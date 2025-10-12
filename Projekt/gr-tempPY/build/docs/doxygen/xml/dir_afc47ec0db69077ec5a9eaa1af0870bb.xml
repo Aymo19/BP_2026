@@ -1,0 +1,12 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="dir_afc47ec0db69077ec5a9eaa1af0870bb" kind="dir">
+    <compoundname>tempPY</compoundname>
+    <innerfile refid="api_8h">api.h</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/aymo/BC/Projekt/gr-tempPY/include/gnuradio/tempPY/"/>
+  </compounddef>
+</doxygen>

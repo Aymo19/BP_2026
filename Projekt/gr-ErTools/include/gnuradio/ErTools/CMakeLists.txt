@@ -10,4 +10,4 @@
 # Install public header files
 ########################################################################
 install(FILES api.h
-    BER_Curve_Sink.h DESTINATION include/gnuradio/ErTools)
+    BER_sync.h DESTINATION include/gnuradio/ErTools)

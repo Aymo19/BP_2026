@@ -1,0 +1,12 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="dir_ce8b6c94ea4ea5cabfbf22cbe553d724" kind="dir">
+    <compoundname>bindings</compoundname>
+    <innerfile refid="build_2python_2ErTools_2bindings_2pydoc__macros_8h">build/python/ErTools/bindings/pydoc_macros.h</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/aymo/BC/Projekt/gr-ErTools/build/python/ErTools/bindings/"/>
+  </compounddef>
+</doxygen>

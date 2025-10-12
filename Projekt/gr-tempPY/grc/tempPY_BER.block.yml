@@ -1,0 +1,39 @@
+id: tempPY_BER
+label: BER
+category: '[tempPY]'
+
+templates:
+  imports: from gnuradio import tempPY
+  make: tempPY.BER()
+
+#  Make one 'parameters' list entry for every parameter you want settable from the GUI.
+#     Keys include:
+#     * id (makes the value accessible as keyname, e.g. in the make entry)
+#     * label (label shown in the GUI)
+#     * dtype (e.g. int, float, complex, byte, short, xxx_vector, ...)
+#     * default
+
+parameters:
+ - id: N
+   label: N
+   dtype: int
+
+inputs:
+ - label: in0
+   domain: stream
+   dtype: int
+ - label: in1
+   domain: stream
+   dtype: byte
+ - label: in2
+   domain: stream
+   dtype: byte
+
+outputs:
+ - label: out
+   domain: stream
+   dtype: float
+
+#  'file_format' specifies the version of the GRC yml format used in the file
+#  and should usually not be changed.
+file_format: 1

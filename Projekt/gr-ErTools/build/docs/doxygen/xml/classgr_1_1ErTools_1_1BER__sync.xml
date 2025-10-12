@@ -1,0 +1,85 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="classgr_1_1ErTools_1_1BER__sync" kind="class" language="C++" prot="public">
+    <compoundname>gr::ErTools::BER_sync</compoundname>
+    <basecompoundref prot="public" virt="virtual">gr::sync_block</basecompoundref>
+    <derivedcompoundref refid="classgr_1_1ErTools_1_1BER__sync__impl" prot="public" virt="non-virtual">gr::ErTools::BER_sync_impl</derivedcompoundref>
+    <includes refid="BER__sync_8h" local="no">BER_sync.h</includes>
+    <sectiondef kind="public-type">
+      <memberdef kind="typedef" id="classgr_1_1ErTools_1_1BER__sync_1a998446990be81319459cb66ea4aa86b3" prot="public" static="no">
+        <type>std::shared_ptr&lt; <ref refid="classgr_1_1ErTools_1_1BER__sync" kindref="compound">BER_sync</ref> &gt;</type>
+        <definition>typedef std::shared_ptr&lt;BER_sync&gt; gr::ErTools::BER_sync::sptr</definition>
+        <argsstring></argsstring>
+        <name>sptr</name>
+        <qualifiedname>gr::ErTools::BER_sync::sptr</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/aymo/BC/Projekt/gr-ErTools/include/gnuradio/ErTools/BER_sync.h" line="25" column="29" bodyfile="/home/aymo/BC/Projekt/gr-ErTools/include/gnuradio/ErTools/BER_sync.h" bodystart="25" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="classgr_1_1ErTools_1_1BER__sync_1af32b947181a5450f1579d6b7e7ecafce" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classgr_1_1ErTools_1_1BER__sync_1a998446990be81319459cb66ea4aa86b3" kindref="member">sptr</ref></type>
+        <definition>static sptr gr::ErTools::BER_sync::make</definition>
+        <argsstring>(int N)</argsstring>
+        <name>make</name>
+        <qualifiedname>gr::ErTools::BER_sync::make</qualifiedname>
+        <param>
+          <type>int</type>
+          <declname>N</declname>
+        </param>
+        <briefdescription>
+<para>Return a shared_ptr to a new instance of <ref refid="classgr_1_1ErTools_1_1BER__sync" kindref="compound">ErTools::BER_sync</ref>. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>To avoid accidental use of raw pointers, <ref refid="classgr_1_1ErTools_1_1BER__sync" kindref="compound">ErTools::BER_sync</ref>&apos;s constructor is in a private implementation class. <ref refid="classgr_1_1ErTools_1_1BER__sync_1af32b947181a5450f1579d6b7e7ecafce" kindref="member">ErTools::BER_sync::make</ref> is the public interface for creating new instances. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/aymo/BC/Projekt/gr-ErTools/include/gnuradio/ErTools/BER_sync.h" line="35" column="17"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+<para>&lt;+description of block+&gt; </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1">
+        <label>gr::ErTools::BER_sync</label>
+        <link refid="classgr_1_1ErTools_1_1BER__sync"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>gr::ErTools::BER_sync_impl</label>
+        <link refid="classgr_1_1ErTools_1_1BER__sync__impl"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>gr::sync_block</label>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="1">
+        <label>gr::ErTools::BER_sync</label>
+        <link refid="classgr_1_1ErTools_1_1BER__sync"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>gr::sync_block</label>
+      </node>
+    </collaborationgraph>
+    <location file="/home/aymo/BC/Projekt/gr-ErTools/include/gnuradio/ErTools/BER_sync.h" line="22" column="1" bodyfile="/home/aymo/BC/Projekt/gr-ErTools/include/gnuradio/ErTools/BER_sync.h" bodystart="23" bodyend="36"/>
+    <listofallmembers>
+      <member refid="classgr_1_1ErTools_1_1BER__sync_1af32b947181a5450f1579d6b7e7ecafce" prot="public" virt="non-virtual"><scope>gr::ErTools::BER_sync</scope><name>make</name></member>
+      <member refid="classgr_1_1ErTools_1_1BER__sync_1a998446990be81319459cb66ea4aa86b3" prot="public" virt="non-virtual"><scope>gr::ErTools::BER_sync</scope><name>sptr</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

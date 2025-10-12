@@ -1,0 +1,7 @@
+<map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
+<area shape="rect" id="Node000000" title=" " alt="" coords="5,5,120,31"/>
+<area shape="rect" id="Node000001" href="$classgr_1_1ErTools_1_1BER__sync.html" title="&lt;+description of block+&gt;" alt="" coords="168,5,328,31"/>
+<area shape="poly" id="edge1_Node000000_Node000001" title=" " alt="" coords="134,15,168,15,168,21,134,21"/>
+<area shape="rect" id="Node000002" href="$classgr_1_1ErTools_1_1BER__sync__impl.html" title=" " alt="" coords="376,5,572,31"/>
+<area shape="poly" id="edge2_Node000001_Node000002" title=" " alt="" coords="342,15,376,15,376,21,342,21"/>
+</map>
