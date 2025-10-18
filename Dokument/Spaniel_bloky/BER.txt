@@ -1,0 +1,62 @@
+BER
+
+	It calculates the SER (Symbol Error Ratio) curve or the BER (Bit Error Ratio) curve. 
+To do this, it waits for N samples to arrive via the three inputs in0, in1, and in2. 
+This allows it to obtain a first version of the BER (or SER) curve for N samples. 
+This BER (or SER) curve is refined over time, as the process is repeated over and over again, as long as the flowchart's running time allows. 
+This process recalculates the BER (or SER) curve to make it increasingly more precise.
+
+Input signals:
+	in0: The number of the BER point being served at the moment, which corresponds to a given Es/No value. 
+		 But in reality, this block ignores Is/Non and is only interested in knowing the number of the point to be served.
+	in1: This is the signal of bits (or transmitted symbols), that is, those that are before the channel.
+	in2: This is the signal of received bits (or symbols) after passing through a channel.
+
+Output Signal
+	This can be seen as a signal that represents the update of the BER curve every N samples. 
+	The idea is to convert it into a vector of N samples and graph it using something like a "QT GUI vector Sink."
+
+IMPORTANT NOTE:
+	* The e_canal_BER block is the one that has been used to generate the signal entering through in0. The limitations this creates are as follows:
+	** The e_canal_BER channel is designed to carry complex envelopes, that is, symbols. Therefore, what is actually being obtained is a SER curve. 
+	   Converting that to a BER curve may not be so easy. You would need to not rely on in1 and in2 having bit signals instead of symbols. 
+	   Instead, you would need to adjust the signal destined for input in0 so that each bit has an Es/No or Eb/No value.
+	** The e_canal_BER block outputs the Es/No ratio.
+	** Converting Es/No to Eb/No is possible, but only as part of a flowchart where the number of bits per symbol (Bps) is known. 
+	   Keeping in mind that, in linear terms, Eb = Es/Bps.
+	** The way the e_canal_BER block is designed means that if the number of samples per symbol is greater than 1 (Sps>1), 
+	   the Es/No signal is output with Sps values per symbol. In that case, some kind of improvement would be required,
+	   since our block assumes there is only one Is/Non (or Is/No) sample per signal sample in in1 and in2.
+	* The signals in1 and in2 can be bits or symbols. The second case is the one we've used most, since the signals in1 and in2 are of the M-PAM type. 
+	  Therefore, what we've been calculating is the SER curve. It can easily be converted to BER curves if the bits are de-M-PAMed.
+	  
+KOD:
+
+	self. N = N 	# is the number of points in the SER curve to calculate
+					#self. errors = np. zeros(self. N)
+	self. errors = np. float64(np. ones(self. N))
+					# count: Counts the number of samples that have already been processed for each BER point
+					#self. count = 0. # QUESTION: IT SEEMS THERE IS AN ERROR. THERE SHOULD BE A COUNTER FOR EACH k
+					#self. count = np. zeros(self. N)
+	self. count = np. uint64(np. ones(self. N))
+					# SER: is the memory of the last calculated curve
+	self. SER = np. ones(self. N)
+	
+	...
+	
+		# L: is the size of the input vector.
+	L = len(in0)
+
+		# Sweep the received data
+		# i is the current point of the incoming data
+		# k is the current point of the SER
+		# count is the number of samples processed
+		# print('count=',self.count)
+	for i in range(0,L):
+		k = input_items[0][i]
+
+		# self.count[k] += np.sign(k)^1
+
+		# increment the error counter
+	self.errors[k] += int(in0[i]<>in1[i])
+
