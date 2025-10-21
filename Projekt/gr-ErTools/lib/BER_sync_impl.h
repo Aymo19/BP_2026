@@ -16,7 +16,7 @@ namespace ErTools {
 class BER_sync_impl : public BER_sync
 {
 private:
-  int N;
+  int _N;
 
 public:
     BER_sync_impl(int N);
