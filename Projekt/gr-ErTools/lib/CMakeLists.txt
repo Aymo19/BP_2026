@@ -11,7 +11,8 @@
 ########################################################################
 include(GrPlatform) #define LIB_SUFFIX
 list(APPEND ErTools_sources
-    BER_sync_impl.cc)
+    BER_sync_impl.cc
+    BER_moje_impl.cc)
 
 set(ErTools_sources
     "${ErTools_sources}"

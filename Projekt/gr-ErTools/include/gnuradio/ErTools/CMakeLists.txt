@@ -10,4 +10,5 @@
 # Install public header files
 ########################################################################
 install(FILES api.h
-    BER_sync.h DESTINATION include/gnuradio/ErTools)
+    BER_sync.h
+    BER_moje.h DESTINATION include/gnuradio/ErTools)

@@ -22,6 +22,7 @@ namespace py = pybind11;
 /**************************************/
 // BINDING_FUNCTION_PROTOTYPES(
     void bind_BER_sync(py::module& m);
+    void bind_BER_moje(py::module& m);
 // ) END BINDING_FUNCTION_PROTOTYPES
 
 
@@ -51,5 +52,6 @@ PYBIND11_MODULE(ErTools_python, m)
     /**************************************/
     // BINDING_FUNCTION_CALLS(
     bind_BER_sync(m);
+    bind_BER_moje(m);
     // ) END BINDING_FUNCTION_CALLS
 }

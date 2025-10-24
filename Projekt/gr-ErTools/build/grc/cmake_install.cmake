@@ -43,6 +43,9 @@ if(NOT DEFINED CMAKE_OBJDUMP)
 endif()
 
 if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/gnuradio/grc/blocks" TYPE FILE FILES "/home/aymo/BC/Projekt/gr-ErTools/grc/ErTools_BER_sync.block.yml")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/gnuradio/grc/blocks" TYPE FILE FILES
+    "/home/aymo/BC/Projekt/gr-ErTools/grc/ErTools_BER_sync.block.yml"
+    "/home/aymo/BC/Projekt/gr-ErTools/grc/ErTools_BER_moje.block.yml"
+    )
 endif()
 

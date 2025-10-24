@@ -1,4 +1,6 @@
 file(REMOVE_RECURSE
+  "CMakeFiles/ErTools_python.dir/BER_moje_python.cc.o"
+  "CMakeFiles/ErTools_python.dir/BER_moje_python.cc.o.d"
   "CMakeFiles/ErTools_python.dir/BER_sync_python.cc.o"
   "CMakeFiles/ErTools_python.dir/BER_sync_python.cc.o.d"
   "CMakeFiles/ErTools_python.dir/python_bindings.cc.o"

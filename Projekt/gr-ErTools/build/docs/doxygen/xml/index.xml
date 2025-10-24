@@ -1,11 +1,21 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <doxygenindex xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="index.xsd" version="1.9.8" xml:lang="en-US">
+  <compound refid="classgr_1_1ErTools_1_1BER__moje" kind="class"><name>gr::ErTools::BER_moje</name>
+    <member refid="classgr_1_1ErTools_1_1BER__moje_1ae367f77d7ee871e139855905202762ff" kind="typedef"><name>sptr</name></member>
+    <member refid="classgr_1_1ErTools_1_1BER__moje_1a499f568da4735eacea80908e36e855c8" kind="function"><name>make</name></member>
+  </compound>
+  <compound refid="classgr_1_1ErTools_1_1BER__moje__impl" kind="class"><name>gr::ErTools::BER_moje_impl</name>
+    <member refid="classgr_1_1ErTools_1_1BER__moje__impl_1a1a10e65f8a1150692c2ed6cf64336d89" kind="variable"><name>_N</name></member>
+    <member refid="classgr_1_1ErTools_1_1BER__moje__impl_1a7c265cd35b92ba910557963be2d91a44" kind="function"><name>BER_moje_impl</name></member>
+    <member refid="classgr_1_1ErTools_1_1BER__moje__impl_1abf85b86405dee710043e8771bc28565b" kind="function"><name>~BER_moje_impl</name></member>
+    <member refid="classgr_1_1ErTools_1_1BER__moje__impl_1af22cbfd8d3ce74b99fffb13b32bf0971" kind="function"><name>work</name></member>
+  </compound>
   <compound refid="classgr_1_1ErTools_1_1BER__sync" kind="class"><name>gr::ErTools::BER_sync</name>
     <member refid="classgr_1_1ErTools_1_1BER__sync_1a998446990be81319459cb66ea4aa86b3" kind="typedef"><name>sptr</name></member>
     <member refid="classgr_1_1ErTools_1_1BER__sync_1af32b947181a5450f1579d6b7e7ecafce" kind="function"><name>make</name></member>
   </compound>
   <compound refid="classgr_1_1ErTools_1_1BER__sync__impl" kind="class"><name>gr::ErTools::BER_sync_impl</name>
-    <member refid="classgr_1_1ErTools_1_1BER__sync__impl_1a8a4146d449c1619352dcb6793331504f" kind="variable"><name>N</name></member>
+    <member refid="classgr_1_1ErTools_1_1BER__sync__impl_1a736b40cc3425421923eefbf9fbfa8bef" kind="variable"><name>_N</name></member>
     <member refid="classgr_1_1ErTools_1_1BER__sync__impl_1a50d4e6df9c3f440376a6acff8dc20d7e" kind="function"><name>BER_sync_impl</name></member>
     <member refid="classgr_1_1ErTools_1_1BER__sync__impl_1a8840244e8807ecfd3362b792d3d17ce7" kind="function"><name>~BER_sync_impl</name></member>
     <member refid="classgr_1_1ErTools_1_1BER__sync__impl_1a1793e4852634e6e0a5a24b6cd07a665c" kind="function"><name>work</name></member>
@@ -53,9 +63,19 @@
   <compound refid="api_8h" kind="file"><name>api.h</name>
     <member refid="api_8h_1a29908a3852c0e8b5081a13bb9eb7f365" kind="define"><name>ERTOOLS_API</name></member>
   </compound>
+  <compound refid="BER__moje_8h" kind="file"><name>BER_moje.h</name>
+  </compound>
   <compound refid="BER__sync_8h" kind="file"><name>BER_sync.h</name>
   </compound>
+  <compound refid="BER__moje__impl_8h" kind="file"><name>BER_moje_impl.h</name>
+  </compound>
   <compound refid="BER__sync__impl_8h" kind="file"><name>BER_sync_impl.h</name>
+  </compound>
+  <compound refid="BER__moje__pydoc__template_8h" kind="file"><name>BER_moje_pydoc_template.h</name>
+    <member refid="BER__moje__pydoc__template_8h_1a74021f021dcdfbb22891787b79c5529d" kind="define"><name>D</name></member>
+    <member refid="BER__moje__pydoc__template_8h_1a3a08fcd95c8c7a953085e78461274267" kind="variable"><name>__doc_gr_ErTools_BER_moje</name></member>
+    <member refid="BER__moje__pydoc__template_8h_1ad25be50f071c330e067e1488e104179c" kind="variable"><name>__doc_gr_ErTools_BER_moje_BER_moje</name></member>
+    <member refid="BER__moje__pydoc__template_8h_1aaae8882d7b63d5ad297771ec39951355" kind="variable"><name>__doc_gr_ErTools_BER_moje_make</name></member>
   </compound>
   <compound refid="BER__sync__pydoc__template_8h" kind="file"><name>BER_sync_pydoc_template.h</name>
     <member refid="BER__sync__pydoc__template_8h_1a74021f021dcdfbb22891787b79c5529d" kind="define"><name>D</name></member>

@@ -24,7 +24,8 @@ include(GrPybind)
 # Python Bindings
 ########################################################################
 list(APPEND ErTools_python_files
-    BER_sync_python.cc python_bindings.cc)
+    BER_sync_python.cc
+    BER_moje_python.cc python_bindings.cc)
 
 gr_pybind_make_oot(ErTools ../../.. gr::ErTools "${ErTools_python_files}")
 

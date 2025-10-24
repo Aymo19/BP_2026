@@ -8,6 +8,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
+  "/home/aymo/BC/Projekt/gr-ErTools/lib/BER_moje_impl.cc" "lib/CMakeFiles/gnuradio-ErTools.dir/BER_moje_impl.cc.o" "gcc" "lib/CMakeFiles/gnuradio-ErTools.dir/BER_moje_impl.cc.o.d"
   "/home/aymo/BC/Projekt/gr-ErTools/lib/BER_sync_impl.cc" "lib/CMakeFiles/gnuradio-ErTools.dir/BER_sync_impl.cc.o" "gcc" "lib/CMakeFiles/gnuradio-ErTools.dir/BER_sync_impl.cc.o.d"
   )
 

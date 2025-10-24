@@ -2,12 +2,14 @@
 <doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
   <compounddef id="namespacegr_1_1ErTools" kind="namespace" language="C++">
     <compoundname>gr::ErTools</compoundname>
+    <innerclass refid="classgr_1_1ErTools_1_1BER__moje" prot="public">gr::ErTools::BER_moje</innerclass>
+    <innerclass refid="classgr_1_1ErTools_1_1BER__moje__impl" prot="public">gr::ErTools::BER_moje_impl</innerclass>
     <innerclass refid="classgr_1_1ErTools_1_1BER__sync" prot="public">gr::ErTools::BER_sync</innerclass>
     <innerclass refid="classgr_1_1ErTools_1_1BER__sync__impl" prot="public">gr::ErTools::BER_sync_impl</innerclass>
     <briefdescription>
     </briefdescription>
     <detaileddescription>
     </detaileddescription>
-    <location file="/home/aymo/BC/Projekt/gr-ErTools/include/gnuradio/ErTools/BER_sync.h" line="15" column="1"/>
+    <location file="/home/aymo/BC/Projekt/gr-ErTools/include/gnuradio/ErTools/BER_moje.h" line="15" column="1"/>
   </compounddef>
 </doxygen>

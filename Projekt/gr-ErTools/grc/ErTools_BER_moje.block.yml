@@ -1,0 +1,28 @@
+id: ErTools_BER_moje
+label: BER_moje
+category: '[ErTools]'
+
+templates:
+  imports: from gnuradio import ErTools
+  make: ErTools.BER_moje(${N})
+
+parameters:
+- id: N
+  label: Pocet bodov BER
+  dtype: int
+  default: 128
+
+inputs:
+ - label: inOg
+   domain: stream
+   dtype: byte
+ - label: inNo
+   domain: stream
+   dtype: byte
+
+outputs:
+ - label: out
+   domain: stream
+   dtype: float
+
+file_format: 1
