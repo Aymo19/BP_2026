@@ -186,20 +186,6 @@ ErTools_python/fast:
 .PHONY : ErTools_python/fast
 
 # Convenience name for target.
-python/ErTools/bindings/CMakeFiles/extracted_docstrings.dir/rule:
-	cd /home/aymo/BC/Projekt/gr-ErTools/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 python/ErTools/bindings/CMakeFiles/extracted_docstrings.dir/rule
-.PHONY : python/ErTools/bindings/CMakeFiles/extracted_docstrings.dir/rule
-
-# Convenience name for target.
-extracted_docstrings: python/ErTools/bindings/CMakeFiles/extracted_docstrings.dir/rule
-.PHONY : extracted_docstrings
-
-# fast build rule for target.
-extracted_docstrings/fast:
-	cd /home/aymo/BC/Projekt/gr-ErTools/build && $(MAKE) $(MAKESILENT) -f python/ErTools/bindings/CMakeFiles/extracted_docstrings.dir/build.make python/ErTools/bindings/CMakeFiles/extracted_docstrings.dir/build
-.PHONY : extracted_docstrings/fast
-
-# Convenience name for target.
 python/ErTools/bindings/CMakeFiles/ErTools_docstrings.dir/rule:
 	cd /home/aymo/BC/Projekt/gr-ErTools/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 python/ErTools/bindings/CMakeFiles/ErTools_docstrings.dir/rule
 .PHONY : python/ErTools/bindings/CMakeFiles/ErTools_docstrings.dir/rule
@@ -261,6 +247,78 @@ BER_sync_python.cc.s:
 	cd /home/aymo/BC/Projekt/gr-ErTools/build && $(MAKE) $(MAKESILENT) -f python/ErTools/bindings/CMakeFiles/ErTools_python.dir/build.make python/ErTools/bindings/CMakeFiles/ErTools_python.dir/BER_sync_python.cc.s
 .PHONY : BER_sync_python.cc.s
 
+PrintChar_python.o: PrintChar_python.cc.o
+.PHONY : PrintChar_python.o
+
+# target to build an object file
+PrintChar_python.cc.o:
+	cd /home/aymo/BC/Projekt/gr-ErTools/build && $(MAKE) $(MAKESILENT) -f python/ErTools/bindings/CMakeFiles/ErTools_python.dir/build.make python/ErTools/bindings/CMakeFiles/ErTools_python.dir/PrintChar_python.cc.o
+.PHONY : PrintChar_python.cc.o
+
+PrintChar_python.i: PrintChar_python.cc.i
+.PHONY : PrintChar_python.i
+
+# target to preprocess a source file
+PrintChar_python.cc.i:
+	cd /home/aymo/BC/Projekt/gr-ErTools/build && $(MAKE) $(MAKESILENT) -f python/ErTools/bindings/CMakeFiles/ErTools_python.dir/build.make python/ErTools/bindings/CMakeFiles/ErTools_python.dir/PrintChar_python.cc.i
+.PHONY : PrintChar_python.cc.i
+
+PrintChar_python.s: PrintChar_python.cc.s
+.PHONY : PrintChar_python.s
+
+# target to generate assembly for a file
+PrintChar_python.cc.s:
+	cd /home/aymo/BC/Projekt/gr-ErTools/build && $(MAKE) $(MAKESILENT) -f python/ErTools/bindings/CMakeFiles/ErTools_python.dir/build.make python/ErTools/bindings/CMakeFiles/ErTools_python.dir/PrintChar_python.cc.s
+.PHONY : PrintChar_python.cc.s
+
+PrintFloat_python.o: PrintFloat_python.cc.o
+.PHONY : PrintFloat_python.o
+
+# target to build an object file
+PrintFloat_python.cc.o:
+	cd /home/aymo/BC/Projekt/gr-ErTools/build && $(MAKE) $(MAKESILENT) -f python/ErTools/bindings/CMakeFiles/ErTools_python.dir/build.make python/ErTools/bindings/CMakeFiles/ErTools_python.dir/PrintFloat_python.cc.o
+.PHONY : PrintFloat_python.cc.o
+
+PrintFloat_python.i: PrintFloat_python.cc.i
+.PHONY : PrintFloat_python.i
+
+# target to preprocess a source file
+PrintFloat_python.cc.i:
+	cd /home/aymo/BC/Projekt/gr-ErTools/build && $(MAKE) $(MAKESILENT) -f python/ErTools/bindings/CMakeFiles/ErTools_python.dir/build.make python/ErTools/bindings/CMakeFiles/ErTools_python.dir/PrintFloat_python.cc.i
+.PHONY : PrintFloat_python.cc.i
+
+PrintFloat_python.s: PrintFloat_python.cc.s
+.PHONY : PrintFloat_python.s
+
+# target to generate assembly for a file
+PrintFloat_python.cc.s:
+	cd /home/aymo/BC/Projekt/gr-ErTools/build && $(MAKE) $(MAKESILENT) -f python/ErTools/bindings/CMakeFiles/ErTools_python.dir/build.make python/ErTools/bindings/CMakeFiles/ErTools_python.dir/PrintFloat_python.cc.s
+.PHONY : PrintFloat_python.cc.s
+
+PrintInt_python.o: PrintInt_python.cc.o
+.PHONY : PrintInt_python.o
+
+# target to build an object file
+PrintInt_python.cc.o:
+	cd /home/aymo/BC/Projekt/gr-ErTools/build && $(MAKE) $(MAKESILENT) -f python/ErTools/bindings/CMakeFiles/ErTools_python.dir/build.make python/ErTools/bindings/CMakeFiles/ErTools_python.dir/PrintInt_python.cc.o
+.PHONY : PrintInt_python.cc.o
+
+PrintInt_python.i: PrintInt_python.cc.i
+.PHONY : PrintInt_python.i
+
+# target to preprocess a source file
+PrintInt_python.cc.i:
+	cd /home/aymo/BC/Projekt/gr-ErTools/build && $(MAKE) $(MAKESILENT) -f python/ErTools/bindings/CMakeFiles/ErTools_python.dir/build.make python/ErTools/bindings/CMakeFiles/ErTools_python.dir/PrintInt_python.cc.i
+.PHONY : PrintInt_python.cc.i
+
+PrintInt_python.s: PrintInt_python.cc.s
+.PHONY : PrintInt_python.s
+
+# target to generate assembly for a file
+PrintInt_python.cc.s:
+	cd /home/aymo/BC/Projekt/gr-ErTools/build && $(MAKE) $(MAKESILENT) -f python/ErTools/bindings/CMakeFiles/ErTools_python.dir/build.make python/ErTools/bindings/CMakeFiles/ErTools_python.dir/PrintInt_python.cc.s
+.PHONY : PrintInt_python.cc.s
+
 python_bindings.o: python_bindings.cc.o
 .PHONY : python_bindings.o
 
@@ -299,7 +357,6 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... test"
 	@echo "... ErTools_docstrings"
-	@echo "... extracted_docstrings"
 	@echo "... ErTools_python"
 	@echo "... BER_moje_python.o"
 	@echo "... BER_moje_python.i"
@@ -307,6 +364,15 @@ help:
 	@echo "... BER_sync_python.o"
 	@echo "... BER_sync_python.i"
 	@echo "... BER_sync_python.s"
+	@echo "... PrintChar_python.o"
+	@echo "... PrintChar_python.i"
+	@echo "... PrintChar_python.s"
+	@echo "... PrintFloat_python.o"
+	@echo "... PrintFloat_python.i"
+	@echo "... PrintFloat_python.s"
+	@echo "... PrintInt_python.o"
+	@echo "... PrintInt_python.i"
+	@echo "... PrintInt_python.s"
 	@echo "... python_bindings.o"
 	@echo "... python_bindings.i"
 	@echo "... python_bindings.s"

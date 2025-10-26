@@ -233,6 +233,78 @@ BER_sync_impl.cc.s:
 	cd /home/aymo/BC/Projekt/gr-ErTools/build && $(MAKE) $(MAKESILENT) -f lib/CMakeFiles/gnuradio-ErTools.dir/build.make lib/CMakeFiles/gnuradio-ErTools.dir/BER_sync_impl.cc.s
 .PHONY : BER_sync_impl.cc.s
 
+PrintChar_impl.o: PrintChar_impl.cc.o
+.PHONY : PrintChar_impl.o
+
+# target to build an object file
+PrintChar_impl.cc.o:
+	cd /home/aymo/BC/Projekt/gr-ErTools/build && $(MAKE) $(MAKESILENT) -f lib/CMakeFiles/gnuradio-ErTools.dir/build.make lib/CMakeFiles/gnuradio-ErTools.dir/PrintChar_impl.cc.o
+.PHONY : PrintChar_impl.cc.o
+
+PrintChar_impl.i: PrintChar_impl.cc.i
+.PHONY : PrintChar_impl.i
+
+# target to preprocess a source file
+PrintChar_impl.cc.i:
+	cd /home/aymo/BC/Projekt/gr-ErTools/build && $(MAKE) $(MAKESILENT) -f lib/CMakeFiles/gnuradio-ErTools.dir/build.make lib/CMakeFiles/gnuradio-ErTools.dir/PrintChar_impl.cc.i
+.PHONY : PrintChar_impl.cc.i
+
+PrintChar_impl.s: PrintChar_impl.cc.s
+.PHONY : PrintChar_impl.s
+
+# target to generate assembly for a file
+PrintChar_impl.cc.s:
+	cd /home/aymo/BC/Projekt/gr-ErTools/build && $(MAKE) $(MAKESILENT) -f lib/CMakeFiles/gnuradio-ErTools.dir/build.make lib/CMakeFiles/gnuradio-ErTools.dir/PrintChar_impl.cc.s
+.PHONY : PrintChar_impl.cc.s
+
+PrintFloat_impl.o: PrintFloat_impl.cc.o
+.PHONY : PrintFloat_impl.o
+
+# target to build an object file
+PrintFloat_impl.cc.o:
+	cd /home/aymo/BC/Projekt/gr-ErTools/build && $(MAKE) $(MAKESILENT) -f lib/CMakeFiles/gnuradio-ErTools.dir/build.make lib/CMakeFiles/gnuradio-ErTools.dir/PrintFloat_impl.cc.o
+.PHONY : PrintFloat_impl.cc.o
+
+PrintFloat_impl.i: PrintFloat_impl.cc.i
+.PHONY : PrintFloat_impl.i
+
+# target to preprocess a source file
+PrintFloat_impl.cc.i:
+	cd /home/aymo/BC/Projekt/gr-ErTools/build && $(MAKE) $(MAKESILENT) -f lib/CMakeFiles/gnuradio-ErTools.dir/build.make lib/CMakeFiles/gnuradio-ErTools.dir/PrintFloat_impl.cc.i
+.PHONY : PrintFloat_impl.cc.i
+
+PrintFloat_impl.s: PrintFloat_impl.cc.s
+.PHONY : PrintFloat_impl.s
+
+# target to generate assembly for a file
+PrintFloat_impl.cc.s:
+	cd /home/aymo/BC/Projekt/gr-ErTools/build && $(MAKE) $(MAKESILENT) -f lib/CMakeFiles/gnuradio-ErTools.dir/build.make lib/CMakeFiles/gnuradio-ErTools.dir/PrintFloat_impl.cc.s
+.PHONY : PrintFloat_impl.cc.s
+
+PrintInt_impl.o: PrintInt_impl.cc.o
+.PHONY : PrintInt_impl.o
+
+# target to build an object file
+PrintInt_impl.cc.o:
+	cd /home/aymo/BC/Projekt/gr-ErTools/build && $(MAKE) $(MAKESILENT) -f lib/CMakeFiles/gnuradio-ErTools.dir/build.make lib/CMakeFiles/gnuradio-ErTools.dir/PrintInt_impl.cc.o
+.PHONY : PrintInt_impl.cc.o
+
+PrintInt_impl.i: PrintInt_impl.cc.i
+.PHONY : PrintInt_impl.i
+
+# target to preprocess a source file
+PrintInt_impl.cc.i:
+	cd /home/aymo/BC/Projekt/gr-ErTools/build && $(MAKE) $(MAKESILENT) -f lib/CMakeFiles/gnuradio-ErTools.dir/build.make lib/CMakeFiles/gnuradio-ErTools.dir/PrintInt_impl.cc.i
+.PHONY : PrintInt_impl.cc.i
+
+PrintInt_impl.s: PrintInt_impl.cc.s
+.PHONY : PrintInt_impl.s
+
+# target to generate assembly for a file
+PrintInt_impl.cc.s:
+	cd /home/aymo/BC/Projekt/gr-ErTools/build && $(MAKE) $(MAKESILENT) -f lib/CMakeFiles/gnuradio-ErTools.dir/build.make lib/CMakeFiles/gnuradio-ErTools.dir/PrintInt_impl.cc.s
+.PHONY : PrintInt_impl.cc.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -253,6 +325,15 @@ help:
 	@echo "... BER_sync_impl.o"
 	@echo "... BER_sync_impl.i"
 	@echo "... BER_sync_impl.s"
+	@echo "... PrintChar_impl.o"
+	@echo "... PrintChar_impl.i"
+	@echo "... PrintChar_impl.s"
+	@echo "... PrintFloat_impl.o"
+	@echo "... PrintFloat_impl.i"
+	@echo "... PrintFloat_impl.s"
+	@echo "... PrintInt_impl.o"
+	@echo "... PrintInt_impl.i"
+	@echo "... PrintInt_impl.s"
 .PHONY : help
 
 

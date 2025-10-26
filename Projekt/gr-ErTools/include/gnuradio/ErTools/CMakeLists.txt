@@ -11,4 +11,7 @@
 ########################################################################
 install(FILES api.h
     BER_sync.h
-    BER_moje.h DESTINATION include/gnuradio/ErTools)
+    BER_moje.h
+    PrintInt.h
+    PrintChar.h
+    PrintFloat.h DESTINATION include/gnuradio/ErTools)

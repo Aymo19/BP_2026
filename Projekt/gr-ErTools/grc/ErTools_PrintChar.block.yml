@@ -1,0 +1,15 @@
+id: ErTools_PrintChar
+label: PrintChar
+category: '[ErTools]'
+
+templates:
+  imports: from gnuradio import ErTools
+  make: ErTools.PrintChar()
+
+inputs:
+ - label: in
+   domain: stream
+   dtype: byte
+
+file_format: 1
+  
