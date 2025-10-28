@@ -191,6 +191,25 @@ blocks:
     coordinate: [976, 96.0]
     rotation: 0
     state: enabled
+- name: ErTools_BER_moje_0
+  id: ErTools_BER_moje
+  parameters:
+    EbN0max: '16'
+    EbN0min: '0'
+    N: '8'
+    Rb: '1'
+    affinity: ''
+    alias: ''
+    comment: ''
+    maxoutbuf: '0'
+    minoutbuf: '0'
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [800, 288.0]
+    rotation: 0
+    state: enabled
 - name: analog_random_source_x_1
   id: analog_random_source_x
   parameters:
@@ -227,7 +246,42 @@ blocks:
     bus_sink: false
     bus_source: false
     bus_structure: null
-    coordinate: [824, 248.0]
+    coordinate: [256, 384.0]
+    rotation: 0
+    state: disabled
+- name: blocks_null_sink_0
+  id: blocks_null_sink
+  parameters:
+    affinity: ''
+    alias: ''
+    bus_structure_sink: '[[0,],]'
+    comment: ''
+    num_inputs: '1'
+    type: float
+    vlen: '1'
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [984, 304.0]
+    rotation: 0
+    state: enabled
+- name: blocks_stream_to_vector_0
+  id: blocks_stream_to_vector
+  parameters:
+    affinity: ''
+    alias: ''
+    comment: ''
+    maxoutbuf: '0'
+    minoutbuf: '0'
+    num_items: N_snr
+    type: float
+    vlen: '1'
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [1048, 392.0]
     rotation: 0
     state: enabled
 - name: blocks_throttle2_0
@@ -384,7 +438,7 @@ blocks:
     bus_sink: false
     bus_source: false
     bus_structure: null
-    coordinate: [1072, 340.0]
+    coordinate: [1264, 332.0]
     rotation: 0
     state: enabled
 - name: virtual_source_0_0_0_0
@@ -441,15 +495,17 @@ blocks:
     state: enabled
 
 connections:
+- [ErTools_BER_moje_0, '0', blocks_null_sink_0, '0']
+- [ErTools_BER_moje_0, '1', blocks_stream_to_vector_0, '0']
 - [analog_random_source_x_1, '0', blocks_throttle2_0, '0']
-- [b_BERTool_0, '0', digital_constellation_decoder_cb_0_0_0, '0']
-- [b_BERTool_0, '1', qtgui_vector_sink_f_0, '0']
+- [blocks_stream_to_vector_0, '0', qtgui_vector_sink_f_0, '0']
 - [blocks_throttle2_0, '0', digital_chunks_to_symbols_xx_1, '0']
 - [blocks_throttle2_0, '0', vs0_1, '0']
-- [digital_chunks_to_symbols_xx_1, '0', b_BERTool_0, '0']
+- [digital_chunks_to_symbols_xx_1, '0', ErTools_BER_moje_0, '0']
+- [digital_chunks_to_symbols_xx_1, '0', digital_constellation_decoder_cb_0_0_0, '0']
 - [digital_constellation_decoder_cb_0_0_0, '0', vs1_0_0, '0']
-- [virtual_source_0_0_0_0, '0', b_BERTool_0, '2']
-- [virtual_source_0_1_0, '0', b_BERTool_0, '1']
+- [virtual_source_0_0_0_0, '0', ErTools_BER_moje_0, '2']
+- [virtual_source_0_1_0, '0', ErTools_BER_moje_0, '1']
 
 metadata:
   file_format: 1

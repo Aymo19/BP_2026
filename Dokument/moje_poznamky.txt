@@ -16,3 +16,11 @@ BER
 
 
 SNR potom vypocitam nejak...
+
+
+28.10 ---------------
+
+Rozdne dtype porty: (min, max, SUMA[sizeof(typ])
+				napr: (1, 2, sizeof(gr_complex)+sizeof(char))
+				
+Prehodit vsetko do noveho bloku radsej s novymi argumentmi

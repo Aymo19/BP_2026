@@ -40,7 +40,7 @@ int PrintChar_impl::work(int noutput_items,
     // Do <+signal processing+>
     printf("Zaciatok CHAR:\n");
     for(int i = 0; i < noutput_items; i++)
-      printf("\t%c\n", in[i]);
+      printf("\t%c\n", in[i] + 48);
 
     // Tell runtime system how many output items we produced.
     return noutput_items;

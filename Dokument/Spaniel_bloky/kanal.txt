@@ -98,9 +98,9 @@ KOD:
             out0[i] = in0[i] + noise_c(EsN0dB[k], Pin, Rs, B1)
             out1[i] = k
             
-			if(k < N-1) :
+			if(k < N-1): //prechadzame cez vsetky body SNR (x-os)
                 k += 1
-            else:
+            else: 		 //presli sme vsetkymi, ideme na zaciatok
                 k = 0
         
 		return len(out0)

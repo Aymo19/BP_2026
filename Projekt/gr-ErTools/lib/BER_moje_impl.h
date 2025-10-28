@@ -16,10 +16,10 @@ namespace ErTools {
 class BER_moje_impl : public BER_moje
 {
 private:
-  int _N;
+  int _N, _Rb, _EbN0min, _EbN0max;
 
 public:
-    BER_moje_impl(int N);
+    BER_moje_impl(int N, int Rb, int _EbN0min, int  _EbN0max);
     ~BER_moje_impl();
 
     // Where all the action really happens

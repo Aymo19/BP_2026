@@ -15,31 +15,10 @@
  */
 
 
-
- static const char *__doc_gr_ErTools_BER_moje = R"doc(<+description of block+>
-
-Constructor Specific Documentation:
-
-Return a shared_ptr to a new instance of ErTools::BER_moje.
-
-To avoid accidental use of raw pointers, ErTools::BER_moje's constructor is in a private implementation class. ErTools::BER_moje::make is the public interface for creating new instances.
-
-Args:
-    N : )doc";
+static const char* __doc_gr_ErTools_BER_moje = R"doc()doc";
 
 
- static const char *__doc_gr_ErTools_BER_moje_BER_moje = R"doc()doc";
+static const char* __doc_gr_ErTools_BER_moje_BER_moje = R"doc()doc";
 
 
- static const char *__doc_gr_ErTools_BER_moje_make = R"doc(<+description of block+>
-
-Constructor Specific Documentation:
-
-Return a shared_ptr to a new instance of ErTools::BER_moje.
-
-To avoid accidental use of raw pointers, ErTools::BER_moje's constructor is in a private implementation class. ErTools::BER_moje::make is the public interface for creating new instances.
-
-Args:
-    N : )doc";
-
-  
+static const char* __doc_gr_ErTools_BER_moje_make = R"doc()doc";

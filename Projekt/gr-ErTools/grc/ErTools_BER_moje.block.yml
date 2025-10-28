@@ -10,18 +10,36 @@ parameters:
 - id: N
   label: Pocet bodov BER
   dtype: int
-  default: 128
+  default: 8
+- id: Rb
+  label: Bit Rate
+  dtype: int
+  default: 1
+- id: EbN0min
+  label: SNR minimum
+  dtype: int
+  default: 0
+- id: EbN0max
+  label: SNR maximum
+  dtype: int
+  default: 16
 
 inputs:
- - label: inOg
+ - label: in0
+   domain: stream
+   dtype: complex
+ - label: in1
    domain: stream
    dtype: byte
- - label: inNo
+ - label: in2
    domain: stream
    dtype: byte
 
 outputs:
- - label: out
+ - label: out0
+   domain: stream
+   dtype: float
+ - label: out1
    domain: stream
    dtype: float
 

@@ -14,7 +14,7 @@
 /* BINDTOOL_GEN_AUTOMATIC(0)                                                       */
 /* BINDTOOL_USE_PYGCCXML(0)                                                        */
 /* BINDTOOL_HEADER_FILE(BER_moje.h)                                        */
-/* BINDTOOL_HEADER_FILE_HASH(0d752322f3747cadc7f547088f6a9598)                     */
+/* BINDTOOL_HEADER_FILE_HASH(ff250cb4c3374daca5d6346eef0b255a)                     */
 /***********************************************************************************/
 
 #include <pybind11/complex.h>
@@ -30,30 +30,22 @@ namespace py = pybind11;
 void bind_BER_moje(py::module& m)
 {
 
-    using BER_moje    = gr::ErTools::BER_moje;
+    using BER_moje = ::gr::ErTools::BER_moje;
 
 
-    py::class_<BER_moje, gr::sync_block, gr::block, gr::basic_block,
-        std::shared_ptr<BER_moje>>(m, "BER_moje", D(BER_moje))
+    py::class_<BER_moje,
+               gr::sync_block,
+               gr::block,
+               gr::basic_block,
+               std::shared_ptr<BER_moje>>(m, "BER_moje", D(BER_moje))
 
         .def(py::init(&BER_moje::make),
-           D(BER_moje,make)
-        )
-        
-
+             py::arg("N"),
+             py::arg("Rb"),
+             py::arg("EbN0min"),
+             py::arg("EbN0max"),
+             D(BER_moje, make))
 
 
         ;
-
-
-
-
 }
-
-
-
-
-
-
-
-

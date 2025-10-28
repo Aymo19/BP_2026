@@ -4,26 +4,35 @@
 #define N 8 //toto treba zmenit na velkost slova
 
 int BitCounter(char slovo) {
-  int sum = 0;
+  int sum = 0, sign = 0;
   char b_jedna = 1;
-
-  for(int i = 1; i < N; i++) {
-    if(slovo & b_jedna)
+  
+  if(slovo < 0)
+    sign = 1;
+  
+  for(int i = 0; i < N; i++) {
+    if((slovo & b_jedna) > 0) {
+      //printf("i: %d: %d\n", i+1, slovo);
       sum++;
-    slovo >>= 1;
+    }
+    if(sign) { //ked plus
+      slovo >>= 1;
+    }else { //ked minus
+      b_jedna <<= 1;
+    }
   }
 
   return sum;
 }
 
 int main() {
-  
-  int I = 1;
-  char C = '1'; //0011 0001 pre nas
+  int c;
+  char C; //0011 0001 pre nas
+  scanf("%d", &c);
+  C = c;
+  int velkost_char = sizeof(C);
 
-  int velkost_int = sizeof(I), velkost_char = sizeof(C);
-
-  printf("Byte INT: %d B\nByte CHAR: %d B\n", velkost_int, velkost_char);
+  printf("Byte CHAR: %d B\n", velkost_char);
   
   //Prevod na bity
   char virt_jedna = 1; //0000 0001 pre nas

@@ -16,24 +16,12 @@
 
 
 
- static const char *__doc_gr_ErTools_PrintInt = R"doc(<+description of block+>
-
-Constructor Specific Documentation:
-
-Return a shared_ptr to a new instance of ErTools::PrintInt.
-
-To avoid accidental use of raw pointers, ErTools::PrintInt's constructor is in a private implementation class. ErTools::PrintInt::make is the public interface for creating new instances.)doc";
+ static const char *__doc_gr_ErTools_PrintInt = R"doc()doc";
 
 
  static const char *__doc_gr_ErTools_PrintInt_PrintInt = R"doc()doc";
 
 
- static const char *__doc_gr_ErTools_PrintInt_make = R"doc(<+description of block+>
-
-Constructor Specific Documentation:
-
-Return a shared_ptr to a new instance of ErTools::PrintInt.
-
-To avoid accidental use of raw pointers, ErTools::PrintInt's constructor is in a private implementation class. ErTools::PrintInt::make is the public interface for creating new instances.)doc";
+ static const char *__doc_gr_ErTools_PrintInt_make = R"doc()doc";
 
   
