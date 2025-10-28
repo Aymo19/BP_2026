@@ -1,0 +1,175 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygenindex xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="index.xsd" version="1.9.8" xml:lang="en-US">
+  <compound refid="classgr_1_1ErTools_1_1BER__moje" kind="class"><name>gr::ErTools::BER_moje</name>
+    <member refid="classgr_1_1ErTools_1_1BER__moje_1ae367f77d7ee871e139855905202762ff" kind="typedef"><name>sptr</name></member>
+    <member refid="classgr_1_1ErTools_1_1BER__moje_1a499f568da4735eacea80908e36e855c8" kind="function"><name>make</name></member>
+  </compound>
+  <compound refid="classgr_1_1ErTools_1_1BER__moje__impl" kind="class"><name>gr::ErTools::BER_moje_impl</name>
+    <member refid="classgr_1_1ErTools_1_1BER__moje__impl_1a1a10e65f8a1150692c2ed6cf64336d89" kind="variable"><name>_N</name></member>
+    <member refid="classgr_1_1ErTools_1_1BER__moje__impl_1a7c265cd35b92ba910557963be2d91a44" kind="function"><name>BER_moje_impl</name></member>
+    <member refid="classgr_1_1ErTools_1_1BER__moje__impl_1abf85b86405dee710043e8771bc28565b" kind="function"><name>~BER_moje_impl</name></member>
+    <member refid="classgr_1_1ErTools_1_1BER__moje__impl_1af22cbfd8d3ce74b99fffb13b32bf0971" kind="function"><name>work</name></member>
+  </compound>
+  <compound refid="classgr_1_1ErTools_1_1BER__sync" kind="class"><name>gr::ErTools::BER_sync</name>
+    <member refid="classgr_1_1ErTools_1_1BER__sync_1a998446990be81319459cb66ea4aa86b3" kind="typedef"><name>sptr</name></member>
+    <member refid="classgr_1_1ErTools_1_1BER__sync_1af32b947181a5450f1579d6b7e7ecafce" kind="function"><name>make</name></member>
+  </compound>
+  <compound refid="classgr_1_1ErTools_1_1BER__sync__impl" kind="class"><name>gr::ErTools::BER_sync_impl</name>
+    <member refid="classgr_1_1ErTools_1_1BER__sync__impl_1a736b40cc3425421923eefbf9fbfa8bef" kind="variable"><name>_N</name></member>
+    <member refid="classgr_1_1ErTools_1_1BER__sync__impl_1a50d4e6df9c3f440376a6acff8dc20d7e" kind="function"><name>BER_sync_impl</name></member>
+    <member refid="classgr_1_1ErTools_1_1BER__sync__impl_1a8840244e8807ecfd3362b792d3d17ce7" kind="function"><name>~BER_sync_impl</name></member>
+    <member refid="classgr_1_1ErTools_1_1BER__sync__impl_1a1793e4852634e6e0a5a24b6cd07a665c" kind="function"><name>work</name></member>
+  </compound>
+  <compound refid="classgr_1_1ErTools_1_1PrintChar" kind="class"><name>gr::ErTools::PrintChar</name>
+    <member refid="classgr_1_1ErTools_1_1PrintChar_1a52a071bd4e38304ffb61e1ce3a18604c" kind="typedef"><name>sptr</name></member>
+    <member refid="classgr_1_1ErTools_1_1PrintChar_1a1f01a527675a2764526d95bc5551cdfe" kind="function"><name>make</name></member>
+  </compound>
+  <compound refid="classgr_1_1ErTools_1_1PrintChar__impl" kind="class"><name>gr::ErTools::PrintChar_impl</name>
+    <member refid="classgr_1_1ErTools_1_1PrintChar__impl_1a4417133f20de7f39e00b1993b1e84de9" kind="function"><name>PrintChar_impl</name></member>
+    <member refid="classgr_1_1ErTools_1_1PrintChar__impl_1adc657bc8d3451a2e868cc3360b7af09f" kind="function"><name>~PrintChar_impl</name></member>
+    <member refid="classgr_1_1ErTools_1_1PrintChar__impl_1a6eebb84cf5da220800d8e92a7140fbec" kind="function"><name>work</name></member>
+  </compound>
+  <compound refid="classgr_1_1ErTools_1_1PrintFloat" kind="class"><name>gr::ErTools::PrintFloat</name>
+    <member refid="classgr_1_1ErTools_1_1PrintFloat_1a2c870e916e3de3284e76c8df01d5fbc8" kind="typedef"><name>sptr</name></member>
+    <member refid="classgr_1_1ErTools_1_1PrintFloat_1ac60334d06567bc11a1ada4b330ee0aba" kind="function"><name>make</name></member>
+  </compound>
+  <compound refid="classgr_1_1ErTools_1_1PrintFloat__impl" kind="class"><name>gr::ErTools::PrintFloat_impl</name>
+    <member refid="classgr_1_1ErTools_1_1PrintFloat__impl_1a5b8dd4fdfb366b931a0ef2f0609f851a" kind="function"><name>PrintFloat_impl</name></member>
+    <member refid="classgr_1_1ErTools_1_1PrintFloat__impl_1ac216ce2860602751b6b8f856a5c8d3f1" kind="function"><name>~PrintFloat_impl</name></member>
+    <member refid="classgr_1_1ErTools_1_1PrintFloat__impl_1aef75ad3c95e114266add64342cf32f42" kind="function"><name>work</name></member>
+  </compound>
+  <compound refid="classgr_1_1ErTools_1_1PrintInt" kind="class"><name>gr::ErTools::PrintInt</name>
+    <member refid="classgr_1_1ErTools_1_1PrintInt_1a9e4c7020090a624f4ec628ef44bcdf26" kind="typedef"><name>sptr</name></member>
+    <member refid="classgr_1_1ErTools_1_1PrintInt_1adfe83aaa47f439a08f9e511c5ce7934b" kind="function"><name>make</name></member>
+  </compound>
+  <compound refid="classgr_1_1ErTools_1_1PrintInt__impl" kind="class"><name>gr::ErTools::PrintInt_impl</name>
+    <member refid="classgr_1_1ErTools_1_1PrintInt__impl_1aa29a410dacfe49e34bbe78bea25e0b1d" kind="function"><name>PrintInt_impl</name></member>
+    <member refid="classgr_1_1ErTools_1_1PrintInt__impl_1aabbe72a92dd15f4f825168bb360d93d1" kind="function"><name>~PrintInt_impl</name></member>
+    <member refid="classgr_1_1ErTools_1_1PrintInt__impl_1afe8dadae83b3ac31eaff42d099b016f4" kind="function"><name>work</name></member>
+  </compound>
+  <compound refid="namespacegr" kind="namespace"><name>gr</name>
+  </compound>
+  <compound refid="namespacegr_1_1ErTools" kind="namespace"><name>gr::ErTools</name>
+  </compound>
+  <compound refid="namespacestd" kind="namespace"><name>std</name>
+  </compound>
+  <compound refid="group__defs_8dox" kind="file"><name>group_defs.dox</name>
+  </compound>
+  <compound refid="main__page_8dox" kind="file"><name>main_page.dox</name>
+  </compound>
+  <compound refid="build_2python_2ErTools_2bindings_2pydoc__macros_8h" kind="file"><name>build/python/ErTools/bindings/pydoc_macros.h</name>
+    <member refid="build_2python_2ErTools_2bindings_2pydoc__macros_8h_1afa7cf06549cf7fd295f622ef6f376357" kind="define"><name>__EXPAND</name></member>
+    <member refid="build_2python_2ErTools_2bindings_2pydoc__macros_8h_1a251b23a2efed48ff2ba2d6f449ed33a3" kind="define"><name>__COUNT</name></member>
+    <member refid="build_2python_2ErTools_2bindings_2pydoc__macros_8h_1a2815f7ab197591ba9559415c694f9ce0" kind="define"><name>__VA_SIZE</name></member>
+    <member refid="build_2python_2ErTools_2bindings_2pydoc__macros_8h_1afdd58e017733f2235c227ef8dd3b2de8" kind="define"><name>__CAT1</name></member>
+    <member refid="build_2python_2ErTools_2bindings_2pydoc__macros_8h_1af08fe30f2a41cef10658f6a892d20543" kind="define"><name>__CAT2</name></member>
+    <member refid="build_2python_2ErTools_2bindings_2pydoc__macros_8h_1a43c147206df4346db5e9d6445aab28ae" kind="define"><name>__DOC1</name></member>
+    <member refid="build_2python_2ErTools_2bindings_2pydoc__macros_8h_1a53738db606593bc1554371d718695fed" kind="define"><name>__DOC2</name></member>
+    <member refid="build_2python_2ErTools_2bindings_2pydoc__macros_8h_1a21baf08c04d32485764f227c32b5bf5d" kind="define"><name>__DOC3</name></member>
+    <member refid="build_2python_2ErTools_2bindings_2pydoc__macros_8h_1a9463ba0ad86bcb4c59b5aecf8a37174c" kind="define"><name>__DOC4</name></member>
+    <member refid="build_2python_2ErTools_2bindings_2pydoc__macros_8h_1a942579d548421ddb2906af7094e5789c" kind="define"><name>__DOC5</name></member>
+    <member refid="build_2python_2ErTools_2bindings_2pydoc__macros_8h_1a31ea356761360e78d16525aa69d2dae6" kind="define"><name>__DOC6</name></member>
+    <member refid="build_2python_2ErTools_2bindings_2pydoc__macros_8h_1a6f1e731f1c6d2893ff1bf98582a7de6e" kind="define"><name>__DOC7</name></member>
+    <member refid="build_2python_2ErTools_2bindings_2pydoc__macros_8h_1a4e578031ec998eaeb933d5caa6a7d28a" kind="define"><name>DOC</name></member>
+  </compound>
+  <compound refid="docs_2doxygen_2pydoc__macros_8h" kind="file"><name>docs/doxygen/pydoc_macros.h</name>
+    <member refid="docs_2doxygen_2pydoc__macros_8h_1afa7cf06549cf7fd295f622ef6f376357" kind="define"><name>__EXPAND</name></member>
+    <member refid="docs_2doxygen_2pydoc__macros_8h_1a251b23a2efed48ff2ba2d6f449ed33a3" kind="define"><name>__COUNT</name></member>
+    <member refid="docs_2doxygen_2pydoc__macros_8h_1a2815f7ab197591ba9559415c694f9ce0" kind="define"><name>__VA_SIZE</name></member>
+    <member refid="docs_2doxygen_2pydoc__macros_8h_1afdd58e017733f2235c227ef8dd3b2de8" kind="define"><name>__CAT1</name></member>
+    <member refid="docs_2doxygen_2pydoc__macros_8h_1af08fe30f2a41cef10658f6a892d20543" kind="define"><name>__CAT2</name></member>
+    <member refid="docs_2doxygen_2pydoc__macros_8h_1a43c147206df4346db5e9d6445aab28ae" kind="define"><name>__DOC1</name></member>
+    <member refid="docs_2doxygen_2pydoc__macros_8h_1a53738db606593bc1554371d718695fed" kind="define"><name>__DOC2</name></member>
+    <member refid="docs_2doxygen_2pydoc__macros_8h_1a21baf08c04d32485764f227c32b5bf5d" kind="define"><name>__DOC3</name></member>
+    <member refid="docs_2doxygen_2pydoc__macros_8h_1a9463ba0ad86bcb4c59b5aecf8a37174c" kind="define"><name>__DOC4</name></member>
+    <member refid="docs_2doxygen_2pydoc__macros_8h_1a942579d548421ddb2906af7094e5789c" kind="define"><name>__DOC5</name></member>
+    <member refid="docs_2doxygen_2pydoc__macros_8h_1a31ea356761360e78d16525aa69d2dae6" kind="define"><name>__DOC6</name></member>
+    <member refid="docs_2doxygen_2pydoc__macros_8h_1a6f1e731f1c6d2893ff1bf98582a7de6e" kind="define"><name>__DOC7</name></member>
+    <member refid="docs_2doxygen_2pydoc__macros_8h_1a4e578031ec998eaeb933d5caa6a7d28a" kind="define"><name>DOC</name></member>
+  </compound>
+  <compound refid="api_8h" kind="file"><name>api.h</name>
+    <member refid="api_8h_1a29908a3852c0e8b5081a13bb9eb7f365" kind="define"><name>ERTOOLS_API</name></member>
+  </compound>
+  <compound refid="BER__moje_8h" kind="file"><name>BER_moje.h</name>
+  </compound>
+  <compound refid="BER__sync_8h" kind="file"><name>BER_sync.h</name>
+  </compound>
+  <compound refid="PrintChar_8h" kind="file"><name>PrintChar.h</name>
+  </compound>
+  <compound refid="PrintFloat_8h" kind="file"><name>PrintFloat.h</name>
+  </compound>
+  <compound refid="PrintInt_8h" kind="file"><name>PrintInt.h</name>
+  </compound>
+  <compound refid="BER__moje__impl_8h" kind="file"><name>BER_moje_impl.h</name>
+  </compound>
+  <compound refid="BER__sync__impl_8h" kind="file"><name>BER_sync_impl.h</name>
+  </compound>
+  <compound refid="PrintChar__impl_8h" kind="file"><name>PrintChar_impl.h</name>
+  </compound>
+  <compound refid="PrintFloat__impl_8h" kind="file"><name>PrintFloat_impl.h</name>
+  </compound>
+  <compound refid="PrintInt__impl_8h" kind="file"><name>PrintInt_impl.h</name>
+  </compound>
+  <compound refid="BER__moje__pydoc__template_8h" kind="file"><name>BER_moje_pydoc_template.h</name>
+    <member refid="BER__moje__pydoc__template_8h_1a74021f021dcdfbb22891787b79c5529d" kind="define"><name>D</name></member>
+    <member refid="BER__moje__pydoc__template_8h_1a3a08fcd95c8c7a953085e78461274267" kind="variable"><name>__doc_gr_ErTools_BER_moje</name></member>
+    <member refid="BER__moje__pydoc__template_8h_1ad25be50f071c330e067e1488e104179c" kind="variable"><name>__doc_gr_ErTools_BER_moje_BER_moje</name></member>
+    <member refid="BER__moje__pydoc__template_8h_1aaae8882d7b63d5ad297771ec39951355" kind="variable"><name>__doc_gr_ErTools_BER_moje_make</name></member>
+  </compound>
+  <compound refid="BER__sync__pydoc__template_8h" kind="file"><name>BER_sync_pydoc_template.h</name>
+    <member refid="BER__sync__pydoc__template_8h_1a74021f021dcdfbb22891787b79c5529d" kind="define"><name>D</name></member>
+    <member refid="BER__sync__pydoc__template_8h_1a43f9c47593d5544191f11918e16da1ed" kind="variable"><name>__doc_gr_ErTools_BER_sync</name></member>
+    <member refid="BER__sync__pydoc__template_8h_1aa3916daca9f97939f8519a2e1e7af73b" kind="variable"><name>__doc_gr_ErTools_BER_sync_BER_sync</name></member>
+    <member refid="BER__sync__pydoc__template_8h_1a23ad978e7e2c09ef3ad015ad05c2911d" kind="variable"><name>__doc_gr_ErTools_BER_sync_make</name></member>
+  </compound>
+  <compound refid="PrintChar__pydoc__template_8h" kind="file"><name>PrintChar_pydoc_template.h</name>
+    <member refid="PrintChar__pydoc__template_8h_1a74021f021dcdfbb22891787b79c5529d" kind="define"><name>D</name></member>
+    <member refid="PrintChar__pydoc__template_8h_1acfd9d94a773e27d80eac14c2a3e621c2" kind="variable"><name>__doc_gr_ErTools_PrintChar</name></member>
+    <member refid="PrintChar__pydoc__template_8h_1a03ace44c50a4935dd4811c44c961aa9a" kind="variable"><name>__doc_gr_ErTools_PrintChar_PrintChar</name></member>
+    <member refid="PrintChar__pydoc__template_8h_1a6199479bd3855313fb63addcfd35cc36" kind="variable"><name>__doc_gr_ErTools_PrintChar_make</name></member>
+  </compound>
+  <compound refid="PrintFloat__pydoc__template_8h" kind="file"><name>PrintFloat_pydoc_template.h</name>
+    <member refid="PrintFloat__pydoc__template_8h_1a74021f021dcdfbb22891787b79c5529d" kind="define"><name>D</name></member>
+    <member refid="PrintFloat__pydoc__template_8h_1ae026f4f1da6f0e89078a317631ec9092" kind="variable"><name>__doc_gr_ErTools_PrintFloat</name></member>
+    <member refid="PrintFloat__pydoc__template_8h_1a0322473e5e3a8b3e8b454140e8120c77" kind="variable"><name>__doc_gr_ErTools_PrintFloat_PrintFloat</name></member>
+    <member refid="PrintFloat__pydoc__template_8h_1a15a285d4a4df7828de2d97c1e54326f1" kind="variable"><name>__doc_gr_ErTools_PrintFloat_make</name></member>
+  </compound>
+  <compound refid="PrintInt__pydoc__template_8h" kind="file"><name>PrintInt_pydoc_template.h</name>
+    <member refid="PrintInt__pydoc__template_8h_1a74021f021dcdfbb22891787b79c5529d" kind="define"><name>D</name></member>
+    <member refid="PrintInt__pydoc__template_8h_1ad49b9a24ba1304d2b37fd720b0c383a7" kind="variable"><name>__doc_gr_ErTools_PrintInt</name></member>
+    <member refid="PrintInt__pydoc__template_8h_1a7e1f5224ec54b7038ada2593d33b3f58" kind="variable"><name>__doc_gr_ErTools_PrintInt_PrintInt</name></member>
+    <member refid="PrintInt__pydoc__template_8h_1aaeb13647ac8288623948786c30d7da12" kind="variable"><name>__doc_gr_ErTools_PrintInt_make</name></member>
+  </compound>
+  <compound refid="group__block" kind="group"><name>block</name>
+  </compound>
+  <compound refid="dir_ce8b6c94ea4ea5cabfbf22cbe553d724" kind="dir"><name>bindings</name>
+  </compound>
+  <compound refid="dir_f0ee746cf45e3b730ff0d711d1e77b2a" kind="dir"><name>bindings</name>
+  </compound>
+  <compound refid="dir_49e56c817e5e54854c35e136979f97ca" kind="dir"><name>docs</name>
+  </compound>
+  <compound refid="dir_23e6078811a419e6e71ecdc10027ca98" kind="dir"><name>docstrings</name>
+  </compound>
+  <compound refid="dir_359d2bec989c9a8deeeb9aee335c1c76" kind="dir"><name>doxygen</name>
+  </compound>
+  <compound refid="dir_598ebd83f96cc8375fbff06849432c85" kind="dir"><name>ErTools</name>
+  </compound>
+  <compound refid="dir_df4b1a9f322b1f01dd4dc57cc6bc8e03" kind="dir"><name>ErTools</name>
+  </compound>
+  <compound refid="dir_e167ba5378dc6540b99e755508bf0abc" kind="dir"><name>ErTools</name>
+  </compound>
+  <compound refid="dir_902d6fe55786be073ae6681293cdb979" kind="dir"><name>gnuradio</name>
+  </compound>
+  <compound refid="dir_d44c64559bbebec7f509842c48db8b23" kind="dir"><name>include</name>
+  </compound>
+  <compound refid="dir_97aefd0d527b934f1d99a682da8fe6a9" kind="dir"><name>lib</name>
+  </compound>
+  <compound refid="dir_f2cd86917185299abf5a1f0679072f3c" kind="dir"><name>other</name>
+  </compound>
+  <compound refid="dir_ab3dd591509f89c87d6a9fd8136a6d03" kind="dir"><name>python</name>
+  </compound>
+  <compound refid="dir_7837fde3ab9c1fb2fc5be7b717af8d79" kind="dir"><name>python</name>
+  </compound>
+  <compound refid="indexpage" kind="page"><name>index</name>
+  </compound>
+</doxygenindex>

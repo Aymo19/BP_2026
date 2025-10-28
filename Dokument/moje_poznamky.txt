@@ -1,0 +1,18 @@
+orig+noise (char)
+XOR
+orig (char)
+-----------------
+chyba
+.
+.
+pocet_chyb = SUM(chyba)
+.
+.
+pocet_chyb (int)
+DELENO
+orig (char)
+----------------
+BER
+
+
+SNR potom vypocitam nejak...

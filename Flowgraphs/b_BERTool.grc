@@ -1,0 +1,511 @@
+options:
+  parameters:
+    author: Homero Ortega Boada
+    catch_exceptions: 'True'
+    category: comdiguis
+    cmake_opt: ''
+    comment: ''
+    copyright: ''
+    description: "Este Bloque sirve a la vez como canal de Ruido Blanco Gausiano y\
+      \ como herramienta para calcular la curva de BER (Bit error Rate) o SER (simbol\
+      \ error ratio) para una senal con modulacion digital. Parametros usados: N_snr\
+      \ - numero de puntos que tendra la curva de BER; EsNomin: valor minimo de la\
+      \ relaci\xF3n Es/No; EsNomax: valor m\xE1ximo de la relacion Es/No. Las se\xF1\
+      ales de entrada son: in Tx  para los  simbolos transmitidos; in Rx  para los\
+      \ simbolos recibidos; in es la entrante envolvente compleja de la se\xF1al modulada.\
+      \ La salida son dos senales: out - es la Curva de BER o SER a graficar;  out_env\
+      \ - que es la saliente envolvente compleja con la adicion de ruido AWGN; out\
+      \ ser que son los valores de BER o SER disponibles. IMPORTANTE: que la curva\
+      \ sea BER o sea SER lo define el tipo de senal que se tiene en in Tx y en in\
+      \ Rx, donde se tiene en cada caso una senal M-aria. Asi que si M=2, estamos\
+      \ enviando y recibiendo bits, luego obtenemos curva de BER, pero si M>2 estamos\
+      \ hablando de curva de SER. "
+    gen_cmake: 'On'
+    gen_linking: dynamic
+    generate_options: hb
+    hier_block_src_path: '.:'
+    id: b_BERTool
+    max_nouts: '0'
+    output_language: python
+    placement: (0,0)
+    qt_qss_theme: ''
+    realtime_scheduling: ''
+    run: 'True'
+    run_command: '{python} -u {filename}'
+    run_options: prompt
+    sizing_mode: fixed
+    thread_safe_setters: ''
+    title: b_BERTool
+    window_size: ''
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [0, 1]
+    rotation: 0
+    state: enabled
+
+blocks:
+- name: B
+  id: parameter
+  parameters:
+    alias: ''
+    comment: ''
+    hide: none
+    label: B
+    short_id: ''
+    type: ''
+    value: '128'
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [512, 14]
+    rotation: 0
+    state: disabled
+- name: ErTools_BER_moje_0
+  id: ErTools_BER_moje
+  parameters:
+    N: '128'
+    affinity: ''
+    alias: ''
+    comment: ''
+    maxoutbuf: '0'
+    minoutbuf: '0'
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [608, 496.0]
+    rotation: 0
+    state: enabled
+- name: ErTools_BER_sync_0
+  id: ErTools_BER_sync
+  parameters:
+    N: '128'
+    affinity: ''
+    alias: ''
+    comment: ''
+    maxoutbuf: '0'
+    minoutbuf: '0'
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [640, 368.0]
+    rotation: 0
+    state: disabled
+- name: EsN0max
+  id: parameter
+  parameters:
+    alias: ''
+    comment: ''
+    hide: none
+    label: EsN0max
+    short_id: ''
+    type: ''
+    value: '20'
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [408, 14]
+    rotation: 0
+    state: enabled
+- name: EsN0min
+  id: parameter
+  parameters:
+    alias: ''
+    comment: ''
+    hide: none
+    label: EsN0min
+    short_id: ''
+    type: ''
+    value: '0'
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [312, 14]
+    rotation: 0
+    state: enabled
+- name: N_snr
+  id: parameter
+  parameters:
+    alias: ''
+    comment: ''
+    hide: none
+    label: N_snr
+    short_id: ''
+    type: ''
+    value: '128'
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [224, 14]
+    rotation: 0
+    state: enabled
+- name: Rs
+  id: parameter
+  parameters:
+    alias: ''
+    comment: ''
+    hide: none
+    label: Rs
+    short_id: ''
+    type: ''
+    value: '125'
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [592, 14]
+    rotation: 0
+    state: enabled
+- name: analog_const_source_x_0
+  id: analog_const_source_x
+  parameters:
+    affinity: ''
+    alias: ''
+    comment: ''
+    const: '8'
+    maxoutbuf: '0'
+    minoutbuf: '0'
+    type: int
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [440, 320.0]
+    rotation: 0
+    state: disabled
+- name: analog_noise_source_x_0
+  id: analog_noise_source_x
+  parameters:
+    affinity: ''
+    alias: ''
+    amp: '1'
+    comment: ''
+    maxoutbuf: '0'
+    minoutbuf: '0'
+    noise_type: analog.GR_GAUSSIAN
+    seed: '0'
+    type: complex
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [64, 200.0]
+    rotation: 0
+    state: enabled
+- name: blocks_add_xx_0
+  id: blocks_add_xx
+  parameters:
+    affinity: ''
+    alias: ''
+    comment: ''
+    maxoutbuf: '0'
+    minoutbuf: '0'
+    num_inputs: '2'
+    type: complex
+    vlen: '1'
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [464, 240.0]
+    rotation: 0
+    state: enabled
+- name: blocks_float_to_int_0
+  id: blocks_float_to_int
+  parameters:
+    affinity: ''
+    alias: ''
+    comment: ''
+    maxoutbuf: '0'
+    minoutbuf: '0'
+    scale: '1'
+    vlen: '1'
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [440, 392.0]
+    rotation: 0
+    state: disabled
+- name: blocks_float_to_int_1
+  id: blocks_float_to_int
+  parameters:
+    affinity: ''
+    alias: ''
+    comment: ''
+    maxoutbuf: '0'
+    minoutbuf: '0'
+    scale: '1'
+    vlen: '1'
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [416, 496.0]
+    rotation: 0
+    state: disabled
+- name: blocks_nlog10_ff_0
+  id: blocks_nlog10_ff
+  parameters:
+    affinity: ''
+    alias: ''
+    comment: ''
+    k: '0'
+    maxoutbuf: '0'
+    minoutbuf: '0'
+    n: '1'
+    vlen: '1'
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [784, 368.0]
+    rotation: 0
+    state: enabled
+- name: blocks_stream_to_vector_0
+  id: blocks_stream_to_vector
+  parameters:
+    affinity: ''
+    alias: ''
+    comment: ''
+    maxoutbuf: '0'
+    minoutbuf: '0'
+    num_items: N_snr
+    type: float
+    vlen: '1'
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [1032, 344.0]
+    rotation: 0
+    state: enabled
+- name: blocks_uchar_to_float_0
+  id: blocks_uchar_to_float
+  parameters:
+    affinity: ''
+    alias: ''
+    comment: ''
+    maxoutbuf: '0'
+    minoutbuf: '0'
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [176, 480.0]
+    rotation: 0
+    state: disabled
+- name: blocks_uchar_to_float_0_0
+  id: blocks_uchar_to_float
+  parameters:
+    affinity: ''
+    alias: ''
+    comment: ''
+    maxoutbuf: '0'
+    minoutbuf: '0'
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [176, 416.0]
+    rotation: 0
+    state: disabled
+- name: note_0
+  id: note
+  parameters:
+    alias: ''
+    comment: ''
+    note: "NOTA PARA MEJORAR ESTE BLOQUE. Se proponen las siguientes modificaciones;\
+      \ 1) mejorar el canal para que tenga dos entradas, una para la se\xF1al modulada,\
+      \ otra para recibir el monto de ruido requerido (No o Pn o Es/No o SNR) 2) complementar\
+      \  el e_BERToll  para que asuma el roll de ordenar la SNR requerida. 3) optimizar\
+      \ e_BERToll para que haga promediados m\xE1s largos y enfatice en los valors\
+      \ SNR que sean m\xE1s relevantes, evitando con ello recalcular parte de las\
+      \ curvas que van quedando bien definidas y concentrandose donde no est\xE1n\
+      \ tan definidas."
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [312, 172]
+    rotation: 0
+    state: enabled
+- name: pad_sink_0_0_0
+  id: pad_sink
+  parameters:
+    affinity: ''
+    alias: ''
+    comment: ''
+    label: out_env
+    num_streams: '1'
+    optional: 'False'
+    type: complex
+    vlen: '1'
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [632, 208.0]
+    rotation: 0
+    state: enabled
+- name: pad_sink_0_0_0_0
+  id: pad_sink
+  parameters:
+    affinity: ''
+    alias: ''
+    comment: ''
+    label: out
+    num_streams: '1'
+    optional: 'False'
+    type: float
+    vlen: N_snr
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [1240, 328.0]
+    rotation: 0
+    state: enabled
+- name: pad_sink_0_0_0_1
+  id: pad_sink
+  parameters:
+    affinity: ''
+    alias: ''
+    comment: ''
+    label: EsNo
+    num_streams: '1'
+    optional: 'False'
+    type: int
+    vlen: '1'
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [856, 72.0]
+    rotation: 0
+    state: disabled
+- name: pad_source_0_0
+  id: pad_source
+  parameters:
+    affinity: ''
+    alias: ''
+    comment: ''
+    label: in
+    maxoutbuf: '0'
+    minoutbuf: '0'
+    num_streams: '1'
+    optional: 'False'
+    type: complex
+    vlen: '1'
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [32, 332]
+    rotation: 0
+    state: enabled
+- name: pad_source_0_0_0
+  id: pad_source
+  parameters:
+    affinity: ''
+    alias: ''
+    comment: ''
+    label: in_Tx
+    maxoutbuf: '0'
+    minoutbuf: '0'
+    num_streams: '1'
+    optional: 'False'
+    type: byte
+    vlen: '1'
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [32, 412]
+    rotation: 0
+    state: enabled
+- name: pad_source_0_0_0_0
+  id: pad_source
+  parameters:
+    affinity: ''
+    alias: ''
+    comment: ''
+    label: in_Rx
+    maxoutbuf: '0'
+    minoutbuf: '0'
+    num_streams: '1'
+    optional: 'False'
+    type: byte
+    vlen: '1'
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [32, 492]
+    rotation: 0
+    state: enabled
+- name: tempPY_BER_0
+  id: tempPY_BER
+  parameters:
+    N: '128'
+    affinity: ''
+    alias: ''
+    comment: ''
+    maxoutbuf: '0'
+    minoutbuf: '0'
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [352, 408.0]
+    rotation: 0
+    state: disabled
+- name: tipo_mod
+  id: parameter
+  parameters:
+    alias: ''
+    comment: ''
+    hide: none
+    label: tipo_mod
+    short_id: ''
+    type: ''
+    value: '"QPSK"'
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [696, 12]
+    rotation: 0
+    state: disabled
+
+connections:
+- [ErTools_BER_moje_0, '0', blocks_nlog10_ff_0, '0']
+- [ErTools_BER_sync_0, '0', blocks_nlog10_ff_0, '0']
+- [analog_const_source_x_0, '0', ErTools_BER_sync_0, '0']
+- [analog_noise_source_x_0, '0', blocks_add_xx_0, '0']
+- [blocks_add_xx_0, '0', pad_sink_0_0_0, '0']
+- [blocks_float_to_int_0, '0', ErTools_BER_sync_0, '1']
+- [blocks_float_to_int_1, '0', ErTools_BER_sync_0, '2']
+- [blocks_nlog10_ff_0, '0', blocks_stream_to_vector_0, '0']
+- [blocks_stream_to_vector_0, '0', pad_sink_0_0_0_0, '0']
+- [blocks_uchar_to_float_0, '0', blocks_float_to_int_1, '0']
+- [blocks_uchar_to_float_0_0, '0', blocks_float_to_int_0, '0']
+- [pad_source_0_0, '0', blocks_add_xx_0, '1']
+- [pad_source_0_0_0, '0', ErTools_BER_moje_0, '0']
+- [pad_source_0_0_0, '0', blocks_uchar_to_float_0_0, '0']
+- [pad_source_0_0_0, '0', tempPY_BER_0, '0']
+- [pad_source_0_0_0_0, '0', ErTools_BER_moje_0, '1']
+- [pad_source_0_0_0_0, '0', blocks_uchar_to_float_0, '0']
+- [pad_source_0_0_0_0, '0', tempPY_BER_0, '1']
+- [tempPY_BER_0, '0', blocks_nlog10_ff_0, '0']
+
+metadata:
+  file_format: 1
+  grc_version: 3.10.9.2

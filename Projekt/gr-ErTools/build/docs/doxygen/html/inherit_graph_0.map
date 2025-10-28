@@ -1,0 +1,23 @@
+<map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
+<area shape="rect" id="Node000000" title=" " alt="" coords="5,104,120,129"/>
+<area shape="rect" id="Node000001" href="$classgr_1_1ErTools_1_1BER__moje.html" title="&lt;+description of block+&gt;" alt="" coords="168,5,331,31"/>
+<area shape="poly" id="edge1_Node000000_Node000001" title=" " alt="" coords="88,93,124,65,167,40,195,28,197,33,169,44,127,70,91,97"/>
+<area shape="rect" id="Node000003" href="$classgr_1_1ErTools_1_1BER__sync.html" title="&lt;+description of block+&gt;" alt="" coords="169,55,329,80"/>
+<area shape="poly" id="edge3_Node000000_Node000003" title=" " alt="" coords="124,98,199,78,201,83,125,103"/>
+<area shape="rect" id="Node000005" href="$classgr_1_1ErTools_1_1PrintChar.html" title="&lt;+description of block+&gt;" alt="" coords="171,104,328,129"/>
+<area shape="poly" id="edge5_Node000000_Node000005" title=" " alt="" coords="134,114,170,114,170,119,134,119"/>
+<area shape="rect" id="Node000007" href="$classgr_1_1ErTools_1_1PrintFloat.html" title="&lt;+description of block+&gt;" alt="" coords="169,153,329,179"/>
+<area shape="poly" id="edge7_Node000000_Node000007" title=" " alt="" coords="125,130,201,151,199,156,124,135"/>
+<area shape="rect" id="Node000009" href="$classgr_1_1ErTools_1_1PrintInt.html" title="&lt;+description of block+&gt;" alt="" coords="177,203,321,228"/>
+<area shape="poly" id="edge9_Node000000_Node000009" title=" " alt="" coords="91,136,127,163,169,188,200,200,198,205,167,192,124,167,88,140"/>
+<area shape="rect" id="Node000002" href="$classgr_1_1ErTools_1_1BER__moje__impl.html" title=" " alt="" coords="379,5,577,31"/>
+<area shape="poly" id="edge2_Node000001_Node000002" title=" " alt="" coords="344,15,378,15,378,21,344,21"/>
+<area shape="rect" id="Node000004" href="$classgr_1_1ErTools_1_1BER__sync__impl.html" title=" " alt="" coords="380,55,576,80"/>
+<area shape="poly" id="edge4_Node000003_Node000004" title=" " alt="" coords="343,65,380,65,380,70,343,70"/>
+<area shape="rect" id="Node000006" href="$classgr_1_1ErTools_1_1PrintChar__impl.html" title=" " alt="" coords="381,104,575,129"/>
+<area shape="poly" id="edge6_Node000005_Node000006" title=" " alt="" coords="342,114,381,114,381,119,342,119"/>
+<area shape="rect" id="Node000008" href="$classgr_1_1ErTools_1_1PrintFloat__impl.html" title=" " alt="" coords="380,153,576,179"/>
+<area shape="poly" id="edge8_Node000007_Node000008" title=" " alt="" coords="343,163,380,163,380,169,343,169"/>
+<area shape="rect" id="Node000010" href="$classgr_1_1ErTools_1_1PrintInt__impl.html" title=" " alt="" coords="388,203,568,228"/>
+<area shape="poly" id="edge10_Node000009_Node000010" title=" " alt="" coords="335,213,388,213,388,218,335,218"/>
+</map>

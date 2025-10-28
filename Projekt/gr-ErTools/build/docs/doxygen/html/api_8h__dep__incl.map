@@ -1,0 +1,23 @@
+<map id="api.h" name="api.h">
+<area shape="rect" id="Node000001" title=" " alt="" coords="361,5,415,31"/>
+<area shape="rect" id="Node000002" href="$BER__moje_8h.html" title=" " alt="" coords="59,79,159,104"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="347,32,155,81,154,76,346,27"/>
+<area shape="rect" id="Node000004" href="$BER__sync_8h.html" title=" " alt="" coords="201,79,298,104"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="355,39,273,81,271,76,352,34"/>
+<area shape="rect" id="Node000006" href="$PrintChar_8h.html" title=" " alt="" coords="341,79,435,104"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="391,44,391,79,385,79,385,44"/>
+<area shape="rect" id="Node000008" href="$PrintFloat_8h.html" title=" " alt="" coords="477,79,574,104"/>
+<area shape="poly" id="edge7_Node000001_Node000008" title=" " alt="" coords="423,34,504,76,502,81,421,39"/>
+<area shape="rect" id="Node000010" href="$PrintInt_8h.html" title=" " alt="" coords="625,79,706,104"/>
+<area shape="poly" id="edge9_Node000001_Node000010" title=" " alt="" coords="429,27,625,77,624,82,428,32"/>
+<area shape="rect" id="Node000003" href="$BER__moje__impl_8h.html" title=" " alt="" coords="5,152,141,177"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="100,117,82,153,77,151,95,115"/>
+<area shape="rect" id="Node000005" href="$BER__sync__impl_8h.html" title=" " alt="" coords="165,152,299,177"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="246,118,237,153,232,151,241,117"/>
+<area shape="rect" id="Node000007" href="$PrintChar__impl_8h.html" title=" " alt="" coords="323,152,453,177"/>
+<area shape="poly" id="edge6_Node000006_Node000007" title=" " alt="" coords="391,118,391,152,385,152,385,118"/>
+<area shape="rect" id="Node000009" href="$PrintFloat__impl_8h.html" title=" " alt="" coords="477,152,611,177"/>
+<area shape="poly" id="edge8_Node000008_Node000009" title=" " alt="" coords="534,117,544,151,538,153,529,118"/>
+<area shape="rect" id="Node000011" href="$PrintInt__impl_8h.html" title=" " alt="" coords="635,152,752,177"/>
+<area shape="poly" id="edge10_Node000010_Node000011" title=" " alt="" coords="677,116,691,151,686,153,673,118"/>
+</map>

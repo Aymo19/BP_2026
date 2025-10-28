@@ -1,0 +1,81 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="classgr_1_1ErTools_1_1PrintFloat" kind="class" language="C++" prot="public">
+    <compoundname>gr::ErTools::PrintFloat</compoundname>
+    <basecompoundref prot="public" virt="virtual">gr::sync_block</basecompoundref>
+    <derivedcompoundref refid="classgr_1_1ErTools_1_1PrintFloat__impl" prot="public" virt="non-virtual">gr::ErTools::PrintFloat_impl</derivedcompoundref>
+    <includes refid="PrintFloat_8h" local="no">PrintFloat.h</includes>
+    <sectiondef kind="public-type">
+      <memberdef kind="typedef" id="classgr_1_1ErTools_1_1PrintFloat_1a2c870e916e3de3284e76c8df01d5fbc8" prot="public" static="no">
+        <type>std::shared_ptr&lt; <ref refid="classgr_1_1ErTools_1_1PrintFloat" kindref="compound">PrintFloat</ref> &gt;</type>
+        <definition>typedef std::shared_ptr&lt;PrintFloat&gt; gr::ErTools::PrintFloat::sptr</definition>
+        <argsstring></argsstring>
+        <name>sptr</name>
+        <qualifiedname>gr::ErTools::PrintFloat::sptr</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/aymo/BC/Projekt/gr-ErTools/include/gnuradio/ErTools/PrintFloat.h" line="25" column="29" bodyfile="/home/aymo/BC/Projekt/gr-ErTools/include/gnuradio/ErTools/PrintFloat.h" bodystart="25" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="classgr_1_1ErTools_1_1PrintFloat_1ac60334d06567bc11a1ada4b330ee0aba" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classgr_1_1ErTools_1_1PrintFloat_1a2c870e916e3de3284e76c8df01d5fbc8" kindref="member">sptr</ref></type>
+        <definition>static sptr gr::ErTools::PrintFloat::make</definition>
+        <argsstring>()</argsstring>
+        <name>make</name>
+        <qualifiedname>gr::ErTools::PrintFloat::make</qualifiedname>
+        <briefdescription>
+<para>Return a shared_ptr to a new instance of <ref refid="classgr_1_1ErTools_1_1PrintFloat" kindref="compound">ErTools::PrintFloat</ref>. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>To avoid accidental use of raw pointers, <ref refid="classgr_1_1ErTools_1_1PrintFloat" kindref="compound">ErTools::PrintFloat</ref>&apos;s constructor is in a private implementation class. <ref refid="classgr_1_1ErTools_1_1PrintFloat_1ac60334d06567bc11a1ada4b330ee0aba" kindref="member">ErTools::PrintFloat::make</ref> is the public interface for creating new instances. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/aymo/BC/Projekt/gr-ErTools/include/gnuradio/ErTools/PrintFloat.h" line="35" column="17"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+<para>&lt;+description of block+&gt; </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1">
+        <label>gr::ErTools::PrintFloat</label>
+        <link refid="classgr_1_1ErTools_1_1PrintFloat"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>gr::ErTools::PrintFloat_impl</label>
+        <link refid="classgr_1_1ErTools_1_1PrintFloat__impl"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>gr::sync_block</label>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="1">
+        <label>gr::ErTools::PrintFloat</label>
+        <link refid="classgr_1_1ErTools_1_1PrintFloat"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>gr::sync_block</label>
+      </node>
+    </collaborationgraph>
+    <location file="/home/aymo/BC/Projekt/gr-ErTools/include/gnuradio/ErTools/PrintFloat.h" line="22" column="1" bodyfile="/home/aymo/BC/Projekt/gr-ErTools/include/gnuradio/ErTools/PrintFloat.h" bodystart="23" bodyend="36"/>
+    <listofallmembers>
+      <member refid="classgr_1_1ErTools_1_1PrintFloat_1ac60334d06567bc11a1ada4b330ee0aba" prot="public" virt="non-virtual"><scope>gr::ErTools::PrintFloat</scope><name>make</name></member>
+      <member refid="classgr_1_1ErTools_1_1PrintFloat_1a2c870e916e3de3284e76c8df01d5fbc8" prot="public" virt="non-virtual"><scope>gr::ErTools::PrintFloat</scope><name>sptr</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

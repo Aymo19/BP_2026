@@ -1,0 +1,107 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="api_8h" kind="file" language="C++">
+    <compoundname>api.h</compoundname>
+    <includes local="no">gnuradio/attributes.h</includes>
+    <includedby refid="BER__moje_8h" local="no">BER_moje.h</includedby>
+    <includedby refid="BER__sync_8h" local="no">BER_sync.h</includedby>
+    <includedby refid="PrintChar_8h" local="no">PrintChar.h</includedby>
+    <includedby refid="PrintFloat_8h" local="no">PrintFloat.h</includedby>
+    <includedby refid="PrintInt_8h" local="no">PrintInt.h</includedby>
+    <incdepgraph>
+      <node id="1">
+        <label>api.h</label>
+        <link refid="api_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>gnuradio/attributes.h</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="2">
+        <label>BER_moje.h</label>
+        <link refid="BER__moje_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>BER_sync.h</label>
+        <link refid="BER__sync_8h"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="6">
+        <label>PrintChar.h</label>
+        <link refid="PrintChar_8h"/>
+        <childnode refid="7" relation="include">
+        </childnode>
+      </node>
+      <node id="8">
+        <label>PrintFloat.h</label>
+        <link refid="PrintFloat_8h"/>
+        <childnode refid="9" relation="include">
+        </childnode>
+      </node>
+      <node id="10">
+        <label>PrintInt.h</label>
+        <link refid="PrintInt_8h"/>
+        <childnode refid="11" relation="include">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>api.h</label>
+        <link refid="api_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>BER_moje_impl.h</label>
+        <link refid="BER__moje__impl_8h"/>
+      </node>
+      <node id="5">
+        <label>BER_sync_impl.h</label>
+        <link refid="BER__sync__impl_8h"/>
+      </node>
+      <node id="7">
+        <label>PrintChar_impl.h</label>
+        <link refid="PrintChar__impl_8h"/>
+      </node>
+      <node id="9">
+        <label>PrintFloat_impl.h</label>
+        <link refid="PrintFloat__impl_8h"/>
+      </node>
+      <node id="11">
+        <label>PrintInt_impl.h</label>
+        <link refid="PrintInt__impl_8h"/>
+      </node>
+    </invincdepgraph>
+    <sectiondef kind="define">
+      <memberdef kind="define" id="api_8h_1a29908a3852c0e8b5081a13bb9eb7f365" prot="public" static="no">
+        <name>ERTOOLS_API</name>
+        <initializer>__GR_ATTR_IMPORT</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/aymo/BC/Projekt/gr-ErTools/include/gnuradio/ErTools/api.h" line="19" column="10" bodyfile="/home/aymo/BC/Projekt/gr-ErTools/include/gnuradio/ErTools/api.h" bodystart="19" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/aymo/BC/Projekt/gr-ErTools/include/gnuradio/ErTools/api.h"/>
+  </compounddef>
+</doxygen>

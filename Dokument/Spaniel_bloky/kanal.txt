@@ -1,39 +1,57 @@
-CANAL
+custom AWGN kanal
 
 	It is an AWGN channel (Additive White Gaussian Noise, in baseband). It receives the complex envelope of a digitally modulated signal. 
-The block has two outputs: out0, out1. Out0 delivers the same received signal but with additive white Gaussian noise with different power values 
-that correspond to different Es/No values; out1 delivers an Es/No value applied to each out0 sample. 
-This block differs from other traditional AWGN channel blocks in the following: It has an internal function that measures the average power of the incoming signal Ps, 
-so that it can calculate Es=Ps/Rs; By varying the noise power Pn, the Es/No ratio can be varied so that it takes N possible values between EsN0min and EsN0max. 
+The block has two outputs: out0, out1.
+
+OUT0 delivers the same received signal but with additive white Gaussian noise with different power values that correspond to different Es/No values; 
+
+OUT1 delivers an Es/No value applied to each out0 sample. 
+
+This block differs from other traditional AWGN channel blocks in the following: 
+	Signal Power:
+		It has an internal function that measures the average power of the incoming signal Ps, so that it can calculate 
+											
+														Es = Ps / Rs 
+
+	Noise Power:
+		By varying the noise power Pn, the Es/No ratio can be varied so that it takes N possible values between EsN0min and EsN0max.
+					
+											Es/N0 € <Es/N0min ; Es/N0max>, size = N
+											
+												-menime len N0, Es je konstantny
+
 With this, the first test has been completed so that another block can calculate the BER Curve. But it doesn't stop there; it continues performing as many tests as 
 the simulation time allows, so that the block that calculates the BER curve can continually refine it.
 
 Block configuration data:
-	N: The number of discrete points the BER curve will have. It also corresponds to the number of values the Es/No ratio will take.
+	N: 		 The number of discrete points the BER curve will have. It also corresponds to the number of values the Es/No ratio will take.
 	EsN0min: The minimum value to consider for Es/No.
 	EsN0max: The maximum value to consider for Es/No.
-	Rs: The symbol rate.
-	B: A characteristic of the incoming signal; it corresponds to the sampling frequency of the incoming signal and can be greater than or equal to Rs.
-	Es: The energy of a symbol.
+	Rs: 	 The symbol rate.
+	B: 		 A characteristic of the incoming signal; it corresponds to the sampling frequency of the incoming signal and can be greater than or equal to Rs.
+	Es: 	 The energy of a symbol.
 
 Input signals:
-	In0: Complex envelope of a digitally modulated signal.
+	IN0: Complex envelope of a digitally modulated signal.
 
 Output Signals:
-	out0: This is the channel output, that is, the same incoming signal but with noise added to satisfy a certain Es/No ratio.
-	out1: This is the Es/No value applied to the current output.
+	OUT0: This  is the channel output, that is, the same incoming signal but with noise added to satisfy a certain Es/No ratio.
+	OUT1: This is the Es/No value applied to the current output.
 
 Some internal variables are:
-	No: This is the power spectral density of the white noise.
+	No: 	This is the power spectral density of the white noise.
 	SNR-Db: This is the signal-to-noise ratio in dB.
 
 IMPORTANT NOTE:
 	* We wonder if this block shouldn't be called e_canal_BER, since it doesn't represent bits or any relation to them, just symbols. 
   	  The more appropriate name would be e_canal_EsN0.
+	
 	* This block doesn't know the number of bits per symbol, so it can't determine the Eb/No ratio, and all it calculates is the BER relative to Es/No.
+	
 	* The Complex Envelope can have multiple samples per symbol (Sps), for example when it has passed through a Wave Forming block, 
   	  so SampRate can be greater than or equal to Rs. SampRate=Rs*Sps. 
       The problem is that in this case, the out0 output will also have Sps values per symbol, which must be taken into account by the blocks that use this signal.
+	
 	* Es is calculated as: Es = Ps x Ts, where Ps is the average power of the incoming signal (measured internally) and Ts is 
 	  the duration of each symbol or Ts = 1 / Rs. We understand that this implies imagining the symbols as rectangular, 
 	  which can be valid when the incoming signal brings digital modulation based on constellation points, such as BPSK, QPSK, MPSK, MQAM. 
@@ -42,34 +60,77 @@ IMPORTANT NOTE:
 
 KOD:
 
-	self. EsN0dB = np. linspace ( EsN0min, EsN0max, N )
-	self. k = 0 	# Remember the current SNR value
+	## This is where the problem lies and can be better optimized.
+	## Something that could be done is to pay more attention to the high Es/No values, which is where it is most difficult to obtain the BER
+	## Apparently the easy way to do this is to
+	## make the EsN0dB vector keep changing, since it is static and defines which EsN0dB values to use. 
+	## Another aspect that could be improved is that: the blocks that 
+	## benefit from this block have to convert what we give them to a vector of size N. For that grace,
+	## it would be convenient to require that the signals entering and exiting this block be of vector type, with size N. 
+	## I assume that since we already have a fixed value for L=N, we will free ourselves from the for and if clauses below.
 
-	def work (self, input_items, output_items):
-	L = len (input_items [0])
-	Rs = self. Rs
-	B1 = self. B
-		# Calculate the variance (normalized average power) of the incoming signal
-	Pin = np. mean ( np. absolute (input_items [0]) ** 2)
+<-------------------CONSTRUCTOR---------------------->
 
-		# # This is where the biggest problem lies and can be better optimized.
-		# # Something that could be done is to pay more attention to the
-		## high Es/No values, which is where it is most difficult to obtain the BER. Apparently the easy way to do this is to
-		## make the EsN0dB vector keep changing, since
-		## it is static and it is the one that defines which EsN0dB values to use.
-		## Another aspect that can be improved is that: the blocks that
-		## benefit from this block have to convert what we
-		## give them to a vector of size N. For that grace,
-		## it would be convenient to require that the signals entering and
-		## leaving this block be of vector type, with size N.
-		## I assume that since we already have a fixed value for L=N, we will free ourselves
-		## from the for and if clauses below.
+	def __init__(self, N = 8, EsN0min = 0, EsN0max = 16, B = 100, Rs = 1):  # only default arguments here
+        gr.sync_block.__init__(
+            self,
+            name = 'e_canal_BER',
+            in_sig = [np.complex64],
+            out_sig = [np.complex64, np.int32]
+        )
+	self.N = N
+	self.B = B
+	self.Rs = Rs
 
-		## noise sample calculation
-		## Rb: Bit rate
-		## B: The passband bandwidth occupied by the white noise, which is nothing more than twice the bandwidth of the complex envelope of the white noise we are generating. We assume that
-		## B is equal to the signal's sampling frequency
-		## N: The number of elements in the vector
-		## P_s: The variance (average power) of the incoming signal.
-		## SNR_dB: The signal-to-noise ratio in dB of the noise relative to P_signal
+	self.EsN0dB = np.linspace(EsN0min, EsN0max, N) // (START, END, POCET BODOV)
+    self.k = 0  # remember what the current SNR value is
+     
+<----------------------MAIN-------------------------->
+	 
+    def work(self, input_items, output_items):
+        L = len(in0)
+		Rs = self.Rs
+		B1 = self.B
+        	# Calculation of the variance (normalized average power) of the incoming signal
+        Pin = np.mean(np.absolute(pow(in0,2))
+			
+        for i in range(0,L): 
+            out0[i] = in0[i] + noise_c(EsN0dB[k], Pin, Rs, B1)
+            out1[i] = k
+            
+			if(k < N-1) :
+                k += 1
+            else:
+                k = 0
+        
+		return len(out0)
 
+<----------------------AWGN-------------------------->
+		## NOISE SAMPLE CALCULATION
+			## Rb: Bit rate
+			## B:  The passband bandwidth occupied by the white noise, 
+			       which is nothing more than twice the bandwidth of the complex envelope of the white noise we are generating. 
+				   We assume that B is equal to the signal's sampling frequency.
+			## N:   The number of elements in the vector
+			## P_s: The variance (average power) of the incoming signal.
+			## SNR_dB: The signal-to-noise ratio in dB of the noise relative to P_signal
+
+	def noise_c(EsN0_dB, P_s, Rs, B):
+    	EsN0 = pow(10., EsN0_dB / 10.) //opak log pre SNR bez dB
+    	
+		SNR = EsN0 * Rs / B
+    	
+		P_n = P_s / SNR  # the power of noise
+    	
+		Vrms = math.sqrt(P_n) 
+		
+			# random.normal() asks for the standard deviation, but it's the same RMS value.
+			# Vrms is the RMS value of the complex envelope of the noise, but we're
+			# going to generate it as real noise plus imaginary noise. But those two
+			# signals have slightly different RMS values: Vrms_q = Vrms/math.sqrt(2.)
+    	
+		Vrms_q = Vrms / math.sqrt(2.)
+    	
+		n = np.random.normal(0., Vrms_q) + np.random.normal(0., Vrms_q) * 1.j
+        
+    	return n
