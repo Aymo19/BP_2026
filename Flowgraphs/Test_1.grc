@@ -45,26 +45,6 @@ blocks:
     coordinate: [184, 12]
     rotation: 0
     state: enabled
-- name: ErTools_BitErrorRate_0
-  id: ErTools_BitErrorRate
-  parameters:
-    EbN0_max: '16'
-    EbN0_min: '0'
-    N: '8'
-    R_b: '1'
-    affinity: ''
-    alias: ''
-    comment: ''
-    f_vz: '1'
-    maxoutbuf: '0'
-    minoutbuf: '0'
-  states:
-    bus_sink: false
-    bus_source: false
-    bus_structure: null
-    coordinate: [808, 488.0]
-    rotation: 0
-    state: enabled
 - name: analog_noise_source_x_0
   id: analog_noise_source_x
   parameters:
@@ -157,24 +137,7 @@ blocks:
     bus_sink: false
     bus_source: false
     bus_structure: null
-    coordinate: [1080, 512.0]
-    rotation: 0
-    state: enabled
-- name: blocks_null_sink_0_0
-  id: blocks_null_sink
-  parameters:
-    affinity: ''
-    alias: ''
-    bus_structure_sink: '[[0,],]'
-    comment: ''
-    num_inputs: '1'
-    type: complex
-    vlen: '1'
-  states:
-    bus_sink: false
-    bus_source: false
-    bus_structure: null
-    coordinate: [1096, 456.0]
+    coordinate: [920, 496.0]
     rotation: 0
     state: enabled
 - name: blocks_null_source_0
@@ -187,7 +150,7 @@ blocks:
     maxoutbuf: '0'
     minoutbuf: '0'
     num_outputs: '1'
-    type: complex
+    type: float
     vlen: '1'
   states:
     bus_sink: false
@@ -213,25 +176,6 @@ blocks:
     bus_source: false
     bus_structure: null
     coordinate: [624, 520.0]
-    rotation: 0
-    state: enabled
-- name: blocks_null_source_0_1
-  id: blocks_null_source
-  parameters:
-    affinity: ''
-    alias: ''
-    bus_structure_source: '[[0,],]'
-    comment: ''
-    maxoutbuf: '0'
-    minoutbuf: '0'
-    num_outputs: '1'
-    type: byte
-    vlen: '1'
-  states:
-    bus_sink: false
-    bus_source: false
-    bus_structure: null
-    coordinate: [632, 552.0]
     rotation: 0
     state: enabled
 - name: blocks_throttle2_1
@@ -664,6 +608,22 @@ blocks:
     coordinate: [1056, 304.0]
     rotation: 0
     state: enabled
+- name: testing_test_0
+  id: testing_test
+  parameters:
+    N: '0'
+    affinity: ''
+    alias: ''
+    comment: ''
+    maxoutbuf: '0'
+    minoutbuf: '0'
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [816, 480.0]
+    rotation: 0
+    state: enabled
 - name: virtual_sink_0
   id: virtual_sink
   parameters:
@@ -770,17 +730,15 @@ blocks:
     state: enabled
 
 connections:
-- [ErTools_BitErrorRate_0, '0', blocks_null_sink_0_0, '0']
-- [ErTools_BitErrorRate_0, '1', blocks_null_sink_0, '0']
 - [analog_noise_source_x_0, '0', blocks_throttle2_1_0, '0']
 - [analog_sig_source_x_0, '0', blocks_throttle2_1, '0']
 - [blocks_add_xx_0, '0', qtgui_time_sink_x_0_1_0, '0']
 - [blocks_multiply_xx_0, '0', qtgui_time_sink_x_0_1, '0']
-- [blocks_null_source_0, '0', ErTools_BitErrorRate_0, '0']
-- [blocks_null_source_0_0, '0', ErTools_BitErrorRate_0, '1']
-- [blocks_null_source_0_1, '0', ErTools_BitErrorRate_0, '2']
+- [blocks_null_source_0, '0', testing_test_0, '0']
+- [blocks_null_source_0_0, '0', testing_test_0, '1']
 - [blocks_throttle2_1, '0', virtual_sink_1, '0']
 - [blocks_throttle2_1_0, '0', virtual_sink_0, '0']
+- [testing_test_0, '0', blocks_null_sink_0, '0']
 - [virtual_source_0, '0', qtgui_time_sink_x_0, '0']
 - [virtual_source_0_0, '0', qtgui_time_sink_x_0_0, '0']
 - [virtual_source_0_0_0, '0', blocks_multiply_xx_0, '1']

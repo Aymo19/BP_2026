@@ -1,0 +1,32 @@
+id: ErTools_BitErrorRate
+label: BitErrorRate
+category: '[ErTools]'
+
+templates:
+  imports: from gnuradio import ErTools
+  make: ErTools.BitErrorRate(${N}, ${Rb}, ${EbN0min}, ${EbN0max}, ${fvz})
+
+parameters:
+- id: N
+  label: N
+  dtype: int
+  default: 128
+inputs:
+ - label: in0
+   domain: stream
+   dtype: complex
+#  vlen: ...
+#  optional: ...
+ - label: in1
+   domain: stream
+   dtype: float
+outputs:
+#- label: ...
+#  domain: ...
+#  dtype: ...
+#  vlen: ...
+#  optional: ...
+
+#  'file_format' specifies the version of the GRC yml format used in the file
+#  and should usually not be changed.
+file_format: 1

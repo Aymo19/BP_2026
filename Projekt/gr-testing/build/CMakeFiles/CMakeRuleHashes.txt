@@ -1,0 +1,8 @@
+# Hashes of file build rules.
+0924d63ced5d5bb535f5aaf5b2c25cc0 CMakeFiles/uninstall
+f9a5090c01ef7327a6c9040163c33159 python/testing/CMakeFiles/copy_module_for_tests
+e2fea01d821175fdf3b80211e1682078 python/testing/CMakeFiles/pygen_python_testing_51a7b1f7c997d93f9793b99a157c1fac
+81296c84bd08555939b9f34eada8f6f8 python/testing/__init__.pyc
+25d6306d4b1b372daa2b33402fba00e3 python/testing/__init__.pyo
+5fdde49170e37dce8df0dfefb30e3283 python/testing/bindings/CMakeFiles/testing_docstrings
+b40b1a58509169cc92e0fb919243b2c1 python/testing/bindings/docstring_status

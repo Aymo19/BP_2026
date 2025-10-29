@@ -1,0 +1,14 @@
+/usr/local/lib/cmake/gnuradio-testing/gnuradio-testingConfig.cmake
+/usr/local/include/gnuradio/testing/api.h
+/usr/local/include/gnuradio/testing/test.h
+/usr/local/lib/x86_64-linux-gnu/libgnuradio-testing.so.1.0.0.0
+/usr/local/lib/x86_64-linux-gnu/libgnuradio-testing.so.1.0.0
+/usr/local/lib/x86_64-linux-gnu/libgnuradio-testing.so
+/usr/local/lib/cmake/gnuradio-testing/gnuradio-testingTargets.cmake
+/usr/local/lib/cmake/gnuradio-testing/gnuradio-testingTargets-release.cmake
+/usr/local/lib/cmake/gnuradio-testing/gnuradio-testingConfig.cmake
+/usr/local/lib/python3.12/dist-packages/gnuradio/testing/__init__.py
+/usr/local/lib/python3.12/dist-packages/gnuradio/testing/__init__.pyc
+/usr/local/lib/python3.12/dist-packages/gnuradio/testing/__init__.pyo
+/usr/local/lib/python3.12/dist-packages/gnuradio/testing/testing_python.cpython-312-x86_64-linux-gnu.so
+/usr/local/share/gnuradio/grc/blocks/testing_test.block.yml

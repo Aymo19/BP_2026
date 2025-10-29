@@ -16,7 +16,7 @@ list(APPEND ErTools_sources
     PrintInt_impl.cc
     PrintChar_impl.cc
     PrintFloat_impl.cc
-    )
+    BitErrorRate_impl.cc )
 
 set(ErTools_sources
     "${ErTools_sources}"

@@ -194,16 +194,10 @@ blocks:
 - name: ErTools_BitErrorRate_0
   id: ErTools_BitErrorRate
   parameters:
-    EbN0_max: '16'
-    EbN0_min: '0'
     N: '8'
-    R_b: '1'
     affinity: ''
     alias: ''
     comment: ''
-    f_vz: '1'
-    maxoutbuf: '0'
-    minoutbuf: '0'
   states:
     bus_sink: false
     bus_source: false
@@ -479,16 +473,13 @@ blocks:
     state: enabled
 
 connections:
-- [ErTools_BitErrorRate_0, '0', digital_constellation_decoder_cb_0_0_0, '0']
-- [ErTools_BitErrorRate_0, '1', blocks_stream_to_vector_0, '0']
 - [analog_random_source_x_1, '0', blocks_throttle2_0, '0']
 - [blocks_stream_to_vector_0, '0', qtgui_vector_sink_f_0, '0']
 - [blocks_throttle2_0, '0', digital_chunks_to_symbols_xx_1, '0']
 - [blocks_throttle2_0, '0', vs0_1, '0']
 - [digital_chunks_to_symbols_xx_1, '0', ErTools_BitErrorRate_0, '0']
 - [digital_constellation_decoder_cb_0_0_0, '0', vs1_0_0, '0']
-- [virtual_source_0_0_0_0, '0', ErTools_BitErrorRate_0, '2']
-- [virtual_source_0_1_0, '0', ErTools_BitErrorRate_0, '1']
+- [virtual_source_0_0_0_0, '0', ErTools_BitErrorRate_0, '1']
 
 metadata:
   file_format: 1

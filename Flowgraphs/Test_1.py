@@ -10,7 +10,6 @@
 
 from PyQt5 import Qt
 from gnuradio import qtgui
-from gnuradio import ErTools
 from gnuradio import analog
 from gnuradio import blocks
 from gnuradio import gr
@@ -22,6 +21,7 @@ from PyQt5 import Qt
 from argparse import ArgumentParser
 from gnuradio.eng_arg import eng_float, intx
 from gnuradio import eng_notation
+from gnuradio import testing
 import sip
 
 
@@ -67,6 +67,7 @@ class Test_1(gr.top_block, Qt.QWidget):
         # Blocks
         ##################################################
 
+        self.testing_test_0 = testing.test(0)
         self.qtgui_time_sink_x_0_1_0 = qtgui.time_sink_f(
             1024, #size
             samp_rate, #samp_rate
@@ -261,36 +262,31 @@ class Test_1(gr.top_block, Qt.QWidget):
         self.top_layout.addWidget(self._qtgui_time_sink_x_0_win)
         self.blocks_throttle2_1_0 = blocks.throttle( gr.sizeof_float*1, samp_rate, True, 0 if "auto" == "auto" else max( int(float(0.1) * samp_rate) if "auto" == "time" else int(0.1), 1) )
         self.blocks_throttle2_1 = blocks.throttle( gr.sizeof_float*1, samp_rate, True, 0 if "auto" == "auto" else max( int(float(0.1) * samp_rate) if "auto" == "time" else int(0.1), 1) )
-        self.blocks_null_source_0_1 = blocks.null_source(gr.sizeof_char*1)
         self.blocks_null_source_0_0 = blocks.null_source(gr.sizeof_char*1)
-        self.blocks_null_source_0 = blocks.null_source(gr.sizeof_gr_complex*1)
-        self.blocks_null_sink_0_0 = blocks.null_sink(gr.sizeof_gr_complex*1)
+        self.blocks_null_source_0 = blocks.null_source(gr.sizeof_float*1)
         self.blocks_null_sink_0 = blocks.null_sink(gr.sizeof_float*1)
         self.blocks_multiply_xx_0 = blocks.multiply_vff(1)
         self.blocks_add_xx_0 = blocks.add_vff(1)
         self.analog_sig_source_x_0 = analog.sig_source_f(samp_rate, analog.GR_SQR_WAVE, 100, 1, 0, 0)
         self.analog_noise_source_x_0 = analog.noise_source_f(analog.GR_GAUSSIAN, 1, 0)
-        self.ErTools_BitErrorRate_0 = ErTools.BitErrorRate(8, 1, 0, 16, 1)
 
 
         ##################################################
         # Connections
         ##################################################
-        self.connect((self.ErTools_BitErrorRate_0, 1), (self.blocks_null_sink_0, 0))
-        self.connect((self.ErTools_BitErrorRate_0, 0), (self.blocks_null_sink_0_0, 0))
         self.connect((self.analog_noise_source_x_0, 0), (self.blocks_throttle2_1_0, 0))
         self.connect((self.analog_sig_source_x_0, 0), (self.blocks_throttle2_1, 0))
         self.connect((self.blocks_add_xx_0, 0), (self.qtgui_time_sink_x_0_1_0, 0))
         self.connect((self.blocks_multiply_xx_0, 0), (self.qtgui_time_sink_x_0_1, 0))
-        self.connect((self.blocks_null_source_0, 0), (self.ErTools_BitErrorRate_0, 0))
-        self.connect((self.blocks_null_source_0_0, 0), (self.ErTools_BitErrorRate_0, 1))
-        self.connect((self.blocks_null_source_0_1, 0), (self.ErTools_BitErrorRate_0, 2))
+        self.connect((self.blocks_null_source_0, 0), (self.testing_test_0, 0))
+        self.connect((self.blocks_null_source_0_0, 0), (self.testing_test_0, 1))
         self.connect((self.blocks_throttle2_1, 0), (self.blocks_add_xx_0, 0))
         self.connect((self.blocks_throttle2_1, 0), (self.blocks_multiply_xx_0, 0))
         self.connect((self.blocks_throttle2_1, 0), (self.qtgui_time_sink_x_0, 0))
         self.connect((self.blocks_throttle2_1_0, 0), (self.blocks_add_xx_0, 1))
         self.connect((self.blocks_throttle2_1_0, 0), (self.blocks_multiply_xx_0, 1))
         self.connect((self.blocks_throttle2_1_0, 0), (self.qtgui_time_sink_x_0_0, 0))
+        self.connect((self.testing_test_0, 0), (self.blocks_null_sink_0, 0))
 
 
     def closeEvent(self, event):
