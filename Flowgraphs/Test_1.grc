@@ -45,6 +45,26 @@ blocks:
     coordinate: [184, 12]
     rotation: 0
     state: enabled
+- name: ErTools_BitErrorRate_0
+  id: ErTools_BitErrorRate
+  parameters:
+    EbN0_max: '16'
+    EbN0_min: '0'
+    N: '8'
+    R_b: '1'
+    affinity: ''
+    alias: ''
+    comment: ''
+    f_vz: '1'
+    maxoutbuf: '0'
+    minoutbuf: '0'
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [808, 488.0]
+    rotation: 0
+    state: enabled
 - name: analog_noise_source_x_0
   id: analog_noise_source_x
   parameters:
@@ -123,6 +143,97 @@ blocks:
     coordinate: [928, 88.0]
     rotation: 0
     state: enabled
+- name: blocks_null_sink_0
+  id: blocks_null_sink
+  parameters:
+    affinity: ''
+    alias: ''
+    bus_structure_sink: '[[0,],]'
+    comment: ''
+    num_inputs: '1'
+    type: float
+    vlen: '1'
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [1080, 512.0]
+    rotation: 0
+    state: enabled
+- name: blocks_null_sink_0_0
+  id: blocks_null_sink
+  parameters:
+    affinity: ''
+    alias: ''
+    bus_structure_sink: '[[0,],]'
+    comment: ''
+    num_inputs: '1'
+    type: complex
+    vlen: '1'
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [1096, 456.0]
+    rotation: 0
+    state: enabled
+- name: blocks_null_source_0
+  id: blocks_null_source
+  parameters:
+    affinity: ''
+    alias: ''
+    bus_structure_source: '[[0,],]'
+    comment: ''
+    maxoutbuf: '0'
+    minoutbuf: '0'
+    num_outputs: '1'
+    type: complex
+    vlen: '1'
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [648, 472.0]
+    rotation: 0
+    state: enabled
+- name: blocks_null_source_0_0
+  id: blocks_null_source
+  parameters:
+    affinity: ''
+    alias: ''
+    bus_structure_source: '[[0,],]'
+    comment: ''
+    maxoutbuf: '0'
+    minoutbuf: '0'
+    num_outputs: '1'
+    type: byte
+    vlen: '1'
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [624, 520.0]
+    rotation: 0
+    state: enabled
+- name: blocks_null_source_0_1
+  id: blocks_null_source
+  parameters:
+    affinity: ''
+    alias: ''
+    bus_structure_source: '[[0,],]'
+    comment: ''
+    maxoutbuf: '0'
+    minoutbuf: '0'
+    num_outputs: '1'
+    type: byte
+    vlen: '1'
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [632, 552.0]
+    rotation: 0
+    state: enabled
 - name: blocks_throttle2_1
   id: blocks_throttle2
   parameters:
@@ -130,8 +241,8 @@ blocks:
     alias: ''
     comment: ''
     ignoretag: 'True'
-    limit: items
-    maximum: '5'
+    limit: auto
+    maximum: '0.1'
     maxoutbuf: '0'
     minoutbuf: '0'
     samples_per_second: samp_rate
@@ -141,7 +252,7 @@ blocks:
     bus_sink: false
     bus_source: false
     bus_structure: null
-    coordinate: [296, 136.0]
+    coordinate: [296, 144.0]
     rotation: 0
     state: enabled
 - name: blocks_throttle2_1_0
@@ -163,180 +274,6 @@ blocks:
     bus_source: false
     bus_structure: null
     coordinate: [296, 272.0]
-    rotation: 0
-    state: enabled
-- name: qtgui_histogram_sink_x_0
-  id: qtgui_histogram_sink_x
-  parameters:
-    accum: 'False'
-    affinity: ''
-    alias: ''
-    alpha1: '1.0'
-    alpha10: '1.0'
-    alpha2: '1.0'
-    alpha3: '1.0'
-    alpha4: '1.0'
-    alpha5: '1.0'
-    alpha6: '1.0'
-    alpha7: '1.0'
-    alpha8: '1.0'
-    alpha9: '1.0'
-    autoscale: 'True'
-    axislabels: 'True'
-    bins: '1024'
-    color1: '"magenta"'
-    color10: '"dark blue"'
-    color2: '"red"'
-    color3: '"green"'
-    color4: '"black"'
-    color5: '"cyan"'
-    color6: '"magenta"'
-    color7: '"yellow"'
-    color8: '"dark red"'
-    color9: '"dark green"'
-    comment: ''
-    grid: 'True'
-    gui_hint: ''
-    label1: ''
-    label10: ''
-    label2: ''
-    label3: ''
-    label4: ''
-    label5: ''
-    label6: ''
-    label7: ''
-    label8: ''
-    label9: ''
-    legend: 'True'
-    marker1: '-1'
-    marker10: '-1'
-    marker2: '-1'
-    marker3: '-1'
-    marker4: '-1'
-    marker5: '-1'
-    marker6: '-1'
-    marker7: '-1'
-    marker8: '-1'
-    marker9: '-1'
-    name: '"Noise+Signal AMP"'
-    nconnections: '1'
-    size: '1024'
-    style1: '1'
-    style10: '1'
-    style2: '1'
-    style3: '1'
-    style4: '1'
-    style5: '1'
-    style6: '1'
-    style7: '1'
-    style8: '1'
-    style9: '1'
-    type: float
-    update_time: '2'
-    width1: '1'
-    width10: '1'
-    width2: '1'
-    width3: '1'
-    width4: '1'
-    width5: '1'
-    width6: '1'
-    width7: '1'
-    width8: '1'
-    width9: '1'
-    xmax: '7'
-    xmin: '-5'
-  states:
-    bus_sink: false
-    bus_source: false
-    bus_structure: null
-    coordinate: [1056, 416.0]
-    rotation: 0
-    state: enabled
-- name: qtgui_histogram_sink_x_0_0
-  id: qtgui_histogram_sink_x
-  parameters:
-    accum: 'False'
-    affinity: ''
-    alias: ''
-    alpha1: '1.0'
-    alpha10: '1.0'
-    alpha2: '1.0'
-    alpha3: '1.0'
-    alpha4: '1.0'
-    alpha5: '1.0'
-    alpha6: '1.0'
-    alpha7: '1.0'
-    alpha8: '1.0'
-    alpha9: '1.0'
-    autoscale: 'True'
-    axislabels: 'True'
-    bins: '1024'
-    color1: '"black"'
-    color10: '"dark blue"'
-    color2: '"red"'
-    color3: '"green"'
-    color4: '"black"'
-    color5: '"cyan"'
-    color6: '"magenta"'
-    color7: '"yellow"'
-    color8: '"dark red"'
-    color9: '"dark green"'
-    comment: ''
-    grid: 'True'
-    gui_hint: ''
-    label1: ''
-    label10: ''
-    label2: ''
-    label3: ''
-    label4: ''
-    label5: ''
-    label6: ''
-    label7: ''
-    label8: ''
-    label9: ''
-    legend: 'True'
-    marker1: '-1'
-    marker10: '-1'
-    marker2: '-1'
-    marker3: '-1'
-    marker4: '-1'
-    marker5: '-1'
-    marker6: '-1'
-    marker7: '-1'
-    marker8: '-1'
-    marker9: '-1'
-    name: '"Signal AMP"'
-    nconnections: '1'
-    size: '1024'
-    style1: '1'
-    style10: '1'
-    style2: '1'
-    style3: '1'
-    style4: '1'
-    style5: '1'
-    style6: '1'
-    style7: '1'
-    style8: '1'
-    style9: '1'
-    type: float
-    update_time: '2'
-    width1: '1'
-    width10: '1'
-    width2: '1'
-    width3: '1'
-    width4: '1'
-    width5: '1'
-    width6: '1'
-    width7: '1'
-    width8: '1'
-    width9: '1'
-    xmax: '2'
-    xmin: '-0.5'
-  states:
-    bus_sink: false
-    bus_source: false
-    bus_structure: null
-    coordinate: [1384, 284.0]
     rotation: 0
     state: enabled
 - name: qtgui_time_sink_x_0
@@ -831,26 +768,17 @@ blocks:
     coordinate: [744, 272.0]
     rotation: 0
     state: enabled
-- name: virtual_source_0_1_0_0
-  id: virtual_source
-  parameters:
-    alias: ''
-    comment: ''
-    stream_id: x(t)
-  states:
-    bus_sink: false
-    bus_source: false
-    bus_structure: null
-    coordinate: [1232, 336.0]
-    rotation: 0
-    state: enabled
 
 connections:
+- [ErTools_BitErrorRate_0, '0', blocks_null_sink_0_0, '0']
+- [ErTools_BitErrorRate_0, '1', blocks_null_sink_0, '0']
 - [analog_noise_source_x_0, '0', blocks_throttle2_1_0, '0']
 - [analog_sig_source_x_0, '0', blocks_throttle2_1, '0']
-- [blocks_add_xx_0, '0', qtgui_histogram_sink_x_0, '0']
 - [blocks_add_xx_0, '0', qtgui_time_sink_x_0_1_0, '0']
 - [blocks_multiply_xx_0, '0', qtgui_time_sink_x_0_1, '0']
+- [blocks_null_source_0, '0', ErTools_BitErrorRate_0, '0']
+- [blocks_null_source_0_0, '0', ErTools_BitErrorRate_0, '1']
+- [blocks_null_source_0_1, '0', ErTools_BitErrorRate_0, '2']
 - [blocks_throttle2_1, '0', virtual_sink_1, '0']
 - [blocks_throttle2_1_0, '0', virtual_sink_0, '0']
 - [virtual_source_0, '0', qtgui_time_sink_x_0, '0']
@@ -859,7 +787,6 @@ connections:
 - [virtual_source_0_0_0_0, '0', blocks_add_xx_0, '1']
 - [virtual_source_0_1, '0', blocks_multiply_xx_0, '0']
 - [virtual_source_0_1_0, '0', blocks_add_xx_0, '0']
-- [virtual_source_0_1_0_0, '0', qtgui_histogram_sink_x_0_0, '0']
 
 metadata:
   file_format: 1

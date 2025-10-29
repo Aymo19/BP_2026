@@ -14,4 +14,5 @@ install(FILES api.h
     BER_moje.h
     PrintInt.h
     PrintChar.h
-    PrintFloat.h DESTINATION include/gnuradio/ErTools)
+    PrintFloat.h
+    DESTINATION include/gnuradio/ErTools)

@@ -10,8 +10,8 @@
 # Setup library
 ########################################################################
 include(GrPlatform) #define LIB_SUFFIX
-
-list(APPEND tempPY_sources)
+list(APPEND tempPY_sources
+    ctest_impl.cc )
 
 set(tempPY_sources
     "${tempPY_sources}"

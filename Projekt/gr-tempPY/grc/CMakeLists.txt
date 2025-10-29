@@ -5,7 +5,7 @@
 #
 # SPDX-License-Identifier: GPL-3.0-or-later
 #
-
 install(FILES
     tempPY_kanal.block.yml
-    tempPY_BER.block.yml DESTINATION share/gnuradio/grc/blocks)
+    tempPY_BER.block.yml
+    tempPY_ctest.block.yml DESTINATION share/gnuradio/grc/blocks)

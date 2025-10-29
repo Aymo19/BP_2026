@@ -23,7 +23,7 @@ BER_moje::sptr BER_moje::make(int N, int Rb, int EbN0min, int EbN0max) {
 BER_moje_impl::BER_moje_impl(int N, int Rb, int EbN0min, int EbN0max)
     : gr::sync_block("BER_moje",
                      gr::io_signature::make(3, 3, sizeof(input_type)+sizeof(gr_complex)),
-                     gr::io_signature::make(2, 2, sizeof(output_type)))
+                     gr::io_signature::make(2, 2, sizeof(output_type)+sizeof(gr_complex)))
 {
   _N = N;
   _Rb = Rb;
@@ -76,12 +76,12 @@ int BER_moje_impl::work(int noutput_items,
                         gr_vector_const_void_star& input_items,
                         gr_vector_void_star& output_items)
 {
-    auto in0 = static_cast<const input_type*>(input_items[0]);
+    /*auto in0 = static_cast<const input_type*>(input_items[0]);
     auto in1 = static_cast<const input_type*>(input_items[1]);
     auto in2 = static_cast<const input_type*>(input_items[2]);
     auto out0 = static_cast<output_type*>(output_items[0]);
     auto out1 = static_cast<output_type*>(output_items[1]);    
-    
+    */
 
     // Tell runtime system how many output items we produced.
     return noutput_items;

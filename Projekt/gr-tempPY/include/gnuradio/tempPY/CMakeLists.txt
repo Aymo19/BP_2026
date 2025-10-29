@@ -9,4 +9,5 @@
 ########################################################################
 # Install public header files
 ########################################################################
-install(FILES api.h DESTINATION include/gnuradio/tempPY)
+install(FILES api.h
+    ctest.h DESTINATION include/gnuradio/tempPY)
