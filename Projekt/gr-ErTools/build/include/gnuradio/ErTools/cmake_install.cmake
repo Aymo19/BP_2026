@@ -46,7 +46,6 @@ if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/gnuradio/ErTools" TYPE FILE FILES
     "/home/aymo/BC/Projekt/gr-ErTools/include/gnuradio/ErTools/api.h"
     "/home/aymo/BC/Projekt/gr-ErTools/include/gnuradio/ErTools/BER_sync.h"
-    "/home/aymo/BC/Projekt/gr-ErTools/include/gnuradio/ErTools/BER_moje.h"
     "/home/aymo/BC/Projekt/gr-ErTools/include/gnuradio/ErTools/PrintInt.h"
     "/home/aymo/BC/Projekt/gr-ErTools/include/gnuradio/ErTools/PrintChar.h"
     "/home/aymo/BC/Projekt/gr-ErTools/include/gnuradio/ErTools/PrintFloat.h"

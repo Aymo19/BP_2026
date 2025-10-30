@@ -25,7 +25,6 @@ include(GrPybind)
 ########################################################################
 list(APPEND ErTools_python_files
     BER_sync_python.cc
-    BER_moje_python.cc
     PrintInt_python.cc
     PrintChar_python.cc
     PrintFloat_python.cc

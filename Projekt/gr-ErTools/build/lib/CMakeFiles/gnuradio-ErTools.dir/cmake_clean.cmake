@@ -1,7 +1,5 @@
 file(REMOVE_RECURSE
   ".1.0.0"
-  "CMakeFiles/gnuradio-ErTools.dir/BER_moje_impl.cc.o"
-  "CMakeFiles/gnuradio-ErTools.dir/BER_moje_impl.cc.o.d"
   "CMakeFiles/gnuradio-ErTools.dir/BER_sync_impl.cc.o"
   "CMakeFiles/gnuradio-ErTools.dir/BER_sync_impl.cc.o.d"
   "CMakeFiles/gnuradio-ErTools.dir/BitErrorRate_impl.cc.o"

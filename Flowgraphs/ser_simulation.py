@@ -142,7 +142,7 @@ class ser_simulation(gr.top_block, Qt.QWidget):
         self.blocks_throttle2_0 = blocks.throttle( gr.sizeof_char*1, samp_rate, True, 0 if "auto" == "auto" else max( int(float(0.1) * samp_rate) if "auto" == "time" else int(0.1), 1) )
         self.blocks_stream_to_vector_0 = blocks.stream_to_vector(gr.sizeof_float*1, N_snr)
         self.analog_random_source_x_1 = blocks.vector_source_b(list(map(int, numpy.random.randint(0, M0, 10000000))), True)
-        self.ErTools_BitErrorRate_0 = ErTools.BitErrorRate(8, 1, 0, 16, 1)
+        self.ErTools_BitErrorRate_0 = ErTools.BitErrorRate(8, 1, 8, 0, 16)
 
 
         ##################################################

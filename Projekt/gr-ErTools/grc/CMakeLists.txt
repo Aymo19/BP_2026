@@ -7,7 +7,6 @@
 #
 install(FILES
     ErTools_BER_sync.block.yml
-    ErTools_BER_moje.block.yml
     ErTools_PrintInt.block.yml
     ErTools_PrintChar.block.yml
     ErTools_PrintFloat.block.yml

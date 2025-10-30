@@ -211,6 +211,19 @@ pygen_apps_9a6dd283c3de653fbca500f9721f634f/fast:
 .PHONY : pygen_apps_9a6dd283c3de653fbca500f9721f634f/fast
 
 #=============================================================================
+# Target rules for targets named doxygen_target
+
+# Build rule for target.
+doxygen_target: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 doxygen_target
+.PHONY : doxygen_target
+
+# fast build rule for target.
+doxygen_target/fast:
+	$(MAKE) $(MAKESILENT) -f docs/doxygen/CMakeFiles/doxygen_target.dir/build.make docs/doxygen/CMakeFiles/doxygen_target.dir/build
+.PHONY : doxygen_target/fast
+
+#=============================================================================
 # Target rules for targets named pygen_python_ErTools_8928f9cfcc0619caeeeeca7dbffd51bb
 
 # Build rule for target.
@@ -250,6 +263,19 @@ ErTools_python/fast:
 .PHONY : ErTools_python/fast
 
 #=============================================================================
+# Target rules for targets named extracted_docstrings
+
+# Build rule for target.
+extracted_docstrings: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 extracted_docstrings
+.PHONY : extracted_docstrings
+
+# fast build rule for target.
+extracted_docstrings/fast:
+	$(MAKE) $(MAKESILENT) -f python/ErTools/bindings/CMakeFiles/extracted_docstrings.dir/build.make python/ErTools/bindings/CMakeFiles/extracted_docstrings.dir/build
+.PHONY : extracted_docstrings/fast
+
+#=============================================================================
 # Target rules for targets named ErTools_docstrings
 
 # Build rule for target.
@@ -277,6 +303,8 @@ help:
 	@echo "... test"
 	@echo "... ErTools_docstrings"
 	@echo "... copy_module_for_tests"
+	@echo "... doxygen_target"
+	@echo "... extracted_docstrings"
 	@echo "... pygen_apps_9a6dd283c3de653fbca500f9721f634f"
 	@echo "... pygen_python_ErTools_8928f9cfcc0619caeeeeca7dbffd51bb"
 	@echo "... uninstall"

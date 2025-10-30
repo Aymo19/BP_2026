@@ -1,0 +1,110 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="classgr_1_1ErTools_1_1PrintChar__impl" kind="class" language="C++" prot="public">
+    <compoundname>gr::ErTools::PrintChar_impl</compoundname>
+    <basecompoundref refid="classgr_1_1ErTools_1_1PrintChar" prot="public" virt="non-virtual">gr::ErTools::PrintChar</basecompoundref>
+    <includes refid="PrintChar__impl_8h" local="no">PrintChar_impl.h</includes>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="classgr_1_1ErTools_1_1PrintChar__impl_1a4417133f20de7f39e00b1993b1e84de9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>gr::ErTools::PrintChar_impl::PrintChar_impl</definition>
+        <argsstring>()</argsstring>
+        <name>PrintChar_impl</name>
+        <qualifiedname>gr::ErTools::PrintChar_impl::PrintChar_impl</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/aymo/BC/Projekt/gr-ErTools/lib/PrintChar_impl.h" line="22" column="5"/>
+      </memberdef>
+      <memberdef kind="function" id="classgr_1_1ErTools_1_1PrintChar__impl_1adc657bc8d3451a2e868cc3360b7af09f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>gr::ErTools::PrintChar_impl::~PrintChar_impl</definition>
+        <argsstring>()</argsstring>
+        <name>~PrintChar_impl</name>
+        <qualifiedname>gr::ErTools::PrintChar_impl::~PrintChar_impl</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/aymo/BC/Projekt/gr-ErTools/lib/PrintChar_impl.h" line="23" column="5"/>
+      </memberdef>
+      <memberdef kind="function" id="classgr_1_1ErTools_1_1PrintChar__impl_1a6eebb84cf5da220800d8e92a7140fbec" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int gr::ErTools::PrintChar_impl::work</definition>
+        <argsstring>(int noutput_items, gr_vector_const_void_star &amp;input_items, gr_vector_void_star &amp;output_items)</argsstring>
+        <name>work</name>
+        <qualifiedname>gr::ErTools::PrintChar_impl::work</qualifiedname>
+        <param>
+          <type>int</type>
+          <declname>noutput_items</declname>
+        </param>
+        <param>
+          <type>gr_vector_const_void_star &amp;</type>
+          <declname>input_items</declname>
+        </param>
+        <param>
+          <type>gr_vector_void_star &amp;</type>
+          <declname>output_items</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/aymo/BC/Projekt/gr-ErTools/lib/PrintChar_impl.h" line="26" column="9"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="2">
+        <label>gr::ErTools::PrintChar</label>
+        <link refid="classgr_1_1ErTools_1_1PrintChar"/>
+        <childnode refid="3" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>gr::ErTools::PrintChar_impl</label>
+        <link refid="classgr_1_1ErTools_1_1PrintChar__impl"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>gr::sync_block</label>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="2">
+        <label>gr::ErTools::PrintChar</label>
+        <link refid="classgr_1_1ErTools_1_1PrintChar"/>
+        <childnode refid="3" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>gr::ErTools::PrintChar_impl</label>
+        <link refid="classgr_1_1ErTools_1_1PrintChar__impl"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>gr::sync_block</label>
+      </node>
+    </collaborationgraph>
+    <location file="/home/aymo/BC/Projekt/gr-ErTools/lib/PrintChar_impl.h" line="16" column="1" bodyfile="/home/aymo/BC/Projekt/gr-ErTools/lib/PrintChar_impl.h" bodystart="17" bodyend="29"/>
+    <listofallmembers>
+      <member refid="classgr_1_1ErTools_1_1PrintChar_1a1f01a527675a2764526d95bc5551cdfe" prot="public" virt="non-virtual"><scope>gr::ErTools::PrintChar_impl</scope><name>make</name></member>
+      <member refid="classgr_1_1ErTools_1_1PrintChar__impl_1a4417133f20de7f39e00b1993b1e84de9" prot="public" virt="non-virtual"><scope>gr::ErTools::PrintChar_impl</scope><name>PrintChar_impl</name></member>
+      <member refid="classgr_1_1ErTools_1_1PrintChar_1a52a071bd4e38304ffb61e1ce3a18604c" prot="public" virt="non-virtual"><scope>gr::ErTools::PrintChar_impl</scope><name>sptr</name></member>
+      <member refid="classgr_1_1ErTools_1_1PrintChar__impl_1a6eebb84cf5da220800d8e92a7140fbec" prot="public" virt="non-virtual"><scope>gr::ErTools::PrintChar_impl</scope><name>work</name></member>
+      <member refid="classgr_1_1ErTools_1_1PrintChar__impl_1adc657bc8d3451a2e868cc3360b7af09f" prot="public" virt="non-virtual"><scope>gr::ErTools::PrintChar_impl</scope><name>~PrintChar_impl</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

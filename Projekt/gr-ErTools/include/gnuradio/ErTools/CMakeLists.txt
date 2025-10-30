@@ -11,7 +11,6 @@
 ########################################################################
 install(FILES api.h
     BER_sync.h
-    BER_moje.h
     PrintInt.h
     PrintChar.h
     PrintFloat.h

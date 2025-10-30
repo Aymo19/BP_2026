@@ -14,7 +14,7 @@
 /* BINDTOOL_GEN_AUTOMATIC(0)                                                       */
 /* BINDTOOL_USE_PYGCCXML(0)                                                        */
 /* BINDTOOL_HEADER_FILE(BitErrorRate.h)                                        */
-/* BINDTOOL_HEADER_FILE_HASH(82e293fe6b427095ae7876356a94dd22)                     */
+/* BINDTOOL_HEADER_FILE_HASH(2601e13cfaaea11c97aeee4a5320af2d)                     */
 /***********************************************************************************/
 
 #include <pybind11/complex.h>
@@ -33,7 +33,7 @@ void bind_BitErrorRate(py::module& m)
     using BitErrorRate    = gr::ErTools::BitErrorRate;
 
 
-    py::class_<BitErrorRate, gr::block, gr::basic_block,
+    py::class_<BitErrorRate, gr::sync_block, gr::block, gr::basic_block,
         std::shared_ptr<BitErrorRate>>(m, "BitErrorRate", D(BitErrorRate))
 
         .def(py::init(&BitErrorRate::make),

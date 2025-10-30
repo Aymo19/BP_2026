@@ -9,7 +9,7 @@
 #define INCLUDED_ERTOOLS_BITERRORRATE_H
 
 #include <gnuradio/ErTools/api.h>
-#include <gnuradio/block.h>
+#include <gnuradio/sync_block.h>
 
 namespace gr {
 namespace ErTools {
@@ -19,7 +19,7 @@ namespace ErTools {
  * \ingroup ErTools
  *
  */
-class ERTOOLS_API BitErrorRate : virtual public gr::block
+class ERTOOLS_API BitErrorRate : virtual public gr::sync_block
 {
 public:
     typedef std::shared_ptr<BitErrorRate> sptr;
@@ -32,7 +32,7 @@ public:
      * class. ErTools::BitErrorRate::make is the public interface for
      * creating new instances.
      */
-    static sptr make(int N, int Rb, int EbN0min, int EbN0max, int fvz);
+    static sptr make(int N, int Rb, int fvz, int EbN0min, int EbN0max);
 };
 
 } // namespace ErTools

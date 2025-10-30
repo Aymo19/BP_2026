@@ -388,12 +388,12 @@ python/ErTools/bindings/CMakeFiles/ErTools_python.dir/BitErrorRate_python.cc.o: 
  /usr/include/c++/13/bits/parse_numbers.h \
  /home/aymo/BC/Projekt/gr-ErTools/python/ErTools/bindings/../../../include/gnuradio/ErTools/BitErrorRate.h \
  /home/aymo/BC/Projekt/gr-ErTools/python/ErTools/bindings/../../../include/gnuradio/ErTools/api.h \
- /usr/include/gnuradio/attributes.h /usr/include/gnuradio/block.h \
- /usr/include/gnuradio/api.h /usr/include/gnuradio/basic_block.h \
- /usr/include/gnuradio/io_signature.h /usr/include/spdlog/tweakme.h \
- /usr/include/spdlog/fmt/fmt.h /usr/include/fmt/core.h \
- /usr/include/fmt/format.h /usr/include/fmt/core.h \
- /usr/include/gnuradio/buffer_type.h \
+ /usr/include/gnuradio/attributes.h /usr/include/gnuradio/sync_block.h \
+ /usr/include/gnuradio/api.h /usr/include/gnuradio/block.h \
+ /usr/include/gnuradio/basic_block.h /usr/include/gnuradio/io_signature.h \
+ /usr/include/spdlog/tweakme.h /usr/include/spdlog/fmt/fmt.h \
+ /usr/include/fmt/core.h /usr/include/fmt/format.h \
+ /usr/include/fmt/core.h /usr/include/gnuradio/buffer_type.h \
  /usr/include/gnuradio/runtime_types.h /usr/include/gnuradio/types.h \
  /usr/include/gnuradio/gr_complex.h \
  /usr/include/gnuradio/buffer_double_mapped.h \

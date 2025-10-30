@@ -1,0 +1,131 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="classgr_1_1ErTools_1_1BER__sync__impl" kind="class" language="C++" prot="public">
+    <compoundname>gr::ErTools::BER_sync_impl</compoundname>
+    <basecompoundref refid="classgr_1_1ErTools_1_1BER__sync" prot="public" virt="non-virtual">gr::ErTools::BER_sync</basecompoundref>
+    <includes refid="BER__sync__impl_8h" local="no">BER_sync_impl.h</includes>
+    <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classgr_1_1ErTools_1_1BER__sync__impl_1a736b40cc3425421923eefbf9fbfa8bef" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int gr::ErTools::BER_sync_impl::_N</definition>
+        <argsstring></argsstring>
+        <name>_N</name>
+        <qualifiedname>gr::ErTools::BER_sync_impl::_N</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/aymo/BC/Projekt/gr-ErTools/lib/BER_sync_impl.h" line="19" column="7" bodyfile="/home/aymo/BC/Projekt/gr-ErTools/lib/BER_sync_impl.h" bodystart="19" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="classgr_1_1ErTools_1_1BER__sync__impl_1a50d4e6df9c3f440376a6acff8dc20d7e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>gr::ErTools::BER_sync_impl::BER_sync_impl</definition>
+        <argsstring>(int N)</argsstring>
+        <name>BER_sync_impl</name>
+        <qualifiedname>gr::ErTools::BER_sync_impl::BER_sync_impl</qualifiedname>
+        <param>
+          <type>int</type>
+          <declname>N</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/aymo/BC/Projekt/gr-ErTools/lib/BER_sync_impl.h" line="22" column="5"/>
+      </memberdef>
+      <memberdef kind="function" id="classgr_1_1ErTools_1_1BER__sync__impl_1a8840244e8807ecfd3362b792d3d17ce7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>gr::ErTools::BER_sync_impl::~BER_sync_impl</definition>
+        <argsstring>()</argsstring>
+        <name>~BER_sync_impl</name>
+        <qualifiedname>gr::ErTools::BER_sync_impl::~BER_sync_impl</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/aymo/BC/Projekt/gr-ErTools/lib/BER_sync_impl.h" line="23" column="5"/>
+      </memberdef>
+      <memberdef kind="function" id="classgr_1_1ErTools_1_1BER__sync__impl_1a1793e4852634e6e0a5a24b6cd07a665c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int gr::ErTools::BER_sync_impl::work</definition>
+        <argsstring>(int noutput_items, gr_vector_const_void_star &amp;input_items, gr_vector_void_star &amp;output_items)</argsstring>
+        <name>work</name>
+        <qualifiedname>gr::ErTools::BER_sync_impl::work</qualifiedname>
+        <param>
+          <type>int</type>
+          <declname>noutput_items</declname>
+        </param>
+        <param>
+          <type>gr_vector_const_void_star &amp;</type>
+          <declname>input_items</declname>
+        </param>
+        <param>
+          <type>gr_vector_void_star &amp;</type>
+          <declname>output_items</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/aymo/BC/Projekt/gr-ErTools/lib/BER_sync_impl.h" line="26" column="9"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="2">
+        <label>gr::ErTools::BER_sync</label>
+        <link refid="classgr_1_1ErTools_1_1BER__sync"/>
+        <childnode refid="3" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>gr::ErTools::BER_sync_impl</label>
+        <link refid="classgr_1_1ErTools_1_1BER__sync__impl"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>gr::sync_block</label>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="2">
+        <label>gr::ErTools::BER_sync</label>
+        <link refid="classgr_1_1ErTools_1_1BER__sync"/>
+        <childnode refid="3" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>gr::ErTools::BER_sync_impl</label>
+        <link refid="classgr_1_1ErTools_1_1BER__sync__impl"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>gr::sync_block</label>
+      </node>
+    </collaborationgraph>
+    <location file="/home/aymo/BC/Projekt/gr-ErTools/lib/BER_sync_impl.h" line="16" column="1" bodyfile="/home/aymo/BC/Projekt/gr-ErTools/lib/BER_sync_impl.h" bodystart="17" bodyend="29"/>
+    <listofallmembers>
+      <member refid="classgr_1_1ErTools_1_1BER__sync__impl_1a736b40cc3425421923eefbf9fbfa8bef" prot="private" virt="non-virtual"><scope>gr::ErTools::BER_sync_impl</scope><name>_N</name></member>
+      <member refid="classgr_1_1ErTools_1_1BER__sync__impl_1a50d4e6df9c3f440376a6acff8dc20d7e" prot="public" virt="non-virtual"><scope>gr::ErTools::BER_sync_impl</scope><name>BER_sync_impl</name></member>
+      <member refid="classgr_1_1ErTools_1_1BER__sync_1af32b947181a5450f1579d6b7e7ecafce" prot="public" virt="non-virtual"><scope>gr::ErTools::BER_sync_impl</scope><name>make</name></member>
+      <member refid="classgr_1_1ErTools_1_1BER__sync_1a998446990be81319459cb66ea4aa86b3" prot="public" virt="non-virtual"><scope>gr::ErTools::BER_sync_impl</scope><name>sptr</name></member>
+      <member refid="classgr_1_1ErTools_1_1BER__sync__impl_1a1793e4852634e6e0a5a24b6cd07a665c" prot="public" virt="non-virtual"><scope>gr::ErTools::BER_sync_impl</scope><name>work</name></member>
+      <member refid="classgr_1_1ErTools_1_1BER__sync__impl_1a8840244e8807ecfd3362b792d3d17ce7" prot="public" virt="non-virtual"><scope>gr::ErTools::BER_sync_impl</scope><name>~BER_sync_impl</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

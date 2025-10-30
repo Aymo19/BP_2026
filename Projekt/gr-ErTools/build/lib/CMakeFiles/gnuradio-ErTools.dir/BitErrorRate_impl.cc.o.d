@@ -4,7 +4,8 @@ lib/CMakeFiles/gnuradio-ErTools.dir/BitErrorRate_impl.cc.o: \
  /home/aymo/BC/Projekt/gr-ErTools/lib/BitErrorRate_impl.h \
  /home/aymo/BC/Projekt/gr-ErTools/lib/../include/gnuradio/ErTools/BitErrorRate.h \
  /home/aymo/BC/Projekt/gr-ErTools/lib/../include/gnuradio/ErTools/api.h \
- /usr/include/gnuradio/attributes.h /usr/include/gnuradio/block.h \
+ /usr/include/gnuradio/attributes.h /usr/include/gnuradio/sync_block.h \
+ /usr/include/gnuradio/api.h /usr/include/gnuradio/block.h \
  /usr/include/c++/13/memory /usr/include/c++/13/bits/memoryfwd.h \
  /usr/include/x86_64-linux-gnu/c++/13/bits/c++config.h \
  /usr/include/x86_64-linux-gnu/c++/13/bits/os_defines.h \
@@ -120,7 +121,7 @@ lib/CMakeFiles/gnuradio-ErTools.dir/BitErrorRate_impl.cc.o: \
  /usr/include/c++/13/bits/atomic_lockfree_defines.h \
  /usr/include/c++/13/backward/auto_ptr.h \
  /usr/include/c++/13/pstl/glue_memory_defs.h \
- /usr/include/c++/13/pstl/execution_defs.h /usr/include/gnuradio/api.h \
+ /usr/include/c++/13/pstl/execution_defs.h \
  /usr/include/gnuradio/basic_block.h /usr/include/gnuradio/io_signature.h \
  /usr/include/spdlog/tweakme.h /usr/include/spdlog/fmt/fmt.h \
  /usr/include/fmt/core.h /usr/include/c++/13/cstddef \

@@ -185,30 +185,6 @@ gnuradio-ErTools/fast:
 	cd /home/aymo/BC/Projekt/gr-ErTools/build && $(MAKE) $(MAKESILENT) -f lib/CMakeFiles/gnuradio-ErTools.dir/build.make lib/CMakeFiles/gnuradio-ErTools.dir/build
 .PHONY : gnuradio-ErTools/fast
 
-BER_moje_impl.o: BER_moje_impl.cc.o
-.PHONY : BER_moje_impl.o
-
-# target to build an object file
-BER_moje_impl.cc.o:
-	cd /home/aymo/BC/Projekt/gr-ErTools/build && $(MAKE) $(MAKESILENT) -f lib/CMakeFiles/gnuradio-ErTools.dir/build.make lib/CMakeFiles/gnuradio-ErTools.dir/BER_moje_impl.cc.o
-.PHONY : BER_moje_impl.cc.o
-
-BER_moje_impl.i: BER_moje_impl.cc.i
-.PHONY : BER_moje_impl.i
-
-# target to preprocess a source file
-BER_moje_impl.cc.i:
-	cd /home/aymo/BC/Projekt/gr-ErTools/build && $(MAKE) $(MAKESILENT) -f lib/CMakeFiles/gnuradio-ErTools.dir/build.make lib/CMakeFiles/gnuradio-ErTools.dir/BER_moje_impl.cc.i
-.PHONY : BER_moje_impl.cc.i
-
-BER_moje_impl.s: BER_moje_impl.cc.s
-.PHONY : BER_moje_impl.s
-
-# target to generate assembly for a file
-BER_moje_impl.cc.s:
-	cd /home/aymo/BC/Projekt/gr-ErTools/build && $(MAKE) $(MAKESILENT) -f lib/CMakeFiles/gnuradio-ErTools.dir/build.make lib/CMakeFiles/gnuradio-ErTools.dir/BER_moje_impl.cc.s
-.PHONY : BER_moje_impl.cc.s
-
 BER_sync_impl.o: BER_sync_impl.cc.o
 .PHONY : BER_sync_impl.o
 
@@ -343,9 +319,6 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... test"
 	@echo "... gnuradio-ErTools"
-	@echo "... BER_moje_impl.o"
-	@echo "... BER_moje_impl.i"
-	@echo "... BER_moje_impl.s"
 	@echo "... BER_sync_impl.o"
 	@echo "... BER_sync_impl.i"
 	@echo "... BER_sync_impl.s"

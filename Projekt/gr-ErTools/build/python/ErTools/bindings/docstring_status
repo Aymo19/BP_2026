@@ -1,1 +1,10 @@
-DONE
+PASS: /home/aymo/BC/Projekt/gr-ErTools/python/ErTools/bindings/docstrings/PrintInt_pydoc_template.h
+PASS: /home/aymo/BC/Projekt/gr-ErTools/python/ErTools/bindings/docstrings/PrintInt_pydoc_template.h
+PASS: /home/aymo/BC/Projekt/gr-ErTools/python/ErTools/bindings/docstrings/BitErrorRate_pydoc_template.h
+PASS: /home/aymo/BC/Projekt/gr-ErTools/python/ErTools/bindings/docstrings/BitErrorRate_pydoc_template.h
+PASS: /home/aymo/BC/Projekt/gr-ErTools/python/ErTools/bindings/docstrings/PrintFloat_pydoc_template.h
+PASS: /home/aymo/BC/Projekt/gr-ErTools/python/ErTools/bindings/docstrings/PrintFloat_pydoc_template.h
+PASS: /home/aymo/BC/Projekt/gr-ErTools/python/ErTools/bindings/docstrings/PrintChar_pydoc_template.h
+PASS: /home/aymo/BC/Projekt/gr-ErTools/python/ErTools/bindings/docstrings/PrintChar_pydoc_template.h
+PASS: /home/aymo/BC/Projekt/gr-ErTools/python/ErTools/bindings/docstrings/BER_sync_pydoc_template.h
+PASS: /home/aymo/BC/Projekt/gr-ErTools/python/ErTools/bindings/docstrings/BER_sync_pydoc_template.h

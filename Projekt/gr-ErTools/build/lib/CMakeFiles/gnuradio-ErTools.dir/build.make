@@ -83,24 +83,10 @@ lib/CMakeFiles/gnuradio-ErTools.dir/BER_sync_impl.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/gnuradio-ErTools.dir/BER_sync_impl.cc.s"
 	cd /home/aymo/BC/Projekt/gr-ErTools/build/lib && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/aymo/BC/Projekt/gr-ErTools/lib/BER_sync_impl.cc -o CMakeFiles/gnuradio-ErTools.dir/BER_sync_impl.cc.s
 
-lib/CMakeFiles/gnuradio-ErTools.dir/BER_moje_impl.cc.o: lib/CMakeFiles/gnuradio-ErTools.dir/flags.make
-lib/CMakeFiles/gnuradio-ErTools.dir/BER_moje_impl.cc.o: /home/aymo/BC/Projekt/gr-ErTools/lib/BER_moje_impl.cc
-lib/CMakeFiles/gnuradio-ErTools.dir/BER_moje_impl.cc.o: lib/CMakeFiles/gnuradio-ErTools.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/aymo/BC/Projekt/gr-ErTools/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object lib/CMakeFiles/gnuradio-ErTools.dir/BER_moje_impl.cc.o"
-	cd /home/aymo/BC/Projekt/gr-ErTools/build/lib && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT lib/CMakeFiles/gnuradio-ErTools.dir/BER_moje_impl.cc.o -MF CMakeFiles/gnuradio-ErTools.dir/BER_moje_impl.cc.o.d -o CMakeFiles/gnuradio-ErTools.dir/BER_moje_impl.cc.o -c /home/aymo/BC/Projekt/gr-ErTools/lib/BER_moje_impl.cc
-
-lib/CMakeFiles/gnuradio-ErTools.dir/BER_moje_impl.cc.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/gnuradio-ErTools.dir/BER_moje_impl.cc.i"
-	cd /home/aymo/BC/Projekt/gr-ErTools/build/lib && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/aymo/BC/Projekt/gr-ErTools/lib/BER_moje_impl.cc > CMakeFiles/gnuradio-ErTools.dir/BER_moje_impl.cc.i
-
-lib/CMakeFiles/gnuradio-ErTools.dir/BER_moje_impl.cc.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/gnuradio-ErTools.dir/BER_moje_impl.cc.s"
-	cd /home/aymo/BC/Projekt/gr-ErTools/build/lib && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/aymo/BC/Projekt/gr-ErTools/lib/BER_moje_impl.cc -o CMakeFiles/gnuradio-ErTools.dir/BER_moje_impl.cc.s
-
 lib/CMakeFiles/gnuradio-ErTools.dir/PrintInt_impl.cc.o: lib/CMakeFiles/gnuradio-ErTools.dir/flags.make
 lib/CMakeFiles/gnuradio-ErTools.dir/PrintInt_impl.cc.o: /home/aymo/BC/Projekt/gr-ErTools/lib/PrintInt_impl.cc
 lib/CMakeFiles/gnuradio-ErTools.dir/PrintInt_impl.cc.o: lib/CMakeFiles/gnuradio-ErTools.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/aymo/BC/Projekt/gr-ErTools/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object lib/CMakeFiles/gnuradio-ErTools.dir/PrintInt_impl.cc.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/aymo/BC/Projekt/gr-ErTools/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object lib/CMakeFiles/gnuradio-ErTools.dir/PrintInt_impl.cc.o"
 	cd /home/aymo/BC/Projekt/gr-ErTools/build/lib && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT lib/CMakeFiles/gnuradio-ErTools.dir/PrintInt_impl.cc.o -MF CMakeFiles/gnuradio-ErTools.dir/PrintInt_impl.cc.o.d -o CMakeFiles/gnuradio-ErTools.dir/PrintInt_impl.cc.o -c /home/aymo/BC/Projekt/gr-ErTools/lib/PrintInt_impl.cc
 
 lib/CMakeFiles/gnuradio-ErTools.dir/PrintInt_impl.cc.i: cmake_force
@@ -114,7 +100,7 @@ lib/CMakeFiles/gnuradio-ErTools.dir/PrintInt_impl.cc.s: cmake_force
 lib/CMakeFiles/gnuradio-ErTools.dir/PrintChar_impl.cc.o: lib/CMakeFiles/gnuradio-ErTools.dir/flags.make
 lib/CMakeFiles/gnuradio-ErTools.dir/PrintChar_impl.cc.o: /home/aymo/BC/Projekt/gr-ErTools/lib/PrintChar_impl.cc
 lib/CMakeFiles/gnuradio-ErTools.dir/PrintChar_impl.cc.o: lib/CMakeFiles/gnuradio-ErTools.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/aymo/BC/Projekt/gr-ErTools/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object lib/CMakeFiles/gnuradio-ErTools.dir/PrintChar_impl.cc.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/aymo/BC/Projekt/gr-ErTools/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object lib/CMakeFiles/gnuradio-ErTools.dir/PrintChar_impl.cc.o"
 	cd /home/aymo/BC/Projekt/gr-ErTools/build/lib && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT lib/CMakeFiles/gnuradio-ErTools.dir/PrintChar_impl.cc.o -MF CMakeFiles/gnuradio-ErTools.dir/PrintChar_impl.cc.o.d -o CMakeFiles/gnuradio-ErTools.dir/PrintChar_impl.cc.o -c /home/aymo/BC/Projekt/gr-ErTools/lib/PrintChar_impl.cc
 
 lib/CMakeFiles/gnuradio-ErTools.dir/PrintChar_impl.cc.i: cmake_force
@@ -128,7 +114,7 @@ lib/CMakeFiles/gnuradio-ErTools.dir/PrintChar_impl.cc.s: cmake_force
 lib/CMakeFiles/gnuradio-ErTools.dir/PrintFloat_impl.cc.o: lib/CMakeFiles/gnuradio-ErTools.dir/flags.make
 lib/CMakeFiles/gnuradio-ErTools.dir/PrintFloat_impl.cc.o: /home/aymo/BC/Projekt/gr-ErTools/lib/PrintFloat_impl.cc
 lib/CMakeFiles/gnuradio-ErTools.dir/PrintFloat_impl.cc.o: lib/CMakeFiles/gnuradio-ErTools.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/aymo/BC/Projekt/gr-ErTools/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object lib/CMakeFiles/gnuradio-ErTools.dir/PrintFloat_impl.cc.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/aymo/BC/Projekt/gr-ErTools/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object lib/CMakeFiles/gnuradio-ErTools.dir/PrintFloat_impl.cc.o"
 	cd /home/aymo/BC/Projekt/gr-ErTools/build/lib && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT lib/CMakeFiles/gnuradio-ErTools.dir/PrintFloat_impl.cc.o -MF CMakeFiles/gnuradio-ErTools.dir/PrintFloat_impl.cc.o.d -o CMakeFiles/gnuradio-ErTools.dir/PrintFloat_impl.cc.o -c /home/aymo/BC/Projekt/gr-ErTools/lib/PrintFloat_impl.cc
 
 lib/CMakeFiles/gnuradio-ErTools.dir/PrintFloat_impl.cc.i: cmake_force
@@ -142,7 +128,7 @@ lib/CMakeFiles/gnuradio-ErTools.dir/PrintFloat_impl.cc.s: cmake_force
 lib/CMakeFiles/gnuradio-ErTools.dir/BitErrorRate_impl.cc.o: lib/CMakeFiles/gnuradio-ErTools.dir/flags.make
 lib/CMakeFiles/gnuradio-ErTools.dir/BitErrorRate_impl.cc.o: /home/aymo/BC/Projekt/gr-ErTools/lib/BitErrorRate_impl.cc
 lib/CMakeFiles/gnuradio-ErTools.dir/BitErrorRate_impl.cc.o: lib/CMakeFiles/gnuradio-ErTools.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/aymo/BC/Projekt/gr-ErTools/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object lib/CMakeFiles/gnuradio-ErTools.dir/BitErrorRate_impl.cc.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/aymo/BC/Projekt/gr-ErTools/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object lib/CMakeFiles/gnuradio-ErTools.dir/BitErrorRate_impl.cc.o"
 	cd /home/aymo/BC/Projekt/gr-ErTools/build/lib && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT lib/CMakeFiles/gnuradio-ErTools.dir/BitErrorRate_impl.cc.o -MF CMakeFiles/gnuradio-ErTools.dir/BitErrorRate_impl.cc.o.d -o CMakeFiles/gnuradio-ErTools.dir/BitErrorRate_impl.cc.o -c /home/aymo/BC/Projekt/gr-ErTools/lib/BitErrorRate_impl.cc
 
 lib/CMakeFiles/gnuradio-ErTools.dir/BitErrorRate_impl.cc.i: cmake_force
@@ -156,7 +142,6 @@ lib/CMakeFiles/gnuradio-ErTools.dir/BitErrorRate_impl.cc.s: cmake_force
 # Object files for target gnuradio-ErTools
 gnuradio__ErTools_OBJECTS = \
 "CMakeFiles/gnuradio-ErTools.dir/BER_sync_impl.cc.o" \
-"CMakeFiles/gnuradio-ErTools.dir/BER_moje_impl.cc.o" \
 "CMakeFiles/gnuradio-ErTools.dir/PrintInt_impl.cc.o" \
 "CMakeFiles/gnuradio-ErTools.dir/PrintChar_impl.cc.o" \
 "CMakeFiles/gnuradio-ErTools.dir/PrintFloat_impl.cc.o" \
@@ -166,7 +151,6 @@ gnuradio__ErTools_OBJECTS = \
 gnuradio__ErTools_EXTERNAL_OBJECTS =
 
 lib/libgnuradio-ErTools.so.1.0.0.0: lib/CMakeFiles/gnuradio-ErTools.dir/BER_sync_impl.cc.o
-lib/libgnuradio-ErTools.so.1.0.0.0: lib/CMakeFiles/gnuradio-ErTools.dir/BER_moje_impl.cc.o
 lib/libgnuradio-ErTools.so.1.0.0.0: lib/CMakeFiles/gnuradio-ErTools.dir/PrintInt_impl.cc.o
 lib/libgnuradio-ErTools.so.1.0.0.0: lib/CMakeFiles/gnuradio-ErTools.dir/PrintChar_impl.cc.o
 lib/libgnuradio-ErTools.so.1.0.0.0: lib/CMakeFiles/gnuradio-ErTools.dir/PrintFloat_impl.cc.o
@@ -182,7 +166,7 @@ lib/libgnuradio-ErTools.so.1.0.0.0: /usr/lib/x86_64-linux-gnu/libfmt.so.9.1.0
 lib/libgnuradio-ErTools.so.1.0.0.0: /usr/lib/x86_64-linux-gnu/libgmpxx.so
 lib/libgnuradio-ErTools.so.1.0.0.0: /usr/lib/x86_64-linux-gnu/libgmp.so
 lib/libgnuradio-ErTools.so.1.0.0.0: lib/CMakeFiles/gnuradio-ErTools.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/aymo/BC/Projekt/gr-ErTools/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Linking CXX shared library libgnuradio-ErTools.so"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/aymo/BC/Projekt/gr-ErTools/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Linking CXX shared library libgnuradio-ErTools.so"
 	cd /home/aymo/BC/Projekt/gr-ErTools/build/lib && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/gnuradio-ErTools.dir/link.txt --verbose=$(VERBOSE)
 	cd /home/aymo/BC/Projekt/gr-ErTools/build/lib && $(CMAKE_COMMAND) -E cmake_symlink_library libgnuradio-ErTools.so.1.0.0.0 libgnuradio-ErTools.so.1.0.0 libgnuradio-ErTools.so
 

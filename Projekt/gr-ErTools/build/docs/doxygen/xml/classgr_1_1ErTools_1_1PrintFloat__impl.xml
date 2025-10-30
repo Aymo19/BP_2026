@@ -1,0 +1,110 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="classgr_1_1ErTools_1_1PrintFloat__impl" kind="class" language="C++" prot="public">
+    <compoundname>gr::ErTools::PrintFloat_impl</compoundname>
+    <basecompoundref refid="classgr_1_1ErTools_1_1PrintFloat" prot="public" virt="non-virtual">gr::ErTools::PrintFloat</basecompoundref>
+    <includes refid="PrintFloat__impl_8h" local="no">PrintFloat_impl.h</includes>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="classgr_1_1ErTools_1_1PrintFloat__impl_1a5b8dd4fdfb366b931a0ef2f0609f851a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>gr::ErTools::PrintFloat_impl::PrintFloat_impl</definition>
+        <argsstring>()</argsstring>
+        <name>PrintFloat_impl</name>
+        <qualifiedname>gr::ErTools::PrintFloat_impl::PrintFloat_impl</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/aymo/BC/Projekt/gr-ErTools/lib/PrintFloat_impl.h" line="22" column="5"/>
+      </memberdef>
+      <memberdef kind="function" id="classgr_1_1ErTools_1_1PrintFloat__impl_1ac216ce2860602751b6b8f856a5c8d3f1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>gr::ErTools::PrintFloat_impl::~PrintFloat_impl</definition>
+        <argsstring>()</argsstring>
+        <name>~PrintFloat_impl</name>
+        <qualifiedname>gr::ErTools::PrintFloat_impl::~PrintFloat_impl</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/aymo/BC/Projekt/gr-ErTools/lib/PrintFloat_impl.h" line="23" column="5"/>
+      </memberdef>
+      <memberdef kind="function" id="classgr_1_1ErTools_1_1PrintFloat__impl_1aef75ad3c95e114266add64342cf32f42" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int gr::ErTools::PrintFloat_impl::work</definition>
+        <argsstring>(int noutput_items, gr_vector_const_void_star &amp;input_items, gr_vector_void_star &amp;output_items)</argsstring>
+        <name>work</name>
+        <qualifiedname>gr::ErTools::PrintFloat_impl::work</qualifiedname>
+        <param>
+          <type>int</type>
+          <declname>noutput_items</declname>
+        </param>
+        <param>
+          <type>gr_vector_const_void_star &amp;</type>
+          <declname>input_items</declname>
+        </param>
+        <param>
+          <type>gr_vector_void_star &amp;</type>
+          <declname>output_items</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/aymo/BC/Projekt/gr-ErTools/lib/PrintFloat_impl.h" line="26" column="9"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="2">
+        <label>gr::ErTools::PrintFloat</label>
+        <link refid="classgr_1_1ErTools_1_1PrintFloat"/>
+        <childnode refid="3" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>gr::ErTools::PrintFloat_impl</label>
+        <link refid="classgr_1_1ErTools_1_1PrintFloat__impl"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>gr::sync_block</label>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="2">
+        <label>gr::ErTools::PrintFloat</label>
+        <link refid="classgr_1_1ErTools_1_1PrintFloat"/>
+        <childnode refid="3" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>gr::ErTools::PrintFloat_impl</label>
+        <link refid="classgr_1_1ErTools_1_1PrintFloat__impl"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>gr::sync_block</label>
+      </node>
+    </collaborationgraph>
+    <location file="/home/aymo/BC/Projekt/gr-ErTools/lib/PrintFloat_impl.h" line="16" column="1" bodyfile="/home/aymo/BC/Projekt/gr-ErTools/lib/PrintFloat_impl.h" bodystart="17" bodyend="29"/>
+    <listofallmembers>
+      <member refid="classgr_1_1ErTools_1_1PrintFloat_1ac60334d06567bc11a1ada4b330ee0aba" prot="public" virt="non-virtual"><scope>gr::ErTools::PrintFloat_impl</scope><name>make</name></member>
+      <member refid="classgr_1_1ErTools_1_1PrintFloat__impl_1a5b8dd4fdfb366b931a0ef2f0609f851a" prot="public" virt="non-virtual"><scope>gr::ErTools::PrintFloat_impl</scope><name>PrintFloat_impl</name></member>
+      <member refid="classgr_1_1ErTools_1_1PrintFloat_1a2c870e916e3de3284e76c8df01d5fbc8" prot="public" virt="non-virtual"><scope>gr::ErTools::PrintFloat_impl</scope><name>sptr</name></member>
+      <member refid="classgr_1_1ErTools_1_1PrintFloat__impl_1aef75ad3c95e114266add64342cf32f42" prot="public" virt="non-virtual"><scope>gr::ErTools::PrintFloat_impl</scope><name>work</name></member>
+      <member refid="classgr_1_1ErTools_1_1PrintFloat__impl_1ac216ce2860602751b6b8f856a5c8d3f1" prot="public" virt="non-virtual"><scope>gr::ErTools::PrintFloat_impl</scope><name>~PrintFloat_impl</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

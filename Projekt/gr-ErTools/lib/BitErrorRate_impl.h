@@ -16,19 +16,16 @@ namespace ErTools {
 class BitErrorRate_impl : public BitErrorRate
 {
 private:
-    // Nothing to declare in this block.
+  int _N, _Rb, _fvz, _EbN0min, _EbN0max;
 
 public:
-    BitErrorRate_impl(int N, int Rb, int EbN0min, int EbN0max, int fvz);
+    BitErrorRate_impl(int N, int Rb, int fvz, int EbN0min, int EbN0max);
     ~BitErrorRate_impl();
 
     // Where all the action really happens
-    void forecast(int noutput_items, gr_vector_int& ninput_items_required);
-
-    int general_work(int noutput_items,
-                     gr_vector_int& ninput_items,
-                     gr_vector_const_void_star& input_items,
-                     gr_vector_void_star& output_items);
+    int work(int noutput_items,
+             gr_vector_const_void_star& input_items,
+             gr_vector_void_star& output_items);
 };
 
 } // namespace ErTools
