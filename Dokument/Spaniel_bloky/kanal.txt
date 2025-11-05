@@ -122,14 +122,14 @@ KOD:
     	
 		P_n = P_s / SNR  # the power of noise
     	
-		Vrms = math.sqrt(P_n) 
+		sigma = math.sqrt(P_n) 
 		
 			# random.normal() asks for the standard deviation, but it's the same RMS value.
 			# Vrms is the RMS value of the complex envelope of the noise, but we're
 			# going to generate it as real noise plus imaginary noise. But those two
 			# signals have slightly different RMS values: Vrms_q = Vrms/math.sqrt(2.)
     	
-		Vrms_q = Vrms / math.sqrt(2.)
+		Vrms_q = sigma / math.sqrt(2.)
     	
 		n = np.random.normal(0., Vrms_q) + np.random.normal(0., Vrms_q) * 1.j
         

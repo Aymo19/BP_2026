@@ -82,6 +82,10 @@ void BER(char S1, char S2) {
   log_BER = logf(BER);
 }
 
+gr_complex AWGN() {
+ return sum;
+}
+
 //------------------------------------------------------->
 
 int BitErrorRate_impl::work(int noutput_items,
@@ -94,7 +98,47 @@ int BitErrorRate_impl::work(int noutput_items,
     
     const gr_complex *out0 = (const gr_complex *) output_items[0];
     const float *out1 = (const float *) output_items[1];
+    
 
+    //vypocet Eb/N0 [db] -------------------------------
+    float rozpatie, rozpatiePostup;
+
+    float EDB[_N];
+
+    rozpatie = float((_EbN0max - _EbN0min)) / float((_N-1));
+    rozpatiePostup = float(_EbN0min);
+
+    for(int i = 0; i < _N; i++) {
+      EDB[i] = rozpatiePostup;
+      rozpatiePostup += rozpatie;
+    }
+    //vypocet Eb/N0 -----------------------------------
+    float EbN0[_N];
+
+    for(int y = 0; y < _N; y++)
+      EbN0[y] = pow(10.0, EDB[y]/10.0);
+
+    //vypocet SNR --------------------------------------
+    float SNR[_N];
+
+    for(int z = 0; z < _N; z++)
+      SNR[z] = (EbN0[z] * float(_Rb)) / float(_fvz);
+
+    //vypocet variancie AWGN (vykon sumu) --------------
+    //zaroven vypocet vykonu vstupneho signalu Ps
+    gr_complex Ps, sumPs = 0;
+    //int velkost_in0 = sizeof(in0) / sizeof(in0[0]);
+
+    for(int a = 0; a < noutput_items; a++) {
+      sumPs += pow(in0[a], 2);
+    }
+    Ps = sumPs / float(noutput_items);
+
+    //sum
+    gr_complex N0[_N];
+    
+    for(int b = 0; b < _N; b++)
+      N0[b] = Ps / SNR[b];
 
     // Tell runtime system how many output items we produced.
     return noutput_items;

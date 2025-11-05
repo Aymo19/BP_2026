@@ -157,7 +157,7 @@ blocks:
     bus_sink: false
     bus_source: false
     bus_structure: null
-    coordinate: [1000, 488.0]
+    coordinate: [1008, 560.0]
     rotation: 0
     state: enabled
 - name: blocks_null_sink_0_0
@@ -174,7 +174,7 @@ blocks:
     bus_sink: false
     bus_source: false
     bus_structure: null
-    coordinate: [984, 448.0]
+    coordinate: [1000, 464.0]
     rotation: 0
     state: enabled
 - name: blocks_null_source_0
@@ -193,7 +193,7 @@ blocks:
     bus_sink: false
     bus_source: false
     bus_structure: null
-    coordinate: [648, 472.0]
+    coordinate: [608, 448.0]
     rotation: 0
     state: enabled
 - name: blocks_null_source_0_0
@@ -212,7 +212,7 @@ blocks:
     bus_sink: false
     bus_source: false
     bus_structure: null
-    coordinate: [624, 520.0]
+    coordinate: [600, 496.0]
     rotation: 0
     state: enabled
 - name: blocks_null_source_0_0_0
@@ -231,7 +231,7 @@ blocks:
     bus_sink: false
     bus_source: false
     bus_structure: null
-    coordinate: [616, 560.0]
+    coordinate: [600, 560.0]
     rotation: 0
     state: enabled
 - name: blocks_throttle2_1
