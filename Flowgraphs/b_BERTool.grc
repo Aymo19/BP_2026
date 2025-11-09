@@ -62,42 +62,27 @@ blocks:
     bus_structure: null
     coordinate: [512, 14]
     rotation: 0
-    state: disabled
-- name: ErTools_BER_moje_0
-  id: ErTools_BER_moje
+    state: enabled
+- name: ErTools_BitErrorRate_0
+  id: ErTools_BitErrorRate
   parameters:
-    EbN0max: '16'
-    EbN0min: '0'
-    N: '128'
-    Rb: '1'
+    EbN0max: EsN0max
+    EbN0min: EsN0min
+    N: N_snr
+    Rb: Rs
     affinity: ''
     alias: ''
     comment: ''
+    fvz: B
     maxoutbuf: '0'
     minoutbuf: '0'
   states:
     bus_sink: false
     bus_source: false
     bus_structure: null
-    coordinate: [608, 496.0]
+    coordinate: [280, 352.0]
     rotation: 0
     state: enabled
-- name: ErTools_BER_sync_0
-  id: ErTools_BER_sync
-  parameters:
-    N: '128'
-    affinity: ''
-    alias: ''
-    comment: ''
-    maxoutbuf: '0'
-    minoutbuf: '0'
-  states:
-    bus_sink: false
-    bus_source: false
-    bus_structure: null
-    coordinate: [640, 368.0]
-    rotation: 0
-    state: disabled
 - name: EsN0max
   id: parameter
   parameters:
@@ -166,75 +151,6 @@ blocks:
     coordinate: [592, 14]
     rotation: 0
     state: enabled
-- name: analog_const_source_x_0
-  id: analog_const_source_x
-  parameters:
-    affinity: ''
-    alias: ''
-    comment: ''
-    const: '8'
-    maxoutbuf: '0'
-    minoutbuf: '0'
-    type: int
-  states:
-    bus_sink: false
-    bus_source: false
-    bus_structure: null
-    coordinate: [440, 320.0]
-    rotation: 0
-    state: disabled
-- name: blocks_float_to_int_0
-  id: blocks_float_to_int
-  parameters:
-    affinity: ''
-    alias: ''
-    comment: ''
-    maxoutbuf: '0'
-    minoutbuf: '0'
-    scale: '1'
-    vlen: '1'
-  states:
-    bus_sink: false
-    bus_source: false
-    bus_structure: null
-    coordinate: [440, 392.0]
-    rotation: 0
-    state: disabled
-- name: blocks_float_to_int_1
-  id: blocks_float_to_int
-  parameters:
-    affinity: ''
-    alias: ''
-    comment: ''
-    maxoutbuf: '0'
-    minoutbuf: '0'
-    scale: '1'
-    vlen: '1'
-  states:
-    bus_sink: false
-    bus_source: false
-    bus_structure: null
-    coordinate: [416, 496.0]
-    rotation: 0
-    state: disabled
-- name: blocks_nlog10_ff_0
-  id: blocks_nlog10_ff
-  parameters:
-    affinity: ''
-    alias: ''
-    comment: ''
-    k: '0'
-    maxoutbuf: '0'
-    minoutbuf: '0'
-    n: '1'
-    vlen: '1'
-  states:
-    bus_sink: false
-    bus_source: false
-    bus_structure: null
-    coordinate: [784, 368.0]
-    rotation: 0
-    state: enabled
 - name: blocks_stream_to_vector_0
   id: blocks_stream_to_vector
   parameters:
@@ -250,39 +166,9 @@ blocks:
     bus_sink: false
     bus_source: false
     bus_structure: null
-    coordinate: [1032, 344.0]
+    coordinate: [584, 416.0]
     rotation: 0
     state: enabled
-- name: blocks_uchar_to_float_0
-  id: blocks_uchar_to_float
-  parameters:
-    affinity: ''
-    alias: ''
-    comment: ''
-    maxoutbuf: '0'
-    minoutbuf: '0'
-  states:
-    bus_sink: false
-    bus_source: false
-    bus_structure: null
-    coordinate: [176, 480.0]
-    rotation: 0
-    state: disabled
-- name: blocks_uchar_to_float_0_0
-  id: blocks_uchar_to_float
-  parameters:
-    affinity: ''
-    alias: ''
-    comment: ''
-    maxoutbuf: '0'
-    minoutbuf: '0'
-  states:
-    bus_sink: false
-    bus_source: false
-    bus_structure: null
-    coordinate: [176, 416.0]
-    rotation: 0
-    state: disabled
 - name: note_0
   id: note
   parameters:
@@ -303,24 +189,6 @@ blocks:
     coordinate: [952, 16.0]
     rotation: 0
     state: enabled
-- name: pad_sink_0_0_0
-  id: pad_sink
-  parameters:
-    affinity: ''
-    alias: ''
-    comment: ''
-    label: out_env
-    num_streams: '1'
-    optional: 'False'
-    type: complex
-    vlen: '1'
-  states:
-    bus_sink: false
-    bus_source: false
-    bus_structure: null
-    coordinate: [632, 208.0]
-    rotation: 0
-    state: enabled
 - name: pad_sink_0_0_0_0
   id: pad_sink
   parameters:
@@ -336,7 +204,7 @@ blocks:
     bus_sink: false
     bus_source: false
     bus_structure: null
-    coordinate: [1240, 328.0]
+    coordinate: [784, 400.0]
     rotation: 0
     state: enabled
 - name: pad_sink_0_0_0_1
@@ -345,18 +213,18 @@ blocks:
     affinity: ''
     alias: ''
     comment: ''
-    label: EsNo
+    label: Out
     num_streams: '1'
     optional: 'False'
-    type: int
+    type: complex
     vlen: '1'
   states:
     bus_sink: false
     bus_source: false
     bus_structure: null
-    coordinate: [856, 72.0]
+    coordinate: [552, 264.0]
     rotation: 0
-    state: disabled
+    state: enabled
 - name: pad_source_0_0
   id: pad_source
   parameters:
@@ -417,22 +285,6 @@ blocks:
     coordinate: [32, 492]
     rotation: 0
     state: enabled
-- name: tempPY_BER_0
-  id: tempPY_BER
-  parameters:
-    N: '128'
-    affinity: ''
-    alias: ''
-    comment: ''
-    maxoutbuf: '0'
-    minoutbuf: '0'
-  states:
-    bus_sink: false
-    bus_source: false
-    bus_structure: null
-    coordinate: [352, 408.0]
-    rotation: 0
-    state: disabled
 - name: tipo_mod
   id: parameter
   parameters:
@@ -452,22 +304,12 @@ blocks:
     state: disabled
 
 connections:
-- [ErTools_BER_moje_0, '0', blocks_nlog10_ff_0, '0']
-- [ErTools_BER_sync_0, '0', blocks_nlog10_ff_0, '0']
-- [analog_const_source_x_0, '0', ErTools_BER_sync_0, '0']
-- [blocks_float_to_int_0, '0', ErTools_BER_sync_0, '1']
-- [blocks_float_to_int_1, '0', ErTools_BER_sync_0, '2']
-- [blocks_nlog10_ff_0, '0', blocks_stream_to_vector_0, '0']
+- [ErTools_BitErrorRate_0, '0', pad_sink_0_0_0_1, '0']
+- [ErTools_BitErrorRate_0, '1', blocks_stream_to_vector_0, '0']
 - [blocks_stream_to_vector_0, '0', pad_sink_0_0_0_0, '0']
-- [blocks_uchar_to_float_0, '0', blocks_float_to_int_1, '0']
-- [blocks_uchar_to_float_0_0, '0', blocks_float_to_int_0, '0']
-- [pad_source_0_0_0, '0', ErTools_BER_moje_0, '0']
-- [pad_source_0_0_0, '0', blocks_uchar_to_float_0_0, '0']
-- [pad_source_0_0_0, '0', tempPY_BER_0, '0']
-- [pad_source_0_0_0_0, '0', ErTools_BER_moje_0, '1']
-- [pad_source_0_0_0_0, '0', blocks_uchar_to_float_0, '0']
-- [pad_source_0_0_0_0, '0', tempPY_BER_0, '1']
-- [tempPY_BER_0, '0', blocks_nlog10_ff_0, '0']
+- [pad_source_0_0, '0', ErTools_BitErrorRate_0, '0']
+- [pad_source_0_0_0, '0', ErTools_BitErrorRate_0, '1']
+- [pad_source_0_0_0_0, '0', ErTools_BitErrorRate_0, '2']
 
 metadata:
   file_format: 1

@@ -210,7 +210,7 @@ blocks:
     bus_structure: null
     coordinate: [800, 240.0]
     rotation: 0
-    state: enabled
+    state: disabled
 - name: analog_random_source_x_1
   id: analog_random_source_x
   parameters:
@@ -234,6 +234,7 @@ blocks:
 - name: b_BERTool_0
   id: b_BERTool
   parameters:
+    B: '128'
     EsN0max: EsN0max
     EsN0min: EsN0min
     N_snr: N_snr
@@ -250,6 +251,26 @@ blocks:
     coordinate: [168, 432.0]
     rotation: 0
     state: disabled
+- name: b_BERTool_1
+  id: b_BERTool
+  parameters:
+    B: N_snr
+    EsN0max: EsN0min
+    EsN0min: EsN0max
+    N_snr: N_snr
+    Rs: Rs
+    affinity: ''
+    alias: ''
+    comment: ''
+    maxoutbuf: '0'
+    minoutbuf: '0'
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [840, 216.0]
+    rotation: 0
+    state: enabled
 - name: blocks_stream_to_vector_0
   id: blocks_stream_to_vector
   parameters:
@@ -267,7 +288,7 @@ blocks:
     bus_structure: null
     coordinate: [872, 432.0]
     rotation: 0
-    state: enabled
+    state: disabled
 - name: blocks_throttle2_0
   id: blocks_throttle2
   parameters:
@@ -394,7 +415,7 @@ blocks:
     legend: 'True'
     maxoutbuf: '0'
     minoutbuf: '0'
-    name: '"Curva de SER"'
+    name: '"BER"'
     nconnections: '1'
     ref_level: '0'
     showports: 'True'
@@ -482,13 +503,18 @@ connections:
 - [ErTools_BitErrorRate_0, '0', digital_constellation_decoder_cb_0_0_0, '0']
 - [ErTools_BitErrorRate_0, '1', blocks_stream_to_vector_0, '0']
 - [analog_random_source_x_1, '0', blocks_throttle2_0, '0']
+- [b_BERTool_1, '0', qtgui_vector_sink_f_0, '0']
+- [b_BERTool_1, '1', digital_constellation_decoder_cb_0_0_0, '0']
 - [blocks_stream_to_vector_0, '0', qtgui_vector_sink_f_0, '0']
 - [blocks_throttle2_0, '0', digital_chunks_to_symbols_xx_1, '0']
 - [blocks_throttle2_0, '0', vs0_1, '0']
 - [digital_chunks_to_symbols_xx_1, '0', ErTools_BitErrorRate_0, '0']
+- [digital_chunks_to_symbols_xx_1, '0', b_BERTool_1, '0']
 - [digital_constellation_decoder_cb_0_0_0, '0', vs1_0_0, '0']
 - [virtual_source_0_0_0_0, '0', ErTools_BitErrorRate_0, '2']
+- [virtual_source_0_0_0_0, '0', b_BERTool_1, '2']
 - [virtual_source_0_1_0, '0', ErTools_BitErrorRate_0, '1']
+- [virtual_source_0_1_0, '0', b_BERTool_1, '1']
 
 metadata:
   file_format: 1

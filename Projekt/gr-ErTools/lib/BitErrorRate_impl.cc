@@ -40,6 +40,7 @@ BitErrorRate_impl::BitErrorRate_impl(int N, int Rb, int fvz, int EbN0min, int Eb
   _fvz = fvz;
   _EbN0min = EbN0min;
   _EbN0max = EbN0max;
+  k = 0;
 }
 
 //Our virtual destructor.
@@ -70,7 +71,7 @@ int BitCounter(char slovo, int N) {
   return sum;
 }
 
-void BER(char S1, char S2) {
+float BER(char S1, char S2) {
   char virt_jedna = 1, XORnute;
   int e_sum, N_S1 = sizeof(S1) * 8, N_S2 = sizeof(S2) * 8; //krat 8 lebo 1 kodove slovo ma 8 bitov
   float BER, log_BER;
@@ -82,19 +83,49 @@ void BER(char S1, char S2) {
   BER = (float)e_sum / (float)N_S1;
   
   log_BER = logf(BER);
+
+  return log_BER;
 }
 
-gr_complex AWGN(float odchylka) {
+gr_complex AWGN_vypocet(float odchylka) {
   std::default_random_engine R;
   std::default_random_engine I;
   
-  std::normal_distribution<double> Gauss{0, odchylka};
+  std::normal_distribution<double> Gauss{0, odchylka}; //0 lebo AWGN
   
   double GR = Gauss(R);
   double GI = Gauss(I);
   
   gr_complex n = (GR, GI);
   
+  return n;
+}
+
+gr_complex AWGN_Sum(float EDB, float Ps, int _Rb, int _fvz) {
+  float EbN0;
+
+  EbN0 = pow(10.0, EDB/10.0);
+
+  //vypocet SNR --------------------------------------
+  float SNR;
+
+  SNR = (EbN0 * float(_Rb)) / float(_fvz);
+
+  //vypocet variancie AWGN (vykon sumu) --------------
+  gr_complex N0;
+    
+  N0 = Ps / SNR;
+    
+  //vypocet smerodajnej odychlky -----------------------------------
+  float VRMS;
+
+  VRMS = float(sqrt(N0.real())) / sqrt(2.0);
+
+  //vypocet AWGN ---------------------------------------
+  gr_complex n;
+
+  n = AWGN_vypocet(VRMS);
+
   return n;
 }
 
@@ -107,9 +138,10 @@ int BitErrorRate_impl::work(int noutput_items,
     const gr_complex *in0 = (const gr_complex *) input_items[0];
     const char *in1 = (const char *) input_items[1];
     const char *in2 = (const char *) input_items[2];
-    
-    const gr_complex *out0 = (const gr_complex *) output_items[0];
-    const float *out1 = (const float *) output_items[1];
+   
+    //nechapem preco nie const
+    gr_complex *out0 = (gr_complex *) output_items[0];
+    float *out1 = (float *) output_items[1];
     
 
     //vypocet Eb/N0 [db] -------------------------------
@@ -124,46 +156,31 @@ int BitErrorRate_impl::work(int noutput_items,
       EDB[i] = rozpatiePostup;
       rozpatiePostup += rozpatie;
     }
-    //vypocet Eb/N0 -----------------------------------
-    float EbN0[_N];
+    
+    //vypocet vykonu vstupneho signalu Ps
+    float Ps, sumPs = 0;
 
-    for(int y = 0; y < _N; y++)
-      EbN0[y] = pow(10.0, EDB[y]/10.0);
+    for(int a = 0; a < noutput_items; a++)
+      sumPs += pow(in0[a].real(), 2);
 
-    //vypocet SNR --------------------------------------
-    float SNR[_N];
-
-    for(int z = 0; z < _N; z++)
-      SNR[z] = (EbN0[z] * float(_Rb)) / float(_fvz);
-
-    //vypocet variancie AWGN (vykon sumu) --------------
-    //zaroven vypocet vykonu vstupneho signalu Ps
-    gr_complex Ps, sumPs = 0;
-    //int velkost_in0 = sizeof(in0) / sizeof(in0[0]);
-
-    for(int a = 0; a < noutput_items; a++) {
-      sumPs += pow(in0[a], 2);
-    }
     Ps = sumPs / float(noutput_items);
-
-    //sum
-    gr_complex N0[_N];
     
-    for(int b = 0; b < _N; b++)
-      N0[b] = Ps / SNR[b];
-    
-    //vypocet smerodajnej odychlky -----------------------------------
-    float VRMS[_N];
+    for(int b = 0; b < noutput_items; b++) {
+      //AWGN kanal
+      gr_complex sg_n = AWGN_Sum(EDB[k], Ps, _Rb, _fvz);
+      gr_complex spolu = (in0[b].real() + sg_n.real(), in0[b].imag() + sg_n.imag());
+      
+      out0[b] = spolu;
 
-    for(int c = 0; c < _N; c++)
-      VRMS[c] = float(sqrt(N0[c].real())) / sqrt(2.0);
+      //BER pravdepodobnost
+      out1[b] = BER(in1[b], in2[b]);
 
-    //vypocet AWGN ---------------------------------------
-    gr_complex n[_N];
-
-    for(int d = 0; d < _N; d++)
-      n[d] = AWGN(VRMS[d]);
-
+      if(k < _N-1) {
+        k += 1;
+      }else {
+        k = 0;
+      }
+    }
     // Tell runtime system how many output items we produced.
     return noutput_items;
 }
