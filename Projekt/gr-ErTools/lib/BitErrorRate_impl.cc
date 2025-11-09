@@ -9,6 +9,8 @@
 #include <gnuradio/io_signature.h>
 
 #include <cmath>
+#include <random>
+#include <complex>
 
 namespace gr {
 namespace ErTools {
@@ -82,8 +84,18 @@ void BER(char S1, char S2) {
   log_BER = logf(BER);
 }
 
-gr_complex AWGN() {
- return sum;
+gr_complex AWGN(float odchylka) {
+  std::default_random_engine R;
+  std::default_random_engine I;
+  
+  std::normal_distribution<double> Gauss{0, odchylka};
+  
+  double GR = Gauss(R);
+  double GI = Gauss(I);
+  
+  gr_complex n = (GR, GI);
+  
+  return n;
 }
 
 //------------------------------------------------------->
@@ -139,6 +151,18 @@ int BitErrorRate_impl::work(int noutput_items,
     
     for(int b = 0; b < _N; b++)
       N0[b] = Ps / SNR[b];
+    
+    //vypocet smerodajnej odychlky -----------------------------------
+    float VRMS[_N];
+
+    for(int c = 0; c < _N; c++)
+      VRMS[c] = float(sqrt(N0[c].real())) / sqrt(2.0);
+
+    //vypocet AWGN ---------------------------------------
+    gr_complex n[_N];
+
+    for(int d = 0; d < _N; d++)
+      n[d] = AWGN(VRMS[d]);
 
     // Tell runtime system how many output items we produced.
     return noutput_items;
