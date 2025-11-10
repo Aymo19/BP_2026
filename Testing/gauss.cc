@@ -13,13 +13,13 @@ int main() {
   std::complex<double> z;
 
   for(int i = 0; i < 10; i++) {
-    //printf("%lf\n", gaussian(gen));
-    nR = gaussian(R);
+    printf("%lf\n", gaussian(R));
+    /*nR = gaussian(R);
     nI = gaussian(I);
     printf("R: %lf\tI: %lf\n", nR, nI);
     std::complex<double> z1(nR,nI);
     std::cout << z1;
-    printf("\n");
+    printf("\n");*/
   }
 
   /*std::complex<double> z = 1 + 2i;

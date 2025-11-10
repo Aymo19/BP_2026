@@ -39,17 +39,15 @@ AWGN_kanal_impl::AWGN_kanal_impl(int N, int EbN0min, int EbN0max, int R, int W)
   _EbN0min = EbN0min;
   _EbN0max = EbN0max;
   
-  k = 0;
 }
-
-
 
 //Our virtual destructor.
 AWGN_kanal_impl::~AWGN_kanal_impl() {}
 
 gr_complex Sum_vypocet(float odchylka) {
-  std::default_random_engine R;
-  std::default_random_engine I;
+  std::random_device rd;
+  std::default_random_engine R(rd());
+  std::default_random_engine I(rd());
   
   std::normal_distribution<double> Gauss{0, odchylka}; //0 lebo AWGN
   
@@ -62,28 +60,22 @@ gr_complex Sum_vypocet(float odchylka) {
 }
 
 gr_complex Sum(float EDB, float Ps, int _Rb, int _fvz) {
-  float EbN0;
-
-  EbN0 = pow(10.0, EDB/10.0);
-
-  //vypocet SNR --------------------------------------
-  float SNR;
-
-  SNR = (EbN0 * float(_Rb)) / float(_fvz);
-
-  //vypocet variancie AWGN (vykon sumu) --------------
-  float N0;
-    
-  N0 = Ps / SNR;
-    
-  //vypocet smerodajnej odychlky -----------------------------------
-  float VRMS;
-
-  VRMS = sqrt(N0) / sqrt(2.0);
-
-  //vypocet AWGN ---------------------------------------
+  float EbN0, SNR, N, VRMS;
   gr_complex n;
 
+  //premena z dB na pomer
+  EbN0 = pow(10.0, EDB/10.0);
+
+  //vypocet SNR 
+  SNR = EbN0 * float(_Rb) / float(_fvz);
+
+  //vypocet variancie AWGN (vyriancia sumu)
+  N = Ps / SNR;
+    
+  //vypocet smerodajnej odychlky
+  VRMS = sqrt(N); // / sqrt(2.0);
+
+  //vypocet AWGN
   n = Sum_vypocet(VRMS);
 
   return n;
@@ -98,6 +90,8 @@ int AWGN_kanal_impl::work(int noutput_items,
     
     gr_complex *out0 = (gr_complex *) output_items[0];
     float *out1 = (float *) output_items[1];
+
+    //-----logika------------------------
 
     float rozpatie, rozpatiePostup;
 
@@ -119,13 +113,14 @@ int AWGN_kanal_impl::work(int noutput_items,
 
     Ps = sumPs / float(noutput_items);
     
+    int k = 0;
+
     for(int b = 0; b < noutput_items; b++) {
       //AWGN kanal
       gr_complex sg_n = Sum(EDB[k], Ps, _Rb, _fvz);
       
-      gr_complex spolu(in0[b].real() + sg_n.real(), in0[b].imag() + sg_n.imag());
-      
-      out0[b] = spolu;
+      //gr_complex spolu(in0[b].real() + sg_n.real(), in0[b].imag() + sg_n.imag());
+      out0[b] = sg_n;
       out1[b] = k;
 
       if(k < _N-1) {

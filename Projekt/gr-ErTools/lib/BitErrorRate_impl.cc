@@ -111,9 +111,9 @@ int BitErrorRate_impl::work(int noutput_items,
     
     for(int b = 0; b < noutput_items; b++) {
       
-      k = in0[b] 
+      k = in0[b];
       //BER pravdepodobnost
-      out1[b] = BER(in1[b], in2[b], chyby[k]);
+      //out1[b] = BER(in1[b], in2[b], &chyby[k]);
 
     }
     // Tell runtime system how many output items we produced.
