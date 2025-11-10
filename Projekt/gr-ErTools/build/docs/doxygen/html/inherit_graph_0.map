@@ -1,23 +1,27 @@
 <map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
-<area shape="rect" id="Node000000" title=" " alt="" coords="5,104,120,129"/>
-<area shape="rect" id="Node000001" href="$classgr_1_1ErTools_1_1BER__sync.html" title="&lt;+description of block+&gt;" alt="" coords="176,5,336,31"/>
-<area shape="poly" id="edge1_Node000000_Node000001" title=" " alt="" coords="88,93,124,65,167,40,197,28,199,33,169,44,127,70,91,97"/>
-<area shape="rect" id="Node000003" href="$classgr_1_1ErTools_1_1BitErrorRate.html" title="&lt;+description of block+&gt;" alt="" coords="168,55,344,80"/>
-<area shape="poly" id="edge3_Node000000_Node000003" title=" " alt="" coords="125,98,204,78,206,83,127,103"/>
-<area shape="rect" id="Node000005" href="$classgr_1_1ErTools_1_1PrintChar.html" title="&lt;+description of block+&gt;" alt="" coords="177,104,335,129"/>
-<area shape="poly" id="edge5_Node000000_Node000005" title=" " alt="" coords="134,114,177,114,177,119,134,119"/>
-<area shape="rect" id="Node000007" href="$classgr_1_1ErTools_1_1PrintFloat.html" title="&lt;+description of block+&gt;" alt="" coords="176,153,336,179"/>
-<area shape="poly" id="edge7_Node000000_Node000007" title=" " alt="" coords="127,130,206,151,204,156,125,135"/>
-<area shape="rect" id="Node000009" href="$classgr_1_1ErTools_1_1PrintInt.html" title="&lt;+description of block+&gt;" alt="" coords="184,203,328,228"/>
-<area shape="poly" id="edge9_Node000000_Node000009" title=" " alt="" coords="91,136,127,163,169,188,202,200,200,205,167,192,124,167,88,140"/>
-<area shape="rect" id="Node000002" href="$classgr_1_1ErTools_1_1BER__sync__impl.html" title=" " alt="" coords="400,5,596,31"/>
-<area shape="poly" id="edge2_Node000001_Node000002" title=" " alt="" coords="350,15,400,15,400,21,350,21"/>
-<area shape="rect" id="Node000004" href="$classgr_1_1ErTools_1_1BitErrorRate__impl.html" title=" " alt="" coords="392,55,604,80"/>
-<area shape="poly" id="edge4_Node000003_Node000004" title=" " alt="" coords="358,65,392,65,392,70,358,70"/>
-<area shape="rect" id="Node000006" href="$classgr_1_1ErTools_1_1PrintChar__impl.html" title=" " alt="" coords="401,104,595,129"/>
-<area shape="poly" id="edge6_Node000005_Node000006" title=" " alt="" coords="349,114,401,114,401,119,349,119"/>
-<area shape="rect" id="Node000008" href="$classgr_1_1ErTools_1_1PrintFloat__impl.html" title=" " alt="" coords="400,153,596,179"/>
-<area shape="poly" id="edge8_Node000007_Node000008" title=" " alt="" coords="350,163,400,163,400,169,350,169"/>
-<area shape="rect" id="Node000010" href="$classgr_1_1ErTools_1_1PrintInt__impl.html" title=" " alt="" coords="408,203,588,228"/>
-<area shape="poly" id="edge10_Node000009_Node000010" title=" " alt="" coords="342,213,408,213,408,218,342,218"/>
+<area shape="rect" id="Node000000" title=" " alt="" coords="5,129,120,155"/>
+<area shape="rect" id="Node000001" href="$classgr_1_1ErTools_1_1AWGN__kanal.html" title="&lt;+description of block+&gt;" alt="" coords="168,5,348,31"/>
+<area shape="poly" id="edge1_Node000000_Node000001" title=" " alt="" coords="81,117,118,77,141,57,167,40,193,28,195,33,169,44,144,61,121,81,84,120"/>
+<area shape="rect" id="Node000003" href="$classgr_1_1ErTools_1_1BER__sync.html" title="&lt;+description of block+&gt;" alt="" coords="178,55,338,80"/>
+<area shape="poly" id="edge3_Node000000_Node000003" title=" " alt="" coords="98,120,167,89,202,78,204,83,169,94,100,125"/>
+<area shape="rect" id="Node000005" href="$classgr_1_1ErTools_1_1BitErrorRate.html" title="&lt;+description of block+&gt;" alt="" coords="170,104,346,129"/>
+<area shape="poly" id="edge5_Node000000_Node000005" title=" " alt="" coords="133,130,170,125,170,131,134,135"/>
+<area shape="rect" id="Node000007" href="$classgr_1_1ErTools_1_1PrintChar.html" title="&lt;+description of block+&gt;" alt="" coords="179,153,337,179"/>
+<area shape="poly" id="edge7_Node000000_Node000007" title=" " alt="" coords="134,148,180,154,179,159,133,153"/>
+<area shape="rect" id="Node000009" href="$classgr_1_1ErTools_1_1PrintFloat.html" title="&lt;+description of block+&gt;" alt="" coords="178,203,338,228"/>
+<area shape="poly" id="edge9_Node000000_Node000009" title=" " alt="" coords="102,158,169,188,208,200,206,205,167,192,100,163"/>
+<area shape="rect" id="Node000011" href="$classgr_1_1ErTools_1_1PrintInt.html" title="&lt;+description of block+&gt;" alt="" coords="186,252,330,277"/>
+<area shape="poly" id="edge11_Node000000_Node000011" title=" " alt="" coords="85,163,122,201,169,237,198,250,196,254,167,242,118,205,81,167"/>
+<area shape="rect" id="Node000002" href="$classgr_1_1ErTools_1_1AWGN__kanal__impl.html" title=" " alt="" coords="396,5,612,31"/>
+<area shape="poly" id="edge2_Node000001_Node000002" title=" " alt="" coords="362,15,396,15,396,21,362,21"/>
+<area shape="rect" id="Node000004" href="$classgr_1_1ErTools_1_1BER__sync__impl.html" title=" " alt="" coords="406,55,602,80"/>
+<area shape="poly" id="edge4_Node000003_Node000004" title=" " alt="" coords="351,65,406,65,406,70,351,70"/>
+<area shape="rect" id="Node000006" href="$classgr_1_1ErTools_1_1BitErrorRate__impl.html" title=" " alt="" coords="398,104,610,129"/>
+<area shape="poly" id="edge6_Node000005_Node000006" title=" " alt="" coords="360,114,398,114,398,119,360,119"/>
+<area shape="rect" id="Node000008" href="$classgr_1_1ErTools_1_1PrintChar__impl.html" title=" " alt="" coords="407,153,601,179"/>
+<area shape="poly" id="edge8_Node000007_Node000008" title=" " alt="" coords="351,163,407,163,407,169,351,169"/>
+<area shape="rect" id="Node000010" href="$classgr_1_1ErTools_1_1PrintFloat__impl.html" title=" " alt="" coords="406,203,602,228"/>
+<area shape="poly" id="edge10_Node000009_Node000010" title=" " alt="" coords="351,213,406,213,406,218,351,218"/>
+<area shape="rect" id="Node000012" href="$classgr_1_1ErTools_1_1PrintInt__impl.html" title=" " alt="" coords="414,252,594,277"/>
+<area shape="poly" id="edge12_Node000011_Node000012" title=" " alt="" coords="344,262,414,262,414,267,344,267"/>
 </map>

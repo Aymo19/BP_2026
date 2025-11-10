@@ -14,4 +14,5 @@ install(FILES api.h
     PrintInt.h
     PrintChar.h
     PrintFloat.h
-    BitErrorRate.h DESTINATION include/gnuradio/ErTools)
+    BitErrorRate.h
+    AWGN_kanal.h DESTINATION include/gnuradio/ErTools)

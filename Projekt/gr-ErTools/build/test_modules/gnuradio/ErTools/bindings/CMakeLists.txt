@@ -28,7 +28,8 @@ list(APPEND ErTools_python_files
     PrintInt_python.cc
     PrintChar_python.cc
     PrintFloat_python.cc
-    BitErrorRate_python.cc python_bindings.cc)
+    BitErrorRate_python.cc
+    AWGN_kanal_python.cc python_bindings.cc)
 
 gr_pybind_make_oot(ErTools ../../.. gr::ErTools "${ErTools_python_files}")
 

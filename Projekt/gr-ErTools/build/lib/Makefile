@@ -185,6 +185,30 @@ gnuradio-ErTools/fast:
 	cd /home/aymo/BC/Projekt/gr-ErTools/build && $(MAKE) $(MAKESILENT) -f lib/CMakeFiles/gnuradio-ErTools.dir/build.make lib/CMakeFiles/gnuradio-ErTools.dir/build
 .PHONY : gnuradio-ErTools/fast
 
+AWGN_kanal_impl.o: AWGN_kanal_impl.cc.o
+.PHONY : AWGN_kanal_impl.o
+
+# target to build an object file
+AWGN_kanal_impl.cc.o:
+	cd /home/aymo/BC/Projekt/gr-ErTools/build && $(MAKE) $(MAKESILENT) -f lib/CMakeFiles/gnuradio-ErTools.dir/build.make lib/CMakeFiles/gnuradio-ErTools.dir/AWGN_kanal_impl.cc.o
+.PHONY : AWGN_kanal_impl.cc.o
+
+AWGN_kanal_impl.i: AWGN_kanal_impl.cc.i
+.PHONY : AWGN_kanal_impl.i
+
+# target to preprocess a source file
+AWGN_kanal_impl.cc.i:
+	cd /home/aymo/BC/Projekt/gr-ErTools/build && $(MAKE) $(MAKESILENT) -f lib/CMakeFiles/gnuradio-ErTools.dir/build.make lib/CMakeFiles/gnuradio-ErTools.dir/AWGN_kanal_impl.cc.i
+.PHONY : AWGN_kanal_impl.cc.i
+
+AWGN_kanal_impl.s: AWGN_kanal_impl.cc.s
+.PHONY : AWGN_kanal_impl.s
+
+# target to generate assembly for a file
+AWGN_kanal_impl.cc.s:
+	cd /home/aymo/BC/Projekt/gr-ErTools/build && $(MAKE) $(MAKESILENT) -f lib/CMakeFiles/gnuradio-ErTools.dir/build.make lib/CMakeFiles/gnuradio-ErTools.dir/AWGN_kanal_impl.cc.s
+.PHONY : AWGN_kanal_impl.cc.s
+
 BER_sync_impl.o: BER_sync_impl.cc.o
 .PHONY : BER_sync_impl.o
 
@@ -319,6 +343,9 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... test"
 	@echo "... gnuradio-ErTools"
+	@echo "... AWGN_kanal_impl.o"
+	@echo "... AWGN_kanal_impl.i"
+	@echo "... AWGN_kanal_impl.s"
 	@echo "... BER_sync_impl.o"
 	@echo "... BER_sync_impl.i"
 	@echo "... BER_sync_impl.s"

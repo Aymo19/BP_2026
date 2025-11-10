@@ -1,6 +1,7 @@
 var dir_df4b1a9f322b1f01dd4dc57cc6bc8e03 =
 [
     [ "api.h", "api_8h.html", "api_8h" ],
+    [ "AWGN_kanal.h", "AWGN__kanal_8h.html", "AWGN__kanal_8h" ],
     [ "BER_sync.h", "BER__sync_8h.html", "BER__sync_8h" ],
     [ "BitErrorRate.h", "BitErrorRate_8h.html", "BitErrorRate_8h" ],
     [ "PrintChar.h", "PrintChar_8h.html", "PrintChar_8h" ],

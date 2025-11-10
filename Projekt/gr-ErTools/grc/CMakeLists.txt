@@ -10,4 +10,5 @@ install(FILES
     ErTools_PrintInt.block.yml
     ErTools_PrintChar.block.yml
     ErTools_PrintFloat.block.yml
-    ErTools_BitErrorRate.block.yml DESTINATION share/gnuradio/grc/blocks)
+    ErTools_BitErrorRate.block.yml
+    ErTools_AWGN_kanal.block.yml DESTINATION share/gnuradio/grc/blocks)

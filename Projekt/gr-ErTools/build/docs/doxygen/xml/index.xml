@@ -1,5 +1,20 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <doxygenindex xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="index.xsd" version="1.9.8" xml:lang="en-US">
+  <compound refid="classgr_1_1ErTools_1_1AWGN__kanal" kind="class"><name>gr::ErTools::AWGN_kanal</name>
+    <member refid="classgr_1_1ErTools_1_1AWGN__kanal_1a19fee0aa22fa30c4de406353f5d0a0fb" kind="typedef"><name>sptr</name></member>
+    <member refid="classgr_1_1ErTools_1_1AWGN__kanal_1ab79ce1384d1f7932334f3ed064736ca6" kind="function"><name>make</name></member>
+  </compound>
+  <compound refid="classgr_1_1ErTools_1_1AWGN__kanal__impl" kind="class"><name>gr::ErTools::AWGN_kanal_impl</name>
+    <member refid="classgr_1_1ErTools_1_1AWGN__kanal__impl_1acde59139bdefcd6a6c46da780721cb2b" kind="variable"><name>_N</name></member>
+    <member refid="classgr_1_1ErTools_1_1AWGN__kanal__impl_1ac1a20ac5c4cec54caf21bb9066124da7" kind="variable"><name>_EbN0min</name></member>
+    <member refid="classgr_1_1ErTools_1_1AWGN__kanal__impl_1a61a098b3eb58c796ef31f9b4b6b292c2" kind="variable"><name>_EbN0max</name></member>
+    <member refid="classgr_1_1ErTools_1_1AWGN__kanal__impl_1abf82839f5bf0ce51269556f4558b7f28" kind="variable"><name>_Rb</name></member>
+    <member refid="classgr_1_1ErTools_1_1AWGN__kanal__impl_1a5015e595b2be130a903e5978e6cfd9ad" kind="variable"><name>_fvz</name></member>
+    <member refid="classgr_1_1ErTools_1_1AWGN__kanal__impl_1acf39bb9e03effb820c9c69ec89533127" kind="variable"><name>k</name></member>
+    <member refid="classgr_1_1ErTools_1_1AWGN__kanal__impl_1a2256107d57f1618f91a4648b859473aa" kind="function"><name>AWGN_kanal_impl</name></member>
+    <member refid="classgr_1_1ErTools_1_1AWGN__kanal__impl_1a96387c13960e1cf8f67cabeed98c2dd3" kind="function"><name>~AWGN_kanal_impl</name></member>
+    <member refid="classgr_1_1ErTools_1_1AWGN__kanal__impl_1a9a3a625b7a0fe9818f0fdd1644ba5c9c" kind="function"><name>work</name></member>
+  </compound>
   <compound refid="classgr_1_1ErTools_1_1BER__sync" kind="class"><name>gr::ErTools::BER_sync</name>
     <member refid="classgr_1_1ErTools_1_1BER__sync_1a998446990be81319459cb66ea4aa86b3" kind="typedef"><name>sptr</name></member>
     <member refid="classgr_1_1ErTools_1_1BER__sync_1af32b947181a5450f1579d6b7e7ecafce" kind="function"><name>make</name></member>
@@ -20,6 +35,7 @@
     <member refid="classgr_1_1ErTools_1_1BitErrorRate__impl_1a74d0a503e0270e33befb2c83d116a798" kind="variable"><name>_fvz</name></member>
     <member refid="classgr_1_1ErTools_1_1BitErrorRate__impl_1a27e2aa7c6134c58120f1ca5d995be18d" kind="variable"><name>_EbN0min</name></member>
     <member refid="classgr_1_1ErTools_1_1BitErrorRate__impl_1aee81543bff7b3262c53eabe7121d4de6" kind="variable"><name>_EbN0max</name></member>
+    <member refid="classgr_1_1ErTools_1_1BitErrorRate__impl_1a53d22ced616c2e1d6186427f13f21fc5" kind="variable"><name>k</name></member>
     <member refid="classgr_1_1ErTools_1_1BitErrorRate__impl_1a26f50366b15fcdefc07a17244f63cc5c" kind="function"><name>BitErrorRate_impl</name></member>
     <member refid="classgr_1_1ErTools_1_1BitErrorRate__impl_1a4f5604f13bca618b68a5d89558b6fc44" kind="function"><name>~BitErrorRate_impl</name></member>
     <member refid="classgr_1_1ErTools_1_1BitErrorRate__impl_1abeac666db77e24d2c0af8ab07413af31" kind="function"><name>work</name></member>
@@ -94,6 +110,8 @@
   <compound refid="api_8h" kind="file"><name>api.h</name>
     <member refid="api_8h_1a29908a3852c0e8b5081a13bb9eb7f365" kind="define"><name>ERTOOLS_API</name></member>
   </compound>
+  <compound refid="AWGN__kanal_8h" kind="file"><name>AWGN_kanal.h</name>
+  </compound>
   <compound refid="BER__sync_8h" kind="file"><name>BER_sync.h</name>
   </compound>
   <compound refid="BitErrorRate_8h" kind="file"><name>BitErrorRate.h</name>
@@ -104,6 +122,8 @@
   </compound>
   <compound refid="PrintInt_8h" kind="file"><name>PrintInt.h</name>
   </compound>
+  <compound refid="AWGN__kanal__impl_8h" kind="file"><name>AWGN_kanal_impl.h</name>
+  </compound>
   <compound refid="BER__sync__impl_8h" kind="file"><name>BER_sync_impl.h</name>
   </compound>
   <compound refid="BitErrorRate__impl_8h" kind="file"><name>BitErrorRate_impl.h</name>
@@ -113,6 +133,12 @@
   <compound refid="PrintFloat__impl_8h" kind="file"><name>PrintFloat_impl.h</name>
   </compound>
   <compound refid="PrintInt__impl_8h" kind="file"><name>PrintInt_impl.h</name>
+  </compound>
+  <compound refid="AWGN__kanal__pydoc__template_8h" kind="file"><name>AWGN_kanal_pydoc_template.h</name>
+    <member refid="AWGN__kanal__pydoc__template_8h_1a74021f021dcdfbb22891787b79c5529d" kind="define"><name>D</name></member>
+    <member refid="AWGN__kanal__pydoc__template_8h_1a46dd74fe223fa0e660974ebdd13b55fa" kind="variable"><name>__doc_gr_ErTools_AWGN_kanal</name></member>
+    <member refid="AWGN__kanal__pydoc__template_8h_1ae9385552c881e4edd0e225bb5647f206" kind="variable"><name>__doc_gr_ErTools_AWGN_kanal_AWGN_kanal</name></member>
+    <member refid="AWGN__kanal__pydoc__template_8h_1a4cf721111bb1adb9504571e3535f3acc" kind="variable"><name>__doc_gr_ErTools_AWGN_kanal_make</name></member>
   </compound>
   <compound refid="BER__sync__pydoc__template_8h" kind="file"><name>BER_sync_pydoc_template.h</name>
     <member refid="BER__sync__pydoc__template_8h_1a74021f021dcdfbb22891787b79c5529d" kind="define"><name>D</name></member>

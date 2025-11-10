@@ -26,6 +26,7 @@ namespace py = pybind11;
     void bind_PrintChar(py::module& m);
     void bind_PrintFloat(py::module& m);
     void bind_BitErrorRate(py::module& m);
+    void bind_AWGN_kanal(py::module& m);
 // ) END BINDING_FUNCTION_PROTOTYPES
 
 
@@ -59,5 +60,6 @@ PYBIND11_MODULE(ErTools_python, m)
     bind_PrintChar(m);
     bind_PrintFloat(m);
     bind_BitErrorRate(m);
+    bind_AWGN_kanal(m);
     // ) END BINDING_FUNCTION_CALLS
 }

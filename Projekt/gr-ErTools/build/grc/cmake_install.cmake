@@ -49,6 +49,7 @@ if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT
     "/home/aymo/BC/Projekt/gr-ErTools/grc/ErTools_PrintChar.block.yml"
     "/home/aymo/BC/Projekt/gr-ErTools/grc/ErTools_PrintFloat.block.yml"
     "/home/aymo/BC/Projekt/gr-ErTools/grc/ErTools_BitErrorRate.block.yml"
+    "/home/aymo/BC/Projekt/gr-ErTools/grc/ErTools_AWGN_kanal.block.yml"
     )
 endif()
 

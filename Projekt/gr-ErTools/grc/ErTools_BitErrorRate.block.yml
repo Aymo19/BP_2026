@@ -4,34 +4,15 @@ category: '[ErTools]'
 
 templates:
   imports: from gnuradio import ErTools
-  make: ErTools.BitErrorRate(${N}, ${Rb}, ${fvz}, ${EbN0min}, ${EbN0max})
+  make: ErTools.BitErrorRate(${N})
 
 parameters:
 - id: N
   label: Pocet bodov BER
   dtype: int
   default: 8
-- id: Rb
-  label: Bit Rate
-  dtype: int
-  default: 1
-- id: fvz
-  label: Vzorkovacia frekvencia
-  dtype: int
-  default: 8
-- id: EbN0min
-  label: SNR minimum
-  dtype: int
-  default: 0
-- id: EbN0max
-  label: SNR maximum
-  dtype: int
-  default: 16
 
 inputs:
- - label: in0
-   domain: stream
-   dtype: complex
  - label: in1
    domain: stream
    dtype: byte
@@ -40,9 +21,6 @@ inputs:
    dtype: byte
 
 outputs:
- - label: out0
-   domain: stream
-   dtype: complex
  - label: out1
    domain: stream
    dtype: float

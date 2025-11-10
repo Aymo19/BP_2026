@@ -213,6 +213,30 @@ ErTools_docstrings/fast:
 	cd /home/aymo/BC/Projekt/gr-ErTools/build && $(MAKE) $(MAKESILENT) -f python/ErTools/bindings/CMakeFiles/ErTools_docstrings.dir/build.make python/ErTools/bindings/CMakeFiles/ErTools_docstrings.dir/build
 .PHONY : ErTools_docstrings/fast
 
+AWGN_kanal_python.o: AWGN_kanal_python.cc.o
+.PHONY : AWGN_kanal_python.o
+
+# target to build an object file
+AWGN_kanal_python.cc.o:
+	cd /home/aymo/BC/Projekt/gr-ErTools/build && $(MAKE) $(MAKESILENT) -f python/ErTools/bindings/CMakeFiles/ErTools_python.dir/build.make python/ErTools/bindings/CMakeFiles/ErTools_python.dir/AWGN_kanal_python.cc.o
+.PHONY : AWGN_kanal_python.cc.o
+
+AWGN_kanal_python.i: AWGN_kanal_python.cc.i
+.PHONY : AWGN_kanal_python.i
+
+# target to preprocess a source file
+AWGN_kanal_python.cc.i:
+	cd /home/aymo/BC/Projekt/gr-ErTools/build && $(MAKE) $(MAKESILENT) -f python/ErTools/bindings/CMakeFiles/ErTools_python.dir/build.make python/ErTools/bindings/CMakeFiles/ErTools_python.dir/AWGN_kanal_python.cc.i
+.PHONY : AWGN_kanal_python.cc.i
+
+AWGN_kanal_python.s: AWGN_kanal_python.cc.s
+.PHONY : AWGN_kanal_python.s
+
+# target to generate assembly for a file
+AWGN_kanal_python.cc.s:
+	cd /home/aymo/BC/Projekt/gr-ErTools/build && $(MAKE) $(MAKESILENT) -f python/ErTools/bindings/CMakeFiles/ErTools_python.dir/build.make python/ErTools/bindings/CMakeFiles/ErTools_python.dir/AWGN_kanal_python.cc.s
+.PHONY : AWGN_kanal_python.cc.s
+
 BER_sync_python.o: BER_sync_python.cc.o
 .PHONY : BER_sync_python.o
 
@@ -373,6 +397,9 @@ help:
 	@echo "... ErTools_docstrings"
 	@echo "... extracted_docstrings"
 	@echo "... ErTools_python"
+	@echo "... AWGN_kanal_python.o"
+	@echo "... AWGN_kanal_python.i"
+	@echo "... AWGN_kanal_python.s"
 	@echo "... BER_sync_python.o"
 	@echo "... BER_sync_python.i"
 	@echo "... BER_sync_python.s"

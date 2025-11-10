@@ -16,7 +16,7 @@ namespace ErTools {
 class BitErrorRate_impl : public BitErrorRate
 {
 private:
-  int _N, _Rb, _fvz, _EbN0min, _EbN0max, k;
+  int _N, k;
 
 public:
     BitErrorRate_impl(int N, int Rb, int fvz, int EbN0min, int EbN0max);

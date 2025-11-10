@@ -2,6 +2,7 @@
 <doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
   <compounddef id="dir_23e6078811a419e6e71ecdc10027ca98" kind="dir">
     <compoundname>docstrings</compoundname>
+    <innerfile refid="AWGN__kanal__pydoc__template_8h">AWGN_kanal_pydoc_template.h</innerfile>
     <innerfile refid="BER__sync__pydoc__template_8h">BER_sync_pydoc_template.h</innerfile>
     <innerfile refid="BitErrorRate__pydoc__template_8h">BitErrorRate_pydoc_template.h</innerfile>
     <innerfile refid="PrintChar__pydoc__template_8h">PrintChar_pydoc_template.h</innerfile>

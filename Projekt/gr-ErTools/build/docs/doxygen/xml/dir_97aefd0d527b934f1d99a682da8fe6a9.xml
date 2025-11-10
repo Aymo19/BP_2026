@@ -2,6 +2,7 @@
 <doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
   <compounddef id="dir_97aefd0d527b934f1d99a682da8fe6a9" kind="dir">
     <compoundname>lib</compoundname>
+    <innerfile refid="AWGN__kanal__impl_8h">AWGN_kanal_impl.h</innerfile>
     <innerfile refid="BER__sync__impl_8h">BER_sync_impl.h</innerfile>
     <innerfile refid="BitErrorRate__impl_8h">BitErrorRate_impl.h</innerfile>
     <innerfile refid="PrintChar__impl_8h">PrintChar_impl.h</innerfile>

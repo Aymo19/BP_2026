@@ -49,7 +49,7 @@ var NAVTREE =
 
 var NAVTREEINDEX =
 [
-"BER__sync_8h.html"
+"AWGN__kanal_8h.html"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';
