@@ -82,7 +82,7 @@ KOD:
 			SER[k] = errors[k] / count[k]
 			out0[i] = SER[k]
 		
-		count[k] += 1
+			count[k] += 1
 	
 		return len(out0)
 

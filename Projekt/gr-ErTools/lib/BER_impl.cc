@@ -31,6 +31,13 @@ BER_impl::BER_impl(int N)
                      gr::io_signature::make(1, 1, sizeof(output_type)))
 {
   _N = N;
+  _count = std::vector<unsigned long long>(N, 8);
+  _pocet_chyb = std::vector<unsigned long long>(N, 1);
+  _pamat_SER = std::vector<double>(N, 1.0);
+  /*
+  std::fill_n(_count, N, 8);
+  std::fill_n(_pocet_chyb, N, 0);
+  std::fill_n(_pamat_SER, N, 1.0);*/
 }
 
 //Our virtual destructor.
@@ -66,7 +73,6 @@ int BER_calc(char S1, char S2) {
   XORnute = S1 ^ S2;
   
   e_sum = BitCounter(XORnute, 8);//N_S1);
-  printf("%d\n", e_sum);
   /*BER = (float)e_sum / (float)N_S1;
   
   log_BER = logf(BER);
@@ -86,11 +92,11 @@ int BER_impl::work(int noutput_items,
     
     auto out = static_cast<output_type*>(output_items[0]);
 
-    int pocet_chyb[_N], count[_N];
+    /*long long int pocet_chyb[_N], count[_N];
     float pamat_SER[_N];
     std::fill_n(pocet_chyb, _N, 0);
     std::fill_n(count, _N, 8);
-    std::fill_n(pamat_SER, _N, 1.0);
+    std::fill_n(pamat_SER, _N, 1.0);*/
     
     //velkost input vektora z AWGN kanala
     //int L = sizeof(in0) / sizeof(in1[0]);
@@ -98,17 +104,14 @@ int BER_impl::work(int noutput_items,
 
     for(int i = 0; i < noutput_items; i++) {
       k = in0[i];
-      printf("%d\n", k);
-      //pocet_chyb[k] += BER_calc(in1[i], in2[i]);
-      //pamat_SER[k] = float(pocet_chyb[k]) / float(count[k]);
-
-      //printf("%d %d %d\n", k, pocet_chyb[k], count[k]);
+      
+      _pocet_chyb.at(k) += BER_calc(in1[i], in2[i]);
+      _pamat_SER.at(k) = double(_pocet_chyb.at(k)) / double(_count.at(k));
         
-      //out[i] = pamat_SER[k];
-      out[i] = 1.0;
-      count[k] += 8;
-    }
+      out[i] = _pamat_SER.at(k);
 
+      _count.at(k) += 8;
+    }
 
     // Tell runtime system how many output items we produced.
     return noutput_items;

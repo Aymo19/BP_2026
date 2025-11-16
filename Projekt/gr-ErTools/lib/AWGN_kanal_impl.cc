@@ -39,6 +39,7 @@ AWGN_kanal_impl::AWGN_kanal_impl(int N, int EbN0min, int EbN0max, int R, int W)
   _EbN0min = EbN0min;
   _EbN0max = EbN0max;
   
+  //k = 0;
 }
 
 //Our virtual destructor.
@@ -81,6 +82,10 @@ gr_complex Sum(float EDB, float Ps, int _Rb, int _fvz) {
   return n;
 }
 
+float Ps, sumPs = 0;
+float rozpatie, rozpatiePostup;
+//std::vector <float> EDB;
+int k = 0;
 
 int AWGN_kanal_impl::work(int noutput_items,
                           gr_vector_const_void_star& input_items,
@@ -89,12 +94,9 @@ int AWGN_kanal_impl::work(int noutput_items,
     gr_complex *in0 = (gr_complex *) input_items[0];
     
     gr_complex *out0 = (gr_complex *) output_items[0];
-    float *out1 = (float *) output_items[1];
+    int *out1 = (int *) output_items[1];
 
     //-----logika------------------------
-
-    float rozpatie, rozpatiePostup;
-
     float EDB[_N];
 
     rozpatie = float((_EbN0max - _EbN0min)) / float((_N-1));
@@ -106,14 +108,12 @@ int AWGN_kanal_impl::work(int noutput_items,
     }
     
     //vypocet vykonu vstupneho signalu Ps
-    float Ps, sumPs = 0;
 
     for(int a = 0; a < noutput_items; a++)
       sumPs += pow(abs(in0[a]), 2);
 
     Ps = sumPs / float(noutput_items);
-    
-    int k = 0;
+    k = 0;
 
     for(int b = 0; b < noutput_items; b++) {
       //AWGN kanal
@@ -123,6 +123,7 @@ int AWGN_kanal_impl::work(int noutput_items,
       out0[b] = sg_n;
       out1[b] = k;
 
+      //printf("OUT: %d\n", out1[b]);
       if(k < _N-1) {
         k += 1;
       }else {

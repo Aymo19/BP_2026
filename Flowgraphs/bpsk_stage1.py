@@ -73,45 +73,49 @@ class bpsk_stage1(gr.top_block, Qt.QWidget):
         # Blocks
         ##################################################
 
-        self.qtgui_vector_sink_f_0 = qtgui.vector_sink_f(
+        self.qtgui_vector_sink_f_0_0 = qtgui.vector_sink_f(
             128,
             0,
-            1.0,
-            "x-Axis",
-            "y-Axis",
+            ((20-0)/float(128)),
+            "Eb/N0 [dB]",
+            "logPe",
             "BER",
             1, # Number of inputs
             None # parent
         )
-        self.qtgui_vector_sink_f_0.set_update_time(0.10)
-        self.qtgui_vector_sink_f_0.set_y_axis((-140), 10)
-        self.qtgui_vector_sink_f_0.enable_autoscale(False)
-        self.qtgui_vector_sink_f_0.enable_grid(False)
-        self.qtgui_vector_sink_f_0.set_x_axis_units("")
-        self.qtgui_vector_sink_f_0.set_y_axis_units("")
-        self.qtgui_vector_sink_f_0.set_ref_level(0)
+        self.qtgui_vector_sink_f_0_0.set_update_time(0.10)
+        self.qtgui_vector_sink_f_0_0.set_y_axis((-8), 0)
+        self.qtgui_vector_sink_f_0_0.enable_autoscale(False)
+        self.qtgui_vector_sink_f_0_0.enable_grid(True)
+        self.qtgui_vector_sink_f_0_0.set_x_axis_units("dB")
+        self.qtgui_vector_sink_f_0_0.set_y_axis_units("")
+        self.qtgui_vector_sink_f_0_0.set_ref_level(0)
 
 
-        labels = ['', '', '', '', '',
+        labels = ["BPSK", "QPSK", '8PSK', "16QAM", '',
             '', '', '', '', '']
-        widths = [1, 1, 1, 1, 1,
+        widths = [4, 4, 4, 4, 1,
             1, 1, 1, 1, 1]
         colors = ["blue", "red", "green", "black", "cyan",
             "magenta", "yellow", "dark red", "dark green", "dark blue"]
-        alphas = [1.0, 1.0, 1.0, 1.0, 1.0,
+        alphas = [1, 1.0, 1.0, 1.0, 1.0,
             1.0, 1.0, 1.0, 1.0, 1.0]
 
         for i in range(1):
             if len(labels[i]) == 0:
-                self.qtgui_vector_sink_f_0.set_line_label(i, "Data {0}".format(i))
+                self.qtgui_vector_sink_f_0_0.set_line_label(i, "Data {0}".format(i))
             else:
-                self.qtgui_vector_sink_f_0.set_line_label(i, labels[i])
-            self.qtgui_vector_sink_f_0.set_line_width(i, widths[i])
-            self.qtgui_vector_sink_f_0.set_line_color(i, colors[i])
-            self.qtgui_vector_sink_f_0.set_line_alpha(i, alphas[i])
+                self.qtgui_vector_sink_f_0_0.set_line_label(i, labels[i])
+            self.qtgui_vector_sink_f_0_0.set_line_width(i, widths[i])
+            self.qtgui_vector_sink_f_0_0.set_line_color(i, colors[i])
+            self.qtgui_vector_sink_f_0_0.set_line_alpha(i, alphas[i])
 
-        self._qtgui_vector_sink_f_0_win = sip.wrapinstance(self.qtgui_vector_sink_f_0.qwidget(), Qt.QWidget)
-        self.top_layout.addWidget(self._qtgui_vector_sink_f_0_win)
+        self._qtgui_vector_sink_f_0_0_win = sip.wrapinstance(self.qtgui_vector_sink_f_0_0.qwidget(), Qt.QWidget)
+        self.top_grid_layout.addWidget(self._qtgui_vector_sink_f_0_0_win, 2, 0, 1, 1)
+        for r in range(2, 3):
+            self.top_grid_layout.setRowStretch(r, 1)
+        for c in range(0, 1):
+            self.top_grid_layout.setColumnStretch(c, 1)
         self.digital_constellation_modulator_0 = digital.generic_mod(
             constellation=bpsk,
             differential=True,
@@ -128,7 +132,7 @@ class bpsk_stage1(gr.top_block, Qt.QWidget):
         self.blocks_add_xx_0 = blocks.add_vcc(1)
         self.analog_random_source_x_0 = blocks.vector_source_b(list(map(int, numpy.random.randint(0, 2, 1024))), True)
         self.ErTools_BER_0 = ErTools.BER(128)
-        self.ErTools_AWGN_kanal_0 = ErTools.AWGN_kanal(128, 0, 20, 1, 1)
+        self.ErTools_AWGN_kanal_0 = ErTools.AWGN_kanal(128, 0, 10, 1, 32000)
 
 
         ##################################################
@@ -141,7 +145,7 @@ class bpsk_stage1(gr.top_block, Qt.QWidget):
         self.connect((self.analog_random_source_x_0, 0), (self.digital_constellation_modulator_0, 0))
         self.connect((self.blocks_add_xx_0, 0), (self.digital_constellation_decoder_cb_0, 0))
         self.connect((self.blocks_nlog10_ff_0, 0), (self.blocks_stream_to_vector_0, 0))
-        self.connect((self.blocks_stream_to_vector_0, 0), (self.qtgui_vector_sink_f_0, 0))
+        self.connect((self.blocks_stream_to_vector_0, 0), (self.qtgui_vector_sink_f_0_0, 0))
         self.connect((self.blocks_throttle2_0, 0), (self.blocks_add_xx_0, 0))
         self.connect((self.digital_constellation_decoder_cb_0, 0), (self.ErTools_BER_0, 2))
         self.connect((self.digital_constellation_modulator_0, 0), (self.ErTools_AWGN_kanal_0, 0))

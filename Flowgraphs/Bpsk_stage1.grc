@@ -50,7 +50,7 @@ blocks:
     bus_sink: false
     bus_source: false
     bus_structure: null
-    coordinate: [16, 268.0]
+    coordinate: [712, 8.0]
     rotation: 0
     state: true
 - name: excess_bw
@@ -104,11 +104,11 @@ blocks:
 - name: ErTools_AWGN_kanal_0
   id: ErTools_AWGN_kanal
   parameters:
-    EbN0max: '20'
+    EbN0max: '10'
     EbN0min: '0'
     N: '128'
     R: '1'
-    W: '1'
+    W: '32000'
     affinity: ''
     alias: ''
     comment: ''
@@ -118,7 +118,7 @@ blocks:
     bus_sink: false
     bus_source: false
     bus_structure: null
-    coordinate: [504, 216.0]
+    coordinate: [832, 184.0]
     rotation: 0
     state: enabled
 - name: ErTools_BER_0
@@ -134,7 +134,7 @@ blocks:
     bus_sink: false
     bus_source: false
     bus_structure: null
-    coordinate: [768, 448.0]
+    coordinate: [600, 344.0]
     rotation: 0
     state: enabled
 - name: analog_random_source_x_0
@@ -154,7 +154,7 @@ blocks:
     bus_sink: false
     bus_source: false
     bus_structure: null
-    coordinate: [16, 124.0]
+    coordinate: [16, 136.0]
     rotation: 0
     state: enabled
 - name: blocks_add_xx_0
@@ -172,7 +172,7 @@ blocks:
     bus_sink: false
     bus_source: false
     bus_structure: null
-    coordinate: [712, 168.0]
+    coordinate: [1048, 160.0]
     rotation: 0
     state: enabled
 - name: blocks_nlog10_ff_0
@@ -190,7 +190,7 @@ blocks:
     bus_sink: false
     bus_source: false
     bus_structure: null
-    coordinate: [1112, 296.0]
+    coordinate: [792, 368.0]
     rotation: 0
     state: enabled
 - name: blocks_stream_to_vector_0
@@ -208,7 +208,7 @@ blocks:
     bus_sink: false
     bus_source: false
     bus_structure: null
-    coordinate: [1232, 272.0]
+    coordinate: [920, 376.0]
     rotation: 0
     state: enabled
 - name: blocks_throttle2_0
@@ -229,7 +229,7 @@ blocks:
     bus_sink: false
     bus_source: false
     bus_structure: null
-    coordinate: [472, 136.0]
+    coordinate: [824, 104.0]
     rotation: 0
     state: enabled
 - name: digital_constellation_decoder_cb_0
@@ -245,7 +245,7 @@ blocks:
     bus_sink: false
     bus_source: false
     bus_structure: null
-    coordinate: [824, 176.0]
+    coordinate: [1152, 168.0]
     rotation: 0
     state: enabled
 - name: digital_constellation_modulator_0
@@ -267,15 +267,15 @@ blocks:
     bus_sink: false
     bus_source: false
     bus_structure: null
-    coordinate: [208, 124.0]
+    coordinate: [544, 136.0]
     rotation: 0
     state: enabled
-- name: qtgui_vector_sink_f_0
+- name: qtgui_vector_sink_f_0_0
   id: qtgui_vector_sink_f
   parameters:
     affinity: ''
     alias: ''
-    alpha1: '1.0'
+    alpha1: '1'
     alpha10: '1.0'
     alpha2: '1.0'
     alpha3: '1.0'
@@ -298,13 +298,13 @@ blocks:
     color8: '"dark red"'
     color9: '"dark green"'
     comment: ''
-    grid: 'False'
-    gui_hint: ''
-    label1: ''
+    grid: 'True'
+    gui_hint: 2,0,1,1
+    label1: '"BPSK"'
     label10: ''
-    label2: ''
-    label3: ''
-    label4: ''
+    label2: '"QPSK"'
+    label3: 8PSK
+    label4: '"16QAM"'
     label5: ''
     label6: ''
     label7: ''
@@ -316,48 +316,142 @@ blocks:
     name: '"BER"'
     nconnections: '1'
     ref_level: '0'
-    showports: 'False'
+    showports: 'True'
     update_time: '0.10'
     vlen: '128'
-    width1: '1'
+    width1: '4'
     width10: '1'
-    width2: '1'
-    width3: '1'
-    width4: '1'
+    width2: '4'
+    width3: '4'
+    width4: '4'
     width5: '1'
     width6: '1'
     width7: '1'
     width8: '1'
     width9: '1'
-    x_axis_label: '"x-Axis"'
+    x_axis_label: '"Eb/N0 [dB]"'
     x_start: '0'
-    x_step: '1.0'
-    x_units: '""'
-    y_axis_label: '"y-Axis"'
+    x_step: (20-0)/float(128)
+    x_units: '"dB"'
+    y_axis_label: '"logPe"'
     y_units: '""'
-    ymax: '10'
-    ymin: '-140'
+    ymax: '0'
+    ymin: '-8'
   states:
     bus_sink: false
     bus_source: false
     bus_structure: null
-    coordinate: [1400, 256.0]
+    coordinate: [1088, 316.0]
+    rotation: 0
+    state: enabled
+- name: virtual_sink_0
+  id: virtual_sink
+  parameters:
+    alias: ''
+    comment: ''
+    stream_id: AWGN
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [1400, 168.0]
+    rotation: 0
+    state: enabled
+- name: virtual_sink_0_0
+  id: virtual_sink
+  parameters:
+    alias: ''
+    comment: ''
+    stream_id: SIGNAL
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [200, 160.0]
+    rotation: 0
+    state: enabled
+- name: virtual_sink_0_1
+  id: virtual_sink
+  parameters:
+    alias: ''
+    comment: ''
+    stream_id: SAMP_POINT
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [1400, 232.0]
+    rotation: 0
+    state: enabled
+- name: virtual_source_0
+  id: virtual_source
+  parameters:
+    alias: ''
+    comment: ''
+    stream_id: AWGN
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [384, 440.0]
+    rotation: 0
+    state: enabled
+- name: virtual_source_0_0
+  id: virtual_source
+  parameters:
+    alias: ''
+    comment: ''
+    stream_id: SIGNAL
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [376, 384.0]
+    rotation: 0
+    state: enabled
+- name: virtual_source_0_0_0
+  id: virtual_source
+  parameters:
+    alias: ''
+    comment: ''
+    stream_id: SIGNAL
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [376, 160.0]
+    rotation: 0
+    state: enabled
+- name: virtual_source_0_0_1
+  id: virtual_source
+  parameters:
+    alias: ''
+    comment: ''
+    stream_id: SAMP_POINT
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [352, 328.0]
     rotation: 0
     state: enabled
 
 connections:
 - [ErTools_AWGN_kanal_0, '0', blocks_add_xx_0, '1']
-- [ErTools_AWGN_kanal_0, '1', ErTools_BER_0, '0']
+- [ErTools_AWGN_kanal_0, '1', virtual_sink_0_1, '0']
 - [ErTools_BER_0, '0', blocks_nlog10_ff_0, '0']
-- [analog_random_source_x_0, '0', ErTools_BER_0, '1']
-- [analog_random_source_x_0, '0', digital_constellation_modulator_0, '0']
+- [analog_random_source_x_0, '0', virtual_sink_0_0, '0']
 - [blocks_add_xx_0, '0', digital_constellation_decoder_cb_0, '0']
 - [blocks_nlog10_ff_0, '0', blocks_stream_to_vector_0, '0']
-- [blocks_stream_to_vector_0, '0', qtgui_vector_sink_f_0, '0']
+- [blocks_stream_to_vector_0, '0', qtgui_vector_sink_f_0_0, '0']
 - [blocks_throttle2_0, '0', blocks_add_xx_0, '0']
-- [digital_constellation_decoder_cb_0, '0', ErTools_BER_0, '2']
+- [digital_constellation_decoder_cb_0, '0', virtual_sink_0, '0']
 - [digital_constellation_modulator_0, '0', ErTools_AWGN_kanal_0, '0']
 - [digital_constellation_modulator_0, '0', blocks_throttle2_0, '0']
+- [virtual_source_0, '0', ErTools_BER_0, '2']
+- [virtual_source_0_0, '0', ErTools_BER_0, '1']
+- [virtual_source_0_0_0, '0', digital_constellation_modulator_0, '0']
+- [virtual_source_0_0_1, '0', ErTools_BER_0, '0']
 
 metadata:
   file_format: 1
