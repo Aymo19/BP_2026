@@ -10,9 +10,5 @@
 # Install public header files
 ########################################################################
 install(FILES api.h
-    BER_sync.h
-    PrintInt.h
-    PrintChar.h
-    PrintFloat.h
-    BitErrorRate.h
-    AWGN_kanal.h DESTINATION include/gnuradio/ErTools)
+    AWGN_kanal.h
+    BER.h DESTINATION include/gnuradio/ErTools)

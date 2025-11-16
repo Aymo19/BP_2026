@@ -69,80 +69,10 @@ include python/ErTools/bindings/CMakeFiles/ErTools_python.dir/progress.make
 # Include the compile flags for this target's objects.
 include python/ErTools/bindings/CMakeFiles/ErTools_python.dir/flags.make
 
-python/ErTools/bindings/CMakeFiles/ErTools_python.dir/BER_sync_python.cc.o: python/ErTools/bindings/CMakeFiles/ErTools_python.dir/flags.make
-python/ErTools/bindings/CMakeFiles/ErTools_python.dir/BER_sync_python.cc.o: /home/aymo/BC/Projekt/gr-ErTools/python/ErTools/bindings/BER_sync_python.cc
-python/ErTools/bindings/CMakeFiles/ErTools_python.dir/BER_sync_python.cc.o: python/ErTools/bindings/CMakeFiles/ErTools_python.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/aymo/BC/Projekt/gr-ErTools/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object python/ErTools/bindings/CMakeFiles/ErTools_python.dir/BER_sync_python.cc.o"
-	cd /home/aymo/BC/Projekt/gr-ErTools/build/python/ErTools/bindings && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT python/ErTools/bindings/CMakeFiles/ErTools_python.dir/BER_sync_python.cc.o -MF CMakeFiles/ErTools_python.dir/BER_sync_python.cc.o.d -o CMakeFiles/ErTools_python.dir/BER_sync_python.cc.o -c /home/aymo/BC/Projekt/gr-ErTools/python/ErTools/bindings/BER_sync_python.cc
-
-python/ErTools/bindings/CMakeFiles/ErTools_python.dir/BER_sync_python.cc.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/ErTools_python.dir/BER_sync_python.cc.i"
-	cd /home/aymo/BC/Projekt/gr-ErTools/build/python/ErTools/bindings && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/aymo/BC/Projekt/gr-ErTools/python/ErTools/bindings/BER_sync_python.cc > CMakeFiles/ErTools_python.dir/BER_sync_python.cc.i
-
-python/ErTools/bindings/CMakeFiles/ErTools_python.dir/BER_sync_python.cc.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/ErTools_python.dir/BER_sync_python.cc.s"
-	cd /home/aymo/BC/Projekt/gr-ErTools/build/python/ErTools/bindings && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/aymo/BC/Projekt/gr-ErTools/python/ErTools/bindings/BER_sync_python.cc -o CMakeFiles/ErTools_python.dir/BER_sync_python.cc.s
-
-python/ErTools/bindings/CMakeFiles/ErTools_python.dir/PrintInt_python.cc.o: python/ErTools/bindings/CMakeFiles/ErTools_python.dir/flags.make
-python/ErTools/bindings/CMakeFiles/ErTools_python.dir/PrintInt_python.cc.o: /home/aymo/BC/Projekt/gr-ErTools/python/ErTools/bindings/PrintInt_python.cc
-python/ErTools/bindings/CMakeFiles/ErTools_python.dir/PrintInt_python.cc.o: python/ErTools/bindings/CMakeFiles/ErTools_python.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/aymo/BC/Projekt/gr-ErTools/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object python/ErTools/bindings/CMakeFiles/ErTools_python.dir/PrintInt_python.cc.o"
-	cd /home/aymo/BC/Projekt/gr-ErTools/build/python/ErTools/bindings && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT python/ErTools/bindings/CMakeFiles/ErTools_python.dir/PrintInt_python.cc.o -MF CMakeFiles/ErTools_python.dir/PrintInt_python.cc.o.d -o CMakeFiles/ErTools_python.dir/PrintInt_python.cc.o -c /home/aymo/BC/Projekt/gr-ErTools/python/ErTools/bindings/PrintInt_python.cc
-
-python/ErTools/bindings/CMakeFiles/ErTools_python.dir/PrintInt_python.cc.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/ErTools_python.dir/PrintInt_python.cc.i"
-	cd /home/aymo/BC/Projekt/gr-ErTools/build/python/ErTools/bindings && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/aymo/BC/Projekt/gr-ErTools/python/ErTools/bindings/PrintInt_python.cc > CMakeFiles/ErTools_python.dir/PrintInt_python.cc.i
-
-python/ErTools/bindings/CMakeFiles/ErTools_python.dir/PrintInt_python.cc.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/ErTools_python.dir/PrintInt_python.cc.s"
-	cd /home/aymo/BC/Projekt/gr-ErTools/build/python/ErTools/bindings && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/aymo/BC/Projekt/gr-ErTools/python/ErTools/bindings/PrintInt_python.cc -o CMakeFiles/ErTools_python.dir/PrintInt_python.cc.s
-
-python/ErTools/bindings/CMakeFiles/ErTools_python.dir/PrintChar_python.cc.o: python/ErTools/bindings/CMakeFiles/ErTools_python.dir/flags.make
-python/ErTools/bindings/CMakeFiles/ErTools_python.dir/PrintChar_python.cc.o: /home/aymo/BC/Projekt/gr-ErTools/python/ErTools/bindings/PrintChar_python.cc
-python/ErTools/bindings/CMakeFiles/ErTools_python.dir/PrintChar_python.cc.o: python/ErTools/bindings/CMakeFiles/ErTools_python.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/aymo/BC/Projekt/gr-ErTools/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object python/ErTools/bindings/CMakeFiles/ErTools_python.dir/PrintChar_python.cc.o"
-	cd /home/aymo/BC/Projekt/gr-ErTools/build/python/ErTools/bindings && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT python/ErTools/bindings/CMakeFiles/ErTools_python.dir/PrintChar_python.cc.o -MF CMakeFiles/ErTools_python.dir/PrintChar_python.cc.o.d -o CMakeFiles/ErTools_python.dir/PrintChar_python.cc.o -c /home/aymo/BC/Projekt/gr-ErTools/python/ErTools/bindings/PrintChar_python.cc
-
-python/ErTools/bindings/CMakeFiles/ErTools_python.dir/PrintChar_python.cc.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/ErTools_python.dir/PrintChar_python.cc.i"
-	cd /home/aymo/BC/Projekt/gr-ErTools/build/python/ErTools/bindings && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/aymo/BC/Projekt/gr-ErTools/python/ErTools/bindings/PrintChar_python.cc > CMakeFiles/ErTools_python.dir/PrintChar_python.cc.i
-
-python/ErTools/bindings/CMakeFiles/ErTools_python.dir/PrintChar_python.cc.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/ErTools_python.dir/PrintChar_python.cc.s"
-	cd /home/aymo/BC/Projekt/gr-ErTools/build/python/ErTools/bindings && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/aymo/BC/Projekt/gr-ErTools/python/ErTools/bindings/PrintChar_python.cc -o CMakeFiles/ErTools_python.dir/PrintChar_python.cc.s
-
-python/ErTools/bindings/CMakeFiles/ErTools_python.dir/PrintFloat_python.cc.o: python/ErTools/bindings/CMakeFiles/ErTools_python.dir/flags.make
-python/ErTools/bindings/CMakeFiles/ErTools_python.dir/PrintFloat_python.cc.o: /home/aymo/BC/Projekt/gr-ErTools/python/ErTools/bindings/PrintFloat_python.cc
-python/ErTools/bindings/CMakeFiles/ErTools_python.dir/PrintFloat_python.cc.o: python/ErTools/bindings/CMakeFiles/ErTools_python.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/aymo/BC/Projekt/gr-ErTools/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object python/ErTools/bindings/CMakeFiles/ErTools_python.dir/PrintFloat_python.cc.o"
-	cd /home/aymo/BC/Projekt/gr-ErTools/build/python/ErTools/bindings && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT python/ErTools/bindings/CMakeFiles/ErTools_python.dir/PrintFloat_python.cc.o -MF CMakeFiles/ErTools_python.dir/PrintFloat_python.cc.o.d -o CMakeFiles/ErTools_python.dir/PrintFloat_python.cc.o -c /home/aymo/BC/Projekt/gr-ErTools/python/ErTools/bindings/PrintFloat_python.cc
-
-python/ErTools/bindings/CMakeFiles/ErTools_python.dir/PrintFloat_python.cc.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/ErTools_python.dir/PrintFloat_python.cc.i"
-	cd /home/aymo/BC/Projekt/gr-ErTools/build/python/ErTools/bindings && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/aymo/BC/Projekt/gr-ErTools/python/ErTools/bindings/PrintFloat_python.cc > CMakeFiles/ErTools_python.dir/PrintFloat_python.cc.i
-
-python/ErTools/bindings/CMakeFiles/ErTools_python.dir/PrintFloat_python.cc.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/ErTools_python.dir/PrintFloat_python.cc.s"
-	cd /home/aymo/BC/Projekt/gr-ErTools/build/python/ErTools/bindings && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/aymo/BC/Projekt/gr-ErTools/python/ErTools/bindings/PrintFloat_python.cc -o CMakeFiles/ErTools_python.dir/PrintFloat_python.cc.s
-
-python/ErTools/bindings/CMakeFiles/ErTools_python.dir/BitErrorRate_python.cc.o: python/ErTools/bindings/CMakeFiles/ErTools_python.dir/flags.make
-python/ErTools/bindings/CMakeFiles/ErTools_python.dir/BitErrorRate_python.cc.o: /home/aymo/BC/Projekt/gr-ErTools/python/ErTools/bindings/BitErrorRate_python.cc
-python/ErTools/bindings/CMakeFiles/ErTools_python.dir/BitErrorRate_python.cc.o: python/ErTools/bindings/CMakeFiles/ErTools_python.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/aymo/BC/Projekt/gr-ErTools/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object python/ErTools/bindings/CMakeFiles/ErTools_python.dir/BitErrorRate_python.cc.o"
-	cd /home/aymo/BC/Projekt/gr-ErTools/build/python/ErTools/bindings && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT python/ErTools/bindings/CMakeFiles/ErTools_python.dir/BitErrorRate_python.cc.o -MF CMakeFiles/ErTools_python.dir/BitErrorRate_python.cc.o.d -o CMakeFiles/ErTools_python.dir/BitErrorRate_python.cc.o -c /home/aymo/BC/Projekt/gr-ErTools/python/ErTools/bindings/BitErrorRate_python.cc
-
-python/ErTools/bindings/CMakeFiles/ErTools_python.dir/BitErrorRate_python.cc.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/ErTools_python.dir/BitErrorRate_python.cc.i"
-	cd /home/aymo/BC/Projekt/gr-ErTools/build/python/ErTools/bindings && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/aymo/BC/Projekt/gr-ErTools/python/ErTools/bindings/BitErrorRate_python.cc > CMakeFiles/ErTools_python.dir/BitErrorRate_python.cc.i
-
-python/ErTools/bindings/CMakeFiles/ErTools_python.dir/BitErrorRate_python.cc.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/ErTools_python.dir/BitErrorRate_python.cc.s"
-	cd /home/aymo/BC/Projekt/gr-ErTools/build/python/ErTools/bindings && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/aymo/BC/Projekt/gr-ErTools/python/ErTools/bindings/BitErrorRate_python.cc -o CMakeFiles/ErTools_python.dir/BitErrorRate_python.cc.s
-
 python/ErTools/bindings/CMakeFiles/ErTools_python.dir/AWGN_kanal_python.cc.o: python/ErTools/bindings/CMakeFiles/ErTools_python.dir/flags.make
 python/ErTools/bindings/CMakeFiles/ErTools_python.dir/AWGN_kanal_python.cc.o: /home/aymo/BC/Projekt/gr-ErTools/python/ErTools/bindings/AWGN_kanal_python.cc
 python/ErTools/bindings/CMakeFiles/ErTools_python.dir/AWGN_kanal_python.cc.o: python/ErTools/bindings/CMakeFiles/ErTools_python.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/aymo/BC/Projekt/gr-ErTools/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object python/ErTools/bindings/CMakeFiles/ErTools_python.dir/AWGN_kanal_python.cc.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/aymo/BC/Projekt/gr-ErTools/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object python/ErTools/bindings/CMakeFiles/ErTools_python.dir/AWGN_kanal_python.cc.o"
 	cd /home/aymo/BC/Projekt/gr-ErTools/build/python/ErTools/bindings && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT python/ErTools/bindings/CMakeFiles/ErTools_python.dir/AWGN_kanal_python.cc.o -MF CMakeFiles/ErTools_python.dir/AWGN_kanal_python.cc.o.d -o CMakeFiles/ErTools_python.dir/AWGN_kanal_python.cc.o -c /home/aymo/BC/Projekt/gr-ErTools/python/ErTools/bindings/AWGN_kanal_python.cc
 
 python/ErTools/bindings/CMakeFiles/ErTools_python.dir/AWGN_kanal_python.cc.i: cmake_force
@@ -153,10 +83,24 @@ python/ErTools/bindings/CMakeFiles/ErTools_python.dir/AWGN_kanal_python.cc.s: cm
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/ErTools_python.dir/AWGN_kanal_python.cc.s"
 	cd /home/aymo/BC/Projekt/gr-ErTools/build/python/ErTools/bindings && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/aymo/BC/Projekt/gr-ErTools/python/ErTools/bindings/AWGN_kanal_python.cc -o CMakeFiles/ErTools_python.dir/AWGN_kanal_python.cc.s
 
+python/ErTools/bindings/CMakeFiles/ErTools_python.dir/BER_python.cc.o: python/ErTools/bindings/CMakeFiles/ErTools_python.dir/flags.make
+python/ErTools/bindings/CMakeFiles/ErTools_python.dir/BER_python.cc.o: /home/aymo/BC/Projekt/gr-ErTools/python/ErTools/bindings/BER_python.cc
+python/ErTools/bindings/CMakeFiles/ErTools_python.dir/BER_python.cc.o: python/ErTools/bindings/CMakeFiles/ErTools_python.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/aymo/BC/Projekt/gr-ErTools/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object python/ErTools/bindings/CMakeFiles/ErTools_python.dir/BER_python.cc.o"
+	cd /home/aymo/BC/Projekt/gr-ErTools/build/python/ErTools/bindings && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT python/ErTools/bindings/CMakeFiles/ErTools_python.dir/BER_python.cc.o -MF CMakeFiles/ErTools_python.dir/BER_python.cc.o.d -o CMakeFiles/ErTools_python.dir/BER_python.cc.o -c /home/aymo/BC/Projekt/gr-ErTools/python/ErTools/bindings/BER_python.cc
+
+python/ErTools/bindings/CMakeFiles/ErTools_python.dir/BER_python.cc.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/ErTools_python.dir/BER_python.cc.i"
+	cd /home/aymo/BC/Projekt/gr-ErTools/build/python/ErTools/bindings && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/aymo/BC/Projekt/gr-ErTools/python/ErTools/bindings/BER_python.cc > CMakeFiles/ErTools_python.dir/BER_python.cc.i
+
+python/ErTools/bindings/CMakeFiles/ErTools_python.dir/BER_python.cc.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/ErTools_python.dir/BER_python.cc.s"
+	cd /home/aymo/BC/Projekt/gr-ErTools/build/python/ErTools/bindings && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/aymo/BC/Projekt/gr-ErTools/python/ErTools/bindings/BER_python.cc -o CMakeFiles/ErTools_python.dir/BER_python.cc.s
+
 python/ErTools/bindings/CMakeFiles/ErTools_python.dir/python_bindings.cc.o: python/ErTools/bindings/CMakeFiles/ErTools_python.dir/flags.make
 python/ErTools/bindings/CMakeFiles/ErTools_python.dir/python_bindings.cc.o: /home/aymo/BC/Projekt/gr-ErTools/python/ErTools/bindings/python_bindings.cc
 python/ErTools/bindings/CMakeFiles/ErTools_python.dir/python_bindings.cc.o: python/ErTools/bindings/CMakeFiles/ErTools_python.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/aymo/BC/Projekt/gr-ErTools/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object python/ErTools/bindings/CMakeFiles/ErTools_python.dir/python_bindings.cc.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/aymo/BC/Projekt/gr-ErTools/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object python/ErTools/bindings/CMakeFiles/ErTools_python.dir/python_bindings.cc.o"
 	cd /home/aymo/BC/Projekt/gr-ErTools/build/python/ErTools/bindings && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT python/ErTools/bindings/CMakeFiles/ErTools_python.dir/python_bindings.cc.o -MF CMakeFiles/ErTools_python.dir/python_bindings.cc.o.d -o CMakeFiles/ErTools_python.dir/python_bindings.cc.o -c /home/aymo/BC/Projekt/gr-ErTools/python/ErTools/bindings/python_bindings.cc
 
 python/ErTools/bindings/CMakeFiles/ErTools_python.dir/python_bindings.cc.i: cmake_force
@@ -169,23 +113,15 @@ python/ErTools/bindings/CMakeFiles/ErTools_python.dir/python_bindings.cc.s: cmak
 
 # Object files for target ErTools_python
 ErTools_python_OBJECTS = \
-"CMakeFiles/ErTools_python.dir/BER_sync_python.cc.o" \
-"CMakeFiles/ErTools_python.dir/PrintInt_python.cc.o" \
-"CMakeFiles/ErTools_python.dir/PrintChar_python.cc.o" \
-"CMakeFiles/ErTools_python.dir/PrintFloat_python.cc.o" \
-"CMakeFiles/ErTools_python.dir/BitErrorRate_python.cc.o" \
 "CMakeFiles/ErTools_python.dir/AWGN_kanal_python.cc.o" \
+"CMakeFiles/ErTools_python.dir/BER_python.cc.o" \
 "CMakeFiles/ErTools_python.dir/python_bindings.cc.o"
 
 # External object files for target ErTools_python
 ErTools_python_EXTERNAL_OBJECTS =
 
-python/ErTools/bindings/ErTools_python.cpython-312-x86_64-linux-gnu.so: python/ErTools/bindings/CMakeFiles/ErTools_python.dir/BER_sync_python.cc.o
-python/ErTools/bindings/ErTools_python.cpython-312-x86_64-linux-gnu.so: python/ErTools/bindings/CMakeFiles/ErTools_python.dir/PrintInt_python.cc.o
-python/ErTools/bindings/ErTools_python.cpython-312-x86_64-linux-gnu.so: python/ErTools/bindings/CMakeFiles/ErTools_python.dir/PrintChar_python.cc.o
-python/ErTools/bindings/ErTools_python.cpython-312-x86_64-linux-gnu.so: python/ErTools/bindings/CMakeFiles/ErTools_python.dir/PrintFloat_python.cc.o
-python/ErTools/bindings/ErTools_python.cpython-312-x86_64-linux-gnu.so: python/ErTools/bindings/CMakeFiles/ErTools_python.dir/BitErrorRate_python.cc.o
 python/ErTools/bindings/ErTools_python.cpython-312-x86_64-linux-gnu.so: python/ErTools/bindings/CMakeFiles/ErTools_python.dir/AWGN_kanal_python.cc.o
+python/ErTools/bindings/ErTools_python.cpython-312-x86_64-linux-gnu.so: python/ErTools/bindings/CMakeFiles/ErTools_python.dir/BER_python.cc.o
 python/ErTools/bindings/ErTools_python.cpython-312-x86_64-linux-gnu.so: python/ErTools/bindings/CMakeFiles/ErTools_python.dir/python_bindings.cc.o
 python/ErTools/bindings/ErTools_python.cpython-312-x86_64-linux-gnu.so: python/ErTools/bindings/CMakeFiles/ErTools_python.dir/build.make
 python/ErTools/bindings/ErTools_python.cpython-312-x86_64-linux-gnu.so: /usr/lib/x86_64-linux-gnu/libboost_date_time.so.1.83.0
@@ -204,7 +140,7 @@ python/ErTools/bindings/ErTools_python.cpython-312-x86_64-linux-gnu.so: /usr/lib
 python/ErTools/bindings/ErTools_python.cpython-312-x86_64-linux-gnu.so: /usr/lib/x86_64-linux-gnu/libgmpxx.so
 python/ErTools/bindings/ErTools_python.cpython-312-x86_64-linux-gnu.so: /usr/lib/x86_64-linux-gnu/libgmp.so
 python/ErTools/bindings/ErTools_python.cpython-312-x86_64-linux-gnu.so: python/ErTools/bindings/CMakeFiles/ErTools_python.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/aymo/BC/Projekt/gr-ErTools/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Linking CXX shared module ErTools_python.cpython-312-x86_64-linux-gnu.so"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/aymo/BC/Projekt/gr-ErTools/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Linking CXX shared module ErTools_python.cpython-312-x86_64-linux-gnu.so"
 	cd /home/aymo/BC/Projekt/gr-ErTools/build/python/ErTools/bindings && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/ErTools_python.dir/link.txt --verbose=$(VERBOSE)
 	cd /home/aymo/BC/Projekt/gr-ErTools/build/python/ErTools/bindings && /usr/bin/strip /home/aymo/BC/Projekt/gr-ErTools/build/python/ErTools/bindings/ErTools_python.cpython-312-x86_64-linux-gnu.so
 	cd /home/aymo/BC/Projekt/gr-ErTools/build/python/ErTools/bindings && /usr/bin/cmake -E copy /home/aymo/BC/Projekt/gr-ErTools/build/python/ErTools/bindings/ErTools_python.cpython-312-x86_64-linux-gnu.so /home/aymo/BC/Projekt/gr-ErTools/build/test_modules/gnuradio/ErTools/

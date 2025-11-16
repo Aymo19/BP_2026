@@ -11,12 +11,8 @@
 ########################################################################
 include(GrPlatform) #define LIB_SUFFIX
 list(APPEND ErTools_sources
-    BER_sync_impl.cc
-    PrintInt_impl.cc
-    PrintChar_impl.cc
-    PrintFloat_impl.cc
-    BitErrorRate_impl.cc
-    AWGN_kanal_impl.cc )
+    AWGN_kanal_impl.cc
+    BER_impl.cc )
 
 set(ErTools_sources
     "${ErTools_sources}"

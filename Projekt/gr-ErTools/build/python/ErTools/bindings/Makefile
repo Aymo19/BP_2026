@@ -237,125 +237,29 @@ AWGN_kanal_python.cc.s:
 	cd /home/aymo/BC/Projekt/gr-ErTools/build && $(MAKE) $(MAKESILENT) -f python/ErTools/bindings/CMakeFiles/ErTools_python.dir/build.make python/ErTools/bindings/CMakeFiles/ErTools_python.dir/AWGN_kanal_python.cc.s
 .PHONY : AWGN_kanal_python.cc.s
 
-BER_sync_python.o: BER_sync_python.cc.o
-.PHONY : BER_sync_python.o
+BER_python.o: BER_python.cc.o
+.PHONY : BER_python.o
 
 # target to build an object file
-BER_sync_python.cc.o:
-	cd /home/aymo/BC/Projekt/gr-ErTools/build && $(MAKE) $(MAKESILENT) -f python/ErTools/bindings/CMakeFiles/ErTools_python.dir/build.make python/ErTools/bindings/CMakeFiles/ErTools_python.dir/BER_sync_python.cc.o
-.PHONY : BER_sync_python.cc.o
+BER_python.cc.o:
+	cd /home/aymo/BC/Projekt/gr-ErTools/build && $(MAKE) $(MAKESILENT) -f python/ErTools/bindings/CMakeFiles/ErTools_python.dir/build.make python/ErTools/bindings/CMakeFiles/ErTools_python.dir/BER_python.cc.o
+.PHONY : BER_python.cc.o
 
-BER_sync_python.i: BER_sync_python.cc.i
-.PHONY : BER_sync_python.i
-
-# target to preprocess a source file
-BER_sync_python.cc.i:
-	cd /home/aymo/BC/Projekt/gr-ErTools/build && $(MAKE) $(MAKESILENT) -f python/ErTools/bindings/CMakeFiles/ErTools_python.dir/build.make python/ErTools/bindings/CMakeFiles/ErTools_python.dir/BER_sync_python.cc.i
-.PHONY : BER_sync_python.cc.i
-
-BER_sync_python.s: BER_sync_python.cc.s
-.PHONY : BER_sync_python.s
-
-# target to generate assembly for a file
-BER_sync_python.cc.s:
-	cd /home/aymo/BC/Projekt/gr-ErTools/build && $(MAKE) $(MAKESILENT) -f python/ErTools/bindings/CMakeFiles/ErTools_python.dir/build.make python/ErTools/bindings/CMakeFiles/ErTools_python.dir/BER_sync_python.cc.s
-.PHONY : BER_sync_python.cc.s
-
-BitErrorRate_python.o: BitErrorRate_python.cc.o
-.PHONY : BitErrorRate_python.o
-
-# target to build an object file
-BitErrorRate_python.cc.o:
-	cd /home/aymo/BC/Projekt/gr-ErTools/build && $(MAKE) $(MAKESILENT) -f python/ErTools/bindings/CMakeFiles/ErTools_python.dir/build.make python/ErTools/bindings/CMakeFiles/ErTools_python.dir/BitErrorRate_python.cc.o
-.PHONY : BitErrorRate_python.cc.o
-
-BitErrorRate_python.i: BitErrorRate_python.cc.i
-.PHONY : BitErrorRate_python.i
+BER_python.i: BER_python.cc.i
+.PHONY : BER_python.i
 
 # target to preprocess a source file
-BitErrorRate_python.cc.i:
-	cd /home/aymo/BC/Projekt/gr-ErTools/build && $(MAKE) $(MAKESILENT) -f python/ErTools/bindings/CMakeFiles/ErTools_python.dir/build.make python/ErTools/bindings/CMakeFiles/ErTools_python.dir/BitErrorRate_python.cc.i
-.PHONY : BitErrorRate_python.cc.i
+BER_python.cc.i:
+	cd /home/aymo/BC/Projekt/gr-ErTools/build && $(MAKE) $(MAKESILENT) -f python/ErTools/bindings/CMakeFiles/ErTools_python.dir/build.make python/ErTools/bindings/CMakeFiles/ErTools_python.dir/BER_python.cc.i
+.PHONY : BER_python.cc.i
 
-BitErrorRate_python.s: BitErrorRate_python.cc.s
-.PHONY : BitErrorRate_python.s
-
-# target to generate assembly for a file
-BitErrorRate_python.cc.s:
-	cd /home/aymo/BC/Projekt/gr-ErTools/build && $(MAKE) $(MAKESILENT) -f python/ErTools/bindings/CMakeFiles/ErTools_python.dir/build.make python/ErTools/bindings/CMakeFiles/ErTools_python.dir/BitErrorRate_python.cc.s
-.PHONY : BitErrorRate_python.cc.s
-
-PrintChar_python.o: PrintChar_python.cc.o
-.PHONY : PrintChar_python.o
-
-# target to build an object file
-PrintChar_python.cc.o:
-	cd /home/aymo/BC/Projekt/gr-ErTools/build && $(MAKE) $(MAKESILENT) -f python/ErTools/bindings/CMakeFiles/ErTools_python.dir/build.make python/ErTools/bindings/CMakeFiles/ErTools_python.dir/PrintChar_python.cc.o
-.PHONY : PrintChar_python.cc.o
-
-PrintChar_python.i: PrintChar_python.cc.i
-.PHONY : PrintChar_python.i
-
-# target to preprocess a source file
-PrintChar_python.cc.i:
-	cd /home/aymo/BC/Projekt/gr-ErTools/build && $(MAKE) $(MAKESILENT) -f python/ErTools/bindings/CMakeFiles/ErTools_python.dir/build.make python/ErTools/bindings/CMakeFiles/ErTools_python.dir/PrintChar_python.cc.i
-.PHONY : PrintChar_python.cc.i
-
-PrintChar_python.s: PrintChar_python.cc.s
-.PHONY : PrintChar_python.s
+BER_python.s: BER_python.cc.s
+.PHONY : BER_python.s
 
 # target to generate assembly for a file
-PrintChar_python.cc.s:
-	cd /home/aymo/BC/Projekt/gr-ErTools/build && $(MAKE) $(MAKESILENT) -f python/ErTools/bindings/CMakeFiles/ErTools_python.dir/build.make python/ErTools/bindings/CMakeFiles/ErTools_python.dir/PrintChar_python.cc.s
-.PHONY : PrintChar_python.cc.s
-
-PrintFloat_python.o: PrintFloat_python.cc.o
-.PHONY : PrintFloat_python.o
-
-# target to build an object file
-PrintFloat_python.cc.o:
-	cd /home/aymo/BC/Projekt/gr-ErTools/build && $(MAKE) $(MAKESILENT) -f python/ErTools/bindings/CMakeFiles/ErTools_python.dir/build.make python/ErTools/bindings/CMakeFiles/ErTools_python.dir/PrintFloat_python.cc.o
-.PHONY : PrintFloat_python.cc.o
-
-PrintFloat_python.i: PrintFloat_python.cc.i
-.PHONY : PrintFloat_python.i
-
-# target to preprocess a source file
-PrintFloat_python.cc.i:
-	cd /home/aymo/BC/Projekt/gr-ErTools/build && $(MAKE) $(MAKESILENT) -f python/ErTools/bindings/CMakeFiles/ErTools_python.dir/build.make python/ErTools/bindings/CMakeFiles/ErTools_python.dir/PrintFloat_python.cc.i
-.PHONY : PrintFloat_python.cc.i
-
-PrintFloat_python.s: PrintFloat_python.cc.s
-.PHONY : PrintFloat_python.s
-
-# target to generate assembly for a file
-PrintFloat_python.cc.s:
-	cd /home/aymo/BC/Projekt/gr-ErTools/build && $(MAKE) $(MAKESILENT) -f python/ErTools/bindings/CMakeFiles/ErTools_python.dir/build.make python/ErTools/bindings/CMakeFiles/ErTools_python.dir/PrintFloat_python.cc.s
-.PHONY : PrintFloat_python.cc.s
-
-PrintInt_python.o: PrintInt_python.cc.o
-.PHONY : PrintInt_python.o
-
-# target to build an object file
-PrintInt_python.cc.o:
-	cd /home/aymo/BC/Projekt/gr-ErTools/build && $(MAKE) $(MAKESILENT) -f python/ErTools/bindings/CMakeFiles/ErTools_python.dir/build.make python/ErTools/bindings/CMakeFiles/ErTools_python.dir/PrintInt_python.cc.o
-.PHONY : PrintInt_python.cc.o
-
-PrintInt_python.i: PrintInt_python.cc.i
-.PHONY : PrintInt_python.i
-
-# target to preprocess a source file
-PrintInt_python.cc.i:
-	cd /home/aymo/BC/Projekt/gr-ErTools/build && $(MAKE) $(MAKESILENT) -f python/ErTools/bindings/CMakeFiles/ErTools_python.dir/build.make python/ErTools/bindings/CMakeFiles/ErTools_python.dir/PrintInt_python.cc.i
-.PHONY : PrintInt_python.cc.i
-
-PrintInt_python.s: PrintInt_python.cc.s
-.PHONY : PrintInt_python.s
-
-# target to generate assembly for a file
-PrintInt_python.cc.s:
-	cd /home/aymo/BC/Projekt/gr-ErTools/build && $(MAKE) $(MAKESILENT) -f python/ErTools/bindings/CMakeFiles/ErTools_python.dir/build.make python/ErTools/bindings/CMakeFiles/ErTools_python.dir/PrintInt_python.cc.s
-.PHONY : PrintInt_python.cc.s
+BER_python.cc.s:
+	cd /home/aymo/BC/Projekt/gr-ErTools/build && $(MAKE) $(MAKESILENT) -f python/ErTools/bindings/CMakeFiles/ErTools_python.dir/build.make python/ErTools/bindings/CMakeFiles/ErTools_python.dir/BER_python.cc.s
+.PHONY : BER_python.cc.s
 
 python_bindings.o: python_bindings.cc.o
 .PHONY : python_bindings.o
@@ -400,21 +304,9 @@ help:
 	@echo "... AWGN_kanal_python.o"
 	@echo "... AWGN_kanal_python.i"
 	@echo "... AWGN_kanal_python.s"
-	@echo "... BER_sync_python.o"
-	@echo "... BER_sync_python.i"
-	@echo "... BER_sync_python.s"
-	@echo "... BitErrorRate_python.o"
-	@echo "... BitErrorRate_python.i"
-	@echo "... BitErrorRate_python.s"
-	@echo "... PrintChar_python.o"
-	@echo "... PrintChar_python.i"
-	@echo "... PrintChar_python.s"
-	@echo "... PrintFloat_python.o"
-	@echo "... PrintFloat_python.i"
-	@echo "... PrintFloat_python.s"
-	@echo "... PrintInt_python.o"
-	@echo "... PrintInt_python.i"
-	@echo "... PrintInt_python.s"
+	@echo "... BER_python.o"
+	@echo "... BER_python.i"
+	@echo "... BER_python.s"
 	@echo "... python_bindings.o"
 	@echo "... python_bindings.i"
 	@echo "... python_bindings.s"

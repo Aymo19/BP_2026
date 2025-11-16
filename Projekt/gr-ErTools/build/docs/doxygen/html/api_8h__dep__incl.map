@@ -1,27 +1,11 @@
 <map id="api.h" name="api.h">
-<area shape="rect" id="Node000001" title=" " alt="" coords="461,5,516,31"/>
-<area shape="rect" id="Node000002" href="$AWGN__kanal_8h.html" title=" " alt="" coords="59,79,177,104"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="448,30,177,81,176,76,447,25"/>
-<area shape="rect" id="Node000004" href="$BER__sync_8h.html" title=" " alt="" coords="219,79,316,104"/>
-<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="449,35,304,81,302,76,447,30"/>
-<area shape="rect" id="Node000006" href="$BitErrorRate_8h.html" title=" " alt="" coords="368,79,481,104"/>
-<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="471,43,437,80,433,77,467,39"/>
-<area shape="rect" id="Node000008" href="$PrintChar_8h.html" title=" " alt="" coords="523,79,617,104"/>
-<area shape="poly" id="edge7_Node000001_Node000008" title=" " alt="" coords="514,38,558,76,555,80,510,42"/>
-<area shape="rect" id="Node000010" href="$PrintFloat_8h.html" title=" " alt="" coords="668,79,765,104"/>
-<area shape="poly" id="edge9_Node000001_Node000010" title=" " alt="" coords="530,29,681,76,679,81,528,34"/>
-<area shape="rect" id="Node000012" href="$PrintInt_8h.html" title=" " alt="" coords="821,79,903,104"/>
-<area shape="poly" id="edge11_Node000001_Node000012" title=" " alt="" coords="530,24,822,80,821,85,529,30"/>
+<area shape="rect" id="Node000001" title=" " alt="" coords="128,5,183,31"/>
+<area shape="rect" id="Node000002" href="$AWGN__kanal_8h.html" title=" " alt="" coords="41,79,158,104"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="140,43,110,80,106,77,135,40"/>
+<area shape="rect" id="Node000004" href="$BER_8h.html" title=" " alt="" coords="192,79,252,104"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="178,39,213,77,209,80,174,43"/>
 <area shape="rect" id="Node000003" href="$AWGN__kanal__impl_8h.html" title=" " alt="" coords="5,152,159,177"/>
-<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="108,117,90,153,85,151,104,115"/>
-<area shape="rect" id="Node000005" href="$BER__sync__impl_8h.html" title=" " alt="" coords="183,152,317,177"/>
-<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="264,118,255,153,250,151,259,117"/>
-<area shape="rect" id="Node000007" href="$BitErrorRate__impl_8h.html" title=" " alt="" coords="341,152,490,177"/>
-<area shape="poly" id="edge6_Node000006_Node000007" title=" " alt="" coords="424,118,419,152,414,152,419,117"/>
-<area shape="rect" id="Node000009" href="$PrintChar__impl_8h.html" title=" " alt="" coords="514,152,645,177"/>
-<area shape="poly" id="edge8_Node000008_Node000009" title=" " alt="" coords="576,117,580,152,575,152,571,118"/>
-<area shape="rect" id="Node000011" href="$PrintFloat__impl_8h.html" title=" " alt="" coords="669,152,802,177"/>
-<area shape="poly" id="edge10_Node000010_Node000011" title=" " alt="" coords="726,117,735,151,730,153,721,118"/>
-<area shape="rect" id="Node000013" href="$PrintInt__impl_8h.html" title=" " alt="" coords="826,152,943,177"/>
-<area shape="poly" id="edge12_Node000012_Node000013" title=" " alt="" coords="872,117,884,151,878,153,867,118"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="96,118,87,153,82,151,91,117"/>
+<area shape="rect" id="Node000005" href="$BER__impl_8h.html" title=" " alt="" coords="183,152,279,177"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="228,117,232,152,227,152,223,118"/>
 </map>

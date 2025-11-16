@@ -4,16 +4,8 @@
     <compoundname>gr::ErTools</compoundname>
     <innerclass refid="classgr_1_1ErTools_1_1AWGN__kanal" prot="public">gr::ErTools::AWGN_kanal</innerclass>
     <innerclass refid="classgr_1_1ErTools_1_1AWGN__kanal__impl" prot="public">gr::ErTools::AWGN_kanal_impl</innerclass>
-    <innerclass refid="classgr_1_1ErTools_1_1BER__sync" prot="public">gr::ErTools::BER_sync</innerclass>
-    <innerclass refid="classgr_1_1ErTools_1_1BER__sync__impl" prot="public">gr::ErTools::BER_sync_impl</innerclass>
-    <innerclass refid="classgr_1_1ErTools_1_1BitErrorRate" prot="public">gr::ErTools::BitErrorRate</innerclass>
-    <innerclass refid="classgr_1_1ErTools_1_1BitErrorRate__impl" prot="public">gr::ErTools::BitErrorRate_impl</innerclass>
-    <innerclass refid="classgr_1_1ErTools_1_1PrintChar" prot="public">gr::ErTools::PrintChar</innerclass>
-    <innerclass refid="classgr_1_1ErTools_1_1PrintChar__impl" prot="public">gr::ErTools::PrintChar_impl</innerclass>
-    <innerclass refid="classgr_1_1ErTools_1_1PrintFloat" prot="public">gr::ErTools::PrintFloat</innerclass>
-    <innerclass refid="classgr_1_1ErTools_1_1PrintFloat__impl" prot="public">gr::ErTools::PrintFloat_impl</innerclass>
-    <innerclass refid="classgr_1_1ErTools_1_1PrintInt" prot="public">gr::ErTools::PrintInt</innerclass>
-    <innerclass refid="classgr_1_1ErTools_1_1PrintInt__impl" prot="public">gr::ErTools::PrintInt_impl</innerclass>
+    <innerclass refid="classgr_1_1ErTools_1_1BER" prot="public">gr::ErTools::BER</innerclass>
+    <innerclass refid="classgr_1_1ErTools_1_1BER__impl" prot="public">gr::ErTools::BER_impl</innerclass>
     <briefdescription>
     </briefdescription>
     <detaileddescription>

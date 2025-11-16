@@ -209,125 +209,29 @@ AWGN_kanal_impl.cc.s:
 	cd /home/aymo/BC/Projekt/gr-ErTools/build && $(MAKE) $(MAKESILENT) -f lib/CMakeFiles/gnuradio-ErTools.dir/build.make lib/CMakeFiles/gnuradio-ErTools.dir/AWGN_kanal_impl.cc.s
 .PHONY : AWGN_kanal_impl.cc.s
 
-BER_sync_impl.o: BER_sync_impl.cc.o
-.PHONY : BER_sync_impl.o
+BER_impl.o: BER_impl.cc.o
+.PHONY : BER_impl.o
 
 # target to build an object file
-BER_sync_impl.cc.o:
-	cd /home/aymo/BC/Projekt/gr-ErTools/build && $(MAKE) $(MAKESILENT) -f lib/CMakeFiles/gnuradio-ErTools.dir/build.make lib/CMakeFiles/gnuradio-ErTools.dir/BER_sync_impl.cc.o
-.PHONY : BER_sync_impl.cc.o
+BER_impl.cc.o:
+	cd /home/aymo/BC/Projekt/gr-ErTools/build && $(MAKE) $(MAKESILENT) -f lib/CMakeFiles/gnuradio-ErTools.dir/build.make lib/CMakeFiles/gnuradio-ErTools.dir/BER_impl.cc.o
+.PHONY : BER_impl.cc.o
 
-BER_sync_impl.i: BER_sync_impl.cc.i
-.PHONY : BER_sync_impl.i
-
-# target to preprocess a source file
-BER_sync_impl.cc.i:
-	cd /home/aymo/BC/Projekt/gr-ErTools/build && $(MAKE) $(MAKESILENT) -f lib/CMakeFiles/gnuradio-ErTools.dir/build.make lib/CMakeFiles/gnuradio-ErTools.dir/BER_sync_impl.cc.i
-.PHONY : BER_sync_impl.cc.i
-
-BER_sync_impl.s: BER_sync_impl.cc.s
-.PHONY : BER_sync_impl.s
-
-# target to generate assembly for a file
-BER_sync_impl.cc.s:
-	cd /home/aymo/BC/Projekt/gr-ErTools/build && $(MAKE) $(MAKESILENT) -f lib/CMakeFiles/gnuradio-ErTools.dir/build.make lib/CMakeFiles/gnuradio-ErTools.dir/BER_sync_impl.cc.s
-.PHONY : BER_sync_impl.cc.s
-
-BitErrorRate_impl.o: BitErrorRate_impl.cc.o
-.PHONY : BitErrorRate_impl.o
-
-# target to build an object file
-BitErrorRate_impl.cc.o:
-	cd /home/aymo/BC/Projekt/gr-ErTools/build && $(MAKE) $(MAKESILENT) -f lib/CMakeFiles/gnuradio-ErTools.dir/build.make lib/CMakeFiles/gnuradio-ErTools.dir/BitErrorRate_impl.cc.o
-.PHONY : BitErrorRate_impl.cc.o
-
-BitErrorRate_impl.i: BitErrorRate_impl.cc.i
-.PHONY : BitErrorRate_impl.i
+BER_impl.i: BER_impl.cc.i
+.PHONY : BER_impl.i
 
 # target to preprocess a source file
-BitErrorRate_impl.cc.i:
-	cd /home/aymo/BC/Projekt/gr-ErTools/build && $(MAKE) $(MAKESILENT) -f lib/CMakeFiles/gnuradio-ErTools.dir/build.make lib/CMakeFiles/gnuradio-ErTools.dir/BitErrorRate_impl.cc.i
-.PHONY : BitErrorRate_impl.cc.i
+BER_impl.cc.i:
+	cd /home/aymo/BC/Projekt/gr-ErTools/build && $(MAKE) $(MAKESILENT) -f lib/CMakeFiles/gnuradio-ErTools.dir/build.make lib/CMakeFiles/gnuradio-ErTools.dir/BER_impl.cc.i
+.PHONY : BER_impl.cc.i
 
-BitErrorRate_impl.s: BitErrorRate_impl.cc.s
-.PHONY : BitErrorRate_impl.s
-
-# target to generate assembly for a file
-BitErrorRate_impl.cc.s:
-	cd /home/aymo/BC/Projekt/gr-ErTools/build && $(MAKE) $(MAKESILENT) -f lib/CMakeFiles/gnuradio-ErTools.dir/build.make lib/CMakeFiles/gnuradio-ErTools.dir/BitErrorRate_impl.cc.s
-.PHONY : BitErrorRate_impl.cc.s
-
-PrintChar_impl.o: PrintChar_impl.cc.o
-.PHONY : PrintChar_impl.o
-
-# target to build an object file
-PrintChar_impl.cc.o:
-	cd /home/aymo/BC/Projekt/gr-ErTools/build && $(MAKE) $(MAKESILENT) -f lib/CMakeFiles/gnuradio-ErTools.dir/build.make lib/CMakeFiles/gnuradio-ErTools.dir/PrintChar_impl.cc.o
-.PHONY : PrintChar_impl.cc.o
-
-PrintChar_impl.i: PrintChar_impl.cc.i
-.PHONY : PrintChar_impl.i
-
-# target to preprocess a source file
-PrintChar_impl.cc.i:
-	cd /home/aymo/BC/Projekt/gr-ErTools/build && $(MAKE) $(MAKESILENT) -f lib/CMakeFiles/gnuradio-ErTools.dir/build.make lib/CMakeFiles/gnuradio-ErTools.dir/PrintChar_impl.cc.i
-.PHONY : PrintChar_impl.cc.i
-
-PrintChar_impl.s: PrintChar_impl.cc.s
-.PHONY : PrintChar_impl.s
+BER_impl.s: BER_impl.cc.s
+.PHONY : BER_impl.s
 
 # target to generate assembly for a file
-PrintChar_impl.cc.s:
-	cd /home/aymo/BC/Projekt/gr-ErTools/build && $(MAKE) $(MAKESILENT) -f lib/CMakeFiles/gnuradio-ErTools.dir/build.make lib/CMakeFiles/gnuradio-ErTools.dir/PrintChar_impl.cc.s
-.PHONY : PrintChar_impl.cc.s
-
-PrintFloat_impl.o: PrintFloat_impl.cc.o
-.PHONY : PrintFloat_impl.o
-
-# target to build an object file
-PrintFloat_impl.cc.o:
-	cd /home/aymo/BC/Projekt/gr-ErTools/build && $(MAKE) $(MAKESILENT) -f lib/CMakeFiles/gnuradio-ErTools.dir/build.make lib/CMakeFiles/gnuradio-ErTools.dir/PrintFloat_impl.cc.o
-.PHONY : PrintFloat_impl.cc.o
-
-PrintFloat_impl.i: PrintFloat_impl.cc.i
-.PHONY : PrintFloat_impl.i
-
-# target to preprocess a source file
-PrintFloat_impl.cc.i:
-	cd /home/aymo/BC/Projekt/gr-ErTools/build && $(MAKE) $(MAKESILENT) -f lib/CMakeFiles/gnuradio-ErTools.dir/build.make lib/CMakeFiles/gnuradio-ErTools.dir/PrintFloat_impl.cc.i
-.PHONY : PrintFloat_impl.cc.i
-
-PrintFloat_impl.s: PrintFloat_impl.cc.s
-.PHONY : PrintFloat_impl.s
-
-# target to generate assembly for a file
-PrintFloat_impl.cc.s:
-	cd /home/aymo/BC/Projekt/gr-ErTools/build && $(MAKE) $(MAKESILENT) -f lib/CMakeFiles/gnuradio-ErTools.dir/build.make lib/CMakeFiles/gnuradio-ErTools.dir/PrintFloat_impl.cc.s
-.PHONY : PrintFloat_impl.cc.s
-
-PrintInt_impl.o: PrintInt_impl.cc.o
-.PHONY : PrintInt_impl.o
-
-# target to build an object file
-PrintInt_impl.cc.o:
-	cd /home/aymo/BC/Projekt/gr-ErTools/build && $(MAKE) $(MAKESILENT) -f lib/CMakeFiles/gnuradio-ErTools.dir/build.make lib/CMakeFiles/gnuradio-ErTools.dir/PrintInt_impl.cc.o
-.PHONY : PrintInt_impl.cc.o
-
-PrintInt_impl.i: PrintInt_impl.cc.i
-.PHONY : PrintInt_impl.i
-
-# target to preprocess a source file
-PrintInt_impl.cc.i:
-	cd /home/aymo/BC/Projekt/gr-ErTools/build && $(MAKE) $(MAKESILENT) -f lib/CMakeFiles/gnuradio-ErTools.dir/build.make lib/CMakeFiles/gnuradio-ErTools.dir/PrintInt_impl.cc.i
-.PHONY : PrintInt_impl.cc.i
-
-PrintInt_impl.s: PrintInt_impl.cc.s
-.PHONY : PrintInt_impl.s
-
-# target to generate assembly for a file
-PrintInt_impl.cc.s:
-	cd /home/aymo/BC/Projekt/gr-ErTools/build && $(MAKE) $(MAKESILENT) -f lib/CMakeFiles/gnuradio-ErTools.dir/build.make lib/CMakeFiles/gnuradio-ErTools.dir/PrintInt_impl.cc.s
-.PHONY : PrintInt_impl.cc.s
+BER_impl.cc.s:
+	cd /home/aymo/BC/Projekt/gr-ErTools/build && $(MAKE) $(MAKESILENT) -f lib/CMakeFiles/gnuradio-ErTools.dir/build.make lib/CMakeFiles/gnuradio-ErTools.dir/BER_impl.cc.s
+.PHONY : BER_impl.cc.s
 
 # Help Target
 help:
@@ -346,21 +250,9 @@ help:
 	@echo "... AWGN_kanal_impl.o"
 	@echo "... AWGN_kanal_impl.i"
 	@echo "... AWGN_kanal_impl.s"
-	@echo "... BER_sync_impl.o"
-	@echo "... BER_sync_impl.i"
-	@echo "... BER_sync_impl.s"
-	@echo "... BitErrorRate_impl.o"
-	@echo "... BitErrorRate_impl.i"
-	@echo "... BitErrorRate_impl.s"
-	@echo "... PrintChar_impl.o"
-	@echo "... PrintChar_impl.i"
-	@echo "... PrintChar_impl.s"
-	@echo "... PrintFloat_impl.o"
-	@echo "... PrintFloat_impl.i"
-	@echo "... PrintFloat_impl.s"
-	@echo "... PrintInt_impl.o"
-	@echo "... PrintInt_impl.i"
-	@echo "... PrintInt_impl.s"
+	@echo "... BER_impl.o"
+	@echo "... BER_impl.i"
+	@echo "... BER_impl.s"
 .PHONY : help
 
 

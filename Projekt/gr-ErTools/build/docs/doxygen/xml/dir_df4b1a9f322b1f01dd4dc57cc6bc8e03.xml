@@ -4,11 +4,7 @@
     <compoundname>ErTools</compoundname>
     <innerfile refid="api_8h">api.h</innerfile>
     <innerfile refid="AWGN__kanal_8h">AWGN_kanal.h</innerfile>
-    <innerfile refid="BER__sync_8h">BER_sync.h</innerfile>
-    <innerfile refid="BitErrorRate_8h">BitErrorRate.h</innerfile>
-    <innerfile refid="PrintChar_8h">PrintChar.h</innerfile>
-    <innerfile refid="PrintFloat_8h">PrintFloat.h</innerfile>
-    <innerfile refid="PrintInt_8h">PrintInt.h</innerfile>
+    <innerfile refid="BER_8h">BER.h</innerfile>
     <briefdescription>
     </briefdescription>
     <detaileddescription>

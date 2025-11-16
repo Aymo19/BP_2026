@@ -1,75 +1,27 @@
 [
 {
   "directory": "/home/aymo/BC/Projekt/gr-ErTools/build/lib",
-  "command": "/usr/bin/c++ -DBOOST_ATOMIC_DYN_LINK -DBOOST_ATOMIC_NO_LIB -DBOOST_THREAD_DYN_LINK -DBOOST_THREAD_NO_LIB -DFMT_SHARED -DGR_CTRLPORT -DGR_MPLIB_GMP -DGR_PERFORMANCE_COUNTERS -DSPDLOG_COMPILED_LIB -DSPDLOG_FMT_EXTERNAL -DSPDLOG_SHARED_LIB -Dgnuradio_ErTools_EXPORTS -I/home/aymo/BC/Projekt/gr-ErTools/lib/../include  -fvisibility=hidden -Wsign-compare -Wall -Wno-uninitialized -O3 -DNDEBUG -std=c++17 -fPIC -o CMakeFiles/gnuradio-ErTools.dir/BER_sync_impl.cc.o -c /home/aymo/BC/Projekt/gr-ErTools/lib/BER_sync_impl.cc",
-  "file": "/home/aymo/BC/Projekt/gr-ErTools/lib/BER_sync_impl.cc",
-  "output": "lib/CMakeFiles/gnuradio-ErTools.dir/BER_sync_impl.cc.o"
-},
-{
-  "directory": "/home/aymo/BC/Projekt/gr-ErTools/build/lib",
-  "command": "/usr/bin/c++ -DBOOST_ATOMIC_DYN_LINK -DBOOST_ATOMIC_NO_LIB -DBOOST_THREAD_DYN_LINK -DBOOST_THREAD_NO_LIB -DFMT_SHARED -DGR_CTRLPORT -DGR_MPLIB_GMP -DGR_PERFORMANCE_COUNTERS -DSPDLOG_COMPILED_LIB -DSPDLOG_FMT_EXTERNAL -DSPDLOG_SHARED_LIB -Dgnuradio_ErTools_EXPORTS -I/home/aymo/BC/Projekt/gr-ErTools/lib/../include  -fvisibility=hidden -Wsign-compare -Wall -Wno-uninitialized -O3 -DNDEBUG -std=c++17 -fPIC -o CMakeFiles/gnuradio-ErTools.dir/PrintInt_impl.cc.o -c /home/aymo/BC/Projekt/gr-ErTools/lib/PrintInt_impl.cc",
-  "file": "/home/aymo/BC/Projekt/gr-ErTools/lib/PrintInt_impl.cc",
-  "output": "lib/CMakeFiles/gnuradio-ErTools.dir/PrintInt_impl.cc.o"
-},
-{
-  "directory": "/home/aymo/BC/Projekt/gr-ErTools/build/lib",
-  "command": "/usr/bin/c++ -DBOOST_ATOMIC_DYN_LINK -DBOOST_ATOMIC_NO_LIB -DBOOST_THREAD_DYN_LINK -DBOOST_THREAD_NO_LIB -DFMT_SHARED -DGR_CTRLPORT -DGR_MPLIB_GMP -DGR_PERFORMANCE_COUNTERS -DSPDLOG_COMPILED_LIB -DSPDLOG_FMT_EXTERNAL -DSPDLOG_SHARED_LIB -Dgnuradio_ErTools_EXPORTS -I/home/aymo/BC/Projekt/gr-ErTools/lib/../include  -fvisibility=hidden -Wsign-compare -Wall -Wno-uninitialized -O3 -DNDEBUG -std=c++17 -fPIC -o CMakeFiles/gnuradio-ErTools.dir/PrintChar_impl.cc.o -c /home/aymo/BC/Projekt/gr-ErTools/lib/PrintChar_impl.cc",
-  "file": "/home/aymo/BC/Projekt/gr-ErTools/lib/PrintChar_impl.cc",
-  "output": "lib/CMakeFiles/gnuradio-ErTools.dir/PrintChar_impl.cc.o"
-},
-{
-  "directory": "/home/aymo/BC/Projekt/gr-ErTools/build/lib",
-  "command": "/usr/bin/c++ -DBOOST_ATOMIC_DYN_LINK -DBOOST_ATOMIC_NO_LIB -DBOOST_THREAD_DYN_LINK -DBOOST_THREAD_NO_LIB -DFMT_SHARED -DGR_CTRLPORT -DGR_MPLIB_GMP -DGR_PERFORMANCE_COUNTERS -DSPDLOG_COMPILED_LIB -DSPDLOG_FMT_EXTERNAL -DSPDLOG_SHARED_LIB -Dgnuradio_ErTools_EXPORTS -I/home/aymo/BC/Projekt/gr-ErTools/lib/../include  -fvisibility=hidden -Wsign-compare -Wall -Wno-uninitialized -O3 -DNDEBUG -std=c++17 -fPIC -o CMakeFiles/gnuradio-ErTools.dir/PrintFloat_impl.cc.o -c /home/aymo/BC/Projekt/gr-ErTools/lib/PrintFloat_impl.cc",
-  "file": "/home/aymo/BC/Projekt/gr-ErTools/lib/PrintFloat_impl.cc",
-  "output": "lib/CMakeFiles/gnuradio-ErTools.dir/PrintFloat_impl.cc.o"
-},
-{
-  "directory": "/home/aymo/BC/Projekt/gr-ErTools/build/lib",
-  "command": "/usr/bin/c++ -DBOOST_ATOMIC_DYN_LINK -DBOOST_ATOMIC_NO_LIB -DBOOST_THREAD_DYN_LINK -DBOOST_THREAD_NO_LIB -DFMT_SHARED -DGR_CTRLPORT -DGR_MPLIB_GMP -DGR_PERFORMANCE_COUNTERS -DSPDLOG_COMPILED_LIB -DSPDLOG_FMT_EXTERNAL -DSPDLOG_SHARED_LIB -Dgnuradio_ErTools_EXPORTS -I/home/aymo/BC/Projekt/gr-ErTools/lib/../include  -fvisibility=hidden -Wsign-compare -Wall -Wno-uninitialized -O3 -DNDEBUG -std=c++17 -fPIC -o CMakeFiles/gnuradio-ErTools.dir/BitErrorRate_impl.cc.o -c /home/aymo/BC/Projekt/gr-ErTools/lib/BitErrorRate_impl.cc",
-  "file": "/home/aymo/BC/Projekt/gr-ErTools/lib/BitErrorRate_impl.cc",
-  "output": "lib/CMakeFiles/gnuradio-ErTools.dir/BitErrorRate_impl.cc.o"
-},
-{
-  "directory": "/home/aymo/BC/Projekt/gr-ErTools/build/lib",
   "command": "/usr/bin/c++ -DBOOST_ATOMIC_DYN_LINK -DBOOST_ATOMIC_NO_LIB -DBOOST_THREAD_DYN_LINK -DBOOST_THREAD_NO_LIB -DFMT_SHARED -DGR_CTRLPORT -DGR_MPLIB_GMP -DGR_PERFORMANCE_COUNTERS -DSPDLOG_COMPILED_LIB -DSPDLOG_FMT_EXTERNAL -DSPDLOG_SHARED_LIB -Dgnuradio_ErTools_EXPORTS -I/home/aymo/BC/Projekt/gr-ErTools/lib/../include  -fvisibility=hidden -Wsign-compare -Wall -Wno-uninitialized -O3 -DNDEBUG -std=c++17 -fPIC -o CMakeFiles/gnuradio-ErTools.dir/AWGN_kanal_impl.cc.o -c /home/aymo/BC/Projekt/gr-ErTools/lib/AWGN_kanal_impl.cc",
   "file": "/home/aymo/BC/Projekt/gr-ErTools/lib/AWGN_kanal_impl.cc",
   "output": "lib/CMakeFiles/gnuradio-ErTools.dir/AWGN_kanal_impl.cc.o"
 },
 {
-  "directory": "/home/aymo/BC/Projekt/gr-ErTools/build/python/ErTools/bindings",
-  "command": "/usr/bin/c++ -DBOOST_ATOMIC_DYN_LINK -DBOOST_ATOMIC_NO_LIB -DBOOST_DATE_TIME_DYN_LINK -DBOOST_DATE_TIME_NO_LIB -DBOOST_PROGRAM_OPTIONS_DYN_LINK -DBOOST_PROGRAM_OPTIONS_NO_LIB -DBOOST_REGEX_DYN_LINK -DBOOST_REGEX_NO_LIB -DBOOST_SYSTEM_DYN_LINK -DBOOST_SYSTEM_NO_LIB -DBOOST_THREAD_DYN_LINK -DBOOST_THREAD_NO_LIB -DBOOST_UNIT_TEST_FRAMEWORK_DYN_LINK -DBOOST_UNIT_TEST_FRAMEWORK_NO_LIB -DErTools_python_EXPORTS -DFMT_SHARED -DGR_CTRLPORT -DGR_MPLIB_GMP -DGR_PERFORMANCE_COUNTERS -DSPDLOG_COMPILED_LIB -DSPDLOG_FMT_EXTERNAL -DSPDLOG_SHARED_LIB -I/home/aymo/BC/Projekt/gr-ErTools/build/python/ErTools/bindings -I/home/aymo/BC/Projekt/gr-ErTools/python/ErTools/bindings/../../../lib -I/home/aymo/BC/Projekt/gr-ErTools/python/ErTools/bindings/../../../include -I/home/aymo/BC/Projekt/gr-ErTools/lib/../include -isystem /usr/include/python3.12 -isystem /usr/lib/python3/dist-packages/numpy/core/include  -fvisibility=hidden -Wsign-compare -Wall -Wno-uninitialized -O3 -DNDEBUG -std=c++17 -fPIC -fvisibility=hidden -Wno-unused-variable -flto -fno-fat-lto-objects -o CMakeFiles/ErTools_python.dir/BER_sync_python.cc.o -c /home/aymo/BC/Projekt/gr-ErTools/python/ErTools/bindings/BER_sync_python.cc",
-  "file": "/home/aymo/BC/Projekt/gr-ErTools/python/ErTools/bindings/BER_sync_python.cc",
-  "output": "python/ErTools/bindings/CMakeFiles/ErTools_python.dir/BER_sync_python.cc.o"
-},
-{
-  "directory": "/home/aymo/BC/Projekt/gr-ErTools/build/python/ErTools/bindings",
-  "command": "/usr/bin/c++ -DBOOST_ATOMIC_DYN_LINK -DBOOST_ATOMIC_NO_LIB -DBOOST_DATE_TIME_DYN_LINK -DBOOST_DATE_TIME_NO_LIB -DBOOST_PROGRAM_OPTIONS_DYN_LINK -DBOOST_PROGRAM_OPTIONS_NO_LIB -DBOOST_REGEX_DYN_LINK -DBOOST_REGEX_NO_LIB -DBOOST_SYSTEM_DYN_LINK -DBOOST_SYSTEM_NO_LIB -DBOOST_THREAD_DYN_LINK -DBOOST_THREAD_NO_LIB -DBOOST_UNIT_TEST_FRAMEWORK_DYN_LINK -DBOOST_UNIT_TEST_FRAMEWORK_NO_LIB -DErTools_python_EXPORTS -DFMT_SHARED -DGR_CTRLPORT -DGR_MPLIB_GMP -DGR_PERFORMANCE_COUNTERS -DSPDLOG_COMPILED_LIB -DSPDLOG_FMT_EXTERNAL -DSPDLOG_SHARED_LIB -I/home/aymo/BC/Projekt/gr-ErTools/build/python/ErTools/bindings -I/home/aymo/BC/Projekt/gr-ErTools/python/ErTools/bindings/../../../lib -I/home/aymo/BC/Projekt/gr-ErTools/python/ErTools/bindings/../../../include -I/home/aymo/BC/Projekt/gr-ErTools/lib/../include -isystem /usr/include/python3.12 -isystem /usr/lib/python3/dist-packages/numpy/core/include  -fvisibility=hidden -Wsign-compare -Wall -Wno-uninitialized -O3 -DNDEBUG -std=c++17 -fPIC -fvisibility=hidden -Wno-unused-variable -flto -fno-fat-lto-objects -o CMakeFiles/ErTools_python.dir/PrintInt_python.cc.o -c /home/aymo/BC/Projekt/gr-ErTools/python/ErTools/bindings/PrintInt_python.cc",
-  "file": "/home/aymo/BC/Projekt/gr-ErTools/python/ErTools/bindings/PrintInt_python.cc",
-  "output": "python/ErTools/bindings/CMakeFiles/ErTools_python.dir/PrintInt_python.cc.o"
-},
-{
-  "directory": "/home/aymo/BC/Projekt/gr-ErTools/build/python/ErTools/bindings",
-  "command": "/usr/bin/c++ -DBOOST_ATOMIC_DYN_LINK -DBOOST_ATOMIC_NO_LIB -DBOOST_DATE_TIME_DYN_LINK -DBOOST_DATE_TIME_NO_LIB -DBOOST_PROGRAM_OPTIONS_DYN_LINK -DBOOST_PROGRAM_OPTIONS_NO_LIB -DBOOST_REGEX_DYN_LINK -DBOOST_REGEX_NO_LIB -DBOOST_SYSTEM_DYN_LINK -DBOOST_SYSTEM_NO_LIB -DBOOST_THREAD_DYN_LINK -DBOOST_THREAD_NO_LIB -DBOOST_UNIT_TEST_FRAMEWORK_DYN_LINK -DBOOST_UNIT_TEST_FRAMEWORK_NO_LIB -DErTools_python_EXPORTS -DFMT_SHARED -DGR_CTRLPORT -DGR_MPLIB_GMP -DGR_PERFORMANCE_COUNTERS -DSPDLOG_COMPILED_LIB -DSPDLOG_FMT_EXTERNAL -DSPDLOG_SHARED_LIB -I/home/aymo/BC/Projekt/gr-ErTools/build/python/ErTools/bindings -I/home/aymo/BC/Projekt/gr-ErTools/python/ErTools/bindings/../../../lib -I/home/aymo/BC/Projekt/gr-ErTools/python/ErTools/bindings/../../../include -I/home/aymo/BC/Projekt/gr-ErTools/lib/../include -isystem /usr/include/python3.12 -isystem /usr/lib/python3/dist-packages/numpy/core/include  -fvisibility=hidden -Wsign-compare -Wall -Wno-uninitialized -O3 -DNDEBUG -std=c++17 -fPIC -fvisibility=hidden -Wno-unused-variable -flto -fno-fat-lto-objects -o CMakeFiles/ErTools_python.dir/PrintChar_python.cc.o -c /home/aymo/BC/Projekt/gr-ErTools/python/ErTools/bindings/PrintChar_python.cc",
-  "file": "/home/aymo/BC/Projekt/gr-ErTools/python/ErTools/bindings/PrintChar_python.cc",
-  "output": "python/ErTools/bindings/CMakeFiles/ErTools_python.dir/PrintChar_python.cc.o"
-},
-{
-  "directory": "/home/aymo/BC/Projekt/gr-ErTools/build/python/ErTools/bindings",
-  "command": "/usr/bin/c++ -DBOOST_ATOMIC_DYN_LINK -DBOOST_ATOMIC_NO_LIB -DBOOST_DATE_TIME_DYN_LINK -DBOOST_DATE_TIME_NO_LIB -DBOOST_PROGRAM_OPTIONS_DYN_LINK -DBOOST_PROGRAM_OPTIONS_NO_LIB -DBOOST_REGEX_DYN_LINK -DBOOST_REGEX_NO_LIB -DBOOST_SYSTEM_DYN_LINK -DBOOST_SYSTEM_NO_LIB -DBOOST_THREAD_DYN_LINK -DBOOST_THREAD_NO_LIB -DBOOST_UNIT_TEST_FRAMEWORK_DYN_LINK -DBOOST_UNIT_TEST_FRAMEWORK_NO_LIB -DErTools_python_EXPORTS -DFMT_SHARED -DGR_CTRLPORT -DGR_MPLIB_GMP -DGR_PERFORMANCE_COUNTERS -DSPDLOG_COMPILED_LIB -DSPDLOG_FMT_EXTERNAL -DSPDLOG_SHARED_LIB -I/home/aymo/BC/Projekt/gr-ErTools/build/python/ErTools/bindings -I/home/aymo/BC/Projekt/gr-ErTools/python/ErTools/bindings/../../../lib -I/home/aymo/BC/Projekt/gr-ErTools/python/ErTools/bindings/../../../include -I/home/aymo/BC/Projekt/gr-ErTools/lib/../include -isystem /usr/include/python3.12 -isystem /usr/lib/python3/dist-packages/numpy/core/include  -fvisibility=hidden -Wsign-compare -Wall -Wno-uninitialized -O3 -DNDEBUG -std=c++17 -fPIC -fvisibility=hidden -Wno-unused-variable -flto -fno-fat-lto-objects -o CMakeFiles/ErTools_python.dir/PrintFloat_python.cc.o -c /home/aymo/BC/Projekt/gr-ErTools/python/ErTools/bindings/PrintFloat_python.cc",
-  "file": "/home/aymo/BC/Projekt/gr-ErTools/python/ErTools/bindings/PrintFloat_python.cc",
-  "output": "python/ErTools/bindings/CMakeFiles/ErTools_python.dir/PrintFloat_python.cc.o"
-},
-{
-  "directory": "/home/aymo/BC/Projekt/gr-ErTools/build/python/ErTools/bindings",
-  "command": "/usr/bin/c++ -DBOOST_ATOMIC_DYN_LINK -DBOOST_ATOMIC_NO_LIB -DBOOST_DATE_TIME_DYN_LINK -DBOOST_DATE_TIME_NO_LIB -DBOOST_PROGRAM_OPTIONS_DYN_LINK -DBOOST_PROGRAM_OPTIONS_NO_LIB -DBOOST_REGEX_DYN_LINK -DBOOST_REGEX_NO_LIB -DBOOST_SYSTEM_DYN_LINK -DBOOST_SYSTEM_NO_LIB -DBOOST_THREAD_DYN_LINK -DBOOST_THREAD_NO_LIB -DBOOST_UNIT_TEST_FRAMEWORK_DYN_LINK -DBOOST_UNIT_TEST_FRAMEWORK_NO_LIB -DErTools_python_EXPORTS -DFMT_SHARED -DGR_CTRLPORT -DGR_MPLIB_GMP -DGR_PERFORMANCE_COUNTERS -DSPDLOG_COMPILED_LIB -DSPDLOG_FMT_EXTERNAL -DSPDLOG_SHARED_LIB -I/home/aymo/BC/Projekt/gr-ErTools/build/python/ErTools/bindings -I/home/aymo/BC/Projekt/gr-ErTools/python/ErTools/bindings/../../../lib -I/home/aymo/BC/Projekt/gr-ErTools/python/ErTools/bindings/../../../include -I/home/aymo/BC/Projekt/gr-ErTools/lib/../include -isystem /usr/include/python3.12 -isystem /usr/lib/python3/dist-packages/numpy/core/include  -fvisibility=hidden -Wsign-compare -Wall -Wno-uninitialized -O3 -DNDEBUG -std=c++17 -fPIC -fvisibility=hidden -Wno-unused-variable -flto -fno-fat-lto-objects -o CMakeFiles/ErTools_python.dir/BitErrorRate_python.cc.o -c /home/aymo/BC/Projekt/gr-ErTools/python/ErTools/bindings/BitErrorRate_python.cc",
-  "file": "/home/aymo/BC/Projekt/gr-ErTools/python/ErTools/bindings/BitErrorRate_python.cc",
-  "output": "python/ErTools/bindings/CMakeFiles/ErTools_python.dir/BitErrorRate_python.cc.o"
+  "directory": "/home/aymo/BC/Projekt/gr-ErTools/build/lib",
+  "command": "/usr/bin/c++ -DBOOST_ATOMIC_DYN_LINK -DBOOST_ATOMIC_NO_LIB -DBOOST_THREAD_DYN_LINK -DBOOST_THREAD_NO_LIB -DFMT_SHARED -DGR_CTRLPORT -DGR_MPLIB_GMP -DGR_PERFORMANCE_COUNTERS -DSPDLOG_COMPILED_LIB -DSPDLOG_FMT_EXTERNAL -DSPDLOG_SHARED_LIB -Dgnuradio_ErTools_EXPORTS -I/home/aymo/BC/Projekt/gr-ErTools/lib/../include  -fvisibility=hidden -Wsign-compare -Wall -Wno-uninitialized -O3 -DNDEBUG -std=c++17 -fPIC -o CMakeFiles/gnuradio-ErTools.dir/BER_impl.cc.o -c /home/aymo/BC/Projekt/gr-ErTools/lib/BER_impl.cc",
+  "file": "/home/aymo/BC/Projekt/gr-ErTools/lib/BER_impl.cc",
+  "output": "lib/CMakeFiles/gnuradio-ErTools.dir/BER_impl.cc.o"
 },
 {
   "directory": "/home/aymo/BC/Projekt/gr-ErTools/build/python/ErTools/bindings",
   "command": "/usr/bin/c++ -DBOOST_ATOMIC_DYN_LINK -DBOOST_ATOMIC_NO_LIB -DBOOST_DATE_TIME_DYN_LINK -DBOOST_DATE_TIME_NO_LIB -DBOOST_PROGRAM_OPTIONS_DYN_LINK -DBOOST_PROGRAM_OPTIONS_NO_LIB -DBOOST_REGEX_DYN_LINK -DBOOST_REGEX_NO_LIB -DBOOST_SYSTEM_DYN_LINK -DBOOST_SYSTEM_NO_LIB -DBOOST_THREAD_DYN_LINK -DBOOST_THREAD_NO_LIB -DBOOST_UNIT_TEST_FRAMEWORK_DYN_LINK -DBOOST_UNIT_TEST_FRAMEWORK_NO_LIB -DErTools_python_EXPORTS -DFMT_SHARED -DGR_CTRLPORT -DGR_MPLIB_GMP -DGR_PERFORMANCE_COUNTERS -DSPDLOG_COMPILED_LIB -DSPDLOG_FMT_EXTERNAL -DSPDLOG_SHARED_LIB -I/home/aymo/BC/Projekt/gr-ErTools/build/python/ErTools/bindings -I/home/aymo/BC/Projekt/gr-ErTools/python/ErTools/bindings/../../../lib -I/home/aymo/BC/Projekt/gr-ErTools/python/ErTools/bindings/../../../include -I/home/aymo/BC/Projekt/gr-ErTools/lib/../include -isystem /usr/include/python3.12 -isystem /usr/lib/python3/dist-packages/numpy/core/include  -fvisibility=hidden -Wsign-compare -Wall -Wno-uninitialized -O3 -DNDEBUG -std=c++17 -fPIC -fvisibility=hidden -Wno-unused-variable -flto -fno-fat-lto-objects -o CMakeFiles/ErTools_python.dir/AWGN_kanal_python.cc.o -c /home/aymo/BC/Projekt/gr-ErTools/python/ErTools/bindings/AWGN_kanal_python.cc",
   "file": "/home/aymo/BC/Projekt/gr-ErTools/python/ErTools/bindings/AWGN_kanal_python.cc",
   "output": "python/ErTools/bindings/CMakeFiles/ErTools_python.dir/AWGN_kanal_python.cc.o"
+},
+{
+  "directory": "/home/aymo/BC/Projekt/gr-ErTools/build/python/ErTools/bindings",
+  "command": "/usr/bin/c++ -DBOOST_ATOMIC_DYN_LINK -DBOOST_ATOMIC_NO_LIB -DBOOST_DATE_TIME_DYN_LINK -DBOOST_DATE_TIME_NO_LIB -DBOOST_PROGRAM_OPTIONS_DYN_LINK -DBOOST_PROGRAM_OPTIONS_NO_LIB -DBOOST_REGEX_DYN_LINK -DBOOST_REGEX_NO_LIB -DBOOST_SYSTEM_DYN_LINK -DBOOST_SYSTEM_NO_LIB -DBOOST_THREAD_DYN_LINK -DBOOST_THREAD_NO_LIB -DBOOST_UNIT_TEST_FRAMEWORK_DYN_LINK -DBOOST_UNIT_TEST_FRAMEWORK_NO_LIB -DErTools_python_EXPORTS -DFMT_SHARED -DGR_CTRLPORT -DGR_MPLIB_GMP -DGR_PERFORMANCE_COUNTERS -DSPDLOG_COMPILED_LIB -DSPDLOG_FMT_EXTERNAL -DSPDLOG_SHARED_LIB -I/home/aymo/BC/Projekt/gr-ErTools/build/python/ErTools/bindings -I/home/aymo/BC/Projekt/gr-ErTools/python/ErTools/bindings/../../../lib -I/home/aymo/BC/Projekt/gr-ErTools/python/ErTools/bindings/../../../include -I/home/aymo/BC/Projekt/gr-ErTools/lib/../include -isystem /usr/include/python3.12 -isystem /usr/lib/python3/dist-packages/numpy/core/include  -fvisibility=hidden -Wsign-compare -Wall -Wno-uninitialized -O3 -DNDEBUG -std=c++17 -fPIC -fvisibility=hidden -Wno-unused-variable -flto -fno-fat-lto-objects -o CMakeFiles/ErTools_python.dir/BER_python.cc.o -c /home/aymo/BC/Projekt/gr-ErTools/python/ErTools/bindings/BER_python.cc",
+  "file": "/home/aymo/BC/Projekt/gr-ErTools/python/ErTools/bindings/BER_python.cc",
+  "output": "python/ErTools/bindings/CMakeFiles/ErTools_python.dir/BER_python.cc.o"
 },
 {
   "directory": "/home/aymo/BC/Projekt/gr-ErTools/build/python/ErTools/bindings",

@@ -71,7 +71,7 @@ docs/doxygen/CMakeFiles/doxygen_target: docs/doxygen/html
 
 docs/doxygen/xml:
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=/home/aymo/BC/Projekt/gr-ErTools/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating documentation with doxygen"
-	cd /home/aymo/BC/Projekt/gr-ErTools/build/docs/doxygen && DOXYGEN_EXECUTABLE-NOTFOUND /home/aymo/BC/Projekt/gr-ErTools/build/docs/doxygen/Doxyfile
+	cd /home/aymo/BC/Projekt/gr-ErTools/build/docs/doxygen && /usr/bin/doxygen /home/aymo/BC/Projekt/gr-ErTools/build/docs/doxygen/Doxyfile
 
 docs/doxygen/html: docs/doxygen/xml
 	@$(CMAKE_COMMAND) -E touch_nocreate docs/doxygen/html

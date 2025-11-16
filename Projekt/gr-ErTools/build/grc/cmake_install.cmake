@@ -44,12 +44,8 @@ endif()
 
 if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/gnuradio/grc/blocks" TYPE FILE FILES
-    "/home/aymo/BC/Projekt/gr-ErTools/grc/ErTools_BER_sync.block.yml"
-    "/home/aymo/BC/Projekt/gr-ErTools/grc/ErTools_PrintInt.block.yml"
-    "/home/aymo/BC/Projekt/gr-ErTools/grc/ErTools_PrintChar.block.yml"
-    "/home/aymo/BC/Projekt/gr-ErTools/grc/ErTools_PrintFloat.block.yml"
-    "/home/aymo/BC/Projekt/gr-ErTools/grc/ErTools_BitErrorRate.block.yml"
     "/home/aymo/BC/Projekt/gr-ErTools/grc/ErTools_AWGN_kanal.block.yml"
+    "/home/aymo/BC/Projekt/gr-ErTools/grc/ErTools_BER.block.yml"
     )
 endif()
 

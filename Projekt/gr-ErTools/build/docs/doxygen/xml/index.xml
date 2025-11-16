@@ -10,62 +10,19 @@
     <member refid="classgr_1_1ErTools_1_1AWGN__kanal__impl_1a61a098b3eb58c796ef31f9b4b6b292c2" kind="variable"><name>_EbN0max</name></member>
     <member refid="classgr_1_1ErTools_1_1AWGN__kanal__impl_1abf82839f5bf0ce51269556f4558b7f28" kind="variable"><name>_Rb</name></member>
     <member refid="classgr_1_1ErTools_1_1AWGN__kanal__impl_1a5015e595b2be130a903e5978e6cfd9ad" kind="variable"><name>_fvz</name></member>
-    <member refid="classgr_1_1ErTools_1_1AWGN__kanal__impl_1acf39bb9e03effb820c9c69ec89533127" kind="variable"><name>k</name></member>
     <member refid="classgr_1_1ErTools_1_1AWGN__kanal__impl_1a2256107d57f1618f91a4648b859473aa" kind="function"><name>AWGN_kanal_impl</name></member>
     <member refid="classgr_1_1ErTools_1_1AWGN__kanal__impl_1a96387c13960e1cf8f67cabeed98c2dd3" kind="function"><name>~AWGN_kanal_impl</name></member>
     <member refid="classgr_1_1ErTools_1_1AWGN__kanal__impl_1a9a3a625b7a0fe9818f0fdd1644ba5c9c" kind="function"><name>work</name></member>
   </compound>
-  <compound refid="classgr_1_1ErTools_1_1BER__sync" kind="class"><name>gr::ErTools::BER_sync</name>
-    <member refid="classgr_1_1ErTools_1_1BER__sync_1a998446990be81319459cb66ea4aa86b3" kind="typedef"><name>sptr</name></member>
-    <member refid="classgr_1_1ErTools_1_1BER__sync_1af32b947181a5450f1579d6b7e7ecafce" kind="function"><name>make</name></member>
+  <compound refid="classgr_1_1ErTools_1_1BER" kind="class"><name>gr::ErTools::BER</name>
+    <member refid="classgr_1_1ErTools_1_1BER_1a194735ba854cf2b55471d8a46d12c58b" kind="typedef"><name>sptr</name></member>
+    <member refid="classgr_1_1ErTools_1_1BER_1a7b7c378c60827c21bd06986c0cfaf43b" kind="function"><name>make</name></member>
   </compound>
-  <compound refid="classgr_1_1ErTools_1_1BER__sync__impl" kind="class"><name>gr::ErTools::BER_sync_impl</name>
-    <member refid="classgr_1_1ErTools_1_1BER__sync__impl_1a736b40cc3425421923eefbf9fbfa8bef" kind="variable"><name>_N</name></member>
-    <member refid="classgr_1_1ErTools_1_1BER__sync__impl_1a50d4e6df9c3f440376a6acff8dc20d7e" kind="function"><name>BER_sync_impl</name></member>
-    <member refid="classgr_1_1ErTools_1_1BER__sync__impl_1a8840244e8807ecfd3362b792d3d17ce7" kind="function"><name>~BER_sync_impl</name></member>
-    <member refid="classgr_1_1ErTools_1_1BER__sync__impl_1a1793e4852634e6e0a5a24b6cd07a665c" kind="function"><name>work</name></member>
-  </compound>
-  <compound refid="classgr_1_1ErTools_1_1BitErrorRate" kind="class"><name>gr::ErTools::BitErrorRate</name>
-    <member refid="classgr_1_1ErTools_1_1BitErrorRate_1a53d7fb2f413af758f2004b94f5b6a454" kind="typedef"><name>sptr</name></member>
-    <member refid="classgr_1_1ErTools_1_1BitErrorRate_1a5b7f41eee0b869a129978b53c013bf58" kind="function"><name>make</name></member>
-  </compound>
-  <compound refid="classgr_1_1ErTools_1_1BitErrorRate__impl" kind="class"><name>gr::ErTools::BitErrorRate_impl</name>
-    <member refid="classgr_1_1ErTools_1_1BitErrorRate__impl_1a0aa58f7779a408660e172b9553ebf6dc" kind="variable"><name>_N</name></member>
-    <member refid="classgr_1_1ErTools_1_1BitErrorRate__impl_1ab54b4769a21e9a1fe95663cfbd91a1a8" kind="variable"><name>_Rb</name></member>
-    <member refid="classgr_1_1ErTools_1_1BitErrorRate__impl_1a74d0a503e0270e33befb2c83d116a798" kind="variable"><name>_fvz</name></member>
-    <member refid="classgr_1_1ErTools_1_1BitErrorRate__impl_1a27e2aa7c6134c58120f1ca5d995be18d" kind="variable"><name>_EbN0min</name></member>
-    <member refid="classgr_1_1ErTools_1_1BitErrorRate__impl_1aee81543bff7b3262c53eabe7121d4de6" kind="variable"><name>_EbN0max</name></member>
-    <member refid="classgr_1_1ErTools_1_1BitErrorRate__impl_1a53d22ced616c2e1d6186427f13f21fc5" kind="variable"><name>k</name></member>
-    <member refid="classgr_1_1ErTools_1_1BitErrorRate__impl_1a26f50366b15fcdefc07a17244f63cc5c" kind="function"><name>BitErrorRate_impl</name></member>
-    <member refid="classgr_1_1ErTools_1_1BitErrorRate__impl_1a4f5604f13bca618b68a5d89558b6fc44" kind="function"><name>~BitErrorRate_impl</name></member>
-    <member refid="classgr_1_1ErTools_1_1BitErrorRate__impl_1abeac666db77e24d2c0af8ab07413af31" kind="function"><name>work</name></member>
-  </compound>
-  <compound refid="classgr_1_1ErTools_1_1PrintChar" kind="class"><name>gr::ErTools::PrintChar</name>
-    <member refid="classgr_1_1ErTools_1_1PrintChar_1a52a071bd4e38304ffb61e1ce3a18604c" kind="typedef"><name>sptr</name></member>
-    <member refid="classgr_1_1ErTools_1_1PrintChar_1a1f01a527675a2764526d95bc5551cdfe" kind="function"><name>make</name></member>
-  </compound>
-  <compound refid="classgr_1_1ErTools_1_1PrintChar__impl" kind="class"><name>gr::ErTools::PrintChar_impl</name>
-    <member refid="classgr_1_1ErTools_1_1PrintChar__impl_1a4417133f20de7f39e00b1993b1e84de9" kind="function"><name>PrintChar_impl</name></member>
-    <member refid="classgr_1_1ErTools_1_1PrintChar__impl_1adc657bc8d3451a2e868cc3360b7af09f" kind="function"><name>~PrintChar_impl</name></member>
-    <member refid="classgr_1_1ErTools_1_1PrintChar__impl_1a6eebb84cf5da220800d8e92a7140fbec" kind="function"><name>work</name></member>
-  </compound>
-  <compound refid="classgr_1_1ErTools_1_1PrintFloat" kind="class"><name>gr::ErTools::PrintFloat</name>
-    <member refid="classgr_1_1ErTools_1_1PrintFloat_1a2c870e916e3de3284e76c8df01d5fbc8" kind="typedef"><name>sptr</name></member>
-    <member refid="classgr_1_1ErTools_1_1PrintFloat_1ac60334d06567bc11a1ada4b330ee0aba" kind="function"><name>make</name></member>
-  </compound>
-  <compound refid="classgr_1_1ErTools_1_1PrintFloat__impl" kind="class"><name>gr::ErTools::PrintFloat_impl</name>
-    <member refid="classgr_1_1ErTools_1_1PrintFloat__impl_1a5b8dd4fdfb366b931a0ef2f0609f851a" kind="function"><name>PrintFloat_impl</name></member>
-    <member refid="classgr_1_1ErTools_1_1PrintFloat__impl_1ac216ce2860602751b6b8f856a5c8d3f1" kind="function"><name>~PrintFloat_impl</name></member>
-    <member refid="classgr_1_1ErTools_1_1PrintFloat__impl_1aef75ad3c95e114266add64342cf32f42" kind="function"><name>work</name></member>
-  </compound>
-  <compound refid="classgr_1_1ErTools_1_1PrintInt" kind="class"><name>gr::ErTools::PrintInt</name>
-    <member refid="classgr_1_1ErTools_1_1PrintInt_1a9e4c7020090a624f4ec628ef44bcdf26" kind="typedef"><name>sptr</name></member>
-    <member refid="classgr_1_1ErTools_1_1PrintInt_1adfe83aaa47f439a08f9e511c5ce7934b" kind="function"><name>make</name></member>
-  </compound>
-  <compound refid="classgr_1_1ErTools_1_1PrintInt__impl" kind="class"><name>gr::ErTools::PrintInt_impl</name>
-    <member refid="classgr_1_1ErTools_1_1PrintInt__impl_1aa29a410dacfe49e34bbe78bea25e0b1d" kind="function"><name>PrintInt_impl</name></member>
-    <member refid="classgr_1_1ErTools_1_1PrintInt__impl_1aabbe72a92dd15f4f825168bb360d93d1" kind="function"><name>~PrintInt_impl</name></member>
-    <member refid="classgr_1_1ErTools_1_1PrintInt__impl_1afe8dadae83b3ac31eaff42d099b016f4" kind="function"><name>work</name></member>
+  <compound refid="classgr_1_1ErTools_1_1BER__impl" kind="class"><name>gr::ErTools::BER_impl</name>
+    <member refid="classgr_1_1ErTools_1_1BER__impl_1a646875331c3a666c5f45baef1b8a7506" kind="variable"><name>_N</name></member>
+    <member refid="classgr_1_1ErTools_1_1BER__impl_1a30d9ad8dc7aa4b05dfa587b52f6d67d3" kind="function"><name>BER_impl</name></member>
+    <member refid="classgr_1_1ErTools_1_1BER__impl_1a6127ddac53ee3af58c361975ea4876e7" kind="function"><name>~BER_impl</name></member>
+    <member refid="classgr_1_1ErTools_1_1BER__impl_1a175d43f680cf4aee664de1ac01934f57" kind="function"><name>work</name></member>
   </compound>
   <compound refid="namespacegr" kind="namespace"><name>gr</name>
   </compound>
@@ -112,27 +69,11 @@
   </compound>
   <compound refid="AWGN__kanal_8h" kind="file"><name>AWGN_kanal.h</name>
   </compound>
-  <compound refid="BER__sync_8h" kind="file"><name>BER_sync.h</name>
-  </compound>
-  <compound refid="BitErrorRate_8h" kind="file"><name>BitErrorRate.h</name>
-  </compound>
-  <compound refid="PrintChar_8h" kind="file"><name>PrintChar.h</name>
-  </compound>
-  <compound refid="PrintFloat_8h" kind="file"><name>PrintFloat.h</name>
-  </compound>
-  <compound refid="PrintInt_8h" kind="file"><name>PrintInt.h</name>
+  <compound refid="BER_8h" kind="file"><name>BER.h</name>
   </compound>
   <compound refid="AWGN__kanal__impl_8h" kind="file"><name>AWGN_kanal_impl.h</name>
   </compound>
-  <compound refid="BER__sync__impl_8h" kind="file"><name>BER_sync_impl.h</name>
-  </compound>
-  <compound refid="BitErrorRate__impl_8h" kind="file"><name>BitErrorRate_impl.h</name>
-  </compound>
-  <compound refid="PrintChar__impl_8h" kind="file"><name>PrintChar_impl.h</name>
-  </compound>
-  <compound refid="PrintFloat__impl_8h" kind="file"><name>PrintFloat_impl.h</name>
-  </compound>
-  <compound refid="PrintInt__impl_8h" kind="file"><name>PrintInt_impl.h</name>
+  <compound refid="BER__impl_8h" kind="file"><name>BER_impl.h</name>
   </compound>
   <compound refid="AWGN__kanal__pydoc__template_8h" kind="file"><name>AWGN_kanal_pydoc_template.h</name>
     <member refid="AWGN__kanal__pydoc__template_8h_1a74021f021dcdfbb22891787b79c5529d" kind="define"><name>D</name></member>
@@ -140,35 +81,11 @@
     <member refid="AWGN__kanal__pydoc__template_8h_1ae9385552c881e4edd0e225bb5647f206" kind="variable"><name>__doc_gr_ErTools_AWGN_kanal_AWGN_kanal</name></member>
     <member refid="AWGN__kanal__pydoc__template_8h_1a4cf721111bb1adb9504571e3535f3acc" kind="variable"><name>__doc_gr_ErTools_AWGN_kanal_make</name></member>
   </compound>
-  <compound refid="BER__sync__pydoc__template_8h" kind="file"><name>BER_sync_pydoc_template.h</name>
-    <member refid="BER__sync__pydoc__template_8h_1a74021f021dcdfbb22891787b79c5529d" kind="define"><name>D</name></member>
-    <member refid="BER__sync__pydoc__template_8h_1a43f9c47593d5544191f11918e16da1ed" kind="variable"><name>__doc_gr_ErTools_BER_sync</name></member>
-    <member refid="BER__sync__pydoc__template_8h_1aa3916daca9f97939f8519a2e1e7af73b" kind="variable"><name>__doc_gr_ErTools_BER_sync_BER_sync</name></member>
-    <member refid="BER__sync__pydoc__template_8h_1a23ad978e7e2c09ef3ad015ad05c2911d" kind="variable"><name>__doc_gr_ErTools_BER_sync_make</name></member>
-  </compound>
-  <compound refid="BitErrorRate__pydoc__template_8h" kind="file"><name>BitErrorRate_pydoc_template.h</name>
-    <member refid="BitErrorRate__pydoc__template_8h_1a74021f021dcdfbb22891787b79c5529d" kind="define"><name>D</name></member>
-    <member refid="BitErrorRate__pydoc__template_8h_1ad0688179e9dda34a59574e71c907b263" kind="variable"><name>__doc_gr_ErTools_BitErrorRate</name></member>
-    <member refid="BitErrorRate__pydoc__template_8h_1aee3b2043377dbf1b21dff4cfd01426b2" kind="variable"><name>__doc_gr_ErTools_BitErrorRate_BitErrorRate</name></member>
-    <member refid="BitErrorRate__pydoc__template_8h_1a81dd5f946047e8afc39ef3d5d49db49f" kind="variable"><name>__doc_gr_ErTools_BitErrorRate_make</name></member>
-  </compound>
-  <compound refid="PrintChar__pydoc__template_8h" kind="file"><name>PrintChar_pydoc_template.h</name>
-    <member refid="PrintChar__pydoc__template_8h_1a74021f021dcdfbb22891787b79c5529d" kind="define"><name>D</name></member>
-    <member refid="PrintChar__pydoc__template_8h_1acfd9d94a773e27d80eac14c2a3e621c2" kind="variable"><name>__doc_gr_ErTools_PrintChar</name></member>
-    <member refid="PrintChar__pydoc__template_8h_1a03ace44c50a4935dd4811c44c961aa9a" kind="variable"><name>__doc_gr_ErTools_PrintChar_PrintChar</name></member>
-    <member refid="PrintChar__pydoc__template_8h_1a6199479bd3855313fb63addcfd35cc36" kind="variable"><name>__doc_gr_ErTools_PrintChar_make</name></member>
-  </compound>
-  <compound refid="PrintFloat__pydoc__template_8h" kind="file"><name>PrintFloat_pydoc_template.h</name>
-    <member refid="PrintFloat__pydoc__template_8h_1a74021f021dcdfbb22891787b79c5529d" kind="define"><name>D</name></member>
-    <member refid="PrintFloat__pydoc__template_8h_1ae026f4f1da6f0e89078a317631ec9092" kind="variable"><name>__doc_gr_ErTools_PrintFloat</name></member>
-    <member refid="PrintFloat__pydoc__template_8h_1a0322473e5e3a8b3e8b454140e8120c77" kind="variable"><name>__doc_gr_ErTools_PrintFloat_PrintFloat</name></member>
-    <member refid="PrintFloat__pydoc__template_8h_1a15a285d4a4df7828de2d97c1e54326f1" kind="variable"><name>__doc_gr_ErTools_PrintFloat_make</name></member>
-  </compound>
-  <compound refid="PrintInt__pydoc__template_8h" kind="file"><name>PrintInt_pydoc_template.h</name>
-    <member refid="PrintInt__pydoc__template_8h_1a74021f021dcdfbb22891787b79c5529d" kind="define"><name>D</name></member>
-    <member refid="PrintInt__pydoc__template_8h_1ad49b9a24ba1304d2b37fd720b0c383a7" kind="variable"><name>__doc_gr_ErTools_PrintInt</name></member>
-    <member refid="PrintInt__pydoc__template_8h_1a7e1f5224ec54b7038ada2593d33b3f58" kind="variable"><name>__doc_gr_ErTools_PrintInt_PrintInt</name></member>
-    <member refid="PrintInt__pydoc__template_8h_1aaeb13647ac8288623948786c30d7da12" kind="variable"><name>__doc_gr_ErTools_PrintInt_make</name></member>
+  <compound refid="BER__pydoc__template_8h" kind="file"><name>BER_pydoc_template.h</name>
+    <member refid="BER__pydoc__template_8h_1a74021f021dcdfbb22891787b79c5529d" kind="define"><name>D</name></member>
+    <member refid="BER__pydoc__template_8h_1a57bcc0a35fff1fa75fb2fb66f71a6e12" kind="variable"><name>__doc_gr_ErTools_BER</name></member>
+    <member refid="BER__pydoc__template_8h_1ad4b76264bc1cbe5d7771c04a5e4dde70" kind="variable"><name>__doc_gr_ErTools_BER_BER</name></member>
+    <member refid="BER__pydoc__template_8h_1a3628019838ecd2df807ddab8e4b9f8cc" kind="variable"><name>__doc_gr_ErTools_BER_make</name></member>
   </compound>
   <compound refid="group__block" kind="group"><name>block</name>
   </compound>

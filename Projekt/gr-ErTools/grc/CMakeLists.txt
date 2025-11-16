@@ -6,9 +6,5 @@
 # SPDX-License-Identifier: GPL-3.0-or-later
 #
 install(FILES
-    ErTools_BER_sync.block.yml
-    ErTools_PrintInt.block.yml
-    ErTools_PrintChar.block.yml
-    ErTools_PrintFloat.block.yml
-    ErTools_BitErrorRate.block.yml
-    ErTools_AWGN_kanal.block.yml DESTINATION share/gnuradio/grc/blocks)
+    ErTools_AWGN_kanal.block.yml
+    ErTools_BER.block.yml DESTINATION share/gnuradio/grc/blocks)
