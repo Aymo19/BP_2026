@@ -122,7 +122,7 @@ blocks:
     bus_sink: false
     bus_source: false
     bus_structure: null
-    coordinate: [728, 136.0]
+    coordinate: [744, 176.0]
     rotation: 0
     state: enabled
 - name: blocks_add_xx_0_0
@@ -143,21 +143,21 @@ blocks:
     coordinate: [424, 456.0]
     rotation: 0
     state: enabled
-- name: blocks_int_to_float_0
-  id: blocks_int_to_float
+- name: blocks_null_sink_0
+  id: blocks_null_sink
   parameters:
     affinity: ''
     alias: ''
+    bus_structure_sink: '[[0,],]'
     comment: ''
-    maxoutbuf: '0'
-    minoutbuf: '0'
-    scale: '1'
+    num_inputs: '1'
+    type: int
     vlen: '1'
   states:
     bus_sink: false
     bus_source: false
     bus_structure: null
-    coordinate: [720, 304.0]
+    coordinate: [752, 120.0]
     rotation: 0
     state: enabled
 - name: blocks_throttle2_0
@@ -179,93 +179,6 @@ blocks:
     bus_source: false
     bus_structure: null
     coordinate: [312, 152.0]
-    rotation: 0
-    state: enabled
-- name: qtgui_histogram_sink_x_0
-  id: qtgui_histogram_sink_x
-  parameters:
-    accum: 'False'
-    affinity: ''
-    alias: ''
-    alpha1: '1.0'
-    alpha10: '1.0'
-    alpha2: '1.0'
-    alpha3: '1.0'
-    alpha4: '1.0'
-    alpha5: '1.0'
-    alpha6: '1.0'
-    alpha7: '1.0'
-    alpha8: '1.0'
-    alpha9: '1.0'
-    autoscale: 'True'
-    axislabels: 'True'
-    bins: '1024'
-    color1: '"blue"'
-    color10: '"dark blue"'
-    color2: '"red"'
-    color3: '"green"'
-    color4: '"black"'
-    color5: '"cyan"'
-    color6: '"magenta"'
-    color7: '"yellow"'
-    color8: '"dark red"'
-    color9: '"dark green"'
-    comment: ''
-    grid: 'True'
-    gui_hint: ''
-    label1: ''
-    label10: ''
-    label2: ''
-    label3: ''
-    label4: ''
-    label5: ''
-    label6: ''
-    label7: ''
-    label8: ''
-    label9: ''
-    legend: 'True'
-    marker1: '-1'
-    marker10: '-1'
-    marker2: '-1'
-    marker3: '-1'
-    marker4: '-1'
-    marker5: '-1'
-    marker6: '-1'
-    marker7: '-1'
-    marker8: '-1'
-    marker9: '-1'
-    name: '""'
-    nconnections: '1'
-    size: '1024'
-    style1: '1'
-    style10: '1'
-    style2: '1'
-    style3: '1'
-    style4: '1'
-    style5: '1'
-    style6: '1'
-    style7: '1'
-    style8: '1'
-    style9: '1'
-    type: float
-    update_time: '0.10'
-    width1: '1'
-    width10: '1'
-    width2: '1'
-    width3: '1'
-    width4: '1'
-    width5: '1'
-    width6: '1'
-    width7: '1'
-    width8: '1'
-    width9: '1'
-    xmax: '130'
-    xmin: '-1'
-  states:
-    bus_sink: false
-    bus_source: false
-    bus_structure: null
-    coordinate: [952, 368.0]
     rotation: 0
     state: enabled
 - name: qtgui_time_sink_x_0
@@ -362,7 +275,7 @@ blocks:
     bus_sink: false
     bus_source: false
     bus_structure: null
-    coordinate: [872, 120.0]
+    coordinate: [872, 168.0]
     rotation: 0
     state: enabled
 - name: qtgui_time_sink_x_0_0
@@ -459,7 +372,7 @@ blocks:
     bus_sink: false
     bus_source: false
     bus_structure: null
-    coordinate: [520, 320.0]
+    coordinate: [872, 288.0]
     rotation: 0
     state: enabled
 - name: qtgui_time_sink_x_0_0_0
@@ -653,19 +566,18 @@ blocks:
     bus_sink: false
     bus_source: false
     bus_structure: null
-    coordinate: [872, 232.0]
+    coordinate: [872, 48.0]
     rotation: 0
     state: enabled
 
 connections:
 - [ErTools_AWGN_kanal_0, '0', blocks_add_xx_0, '0']
 - [ErTools_AWGN_kanal_0, '0', qtgui_time_sink_x_0_1, '0']
-- [ErTools_AWGN_kanal_0, '1', blocks_int_to_float_0, '0']
+- [ErTools_AWGN_kanal_0, '1', blocks_null_sink_0, '0']
 - [analog_noise_source_x_0, '0', blocks_add_xx_0_0, '1']
 - [analog_sig_source_x_0, '0', blocks_throttle2_0, '0']
 - [blocks_add_xx_0, '0', qtgui_time_sink_x_0, '0']
 - [blocks_add_xx_0_0, '0', qtgui_time_sink_x_0_0_0, '0']
-- [blocks_int_to_float_0, '0', qtgui_histogram_sink_x_0, '0']
 - [blocks_throttle2_0, '0', ErTools_AWGN_kanal_0, '0']
 - [blocks_throttle2_0, '0', blocks_add_xx_0, '1']
 - [blocks_throttle2_0, '0', blocks_add_xx_0_0, '0']

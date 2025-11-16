@@ -12,17 +12,14 @@
 
 from PyQt5 import Qt
 from gnuradio import qtgui
-import os
-import sys
-sys.path.append(os.environ.get('GRC_HIER_PATH', os.path.expanduser('~/.grc_gnuradio')))
-
-from b_BERTool import b_BERTool  # grc-generated hier_block
+from gnuradio import ErTools
 from gnuradio import blocks
 import numpy
 from gnuradio import digital
 from gnuradio import gr
 from gnuradio.filter import firdes
 from gnuradio.fft import window
+import sys
 import signal
 from PyQt5 import Qt
 from argparse import ArgumentParser
@@ -143,26 +140,25 @@ class ser_simulation(gr.top_block, Qt.QWidget):
         self.digital_constellation_decoder_cb_0_0_0 = digital.constellation_decoder_cb(MiconstellationObject0)
         self.digital_chunks_to_symbols_xx_1 = digital.chunks_to_symbols_bc(const0, 1)
         self.blocks_throttle2_0 = blocks.throttle( gr.sizeof_char*1, samp_rate, True, 0 if "auto" == "auto" else max( int(float(0.1) * samp_rate) if "auto" == "time" else int(0.1), 1) )
-        self.b_BERTool_1 = b_BERTool(
-            B=N_snr,
-            EsN0max=EsN0min,
-            EsN0min=EsN0max,
-            N_snr=N_snr,
-            Rs=Rs,
-        )
+        self.blocks_stream_to_vector_0 = blocks.stream_to_vector(gr.sizeof_float*1, N_snr)
+        self.blocks_null_sink_0 = blocks.null_sink(gr.sizeof_int*1)
         self.analog_random_source_x_1 = blocks.vector_source_b(list(map(int, numpy.random.randint(0, M0, 10000000))), True)
+        self.ErTools_BitErrorRate_0 = ErTools.BitErrorRate(N_snr)
+        self.ErTools_AWGN_kanal_0 = ErTools.AWGN_kanal(N_snr, 5, 25, 100000, 1)
 
 
         ##################################################
         # Connections
         ##################################################
+        self.connect((self.ErTools_AWGN_kanal_0, 1), (self.blocks_null_sink_0, 0))
+        self.connect((self.ErTools_AWGN_kanal_0, 0), (self.digital_constellation_decoder_cb_0_0_0, 0))
+        self.connect((self.ErTools_BitErrorRate_0, 0), (self.blocks_stream_to_vector_0, 0))
         self.connect((self.analog_random_source_x_1, 0), (self.blocks_throttle2_0, 0))
-        self.connect((self.b_BERTool_1, 1), (self.digital_constellation_decoder_cb_0_0_0, 0))
-        self.connect((self.b_BERTool_1, 0), (self.qtgui_vector_sink_f_0, 0))
-        self.connect((self.blocks_throttle2_0, 0), (self.b_BERTool_1, 1))
+        self.connect((self.blocks_stream_to_vector_0, 0), (self.qtgui_vector_sink_f_0, 0))
+        self.connect((self.blocks_throttle2_0, 0), (self.ErTools_BitErrorRate_0, 0))
         self.connect((self.blocks_throttle2_0, 0), (self.digital_chunks_to_symbols_xx_1, 0))
-        self.connect((self.digital_chunks_to_symbols_xx_1, 0), (self.b_BERTool_1, 0))
-        self.connect((self.digital_constellation_decoder_cb_0_0_0, 0), (self.b_BERTool_1, 2))
+        self.connect((self.digital_chunks_to_symbols_xx_1, 0), (self.ErTools_AWGN_kanal_0, 0))
+        self.connect((self.digital_constellation_decoder_cb_0_0_0, 0), (self.ErTools_BitErrorRate_0, 1))
 
 
     def closeEvent(self, event):
@@ -210,15 +206,12 @@ class ser_simulation(gr.top_block, Qt.QWidget):
 
     def set_Rs(self, Rs):
         self.Rs = Rs
-        self.b_BERTool_1.set_Rs(self.Rs)
 
     def get_N_snr(self):
         return self.N_snr
 
     def set_N_snr(self, N_snr):
         self.N_snr = N_snr
-        self.b_BERTool_1.set_B(self.N_snr)
-        self.b_BERTool_1.set_N_snr(self.N_snr)
         self.qtgui_vector_sink_f_0.set_x_axis(self.EsN0min, ((self.EsN0max-self.EsN0min)/float(self.N_snr)))
 
     def get_MiconstellationObject0(self):
@@ -251,7 +244,6 @@ class ser_simulation(gr.top_block, Qt.QWidget):
 
     def set_EsN0min(self, EsN0min):
         self.EsN0min = EsN0min
-        self.b_BERTool_1.set_EsN0max(self.EsN0min)
         self.qtgui_vector_sink_f_0.set_x_axis(self.EsN0min, ((self.EsN0max-self.EsN0min)/float(self.N_snr)))
 
     def get_EsN0max(self):
@@ -259,7 +251,6 @@ class ser_simulation(gr.top_block, Qt.QWidget):
 
     def set_EsN0max(self, EsN0max):
         self.EsN0max = EsN0max
-        self.b_BERTool_1.set_EsN0min(self.EsN0max)
         self.qtgui_vector_sink_f_0.set_x_axis(self.EsN0min, ((self.EsN0max-self.EsN0min)/float(self.N_snr)))
 
 

@@ -30,7 +30,6 @@ BER_impl::BER_impl(int N)
                      gr::io_signature::makev(2, 3, isig),
                      gr::io_signature::make(1, 1, sizeof(output_type)))
 {
-  _N = N;
 }
 
 //Our virtual destructor.
@@ -66,7 +65,7 @@ int BER_calc(char S1, char S2) {
   XORnute = S1 ^ S2;
   
   e_sum = BitCounter(XORnute, 8);//N_S1);
-  printf("%d\n", e_sum);
+  
   /*BER = (float)e_sum / (float)N_S1;
   
   log_BER = logf(BER);
@@ -86,26 +85,24 @@ int BER_impl::work(int noutput_items,
     
     auto out = static_cast<output_type*>(output_items[0]);
 
-    int pocet_chyb[_N], count[_N];
-    float pamat_SER[_N];
+    int pocet_chyb[_N], count[_N], pamat_SER[_N];
     std::fill_n(pocet_chyb, _N, 0);
     std::fill_n(count, _N, 8);
-    std::fill_n(pamat_SER, _N, 1.0);
+    std::fill_n(pamat_SER, _N, 1);
     
     //velkost input vektora z AWGN kanala
-    //int L = sizeof(in0) / sizeof(in1[0]);
+    int L = sizeof(in0) / sizeof(in1[0]);
     int k;
 
-    for(int i = 0; i < noutput_items; i++) {
+    for(int i = 0; i < L; i++) {
       k = in0[i];
-      printf("%d\n", k);
-      //pocet_chyb[k] += BER_calc(in1[i], in2[i]);
-      //pamat_SER[k] = float(pocet_chyb[k]) / float(count[k]);
 
-      //printf("%d %d %d\n", k, pocet_chyb[k], count[k]);
-        
-      //out[i] = pamat_SER[k];
-      out[i] = 1.0;
+      pocet_chyb[k] += 1;//BER_calc(in1[i], in2[i]);
+
+      pamat_SER[k] = pocet_chyb[k] / count[k];
+
+      out[i] = pamat_SER[k];
+
       count[k] += 8;
     }
 

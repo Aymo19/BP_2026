@@ -1,5 +1,5 @@
 #include <stdio.h>
-#include <math.h>
+//#include <math.h>
 
 #define N 8 //toto treba zmenit na velkost slova
 
@@ -31,11 +31,11 @@ int main() {
   scanf("%d", &c);
   C = c;
   int velkost_char = sizeof(C);
-
+  C = '0';
   printf("Byte CHAR: %d B\n", velkost_char);
   
   //Prevod na bity
-  char virt_jedna = 1; //0000 0001 pre nas
+  char virt_jedna = '3'; //0000 0001 pre nas
   //printf("%c\n", virt_jedna);
 
   // 1. XOR
@@ -61,8 +61,8 @@ int main() {
   float BER = (float)e_sum / (float)N;
   printf("BER: %.2f%%\n", BER*100);
 
-  float log_BER = logf(BER);
-  printf("log BER: %.2f\n", log_BER);
+  //float log_BER = logf(BER);
+  //printf("log BER: %.2f\n", log_BER);
 
   return 0;
 }

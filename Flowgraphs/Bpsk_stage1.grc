@@ -134,7 +134,7 @@ blocks:
     bus_sink: false
     bus_source: false
     bus_structure: null
-    coordinate: [808, 432.0]
+    coordinate: [768, 448.0]
     rotation: 0
     state: enabled
 - name: analog_random_source_x_0
@@ -232,27 +232,6 @@ blocks:
     coordinate: [472, 136.0]
     rotation: 0
     state: enabled
-- name: blocks_throttle2_1
-  id: blocks_throttle2
-  parameters:
-    affinity: ''
-    alias: ''
-    comment: ''
-    ignoretag: 'True'
-    limit: auto
-    maximum: '0.1'
-    maxoutbuf: '0'
-    minoutbuf: '0'
-    samples_per_second: samp_rate
-    type: float
-    vlen: '1'
-  states:
-    bus_sink: false
-    bus_source: false
-    bus_structure: null
-    coordinate: [1064, 456.0]
-    rotation: 0
-    state: disabled
 - name: digital_constellation_decoder_cb_0
   id: digital_constellation_decoder_cb
   parameters:
@@ -370,14 +349,12 @@ connections:
 - [ErTools_AWGN_kanal_0, '0', blocks_add_xx_0, '1']
 - [ErTools_AWGN_kanal_0, '1', ErTools_BER_0, '0']
 - [ErTools_BER_0, '0', blocks_nlog10_ff_0, '0']
-- [ErTools_BER_0, '0', blocks_throttle2_1, '0']
 - [analog_random_source_x_0, '0', ErTools_BER_0, '1']
 - [analog_random_source_x_0, '0', digital_constellation_modulator_0, '0']
 - [blocks_add_xx_0, '0', digital_constellation_decoder_cb_0, '0']
 - [blocks_nlog10_ff_0, '0', blocks_stream_to_vector_0, '0']
 - [blocks_stream_to_vector_0, '0', qtgui_vector_sink_f_0, '0']
 - [blocks_throttle2_0, '0', blocks_add_xx_0, '0']
-- [blocks_throttle2_1, '0', blocks_nlog10_ff_0, '0']
 - [digital_constellation_decoder_cb_0, '0', ErTools_BER_0, '2']
 - [digital_constellation_modulator_0, '0', ErTools_AWGN_kanal_0, '0']
 - [digital_constellation_modulator_0, '0', blocks_throttle2_0, '0']
