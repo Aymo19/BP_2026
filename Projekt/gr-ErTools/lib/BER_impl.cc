@@ -21,7 +21,7 @@ using output_type = float;
 
 BER::sptr BER::make(int N) { return gnuradio::make_block_sptr<BER_impl>(N); }
 
-static int is[] = { sizeof(int), sizeof(char), sizeof(char) };
+static int is[] = { sizeof(int), sizeof(unsigned char), sizeof(unsigned char) };
 static std::vector<int> isig(is, is + sizeof(is) / sizeof(int));
 
 //The private constructor
@@ -31,8 +31,8 @@ BER_impl::BER_impl(int N)
                      gr::io_signature::make(1, 1, sizeof(output_type)))
 {
   _N = N;
-  _count = std::vector<unsigned long long>(N, 8);
-  _pocet_chyb = std::vector<unsigned long long>(N, 1);
+  _count = std::vector<int>(N, 8);
+  _pocet_chyb = std::vector<int>(N, 1);
   _pamat_SER = std::vector<double>(N, 1.0);
   /*
   std::fill_n(_count, N, 8);
@@ -44,9 +44,9 @@ BER_impl::BER_impl(int N)
 BER_impl::~BER_impl() {}
 
 //spocita vsetky chybne bity po x(t) XOR x(t)+n(t)
-int BitCounter(char slovo, int N) {
+int BitCounter(unsigned char slovo, int N) {
   int sum = 0, sign = 0;
-  char b_jedna = 1;
+  unsigned char b_jedna = 1;
   
   if(slovo < 0)
     sign = 1;
@@ -65,8 +65,8 @@ int BitCounter(char slovo, int N) {
   return sum;
 }
 
-int BER_calc(char S1, char S2) {
-  char XORnute;
+int BER_calc(unsigned char S1, unsigned char S2) {
+  unsigned char XORnute;
   int e_sum;//, N_S1 = sizeof(S1) * 8; //krat 8 lebo 1 kodove slovo ma 8 bitov
   //float BER, log_BER;
 
@@ -87,8 +87,8 @@ int BER_impl::work(int noutput_items,
                    gr_vector_void_star& output_items)
 {
     int *in0 = (int *)input_items[0];
-    char *in1 = (char *)input_items[1];
-    char *in2 = (char *)input_items[2];
+    unsigned char *in1 = (unsigned char *)input_items[1];
+    unsigned char *in2 = (unsigned char *)input_items[2];
     
     auto out = static_cast<output_type*>(output_items[0]);
 
@@ -107,7 +107,9 @@ int BER_impl::work(int noutput_items,
       
       _pocet_chyb.at(k) += BER_calc(in1[i], in2[i]);
       _pamat_SER.at(k) = double(_pocet_chyb.at(k)) / double(_count.at(k));
-        
+      /*if(k%2 == 0)
+        GR_LOG_INFO(d_logger, std::string("e: ") + std::to_string(_pocet_chyb.at(k)));
+*/
       out[i] = _pamat_SER.at(k);
 
       _count.at(k) += 8;

@@ -11,6 +11,7 @@
 #include <cmath>
 #include <random>
 #include <complex>
+#include <cstdlib>
 
 namespace gr {
 namespace ErTools {
@@ -47,8 +48,8 @@ AWGN_kanal_impl::~AWGN_kanal_impl() {}
 
 gr_complex Sum_vypocet(float odchylka) {
   std::random_device rd;
-  std::default_random_engine R(rd());
-  std::default_random_engine I(rd());
+  std::mt19937 R(rd());
+  std::mt19937 I(rd());
   
   std::normal_distribution<double> Gauss{0, odchylka}; //0 lebo AWGN
   
@@ -74,10 +75,12 @@ gr_complex Sum(float EDB, float Ps, int _Rb, int _fvz) {
   N = Ps / SNR;
     
   //vypocet smerodajnej odychlky
-  VRMS = sqrt(N); // / sqrt(2.0);
-
+  VRMS = sqrt(N) / sqrt(2.0);
+  srand(time(0));
   //vypocet AWGN
   n = Sum_vypocet(VRMS);
+
+  //gr_complex n(VRMS*randomFloat(), VRMS*randomFloat());
 
   return n;
 }
