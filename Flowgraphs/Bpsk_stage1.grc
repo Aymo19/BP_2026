@@ -260,6 +260,22 @@ blocks:
     coordinate: [1152, 168.0]
     rotation: 0
     state: enabled
+- name: digital_constellation_encoder_bc_0
+  id: digital_constellation_encoder_bc
+  parameters:
+    affinity: ''
+    alias: ''
+    comment: ''
+    constellation: bpsk
+    maxoutbuf: '0'
+    minoutbuf: '0'
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [536, 240.0]
+    rotation: 0
+    state: enabled
 - name: digital_constellation_modulator_0
   id: digital_constellation_modulator
   parameters:
@@ -281,7 +297,7 @@ blocks:
     bus_structure: null
     coordinate: [544, 136.0]
     rotation: 0
-    state: enabled
+    state: disabled
 - name: qtgui_time_sink_x_0
   id: qtgui_time_sink_x
   parameters:
@@ -314,9 +330,9 @@ blocks:
     entags: 'True'
     grid: 'False'
     gui_hint: ''
-    label1: Signal 1
+    label1: Re
     label10: Signal 10
-    label2: Signal 2
+    label2: Im
     label3: Signal 3
     label4: Signal 4
     label5: Signal 5
@@ -335,7 +351,7 @@ blocks:
     marker7: '-1'
     marker8: '-1'
     marker9: '-1'
-    name: '""'
+    name: '"AWGN"'
     nconnections: '1'
     size: '1024'
     srate: samp_rate
@@ -376,7 +392,7 @@ blocks:
     bus_sink: false
     bus_source: false
     bus_structure: null
-    coordinate: [1112, 40.0]
+    coordinate: [1128, 48.0]
     rotation: 0
     state: enabled
 - name: qtgui_time_sink_x_1
@@ -432,7 +448,7 @@ blocks:
     marker7: '-1'
     marker8: '-1'
     marker9: '-1'
-    name: '""'
+    name: '"logPe"'
     nconnections: '1'
     size: '1024'
     srate: samp_rate
@@ -468,7 +484,7 @@ blocks:
     ylabel: Amplitude
     ymax: '1'
     ymin: '-30'
-    yunit: '""'
+    yunit: '"log"'
   states:
     bus_sink: false
     bus_source: false
@@ -492,7 +508,7 @@ blocks:
     alpha8: '1.0'
     alpha9: '1.0'
     autoscale: 'False'
-    average: '1.0'
+    average: '0.05'
     color1: '"blue"'
     color10: '"dark blue"'
     color2: '"red"'
@@ -537,7 +553,7 @@ blocks:
     width9: '1'
     x_axis_label: '"Eb/N0 [dB]"'
     x_start: '0'
-    x_step: (20-0)/float(128)
+    x_step: (10-0)/float(128)
     x_units: '"dB"'
     y_axis_label: '"logPe"'
     y_units: '""'
@@ -654,10 +670,13 @@ connections:
 - [blocks_stream_to_vector_0, '0', qtgui_vector_sink_f_0_0, '0']
 - [blocks_throttle2_0, '0', blocks_add_xx_0, '0']
 - [digital_constellation_decoder_cb_0, '0', virtual_sink_0, '0']
+- [digital_constellation_encoder_bc_0, '0', ErTools_AWGN_kanal_0, '0']
+- [digital_constellation_encoder_bc_0, '0', blocks_throttle2_0, '0']
 - [digital_constellation_modulator_0, '0', ErTools_AWGN_kanal_0, '0']
 - [digital_constellation_modulator_0, '0', blocks_throttle2_0, '0']
 - [virtual_source_0, '0', ErTools_BER_0, '2']
 - [virtual_source_0_0, '0', ErTools_BER_0, '1']
+- [virtual_source_0_0_0, '0', digital_constellation_encoder_bc_0, '0']
 - [virtual_source_0_0_0, '0', digital_constellation_modulator_0, '0']
 - [virtual_source_0_0_1, '0', ErTools_BER_0, '0']
 

@@ -77,7 +77,7 @@ class bpsk_stage1(gr.top_block, Qt.QWidget):
         self.qtgui_vector_sink_f_0_0 = qtgui.vector_sink_f(
             N,
             0,
-            ((20-0)/float(128)),
+            ((10-0)/float(128)),
             "Eb/N0 [dB]",
             "logPe",
             "BER",
@@ -120,14 +120,14 @@ class bpsk_stage1(gr.top_block, Qt.QWidget):
         self.qtgui_time_sink_x_1 = qtgui.time_sink_f(
             1024, #size
             samp_rate, #samp_rate
-            "", #name
+            "logPe", #name
             1, #number of inputs
             None # parent
         )
         self.qtgui_time_sink_x_1.set_update_time(0.10)
         self.qtgui_time_sink_x_1.set_y_axis(-30, 1)
 
-        self.qtgui_time_sink_x_1.set_y_label('Amplitude', "")
+        self.qtgui_time_sink_x_1.set_y_label('Amplitude', "log")
 
         self.qtgui_time_sink_x_1.enable_tags(True)
         self.qtgui_time_sink_x_1.set_trigger_mode(qtgui.TRIG_MODE_FREE, qtgui.TRIG_SLOPE_POS, 0.0, 0, 0, "")
@@ -168,7 +168,7 @@ class bpsk_stage1(gr.top_block, Qt.QWidget):
         self.qtgui_time_sink_x_0 = qtgui.time_sink_c(
             1024, #size
             samp_rate, #samp_rate
-            "", #name
+            "AWGN", #name
             1, #number of inputs
             None # parent
         )
@@ -186,7 +186,7 @@ class bpsk_stage1(gr.top_block, Qt.QWidget):
         self.qtgui_time_sink_x_0.enable_stem_plot(False)
 
 
-        labels = ['Signal 1', 'Signal 2', 'Signal 3', 'Signal 4', 'Signal 5',
+        labels = ['Re', 'Im', 'Signal 3', 'Signal 4', 'Signal 5',
             'Signal 6', 'Signal 7', 'Signal 8', 'Signal 9', 'Signal 10']
         widths = [1, 1, 1, 1, 1,
             1, 1, 1, 1, 1]
@@ -216,15 +216,7 @@ class bpsk_stage1(gr.top_block, Qt.QWidget):
 
         self._qtgui_time_sink_x_0_win = sip.wrapinstance(self.qtgui_time_sink_x_0.qwidget(), Qt.QWidget)
         self.top_layout.addWidget(self._qtgui_time_sink_x_0_win)
-        self.digital_constellation_modulator_0 = digital.generic_mod(
-            constellation=bpsk,
-            differential=True,
-            samples_per_symbol=sps,
-            pre_diff_code=True,
-            excess_bw=excess_bw,
-            verbose=False,
-            log=False,
-            truncate=False)
+        self.digital_constellation_encoder_bc_0 = digital.constellation_encoder_bc(bpsk)
         self.digital_constellation_decoder_cb_0 = digital.constellation_decoder_cb(bpsk)
         self.blocks_throttle2_0 = blocks.throttle( gr.sizeof_gr_complex*1, samp_rate, True, 0 if "auto" == "auto" else max( int(float(0.1) * samp_rate) if "auto" == "time" else int(0.1), 1) )
         self.blocks_stream_to_vector_0 = blocks.stream_to_vector(gr.sizeof_float*1, N)
@@ -243,15 +235,15 @@ class bpsk_stage1(gr.top_block, Qt.QWidget):
         self.connect((self.ErTools_AWGN_kanal_0, 0), (self.qtgui_time_sink_x_0, 0))
         self.connect((self.ErTools_BER_0, 0), (self.blocks_nlog10_ff_0, 0))
         self.connect((self.analog_random_source_x_0, 0), (self.ErTools_BER_0, 1))
-        self.connect((self.analog_random_source_x_0, 0), (self.digital_constellation_modulator_0, 0))
+        self.connect((self.analog_random_source_x_0, 0), (self.digital_constellation_encoder_bc_0, 0))
         self.connect((self.blocks_add_xx_0, 0), (self.digital_constellation_decoder_cb_0, 0))
         self.connect((self.blocks_nlog10_ff_0, 0), (self.blocks_stream_to_vector_0, 0))
         self.connect((self.blocks_nlog10_ff_0, 0), (self.qtgui_time_sink_x_1, 0))
         self.connect((self.blocks_stream_to_vector_0, 0), (self.qtgui_vector_sink_f_0_0, 0))
         self.connect((self.blocks_throttle2_0, 0), (self.blocks_add_xx_0, 0))
         self.connect((self.digital_constellation_decoder_cb_0, 0), (self.ErTools_BER_0, 2))
-        self.connect((self.digital_constellation_modulator_0, 0), (self.ErTools_AWGN_kanal_0, 0))
-        self.connect((self.digital_constellation_modulator_0, 0), (self.blocks_throttle2_0, 0))
+        self.connect((self.digital_constellation_encoder_bc_0, 0), (self.ErTools_AWGN_kanal_0, 0))
+        self.connect((self.digital_constellation_encoder_bc_0, 0), (self.blocks_throttle2_0, 0))
 
 
     def closeEvent(self, event):
@@ -297,6 +289,7 @@ class bpsk_stage1(gr.top_block, Qt.QWidget):
     def set_bpsk(self, bpsk):
         self.bpsk = bpsk
         self.digital_constellation_decoder_cb_0.set_constellation(self.bpsk)
+        self.digital_constellation_encoder_bc_0.set_constellation(self.bpsk)
 
     def get_N(self):
         return self.N

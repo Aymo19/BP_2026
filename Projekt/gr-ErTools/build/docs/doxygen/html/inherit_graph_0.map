@@ -1,0 +1,11 @@
+<map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
+<area shape="rect" id="Node000000" title=" " alt="" coords="5,31,120,56"/>
+<area shape="rect" id="Node000001" href="$classgr_1_1ErTools_1_1AWGN__kanal.html" title="&lt;+description of block+&gt;" alt="" coords="168,5,348,31"/>
+<area shape="poly" id="edge1_Node000000_Node000001" title=" " alt="" coords="133,32,167,27,168,32,134,37"/>
+<area shape="rect" id="Node000003" href="$classgr_1_1ErTools_1_1BER.html" title="&lt;+description of block+&gt;" alt="" coords="197,55,319,80"/>
+<area shape="poly" id="edge3_Node000000_Node000003" title=" " alt="" coords="134,49,197,57,196,63,133,55"/>
+<area shape="rect" id="Node000002" href="$classgr_1_1ErTools_1_1AWGN__kanal__impl.html" title=" " alt="" coords="396,5,612,31"/>
+<area shape="poly" id="edge2_Node000001_Node000002" title=" " alt="" coords="362,15,396,15,396,21,362,21"/>
+<area shape="rect" id="Node000004" href="$classgr_1_1ErTools_1_1BER__impl.html" title=" " alt="" coords="425,55,583,80"/>
+<area shape="poly" id="edge4_Node000003_Node000004" title=" " alt="" coords="333,65,424,65,424,70,333,70"/>
+</map>

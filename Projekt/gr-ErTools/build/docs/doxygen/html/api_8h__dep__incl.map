@@ -1,0 +1,11 @@
+<map id="api.h" name="api.h">
+<area shape="rect" id="Node000001" title=" " alt="" coords="128,5,183,31"/>
+<area shape="rect" id="Node000002" href="$AWGN__kanal_8h.html" title=" " alt="" coords="41,79,158,104"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="140,43,110,80,106,77,135,40"/>
+<area shape="rect" id="Node000004" href="$BER_8h.html" title=" " alt="" coords="192,79,252,104"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="178,39,213,77,209,80,174,43"/>
+<area shape="rect" id="Node000003" href="$AWGN__kanal__impl_8h.html" title=" " alt="" coords="5,152,159,177"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="96,118,87,153,82,151,91,117"/>
+<area shape="rect" id="Node000005" href="$BER__impl_8h.html" title=" " alt="" coords="183,152,279,177"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="228,117,232,152,227,152,223,118"/>
+</map>
