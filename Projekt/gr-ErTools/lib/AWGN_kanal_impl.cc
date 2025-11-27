@@ -8,6 +8,7 @@
 #include "AWGN_kanal_impl.h"
 #include <gnuradio/io_signature.h>
 
+// Pridane kniznice
 #include <cmath>
 #include <random>
 #include <complex>
@@ -16,68 +17,79 @@
 namespace gr {
 namespace ErTools {
 
-//using input_type = float;
-//using output_type = float;
-
-AWGN_kanal::sptr AWGN_kanal::make(int N, int EbN0min, int EbN0max, int R, int W)
-{
+AWGN_kanal::sptr AWGN_kanal::make(int N, int EbN0min, int EbN0max, int R, int W) {
     return gnuradio::make_block_sptr<AWGN_kanal_impl>(N, EbN0min, EbN0max, R, W);
 }
 
+// Output vector
 static int os[] = { sizeof(gr_complex), sizeof(int) };
 static std::vector<int> osig(os, os + sizeof(os) / sizeof(int));
-/*
- * The private constructor
- */
+
+//The private constructor
 AWGN_kanal_impl::AWGN_kanal_impl(int N, int EbN0min, int EbN0max, int R, int W)
     : gr::sync_block("AWGN_kanal",
                      gr::io_signature::make(1, 1, sizeof(gr_complex)),
                      gr::io_signature::makev(1, 2, osig))
 {
-  _N = N;
-  _Rb = R;
-  _fvz = W;
-  _EbN0min = EbN0min;
-  _EbN0max = EbN0max;
+  _N = N; // Pocet vzoriek EbN0 (kolko bodov na X-osi)
+  _Rb = R; // Bitova rychlost
+  _fvz = W; // Sirka pasma
+  _EbN0min = EbN0min; // Zaciatok EbN0 [dB]
+  _EbN0max = EbN0max; // Koniec EbN0 [dB]
+
+  // Vnutorne premenne
   
-  //k = 0;
 }
 
 //Our virtual destructor.
 AWGN_kanal_impl::~AWGN_kanal_impl() {}
 
-gr_complex Sum_vypocet(float odchylka) {
+//----------------------------------------------------LOGIKA-FUNKCIE--------------------------------------------------------||
+
+//-------------------Tvorba-Gaussovky-a-random-bodu---------------------|
+gr_complex Sum_vypocet(double odchylka) {
+  double GR, GI;
+
+  // Generovanie nahodneho cisla podla semena (seed)
   std::random_device rd;
   std::mt19937 R(rd());
   std::mt19937 I(rd());
   
-  std::normal_distribution<double> Gauss{0, odchylka}; //0 lebo AWGN
+  // Tvorba Gaussovky podla odchylky
+  std::normal_distribution<double> Gauss{0, odchylka}; //mi = 0 lebo AWGN
   
-  double GR = Gauss(R);
-  double GI = Gauss(I);
+  // Vyberieme nahodne hodnoty z Gaussovky
+  GR = Gauss(R);
+  GI = Gauss(I);
   
+  // Hodnoty ulozime ako komplexne cislo, teda nas AWGN sum
   gr_complex n(GR, GI);
   
   return n;
 }
 
+
+//-------------------Odvodenie-varianci-esumu-z-EbN0-[db]---------------------|
 gr_complex Sum(float EDB, float Ps, int _Rb, int _fvz) {
-  float EbN0, SNR, N, VRMS;
+  double EbN0, SNR, N, VRMS;
   gr_complex n;
 
-  //premena z dB na pomer
+  // Premena z dB na pomer
   EbN0 = pow(10.0, EDB/10.0);
 
-  //vypocet SNR 
+  // Vypocet SNR 
   SNR = EbN0 * float(_Rb) / float(_fvz);
 
-  //vypocet variancie AWGN (vyriancia sumu)
+  // Vypocet variancie AWGN (variancia sumu)
   N = Ps / SNR;
     
-  //vypocet smerodajnej odychlky
+  // Vypocet smerodajnej odchylky
   VRMS = sqrt(N) / sqrt(2.0);
+  
+  // I dont fucking know...
   srand(time(0));
-  //vypocet AWGN
+
+  // Ziskanie komplexneho sumu (funkcia vyssie)
   n = Sum_vypocet(VRMS);
 
   //gr_complex n(VRMS*randomFloat(), VRMS*randomFloat());
@@ -85,23 +97,34 @@ gr_complex Sum(float EDB, float Ps, int _Rb, int _fvz) {
   return n;
 }
 
-float Ps, sumPs = 0;
+//-------------------------------------------------------------------------------------------------------------------------||
+//-------------------------------------------------------PREMENNE----------------------------------------------------------||
+
+//docasne, musim upravit
 float rozpatie, rozpatiePostup;
-//std::vector <float> EDB;
 int k = 0;
+
+//-------------------------------------------------------------------------------------------------------------------------||
+//---------------------------------------------------------WORK------------------------------------------------------------||
 
 int AWGN_kanal_impl::work(int noutput_items,
                           gr_vector_const_void_star& input_items,
                           gr_vector_void_star& output_items)
 {
+    
+    //-----------------------Inicializacia-I/O--------------------------|
+    // INPUT
     gr_complex *in0 = (gr_complex *) input_items[0];
     
+    // OUTPUT
     gr_complex *out0 = (gr_complex *) output_items[0];
     int *out1 = (int *) output_items[1];
 
-    //-----logika------------------------
+    //-----------------------LOGIKA--------------------------|
+    //-------------------Prvotne-vypocty---------------------|
     float EDB[_N];
 
+    // Linearne rozlozenie EbN0db bodov
     rozpatie = float((_EbN0max - _EbN0min)) / float((_N-1));
     rozpatiePostup = float(_EbN0min);
 
@@ -110,30 +133,35 @@ int AWGN_kanal_impl::work(int noutput_items,
       rozpatiePostup += rozpatie;
     }
     
-    //vypocet vykonu vstupneho signalu Ps
-
+    // Vypocet vykonu vstupneho signalu Ps = E(x)
     for(int a = 0; a < noutput_items; a++)
       sumPs += pow(abs(in0[a]), 2);
 
     Ps = sumPs / float(noutput_items);
-    k = 0;
 
+
+    //-----------------------Prejdeme-vsetkymi-I/O-items--------------------------|
     for(int b = 0; b < noutput_items; b++) {
-      //AWGN kanal
+      
+      // Ziskanie komplexneho sumu
       gr_complex sg_n = Sum(EDB[k], Ps, _Rb, _fvz);
       
+      // Tuto by sa malo scitat ale C++ neznasa komplexne cisla, alebo mna...
       //gr_complex spolu(in0[b].real() + sg_n.real(), in0[b].imag() + sg_n.imag());
+
+      // Komplexny vystup = AWGN sum
       out0[b] = sg_n;
+
+      // Int vystup = N-ta vzorka EbN0, ktoru sme pocitali
       out1[b] = k;
 
-      //printf("OUT: %d\n", out1[b]);
+      // Iterujeme po vsetkych vzorkach EbN0, t.j. od 0 do N-1
       if(k < _N-1) {
         k += 1;
       }else {
         k = 0;
       }
     }
-
 
     // Tell runtime system how many output items we produced.
     return noutput_items;

@@ -141,24 +141,26 @@ class ser_simulation(gr.top_block, Qt.QWidget):
         self.digital_chunks_to_symbols_xx_1 = digital.chunks_to_symbols_bc(const0, 1)
         self.blocks_throttle2_0 = blocks.throttle( gr.sizeof_char*1, samp_rate, True, 0 if "auto" == "auto" else max( int(float(0.1) * samp_rate) if "auto" == "time" else int(0.1), 1) )
         self.blocks_stream_to_vector_0 = blocks.stream_to_vector(gr.sizeof_float*1, N_snr)
-        self.blocks_null_sink_0 = blocks.null_sink(gr.sizeof_int*1)
+        self.blocks_add_xx_0 = blocks.add_vcc(1)
         self.analog_random_source_x_1 = blocks.vector_source_b(list(map(int, numpy.random.randint(0, M0, 10000000))), True)
-        self.ErTools_BitErrorRate_0 = ErTools.BitErrorRate(N_snr)
-        self.ErTools_AWGN_kanal_0 = ErTools.AWGN_kanal(N_snr, 5, 25, 100000, 1)
+        self.ErTools_BER_0 = ErTools.BER(128)
+        self.ErTools_AWGN_kanal_0 = ErTools.AWGN_kanal(N_snr, 5, 25, 125, 125)
 
 
         ##################################################
         # Connections
         ##################################################
-        self.connect((self.ErTools_AWGN_kanal_0, 1), (self.blocks_null_sink_0, 0))
-        self.connect((self.ErTools_AWGN_kanal_0, 0), (self.digital_constellation_decoder_cb_0_0_0, 0))
-        self.connect((self.ErTools_BitErrorRate_0, 0), (self.blocks_stream_to_vector_0, 0))
+        self.connect((self.ErTools_AWGN_kanal_0, 1), (self.ErTools_BER_0, 0))
+        self.connect((self.ErTools_AWGN_kanal_0, 0), (self.blocks_add_xx_0, 0))
+        self.connect((self.ErTools_BER_0, 0), (self.blocks_stream_to_vector_0, 0))
         self.connect((self.analog_random_source_x_1, 0), (self.blocks_throttle2_0, 0))
+        self.connect((self.blocks_add_xx_0, 0), (self.digital_constellation_decoder_cb_0_0_0, 0))
         self.connect((self.blocks_stream_to_vector_0, 0), (self.qtgui_vector_sink_f_0, 0))
-        self.connect((self.blocks_throttle2_0, 0), (self.ErTools_BitErrorRate_0, 0))
+        self.connect((self.blocks_throttle2_0, 0), (self.ErTools_BER_0, 1))
         self.connect((self.blocks_throttle2_0, 0), (self.digital_chunks_to_symbols_xx_1, 0))
         self.connect((self.digital_chunks_to_symbols_xx_1, 0), (self.ErTools_AWGN_kanal_0, 0))
-        self.connect((self.digital_constellation_decoder_cb_0_0_0, 0), (self.ErTools_BitErrorRate_0, 1))
+        self.connect((self.digital_chunks_to_symbols_xx_1, 0), (self.blocks_add_xx_0, 1))
+        self.connect((self.digital_constellation_decoder_cb_0_0_0, 0), (self.ErTools_BER_0, 2))
 
 
     def closeEvent(self, event):

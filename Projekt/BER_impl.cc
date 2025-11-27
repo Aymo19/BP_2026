@@ -8,7 +8,6 @@
 #include "BER_impl.h"
 #include <gnuradio/io_signature.h>
 
-// Pridane kniznice
 #include <cmath>
 #include <random>
 #include <complex>
@@ -17,13 +16,11 @@
 namespace gr {
 namespace ErTools {
 
+//using input_type = float;
 using output_type = float;
 
-BER::sptr BER::make(int N) {
-  return gnuradio::make_block_sptr<BER_impl>(N);
-}
+BER::sptr BER::make(int N) { return gnuradio::make_block_sptr<BER_impl>(N); }
 
-// Input vector
 static int is[] = { sizeof(int), sizeof(unsigned char), sizeof(unsigned char) };
 static std::vector<int> isig(is, is + sizeof(is) / sizeof(int));
 
@@ -33,14 +30,11 @@ BER_impl::BER_impl(int N)
                      gr::io_signature::makev(2, 3, isig),
                      gr::io_signature::make(1, 1, sizeof(output_type)))
 {
-  _N = N; // Pocet vzoriek EbN0 (kolko bodov na X-osi)
-
-  // Vektory
-  _count = std::vector<int>(N, 1); // Celkovy pocet bitov co sme spracovali
-  _pocet_chyb = std::vector<int>(N, 0); // Celkovy pocet zistenych chyb
-  _pamat_SER = std::vector<double>(N, 1.0); // Vystupne hodnoty BER (ja viem, je  tam SER)
-  
-  /* stare pre zoznamy
+  _N = N;
+  _count = std::vector<int>(N, 8);
+  _pocet_chyb = std::vector<int>(N, 1);
+  _pamat_SER = std::vector<double>(N, 1.0);
+  /*
   std::fill_n(_count, N, 8);
   std::fill_n(_pocet_chyb, N, 0);
   std::fill_n(_pamat_SER, N, 1.0);*/
@@ -49,9 +43,7 @@ BER_impl::BER_impl(int N)
 //Our virtual destructor.
 BER_impl::~BER_impl() {}
 
-//----------------------------------------------------LOGIKA-FUNKCIE--------------------------------------------------------||
-
-//-------------------Zisti-kolky-chyb-je-v-slove---------------------|
+//spocita vsetky chybne bity po x(t) XOR x(t)+n(t)
 int BitCounter(unsigned char slovo, int N) {
   int sum = 0, sign = 0;
   unsigned char b_jedna = 1;
@@ -73,27 +65,19 @@ int BitCounter(unsigned char slovo, int N) {
   return sum;
 }
 
-
-//-------------------Zisti-ci-nastala-chyba---------------------|
 int BER_calc(unsigned char S1, unsigned char S2) {
   unsigned char XORnute;
-  int e_sum;
-  
-  // Logaritmicke premenne
-  float BER, log_BER;
+  int e_sum;//, N_S1 = sizeof(S1) * 8; //krat 8 lebo 1 kodove slovo ma 8 bitov
+  //float BER, log_BER;
 
-  // XOR-neme slovo zo signalu 1 a slovo zo signalu 2, vieme ze je chyba, ale nevieme kde a kolko chyb
   XORnute = S1 ^ S2;
   
-  // Ak hej, tak nie je nulova hodnota e_sum
-  e_sum = BitCounter(XORnute, 1);
+  e_sum = BitCounter(XORnute, 8);//N_S1);
+  /*BER = (float)e_sum / (float)N_S1;
   
-  // Logaritmicky vystup
-  log_BER = logf(e_sum);
-  
-  //printf("%d %.2f\n", e_sum, log_BER);
+  log_BER = logf(BER);
 
-  //return log_BER;*/
+  return log_BER;*/
   
   return e_sum;
 }
@@ -122,20 +106,13 @@ int BER_impl::work(int noutput_items,
       k = in0[i];
       
       _pocet_chyb.at(k) += BER_calc(in1[i], in2[i]);
-      
-      //printf("%d: %lf\n", k, _pamat_SER.at(k));
-      if(_pocet_chyb.at(k) == 0) {
-        _pamat_SER.at(k) = 0.00000001;
-        //printf("%d: %lf\n", k, _pamat_SER.at(k));
-      }else {
-        _pamat_SER.at(k) = double(_pocet_chyb.at(k)) / double(_count.at(k));
-      }
+      _pamat_SER.at(k) = double(_pocet_chyb.at(k)) / double(_count.at(k));
       /*if(k%2 == 0)
         GR_LOG_INFO(d_logger, std::string("e: ") + std::to_string(_pocet_chyb.at(k)));
 */
       out[i] = _pamat_SER.at(k);
 
-      _count.at(k) += 1; // Lebo BPSK
+      _count.at(k) += 8;
     }
 
     // Tell runtime system how many output items we produced.

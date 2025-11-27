@@ -5,14 +5,16 @@
 # SPDX-License-Identifier: GPL-3.0
 #
 # GNU Radio Python Flow Graph
-# Title: bpsk_stage1
+# Title: b_BERTool
+# Author: Homero Ortega Boada
+# Description: Este Bloque sirve a la vez como canal de Ruido Blanco Gausiano y como herramienta para calcular la curva de BER (Bit error Rate) o SER (simbol error ratio) para una senal con modulacion digital. Parametros usados: N_snr - numero de puntos que tendra la curva de BER; EsNomin: valor minimo de la relación Es/No; EsNomax: valor máximo de la relacion Es/No. Las señales de entrada son: in Tx  para los  simbolos transmitidos; in Rx  para los simbolos recibidos; in es la entrante envolvente compleja de la señal modulada. La salida son dos senales: out - es la Curva de BER o SER a graficar;  out_env - que es la saliente envolvente compleja con la adicion de ruido AWGN; out ser que son los valores de BER o SER disponibles. IMPORTANTE: que la curva sea BER o sea SER lo define el tipo de senal que se tiene en in Tx y en in Rx, donde se tiene en cada caso una senal M-aria. Asi que si M=2, estamos enviando y recibiendo bits, luego obtenemos curva de BER, pero si M>2 estamos hablando de curva de SER.
 # GNU Radio version: 3.10.9.2
 
 from PyQt5 import Qt
 from gnuradio import qtgui
 from gnuradio import ErTools
+from gnuradio import analog
 from gnuradio import blocks
-from gnuradio import digital
 from gnuradio import gr
 from gnuradio.filter import firdes
 from gnuradio.fft import window
@@ -26,12 +28,12 @@ import sip
 
 
 
-class bpsk_stage1(gr.top_block, Qt.QWidget):
+class b_BERTool(gr.top_block, Qt.QWidget):
 
     def __init__(self):
-        gr.top_block.__init__(self, "bpsk_stage1", catch_exceptions=True)
+        gr.top_block.__init__(self, "b_BERTool", catch_exceptions=True)
         Qt.QWidget.__init__(self)
-        self.setWindowTitle("bpsk_stage1")
+        self.setWindowTitle("b_BERTool")
         qtgui.util.check_set_qss()
         try:
             self.setWindowIcon(Qt.QIcon.fromTheme('gnuradio-grc'))
@@ -49,7 +51,7 @@ class bpsk_stage1(gr.top_block, Qt.QWidget):
         self.top_grid_layout = Qt.QGridLayout()
         self.top_layout.addLayout(self.top_grid_layout)
 
-        self.settings = Qt.QSettings("GNU Radio", "bpsk_stage1")
+        self.settings = Qt.QSettings("GNU Radio", "b_BERTool")
 
         try:
             geometry = self.settings.value("geometry")
@@ -62,66 +64,71 @@ class bpsk_stage1(gr.top_block, Qt.QWidget):
         # Variables
         ##################################################
         self.samp_rate = samp_rate = 32000
-        self.bpsk = bpsk = digital.constellation_bpsk().base()
-        self.bpsk.set_npwr(1.0)
-        self.N = N = 128
 
         ##################################################
         # Blocks
         ##################################################
 
-        self.qtgui_vector_sink_f_0_0 = qtgui.vector_sink_f(
-            N,
-            (-5),
-            0.078125,
-            "Eb/N0 [dB]",
-            "logPe",
-            "BER",
-            1, # Number of inputs
+        self.qtgui_time_sink_x_0_0_0 = qtgui.time_sink_c(
+            1024, #size
+            samp_rate, #samp_rate
+            "Noise Source", #name
+            1, #number of inputs
             None # parent
         )
-        self.qtgui_vector_sink_f_0_0.set_update_time(0.10)
-        self.qtgui_vector_sink_f_0_0.set_y_axis((-10), 0)
-        self.qtgui_vector_sink_f_0_0.enable_autoscale(False)
-        self.qtgui_vector_sink_f_0_0.enable_grid(True)
-        self.qtgui_vector_sink_f_0_0.set_x_axis_units("dB")
-        self.qtgui_vector_sink_f_0_0.set_y_axis_units("")
-        self.qtgui_vector_sink_f_0_0.set_ref_level(0)
+        self.qtgui_time_sink_x_0_0_0.set_update_time(0.10)
+        self.qtgui_time_sink_x_0_0_0.set_y_axis(-10, 10)
+
+        self.qtgui_time_sink_x_0_0_0.set_y_label('Amplitude', "")
+
+        self.qtgui_time_sink_x_0_0_0.enable_tags(True)
+        self.qtgui_time_sink_x_0_0_0.set_trigger_mode(qtgui.TRIG_MODE_FREE, qtgui.TRIG_SLOPE_POS, 0.0, 0, 0, "")
+        self.qtgui_time_sink_x_0_0_0.enable_autoscale(False)
+        self.qtgui_time_sink_x_0_0_0.enable_grid(False)
+        self.qtgui_time_sink_x_0_0_0.enable_axis_labels(True)
+        self.qtgui_time_sink_x_0_0_0.enable_control_panel(False)
+        self.qtgui_time_sink_x_0_0_0.enable_stem_plot(False)
 
 
-        labels = ["BPSK", "QPSK", '8PSK', "16QAM", '',
-            '', '', '', '', '']
-        widths = [4, 4, 4, 4, 1,
+        labels = ['Signal 1', 'Signal 2', 'Signal 3', 'Signal 4', 'Signal 5',
+            'Signal 6', 'Signal 7', 'Signal 8', 'Signal 9', 'Signal 10']
+        widths = [1, 1, 1, 1, 1,
             1, 1, 1, 1, 1]
-        colors = ["blue", "red", "green", "black", "cyan",
-            "magenta", "yellow", "dark red", "dark green", "dark blue"]
-        alphas = [1, 1.0, 1.0, 1.0, 1.0,
+        colors = ['blue', 'red', 'green', 'black', 'cyan',
+            'magenta', 'yellow', 'dark red', 'dark green', 'dark blue']
+        alphas = [1.0, 1.0, 1.0, 1.0, 1.0,
             1.0, 1.0, 1.0, 1.0, 1.0]
+        styles = [1, 1, 1, 1, 1,
+            1, 1, 1, 1, 1]
+        markers = [-1, -1, -1, -1, -1,
+            -1, -1, -1, -1, -1]
 
-        for i in range(1):
+
+        for i in range(2):
             if len(labels[i]) == 0:
-                self.qtgui_vector_sink_f_0_0.set_line_label(i, "Data {0}".format(i))
+                if (i % 2 == 0):
+                    self.qtgui_time_sink_x_0_0_0.set_line_label(i, "Re{{Data {0}}}".format(i/2))
+                else:
+                    self.qtgui_time_sink_x_0_0_0.set_line_label(i, "Im{{Data {0}}}".format(i/2))
             else:
-                self.qtgui_vector_sink_f_0_0.set_line_label(i, labels[i])
-            self.qtgui_vector_sink_f_0_0.set_line_width(i, widths[i])
-            self.qtgui_vector_sink_f_0_0.set_line_color(i, colors[i])
-            self.qtgui_vector_sink_f_0_0.set_line_alpha(i, alphas[i])
+                self.qtgui_time_sink_x_0_0_0.set_line_label(i, labels[i])
+            self.qtgui_time_sink_x_0_0_0.set_line_width(i, widths[i])
+            self.qtgui_time_sink_x_0_0_0.set_line_color(i, colors[i])
+            self.qtgui_time_sink_x_0_0_0.set_line_style(i, styles[i])
+            self.qtgui_time_sink_x_0_0_0.set_line_marker(i, markers[i])
+            self.qtgui_time_sink_x_0_0_0.set_line_alpha(i, alphas[i])
 
-        self._qtgui_vector_sink_f_0_0_win = sip.wrapinstance(self.qtgui_vector_sink_f_0_0.qwidget(), Qt.QWidget)
-        self.top_grid_layout.addWidget(self._qtgui_vector_sink_f_0_0_win, 2, 0, 1, 1)
-        for r in range(2, 3):
-            self.top_grid_layout.setRowStretch(r, 1)
-        for c in range(0, 1):
-            self.top_grid_layout.setColumnStretch(c, 1)
+        self._qtgui_time_sink_x_0_0_0_win = sip.wrapinstance(self.qtgui_time_sink_x_0_0_0.qwidget(), Qt.QWidget)
+        self.top_layout.addWidget(self._qtgui_time_sink_x_0_0_0_win)
         self.qtgui_time_sink_x_0_0 = qtgui.time_sink_c(
             1024, #size
             samp_rate, #samp_rate
-            "AWGN", #name
+            "Signal", #name
             1, #number of inputs
             None # parent
         )
         self.qtgui_time_sink_x_0_0.set_update_time(0.10)
-        self.qtgui_time_sink_x_0_0.set_y_axis(-20, 20)
+        self.qtgui_time_sink_x_0_0.set_y_axis(-10, 10)
 
         self.qtgui_time_sink_x_0_0.set_y_label('Amplitude', "")
 
@@ -134,7 +141,7 @@ class bpsk_stage1(gr.top_block, Qt.QWidget):
         self.qtgui_time_sink_x_0_0.enable_stem_plot(False)
 
 
-        labels = ['Re', 'Im', 'Signal 3', 'Signal 4', 'Signal 5',
+        labels = ['Signal 1', 'Signal 2', 'Signal 3', 'Signal 4', 'Signal 5',
             'Signal 6', 'Signal 7', 'Signal 8', 'Signal 9', 'Signal 10']
         widths = [1, 1, 1, 1, 1,
             1, 1, 1, 1, 1]
@@ -167,12 +174,12 @@ class bpsk_stage1(gr.top_block, Qt.QWidget):
         self.qtgui_time_sink_x_0 = qtgui.time_sink_c(
             1024, #size
             samp_rate, #samp_rate
-            "AWGN", #name
+            "Moje AWGN", #name
             1, #number of inputs
             None # parent
         )
         self.qtgui_time_sink_x_0.set_update_time(0.10)
-        self.qtgui_time_sink_x_0.set_y_axis(-20, 20)
+        self.qtgui_time_sink_x_0.set_y_axis(-10, 10)
 
         self.qtgui_time_sink_x_0.set_y_label('Amplitude', "")
 
@@ -185,7 +192,7 @@ class bpsk_stage1(gr.top_block, Qt.QWidget):
         self.qtgui_time_sink_x_0.enable_stem_plot(False)
 
 
-        labels = ['Re', 'Im', 'Signal 3', 'Signal 4', 'Signal 5',
+        labels = ['Signal 1', 'Signal 2', 'Signal 3', 'Signal 4', 'Signal 5',
             'Signal 6', 'Signal 7', 'Signal 8', 'Signal 9', 'Signal 10']
         widths = [1, 1, 1, 1, 1,
             1, 1, 1, 1, 1]
@@ -215,39 +222,6 @@ class bpsk_stage1(gr.top_block, Qt.QWidget):
 
         self._qtgui_time_sink_x_0_win = sip.wrapinstance(self.qtgui_time_sink_x_0.qwidget(), Qt.QWidget)
         self.top_layout.addWidget(self._qtgui_time_sink_x_0_win)
-        self.qtgui_number_sink_0_0 = qtgui.number_sink(
-            gr.sizeof_float,
-            0,
-            qtgui.NUM_GRAPH_HORIZ,
-            1,
-            None # parent
-        )
-        self.qtgui_number_sink_0_0.set_update_time(0.10)
-        self.qtgui_number_sink_0_0.set_title("")
-
-        labels = ['', '', '', '', '',
-            '', '', '', '', '']
-        units = ['', '', '', '', '',
-            '', '', '', '', '']
-        colors = [("black", "black"), ("black", "black"), ("black", "black"), ("black", "black"), ("black", "black"),
-            ("black", "black"), ("black", "black"), ("black", "black"), ("black", "black"), ("black", "black")]
-        factor = [1, 1, 1, 1, 1,
-            1, 1, 1, 1, 1]
-
-        for i in range(1):
-            self.qtgui_number_sink_0_0.set_min(i, -1)
-            self.qtgui_number_sink_0_0.set_max(i, 1)
-            self.qtgui_number_sink_0_0.set_color(i, colors[i][0], colors[i][1])
-            if len(labels[i]) == 0:
-                self.qtgui_number_sink_0_0.set_label(i, "Data {0}".format(i))
-            else:
-                self.qtgui_number_sink_0_0.set_label(i, labels[i])
-            self.qtgui_number_sink_0_0.set_unit(i, units[i])
-            self.qtgui_number_sink_0_0.set_factor(i, factor[i])
-
-        self.qtgui_number_sink_0_0.enable_autoscale(False)
-        self._qtgui_number_sink_0_0_win = sip.wrapinstance(self.qtgui_number_sink_0_0.qwidget(), Qt.QWidget)
-        self.top_layout.addWidget(self._qtgui_number_sink_0_0_win)
         self.qtgui_number_sink_0 = qtgui.number_sink(
             gr.sizeof_float,
             0,
@@ -256,7 +230,7 @@ class bpsk_stage1(gr.top_block, Qt.QWidget):
             None # parent
         )
         self.qtgui_number_sink_0.set_update_time(0.10)
-        self.qtgui_number_sink_0.set_title("")
+        self.qtgui_number_sink_0.set_title("Moje AWGN AMP")
 
         labels = ['', '', '', '', '',
             '', '', '', '', '']
@@ -268,8 +242,8 @@ class bpsk_stage1(gr.top_block, Qt.QWidget):
             1, 1, 1, 1, 1]
 
         for i in range(1):
-            self.qtgui_number_sink_0.set_min(i, -1)
-            self.qtgui_number_sink_0.set_max(i, 1)
+            self.qtgui_number_sink_0.set_min(i, -30)
+            self.qtgui_number_sink_0.set_max(i, 30)
             self.qtgui_number_sink_0.set_color(i, colors[i][0], colors[i][1])
             if len(labels[i]) == 0:
                 self.qtgui_number_sink_0.set_label(i, "Data {0}".format(i))
@@ -281,40 +255,31 @@ class bpsk_stage1(gr.top_block, Qt.QWidget):
         self.qtgui_number_sink_0.enable_autoscale(False)
         self._qtgui_number_sink_0_win = sip.wrapinstance(self.qtgui_number_sink_0.qwidget(), Qt.QWidget)
         self.top_layout.addWidget(self._qtgui_number_sink_0_win)
-        self.digital_constellation_encoder_bc_0 = digital.constellation_encoder_bc(bpsk)
-        self.digital_constellation_decoder_cb_0 = digital.constellation_decoder_cb(bpsk)
-        self.blocks_vector_source_x_0 = blocks.vector_source_b((0, 0, 0), True, 1, [])
         self.blocks_throttle2_0 = blocks.throttle( gr.sizeof_gr_complex*1, samp_rate, True, 0 if "auto" == "auto" else max( int(float(0.1) * samp_rate) if "auto" == "time" else int(0.1), 1) )
-        self.blocks_stream_to_vector_0 = blocks.stream_to_vector(gr.sizeof_float*1, N)
-        self.blocks_nlog10_ff_0 = blocks.nlog10_ff(1, 1, 0)
-        self.blocks_add_xx_0 = blocks.add_vcc(1)
-        self.ErTools_BER_0 = ErTools.BER(N)
-        self.ErTools_AWGN_kanal_0 = ErTools.AWGN_kanal(N, 0, 20, 1, 1)
+        self.blocks_null_sink_0_0 = blocks.null_sink(gr.sizeof_float*1)
+        self.blocks_null_sink_0 = blocks.null_sink(gr.sizeof_int*1)
+        self.blocks_complex_to_float_0 = blocks.complex_to_float(1)
+        self.analog_sig_source_x_0 = analog.sig_source_c(samp_rate, analog.GR_COS_WAVE, 1000, 1, 0, 0)
+        self.analog_noise_source_x_0 = analog.noise_source_c(analog.GR_GAUSSIAN, 1, 0)
+        self.ErTools_AWGN_kanal_0 = ErTools.AWGN_kanal(128, 0, 10, 1, 1)
 
 
         ##################################################
         # Connections
         ##################################################
-        self.connect((self.ErTools_AWGN_kanal_0, 1), (self.ErTools_BER_0, 0))
-        self.connect((self.ErTools_AWGN_kanal_0, 0), (self.blocks_add_xx_0, 1))
-        self.connect((self.ErTools_BER_0, 0), (self.blocks_nlog10_ff_0, 0))
-        self.connect((self.ErTools_BER_0, 0), (self.qtgui_number_sink_0_0, 0))
-        self.connect((self.blocks_add_xx_0, 0), (self.digital_constellation_decoder_cb_0, 0))
-        self.connect((self.blocks_add_xx_0, 0), (self.qtgui_time_sink_x_0, 0))
-        self.connect((self.blocks_nlog10_ff_0, 0), (self.blocks_stream_to_vector_0, 0))
-        self.connect((self.blocks_nlog10_ff_0, 0), (self.qtgui_number_sink_0, 0))
-        self.connect((self.blocks_stream_to_vector_0, 0), (self.qtgui_vector_sink_f_0_0, 0))
-        self.connect((self.blocks_throttle2_0, 0), (self.blocks_add_xx_0, 0))
-        self.connect((self.blocks_vector_source_x_0, 0), (self.ErTools_BER_0, 1))
-        self.connect((self.blocks_vector_source_x_0, 0), (self.digital_constellation_encoder_bc_0, 0))
-        self.connect((self.digital_constellation_decoder_cb_0, 0), (self.ErTools_BER_0, 2))
-        self.connect((self.digital_constellation_encoder_bc_0, 0), (self.ErTools_AWGN_kanal_0, 0))
-        self.connect((self.digital_constellation_encoder_bc_0, 0), (self.blocks_throttle2_0, 0))
-        self.connect((self.digital_constellation_encoder_bc_0, 0), (self.qtgui_time_sink_x_0_0, 0))
+        self.connect((self.ErTools_AWGN_kanal_0, 0), (self.blocks_complex_to_float_0, 0))
+        self.connect((self.ErTools_AWGN_kanal_0, 1), (self.blocks_null_sink_0, 0))
+        self.connect((self.ErTools_AWGN_kanal_0, 0), (self.qtgui_time_sink_x_0, 0))
+        self.connect((self.analog_noise_source_x_0, 0), (self.qtgui_time_sink_x_0_0_0, 0))
+        self.connect((self.analog_sig_source_x_0, 0), (self.blocks_throttle2_0, 0))
+        self.connect((self.blocks_complex_to_float_0, 1), (self.blocks_null_sink_0_0, 0))
+        self.connect((self.blocks_complex_to_float_0, 0), (self.qtgui_number_sink_0, 0))
+        self.connect((self.blocks_throttle2_0, 0), (self.ErTools_AWGN_kanal_0, 0))
+        self.connect((self.blocks_throttle2_0, 0), (self.qtgui_time_sink_x_0_0, 0))
 
 
     def closeEvent(self, event):
-        self.settings = Qt.QSettings("GNU Radio", "bpsk_stage1")
+        self.settings = Qt.QSettings("GNU Radio", "b_BERTool")
         self.settings.setValue("geometry", self.saveGeometry())
         self.stop()
         self.wait()
@@ -326,28 +291,16 @@ class bpsk_stage1(gr.top_block, Qt.QWidget):
 
     def set_samp_rate(self, samp_rate):
         self.samp_rate = samp_rate
+        self.analog_sig_source_x_0.set_sampling_freq(self.samp_rate)
         self.blocks_throttle2_0.set_sample_rate(self.samp_rate)
         self.qtgui_time_sink_x_0.set_samp_rate(self.samp_rate)
         self.qtgui_time_sink_x_0_0.set_samp_rate(self.samp_rate)
-
-    def get_bpsk(self):
-        return self.bpsk
-
-    def set_bpsk(self, bpsk):
-        self.bpsk = bpsk
-        self.digital_constellation_decoder_cb_0.set_constellation(self.bpsk)
-        self.digital_constellation_encoder_bc_0.set_constellation(self.bpsk)
-
-    def get_N(self):
-        return self.N
-
-    def set_N(self, N):
-        self.N = N
+        self.qtgui_time_sink_x_0_0_0.set_samp_rate(self.samp_rate)
 
 
 
 
-def main(top_block_cls=bpsk_stage1, options=None):
+def main(top_block_cls=b_BERTool, options=None):
 
     qapp = Qt.QApplication(sys.argv)
 
