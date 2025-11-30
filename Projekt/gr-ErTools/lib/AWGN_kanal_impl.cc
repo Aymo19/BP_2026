@@ -47,52 +47,37 @@ AWGN_kanal_impl::~AWGN_kanal_impl() {}
 //----------------------------------------------------LOGIKA-FUNKCIE--------------------------------------------------------||
 
 //-------------------Tvorba-Gaussovky-a-random-bodu---------------------|
-gr_complex Sum_vypocet(double odchylka) {
+double Sum_vypocet() {
   double GR, GI;
 
   // Generovanie nahodneho cisla podla semena (seed)
   std::random_device rd;
   std::mt19937 R(rd());
-  std::mt19937 I(rd());
   
   // Tvorba Gaussovky podla odchylky
-  std::normal_distribution<double> Gauss{0, odchylka}; //mi = 0 lebo AWGN
+  std::normal_distribution<double> Gauss{0, 1}; //mi = 0 lebo AWGN
   
   // Vyberieme nahodne hodnoty z Gaussovky
   GR = Gauss(R);
-  GI = Gauss(I);
-  
-  // Hodnoty ulozime ako komplexne cislo, teda nas AWGN sum
-  gr_complex n(GR, GI);
-  
-  return n;
+
+  return GR;
 }
 
 
 //-------------------Odvodenie-varianci-esumu-z-EbN0-[db]---------------------|
 gr_complex Sum(float EDB, float Ps, int _Rb, int _fvz) {
   double EbN0, SNR, N, VRMS;
-  gr_complex n;
+  double REAL, IMAG;
 
   // Premena z dB na pomer
   EbN0 = pow(10.0, EDB/10.0);
 
-  // Vypocet SNR 
-  SNR = EbN0 * float(_Rb) / float(_fvz);
+  double menovatel = sqrt(2 * EbN0);
 
-  // Vypocet variancie AWGN (variancia sumu)
-  N = Ps / SNR;
-    
-  // Vypocet smerodajnej odchylky
-  VRMS = sqrt(N) / sqrt(2.0);
-  
-  // I dont fucking know...
-  srand(time(0));
+  REAL = Sum_vypocet() / menovatel;
+  IMAG = Sum_vypocet() / menovatel;
 
-  // Ziskanie komplexneho sumu (funkcia vyssie)
-  n = Sum_vypocet(VRMS);
-
-  //gr_complex n(VRMS*randomFloat(), VRMS*randomFloat());
+  gr_complex n(REAL, IMAG);
 
   return n;
 }

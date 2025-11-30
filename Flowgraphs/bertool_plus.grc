@@ -237,7 +237,7 @@ blocks:
     maxoutbuf: '0'
     min: '0'
     minoutbuf: '0'
-    num_samps: '10000000'
+    num_samps: '100000000'
     repeat: 'True'
     type: byte
   states:
