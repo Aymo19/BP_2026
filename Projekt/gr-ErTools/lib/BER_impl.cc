@@ -89,10 +89,8 @@ int BER_calc(unsigned char S1, unsigned char S2) {
   e_sum = BitCounter(XORnute, 1);
   
   // Logaritmicky vystup
-  log_BER = logf(e_sum);
+  //log_BER = logf(e_sum);
   
-  //printf("%d %.2f\n", e_sum, log_BER);
-
   //return log_BER;*/
   
   return e_sum;
@@ -126,16 +124,16 @@ int BER_impl::work(int noutput_items,
       //printf("%d: %lf\n", k, _pamat_SER.at(k));
       if(_pocet_chyb.at(k) == 0) {
         _pamat_SER.at(k) = 0.00000001;
-        //printf("%d: %lf\n", k, _pamat_SER.at(k));
       }else {
         _pamat_SER.at(k) = double(_pocet_chyb.at(k)) / double(_count.at(k));
       }
-      /*if(k%2 == 0)
-        GR_LOG_INFO(d_logger, std::string("e: ") + std::to_string(_pocet_chyb.at(k)));
-*/
+
+     /* if(k%10000 == 0)
+        GR_LOG_INFO(d_logger, std::string("b: ") + std::to_string(in2[i]) + std::string("\n"));
+      */
       out[i] = _pamat_SER.at(k);
 
-      _count.at(k) += 1; // Lebo BPSK
+      _count.at(k) += 1;
     }
 
     // Tell runtime system how many output items we produced.

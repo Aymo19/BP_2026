@@ -71,26 +71,28 @@ $(document).ready(function(){initNavTree('AWGN__kanal__impl_8h_source.html','');
 <div class="line"><a id="l00016" name="l00016"></a><span class="lineno"><a class="line" href="classgr_1_1ErTools_1_1AWGN__kanal__impl.html">   16</a></span><span class="keyword">class </span><a class="code hl_class" href="classgr_1_1ErTools_1_1AWGN__kanal__impl.html">AWGN_kanal_impl</a> : <span class="keyword">public</span> <a class="code hl_class" href="classgr_1_1ErTools_1_1AWGN__kanal.html">AWGN_kanal</a></div>
 <div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>{</div>
 <div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span><span class="keyword">private</span>:</div>
-<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>  <span class="keywordtype">int</span> _N, _EbN0min, _EbN0max, _Rb, _fvz, k;</div>
-<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span> </div>
-<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span><span class="keyword">public</span>:</div>
-<div class="line"><a id="l00022" name="l00022"></a><span class="lineno"><a class="line" href="classgr_1_1ErTools_1_1AWGN__kanal__impl.html#a2256107d57f1618f91a4648b859473aa">   22</a></span>    <a class="code hl_function" href="classgr_1_1ErTools_1_1AWGN__kanal__impl.html#a2256107d57f1618f91a4648b859473aa">AWGN_kanal_impl</a>(<span class="keywordtype">int</span> N, <span class="keywordtype">int</span> EbN0min, <span class="keywordtype">int</span> EbN0max, <span class="keywordtype">int</span> R, <span class="keywordtype">int</span> W);</div>
-<div class="line"><a id="l00023" name="l00023"></a><span class="lineno"><a class="line" href="classgr_1_1ErTools_1_1AWGN__kanal__impl.html#a96387c13960e1cf8f67cabeed98c2dd3">   23</a></span>    <a class="code hl_function" href="classgr_1_1ErTools_1_1AWGN__kanal__impl.html#a96387c13960e1cf8f67cabeed98c2dd3">~AWGN_kanal_impl</a>();</div>
-<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span> </div>
-<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>    <span class="comment">// Where all the action really happens</span></div>
-<div class="line"><a id="l00026" name="l00026"></a><span class="lineno"><a class="line" href="classgr_1_1ErTools_1_1AWGN__kanal__impl.html#a9a3a625b7a0fe9818f0fdd1644ba5c9c">   26</a></span>    <span class="keywordtype">int</span> <a class="code hl_function" href="classgr_1_1ErTools_1_1AWGN__kanal__impl.html#a9a3a625b7a0fe9818f0fdd1644ba5c9c">work</a>(<span class="keywordtype">int</span> noutput_items,</div>
-<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>             gr_vector_const_void_star&amp; input_items,</div>
-<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>             gr_vector_void_star&amp; output_items);</div>
-<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>};</div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>  <span class="keywordtype">int</span> _N, _EbN0min, _EbN0max;</div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>  <span class="keywordtype">int</span> k;</div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>  <span class="comment">//float Ps, sumPs;</span></div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span> </div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span><span class="keyword">public</span>:</div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno"><a class="line" href="classgr_1_1ErTools_1_1AWGN__kanal__impl.html#a71ef01eb77c003e80eef5bee37fab3a8">   24</a></span>    <a class="code hl_function" href="classgr_1_1ErTools_1_1AWGN__kanal__impl.html#a71ef01eb77c003e80eef5bee37fab3a8">AWGN_kanal_impl</a>(<span class="keywordtype">int</span> N, <span class="keywordtype">int</span> EbN0min, <span class="keywordtype">int</span> EbN0max);</div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno"><a class="line" href="classgr_1_1ErTools_1_1AWGN__kanal__impl.html#a96387c13960e1cf8f67cabeed98c2dd3">   25</a></span>    <a class="code hl_function" href="classgr_1_1ErTools_1_1AWGN__kanal__impl.html#a96387c13960e1cf8f67cabeed98c2dd3">~AWGN_kanal_impl</a>();</div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span> </div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>    <span class="comment">// Where all the action really happens</span></div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno"><a class="line" href="classgr_1_1ErTools_1_1AWGN__kanal__impl.html#a9a3a625b7a0fe9818f0fdd1644ba5c9c">   28</a></span>    <span class="keywordtype">int</span> <a class="code hl_function" href="classgr_1_1ErTools_1_1AWGN__kanal__impl.html#a9a3a625b7a0fe9818f0fdd1644ba5c9c">work</a>(<span class="keywordtype">int</span> noutput_items,</div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>             gr_vector_const_void_star&amp; input_items,</div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>             gr_vector_void_star&amp; output_items);</div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>};</div>
 </div>
-<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span> </div>
-<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>} <span class="comment">// namespace ErTools</span></div>
-<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>} <span class="comment">// namespace gr</span></div>
-<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span> </div>
-<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span><span class="preprocessor">#endif </span><span class="comment">/* INCLUDED_ERTOOLS_AWGN_KANAL_IMPL_H */</span><span class="preprocessor"></span></div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span> </div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>} <span class="comment">// namespace ErTools</span></div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>} <span class="comment">// namespace gr</span></div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span> </div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span><span class="preprocessor">#endif </span><span class="comment">/* INCLUDED_ERTOOLS_AWGN_KANAL_IMPL_H */</span><span class="preprocessor"></span></div>
 <div class="ttc" id="aAWGN__kanal_8h_html"><div class="ttname"><a href="AWGN__kanal_8h.html">AWGN_kanal.h</a></div></div>
 <div class="ttc" id="aclassgr_1_1ErTools_1_1AWGN__kanal__impl_html"><div class="ttname"><a href="classgr_1_1ErTools_1_1AWGN__kanal__impl.html">gr::ErTools::AWGN_kanal_impl</a></div><div class="ttdef"><b>Definition</b> AWGN_kanal_impl.h:17</div></div>
-<div class="ttc" id="aclassgr_1_1ErTools_1_1AWGN__kanal__impl_html_a2256107d57f1618f91a4648b859473aa"><div class="ttname"><a href="classgr_1_1ErTools_1_1AWGN__kanal__impl.html#a2256107d57f1618f91a4648b859473aa">gr::ErTools::AWGN_kanal_impl::AWGN_kanal_impl</a></div><div class="ttdeci">AWGN_kanal_impl(int N, int EbN0min, int EbN0max, int R, int W)</div></div>
+<div class="ttc" id="aclassgr_1_1ErTools_1_1AWGN__kanal__impl_html_a71ef01eb77c003e80eef5bee37fab3a8"><div class="ttname"><a href="classgr_1_1ErTools_1_1AWGN__kanal__impl.html#a71ef01eb77c003e80eef5bee37fab3a8">gr::ErTools::AWGN_kanal_impl::AWGN_kanal_impl</a></div><div class="ttdeci">AWGN_kanal_impl(int N, int EbN0min, int EbN0max)</div></div>
 <div class="ttc" id="aclassgr_1_1ErTools_1_1AWGN__kanal__impl_html_a96387c13960e1cf8f67cabeed98c2dd3"><div class="ttname"><a href="classgr_1_1ErTools_1_1AWGN__kanal__impl.html#a96387c13960e1cf8f67cabeed98c2dd3">gr::ErTools::AWGN_kanal_impl::~AWGN_kanal_impl</a></div><div class="ttdeci">~AWGN_kanal_impl()</div></div>
 <div class="ttc" id="aclassgr_1_1ErTools_1_1AWGN__kanal__impl_html_a9a3a625b7a0fe9818f0fdd1644ba5c9c"><div class="ttname"><a href="classgr_1_1ErTools_1_1AWGN__kanal__impl.html#a9a3a625b7a0fe9818f0fdd1644ba5c9c">gr::ErTools::AWGN_kanal_impl::work</a></div><div class="ttdeci">int work(int noutput_items, gr_vector_const_void_star &amp;input_items, gr_vector_void_star &amp;output_items)</div></div>
 <div class="ttc" id="aclassgr_1_1ErTools_1_1AWGN__kanal_html"><div class="ttname"><a href="classgr_1_1ErTools_1_1AWGN__kanal.html">gr::ErTools::AWGN_kanal</a></div><div class="ttdoc">&lt;+description of block+&gt;</div><div class="ttdef"><b>Definition</b> AWGN_kanal.h:23</div></div>

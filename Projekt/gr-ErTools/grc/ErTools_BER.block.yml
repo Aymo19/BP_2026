@@ -16,18 +16,18 @@ inputs:
  - label: in0
    domain: stream
    dtype: int
-   optional: true
+
  - label: in1
    domain: stream
    dtype: byte
+
  - label: in2
    domain: stream
    dtype: byte
 
 outputs:
  - label: out
-   domain: stream
+   domain: stream 
    dtype: float
-   #vlen
 
 file_format: 1

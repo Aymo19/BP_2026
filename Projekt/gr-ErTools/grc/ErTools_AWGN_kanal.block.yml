@@ -4,11 +4,11 @@ category: '[ErTools]'
 
 templates:
   imports: from gnuradio import ErTools
-  make: ErTools.AWGN_kanal(${N}, ${EbN0min}, ${EbN0max}, ${R}, ${W})
+  make: ErTools.AWGN_kanal(${N}, ${EbN0min}, ${EbN0max})
 
 parameters:
 - id: N
-  label: Pocet vzoriek
+  label: Pocet SNR bodov
   dtype: int
   default: 128
 - id: EbN0min
@@ -19,14 +19,6 @@ parameters:
   label: SNR max
   dtype: int
   default: 20
-- id: R
-  label: Bitova rychlost
-  dtype: int
-  defautl: 1
-- id: W
-  label: Sirka pasma
-  dtype: int
-  default: 1
 
 inputs:
  - label: in0

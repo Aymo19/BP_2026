@@ -14,7 +14,7 @@
 /* BINDTOOL_GEN_AUTOMATIC(0)                                                       */
 /* BINDTOOL_USE_PYGCCXML(0)                                                        */
 /* BINDTOOL_HEADER_FILE(AWGN_kanal.h)                                        */
-/* BINDTOOL_HEADER_FILE_HASH(eddd167da09a35abf139bf403751c622)                     */
+/* BINDTOOL_HEADER_FILE_HASH(4873226dd24307d29df5640d0d092215)                     */
 /***********************************************************************************/
 
 #include <pybind11/complex.h>
@@ -30,30 +30,21 @@ namespace py = pybind11;
 void bind_AWGN_kanal(py::module& m)
 {
 
-    using AWGN_kanal    = gr::ErTools::AWGN_kanal;
+    using AWGN_kanal = ::gr::ErTools::AWGN_kanal;
 
 
-    py::class_<AWGN_kanal, gr::sync_block, gr::block, gr::basic_block,
-        std::shared_ptr<AWGN_kanal>>(m, "AWGN_kanal", D(AWGN_kanal))
+    py::class_<AWGN_kanal,
+               gr::sync_block,
+               gr::block,
+               gr::basic_block,
+               std::shared_ptr<AWGN_kanal>>(m, "AWGN_kanal", D(AWGN_kanal))
 
         .def(py::init(&AWGN_kanal::make),
-           D(AWGN_kanal,make)
-        )
-        
-
+             py::arg("N"),
+             py::arg("EbN0min"),
+             py::arg("EbN0max"),
+             D(AWGN_kanal, make))
 
 
         ;
-
-
-
-
 }
-
-
-
-
-
-
-
-

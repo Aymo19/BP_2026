@@ -32,7 +32,7 @@ public:
      * class. ErTools::AWGN_kanal::make is the public interface for
      * creating new instances.
      */
-    static sptr make(int N, int EbN0min, int EbN0max, int R, int W);
+    static sptr make(int N, int EbN0min, int EbN0max);
 };
 
 } // namespace ErTools

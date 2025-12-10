@@ -16,11 +16,11 @@ namespace ErTools {
 class AWGN_kanal_impl : public AWGN_kanal
 {
 private:
-  int _N, _EbN0min, _EbN0max, _Rb, _fvz, k;
-  float Ps, sumPs;
+  int _N, _EbN0min, _EbN0max;
+  //float Ps, sumPs;
 
 public:
-    AWGN_kanal_impl(int N, int EbN0min, int EbN0max, int R, int W);
+    AWGN_kanal_impl(int N, int EbN0min, int EbN0max);
     ~AWGN_kanal_impl();
 
     // Where all the action really happens

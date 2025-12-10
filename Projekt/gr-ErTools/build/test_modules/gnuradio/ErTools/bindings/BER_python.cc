@@ -30,30 +30,14 @@ namespace py = pybind11;
 void bind_BER(py::module& m)
 {
 
-    using BER    = gr::ErTools::BER;
+    using BER = ::gr::ErTools::BER;
 
 
-    py::class_<BER, gr::sync_block, gr::block, gr::basic_block,
-        std::shared_ptr<BER>>(m, "BER", D(BER))
+    py::class_<BER, gr::sync_block, gr::block, gr::basic_block, std::shared_ptr<BER>>(
+        m, "BER", D(BER))
 
-        .def(py::init(&BER::make),
-           D(BER,make)
-        )
-        
-
+        .def(py::init(&BER::make), py::arg("N"), D(BER, make))
 
 
         ;
-
-
-
-
 }
-
-
-
-
-
-
-
-

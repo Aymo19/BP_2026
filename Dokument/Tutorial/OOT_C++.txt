@@ -1,0 +1,45 @@
+https://wiki.gnuradio.org/index.php?title=Creating_C%2B%2B_OOT_with_gr-modtool
+
+Vytvorenie modulu:
+	gr_modtool newmod MenoModulu
+	cd gr-MenoModulu
+
+Vytvorenie bloku:
+	gr_modtool add MenoBloku
+	Vyberanie: sync (na 99% casu)
+			   cpp
+			   Meno vlastnika
+			   Argumenty (napr. int N alebo int N, float k)
+			   n
+			   n
+
+
+Editovanie bloku:
+(GCC a G++ v13)
+	vim lib/MenoBloku_impl.h
+	vim lib/MenoBliku_impl.cc
+	vim grc/MenoModulu_MenoBloku.block.yml
+
+GCC a G++ v11 (gr_modtool pybind)
+	vim include/gnuradio/MenoModulu/MenoBloku.h
+
+Instalacia bloku:
+	mkdir build
+	cd build
+	cmake .. -Wno-dev
+	make -Wno-dev
+	sudo make install
+	sudo ldconfig
+
+Odinstalacia bloku:
+	cd build
+	sudo make uninstall
+	sudo ldconfig
+	(pripadne este: rm *)
+
+Zmena verzie GCC a G++:
+	sudo apt install gcc-11 gcc-13 g++-11 g++-13
+	sudo update-alternatives --install /usr/bin/gcc gcc /usr/bin/gcc-[version_number] [priority]
+	sudo update-alternatives --install /usr/bin/g++ g++ /usr/bin/g++-[version_number] [priority]
+	sudo update-alternatives --config gcc
+	sudo update-alternatives --config g++

@@ -1,0 +1,13 @@
+Manualne mazanie bloku/modulu
+
+Ak priecinok:
+	sudo rm -rf nazov
+
+Ak subor:
+	sudo rm nazov
+
+/usr/local/share/gnuradio/grc/blocks/  	//nezobrazi sa v GC
+/usr/local/include/gnuradio/
+/usr/local/lib/python3.12/dist-packages/gnuradio/
+/usr/local/lib/cmake/
+/usr/local/lib/x86_64-linux-gnu/
