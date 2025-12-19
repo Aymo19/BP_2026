@@ -17,8 +17,10 @@ class BER_impl : public BER
 {
 private:
   int _N;
+
+  // Deklarovanie vektorov
   std::vector<int> _count;
-  std::vector<double> _pamat_SER;
+  std::vector<double> _pamat_BER;
   std::vector<int> _pocet_chyb;
 
 public:

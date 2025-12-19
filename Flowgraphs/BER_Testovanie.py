@@ -69,7 +69,7 @@ class BER_Testovanie(gr.top_block, Qt.QWidget):
         self.SNR_max = SNR_max = 20
         self.Num_samp = Num_samp = 10000000
         self.N = N = 256
-        self.Modulacia = Modulacia = digital.constellation_bpsk().base()
+        self.Modulacia = Modulacia = digital.constellation_16qam().base()
         self.Modulacia.set_npwr(1.0)
 
         ##################################################

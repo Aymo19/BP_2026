@@ -31,12 +31,9 @@ AWGN_kanal_impl::AWGN_kanal_impl(int N, int EbN0min, int EbN0max)
                      gr::io_signature::make(1, 1, sizeof(gr_complex)),
                      gr::io_signature::makev(1, 2, osig))
 {
-  _N = N; // Pocet vzoriek EbN0 (kolko bodov na X-osi)
+  _N = N;             // Pocet vzoriek EbN0 (kolko bodov na X-osi)
   _EbN0min = EbN0min; // Zaciatok EbN0 [dB]
   _EbN0max = EbN0max; // Koniec EbN0 [dB]
-
-  // Vnutorne premenne
-  
 }
 
 //Our virtual destructor.
@@ -48,7 +45,7 @@ AWGN_kanal_impl::~AWGN_kanal_impl() {}
 double Sum_vypocet() {
   double GR;
 
-  // Generovanie nahodneho cisla podla semena (seed)
+  // Generovanie nahodneho cisla podla seed
   std::random_device rd;
   std::mt19937 R(rd());
   
