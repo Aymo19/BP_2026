@@ -136,7 +136,7 @@ int BER_impl::work(int noutput_items,
       // Nastavenia pre logaritmus v pripade ze nenastala chyba
       // GR nedokaze zobrazit v QT GUI nekonecna
       if(_pocet_chyb.at(k) == 0) {
-        _pamat_BER.at(k) = 0.00000001; // log cisla je -8
+        _pamat_BER.at(k) = 0;//0.00000001; // log cisla je -8
       }else {
         _pamat_BER.at(k) = double(_pocet_chyb.at(k)) / double(_count.at(k)); // Tuto nastala chyba, nemenime umelo hodnotu, pocet chyb deleno pocet bitov za celu dobu
       }
