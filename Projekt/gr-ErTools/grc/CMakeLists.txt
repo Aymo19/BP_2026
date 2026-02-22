@@ -7,4 +7,5 @@
 #
 install(FILES
     ErTools_AWGN_kanal.block.yml
-    ErTools_BER.block.yml DESTINATION share/gnuradio/grc/blocks)
+    ErTools_BER.block.yml
+    ErTools_SER.block.yml DESTINATION share/gnuradio/grc/blocks)

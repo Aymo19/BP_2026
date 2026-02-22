@@ -3,6 +3,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/ErTools_python.dir/AWGN_kanal_python.cc.o.d"
   "CMakeFiles/ErTools_python.dir/BER_python.cc.o"
   "CMakeFiles/ErTools_python.dir/BER_python.cc.o.d"
+  "CMakeFiles/ErTools_python.dir/SER_python.cc.o"
+  "CMakeFiles/ErTools_python.dir/SER_python.cc.o.d"
   "CMakeFiles/ErTools_python.dir/python_bindings.cc.o"
   "CMakeFiles/ErTools_python.dir/python_bindings.cc.o.d"
   "ErTools_python.cpython-312-x86_64-linux-gnu.so"

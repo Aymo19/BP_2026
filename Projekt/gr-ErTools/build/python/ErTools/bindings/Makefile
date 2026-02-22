@@ -247,6 +247,30 @@ BER_python.cc.s:
 	cd /home/aymo/BC/Projekt/gr-ErTools/build && $(MAKE) $(MAKESILENT) -f python/ErTools/bindings/CMakeFiles/ErTools_python.dir/build.make python/ErTools/bindings/CMakeFiles/ErTools_python.dir/BER_python.cc.s
 .PHONY : BER_python.cc.s
 
+SER_python.o: SER_python.cc.o
+.PHONY : SER_python.o
+
+# target to build an object file
+SER_python.cc.o:
+	cd /home/aymo/BC/Projekt/gr-ErTools/build && $(MAKE) $(MAKESILENT) -f python/ErTools/bindings/CMakeFiles/ErTools_python.dir/build.make python/ErTools/bindings/CMakeFiles/ErTools_python.dir/SER_python.cc.o
+.PHONY : SER_python.cc.o
+
+SER_python.i: SER_python.cc.i
+.PHONY : SER_python.i
+
+# target to preprocess a source file
+SER_python.cc.i:
+	cd /home/aymo/BC/Projekt/gr-ErTools/build && $(MAKE) $(MAKESILENT) -f python/ErTools/bindings/CMakeFiles/ErTools_python.dir/build.make python/ErTools/bindings/CMakeFiles/ErTools_python.dir/SER_python.cc.i
+.PHONY : SER_python.cc.i
+
+SER_python.s: SER_python.cc.s
+.PHONY : SER_python.s
+
+# target to generate assembly for a file
+SER_python.cc.s:
+	cd /home/aymo/BC/Projekt/gr-ErTools/build && $(MAKE) $(MAKESILENT) -f python/ErTools/bindings/CMakeFiles/ErTools_python.dir/build.make python/ErTools/bindings/CMakeFiles/ErTools_python.dir/SER_python.cc.s
+.PHONY : SER_python.cc.s
+
 python_bindings.o: python_bindings.cc.o
 .PHONY : python_bindings.o
 
@@ -292,6 +316,9 @@ help:
 	@echo "... BER_python.o"
 	@echo "... BER_python.i"
 	@echo "... BER_python.s"
+	@echo "... SER_python.o"
+	@echo "... SER_python.i"
+	@echo "... SER_python.s"
 	@echo "... python_bindings.o"
 	@echo "... python_bindings.i"
 	@echo "... python_bindings.s"

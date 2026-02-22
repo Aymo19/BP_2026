@@ -2,6 +2,7 @@
 /usr/local/include/gnuradio/ErTools/api.h
 /usr/local/include/gnuradio/ErTools/AWGN_kanal.h
 /usr/local/include/gnuradio/ErTools/BER.h
+/usr/local/include/gnuradio/ErTools/SER.h
 /usr/local/lib/x86_64-linux-gnu/libgnuradio-ErTools.so.1.0.0.0
 /usr/local/lib/x86_64-linux-gnu/libgnuradio-ErTools.so.1.0.0
 /usr/local/lib/x86_64-linux-gnu/libgnuradio-ErTools.so
@@ -14,3 +15,4 @@
 /usr/local/lib/python3.12/dist-packages/gnuradio/ErTools/ErTools_python.cpython-312-x86_64-linux-gnu.so
 /usr/local/share/gnuradio/grc/blocks/ErTools_AWGN_kanal.block.yml
 /usr/local/share/gnuradio/grc/blocks/ErTools_BER.block.yml
+/usr/local/share/gnuradio/grc/blocks/ErTools_SER.block.yml

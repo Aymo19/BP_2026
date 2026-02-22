@@ -233,6 +233,30 @@ BER_impl.cc.s:
 	cd /home/aymo/BC/Projekt/gr-ErTools/build && $(MAKE) $(MAKESILENT) -f lib/CMakeFiles/gnuradio-ErTools.dir/build.make lib/CMakeFiles/gnuradio-ErTools.dir/BER_impl.cc.s
 .PHONY : BER_impl.cc.s
 
+SER_impl.o: SER_impl.cc.o
+.PHONY : SER_impl.o
+
+# target to build an object file
+SER_impl.cc.o:
+	cd /home/aymo/BC/Projekt/gr-ErTools/build && $(MAKE) $(MAKESILENT) -f lib/CMakeFiles/gnuradio-ErTools.dir/build.make lib/CMakeFiles/gnuradio-ErTools.dir/SER_impl.cc.o
+.PHONY : SER_impl.cc.o
+
+SER_impl.i: SER_impl.cc.i
+.PHONY : SER_impl.i
+
+# target to preprocess a source file
+SER_impl.cc.i:
+	cd /home/aymo/BC/Projekt/gr-ErTools/build && $(MAKE) $(MAKESILENT) -f lib/CMakeFiles/gnuradio-ErTools.dir/build.make lib/CMakeFiles/gnuradio-ErTools.dir/SER_impl.cc.i
+.PHONY : SER_impl.cc.i
+
+SER_impl.s: SER_impl.cc.s
+.PHONY : SER_impl.s
+
+# target to generate assembly for a file
+SER_impl.cc.s:
+	cd /home/aymo/BC/Projekt/gr-ErTools/build && $(MAKE) $(MAKESILENT) -f lib/CMakeFiles/gnuradio-ErTools.dir/build.make lib/CMakeFiles/gnuradio-ErTools.dir/SER_impl.cc.s
+.PHONY : SER_impl.cc.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -253,6 +277,9 @@ help:
 	@echo "... BER_impl.o"
 	@echo "... BER_impl.i"
 	@echo "... BER_impl.s"
+	@echo "... SER_impl.o"
+	@echo "... SER_impl.i"
+	@echo "... SER_impl.s"
 .PHONY : help
 
 
