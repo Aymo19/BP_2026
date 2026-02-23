@@ -12,4 +12,5 @@
 install(FILES api.h
     AWGN_kanal.h
     BER.h
-    SER.h DESTINATION include/gnuradio/ErTools)
+    SER.h
+    AWGN.h DESTINATION include/gnuradio/ErTools)

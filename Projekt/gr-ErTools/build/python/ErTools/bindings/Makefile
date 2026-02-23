@@ -223,6 +223,30 @@ AWGN_kanal_python.cc.s:
 	cd /home/aymo/BC/Projekt/gr-ErTools/build && $(MAKE) $(MAKESILENT) -f python/ErTools/bindings/CMakeFiles/ErTools_python.dir/build.make python/ErTools/bindings/CMakeFiles/ErTools_python.dir/AWGN_kanal_python.cc.s
 .PHONY : AWGN_kanal_python.cc.s
 
+AWGN_python.o: AWGN_python.cc.o
+.PHONY : AWGN_python.o
+
+# target to build an object file
+AWGN_python.cc.o:
+	cd /home/aymo/BC/Projekt/gr-ErTools/build && $(MAKE) $(MAKESILENT) -f python/ErTools/bindings/CMakeFiles/ErTools_python.dir/build.make python/ErTools/bindings/CMakeFiles/ErTools_python.dir/AWGN_python.cc.o
+.PHONY : AWGN_python.cc.o
+
+AWGN_python.i: AWGN_python.cc.i
+.PHONY : AWGN_python.i
+
+# target to preprocess a source file
+AWGN_python.cc.i:
+	cd /home/aymo/BC/Projekt/gr-ErTools/build && $(MAKE) $(MAKESILENT) -f python/ErTools/bindings/CMakeFiles/ErTools_python.dir/build.make python/ErTools/bindings/CMakeFiles/ErTools_python.dir/AWGN_python.cc.i
+.PHONY : AWGN_python.cc.i
+
+AWGN_python.s: AWGN_python.cc.s
+.PHONY : AWGN_python.s
+
+# target to generate assembly for a file
+AWGN_python.cc.s:
+	cd /home/aymo/BC/Projekt/gr-ErTools/build && $(MAKE) $(MAKESILENT) -f python/ErTools/bindings/CMakeFiles/ErTools_python.dir/build.make python/ErTools/bindings/CMakeFiles/ErTools_python.dir/AWGN_python.cc.s
+.PHONY : AWGN_python.cc.s
+
 BER_python.o: BER_python.cc.o
 .PHONY : BER_python.o
 
@@ -313,6 +337,9 @@ help:
 	@echo "... AWGN_kanal_python.o"
 	@echo "... AWGN_kanal_python.i"
 	@echo "... AWGN_kanal_python.s"
+	@echo "... AWGN_python.o"
+	@echo "... AWGN_python.i"
+	@echo "... AWGN_python.s"
 	@echo "... BER_python.o"
 	@echo "... BER_python.i"
 	@echo "... BER_python.s"

@@ -69,8 +69,9 @@ class BER_Testovanie(gr.top_block, Qt.QWidget):
         self.SNR_max = SNR_max = 20
         self.Num_samp = Num_samp = 500
         self.N = N = 256
-        self.Modulacia = Modulacia = digital.constellation_qpsk().base()
+        self.Modulacia = Modulacia = digital.constellation_8psk().base()
         self.Modulacia.set_npwr(1.0)
+        self.M = M = 8
 
         ##################################################
         # Blocks
@@ -119,67 +120,6 @@ class BER_Testovanie(gr.top_block, Qt.QWidget):
             self.top_grid_layout.setRowStretch(r, 1)
         for c in range(0, 1):
             self.top_grid_layout.setColumnStretch(c, 1)
-        self.qtgui_sink_x_0 = qtgui.sink_c(
-            1024, #fftsize
-            window.WIN_BLACKMAN_hARRIS, #wintype
-            0, #fc
-            samp_rate, #bw
-            "", #name
-            True, #plotfreq
-            True, #plotwaterfall
-            True, #plottime
-            True, #plotconst
-            None # parent
-        )
-        self.qtgui_sink_x_0.set_update_time(1.0/10)
-        self._qtgui_sink_x_0_win = sip.wrapinstance(self.qtgui_sink_x_0.qwidget(), Qt.QWidget)
-
-        self.qtgui_sink_x_0.enable_rf_freq(False)
-
-        self.top_layout.addWidget(self._qtgui_sink_x_0_win)
-        self.qtgui_histogram_sink_x_0 = qtgui.histogram_sink_f(
-            1024,
-            1024,
-            (-2),
-            2,
-            "",
-            1,
-            None # parent
-        )
-
-        self.qtgui_histogram_sink_x_0.set_update_time(0.10)
-        self.qtgui_histogram_sink_x_0.enable_autoscale(True)
-        self.qtgui_histogram_sink_x_0.enable_accumulate(False)
-        self.qtgui_histogram_sink_x_0.enable_grid(True)
-        self.qtgui_histogram_sink_x_0.enable_axis_labels(True)
-
-
-        labels = ['', '', '', '', '',
-            '', '', '', '', '']
-        widths = [1, 1, 1, 1, 1,
-            1, 1, 1, 1, 1]
-        colors = ["blue", "red", "green", "black", "cyan",
-            "magenta", "yellow", "dark red", "dark green", "dark blue"]
-        styles = [1, 1, 1, 1, 1,
-            1, 1, 1, 1, 1]
-        markers= [-1, -1, -1, -1, -1,
-            -1, -1, -1, -1, -1]
-        alphas = [1.0, 1.0, 1.0, 1.0, 1.0,
-            1.0, 1.0, 1.0, 1.0, 1.0]
-
-        for i in range(1):
-            if len(labels[i]) == 0:
-                self.qtgui_histogram_sink_x_0.set_line_label(i, "Data {0}".format(i))
-            else:
-                self.qtgui_histogram_sink_x_0.set_line_label(i, labels[i])
-            self.qtgui_histogram_sink_x_0.set_line_width(i, widths[i])
-            self.qtgui_histogram_sink_x_0.set_line_color(i, colors[i])
-            self.qtgui_histogram_sink_x_0.set_line_style(i, styles[i])
-            self.qtgui_histogram_sink_x_0.set_line_marker(i, markers[i])
-            self.qtgui_histogram_sink_x_0.set_line_alpha(i, alphas[i])
-
-        self._qtgui_histogram_sink_x_0_win = sip.wrapinstance(self.qtgui_histogram_sink_x_0.qwidget(), Qt.QWidget)
-        self.top_layout.addWidget(self._qtgui_histogram_sink_x_0_win)
         self.digital_constellation_encoder_bc_0 = digital.constellation_encoder_bc(Modulacia)
         self.digital_constellation_decoder_cb_0 = digital.constellation_decoder_cb(Modulacia)
         self.blocks_unpack_k_bits_bb_0 = blocks.unpack_k_bits_bb(1)
@@ -188,29 +128,25 @@ class BER_Testovanie(gr.top_block, Qt.QWidget):
         self.blocks_stream_to_vector_0 = blocks.stream_to_vector(gr.sizeof_float*1, N)
         self.blocks_nlog10_ff_0_1 = blocks.nlog10_ff(1, 1, 0)
         self.blocks_nlog10_ff_0 = blocks.nlog10_ff(1, 1, 0)
-        self.blocks_complex_to_float_0 = blocks.complex_to_float(1)
         self.blocks_add_xx_0 = blocks.add_vcc(1)
         self.analog_random_source_x_0 = blocks.vector_source_b(list(map(int, numpy.random.randint(0, 2, Num_samp))), True)
         self.ErTools_SER_0 = ErTools.SER(N)
         self.ErTools_BER_0 = ErTools.BER(N)
-        self.ErTools_AWGN_kanal_0 = ErTools.AWGN_kanal(N, SNR_min, SNR_max)
+        self.ErTools_AWGN_0 = ErTools.AWGN(N, M, 0, 20)
 
 
         ##################################################
         # Connections
         ##################################################
-        self.connect((self.ErTools_AWGN_kanal_0, 1), (self.ErTools_BER_0, 0))
-        self.connect((self.ErTools_AWGN_kanal_0, 1), (self.ErTools_SER_0, 0))
-        self.connect((self.ErTools_AWGN_kanal_0, 0), (self.blocks_add_xx_0, 1))
-        self.connect((self.ErTools_AWGN_kanal_0, 0), (self.blocks_complex_to_float_0, 0))
-        self.connect((self.ErTools_AWGN_kanal_0, 0), (self.qtgui_sink_x_0, 0))
+        self.connect((self.ErTools_AWGN_0, 1), (self.ErTools_BER_0, 0))
+        self.connect((self.ErTools_AWGN_0, 1), (self.ErTools_SER_0, 0))
+        self.connect((self.ErTools_AWGN_0, 0), (self.blocks_add_xx_0, 1))
         self.connect((self.ErTools_BER_0, 0), (self.blocks_nlog10_ff_0, 0))
         self.connect((self.ErTools_SER_0, 0), (self.blocks_nlog10_ff_0_1, 0))
         self.connect((self.analog_random_source_x_0, 0), (self.ErTools_BER_0, 1))
         self.connect((self.analog_random_source_x_0, 0), (self.ErTools_SER_0, 1))
         self.connect((self.analog_random_source_x_0, 0), (self.digital_constellation_encoder_bc_0, 0))
         self.connect((self.blocks_add_xx_0, 0), (self.digital_constellation_decoder_cb_0, 0))
-        self.connect((self.blocks_complex_to_float_0, 0), (self.qtgui_histogram_sink_x_0, 0))
         self.connect((self.blocks_nlog10_ff_0, 0), (self.blocks_stream_to_vector_0, 0))
         self.connect((self.blocks_nlog10_ff_0_1, 0), (self.blocks_stream_to_vector_0_1, 0))
         self.connect((self.blocks_stream_to_vector_0, 0), (self.qtgui_vector_sink_f_0_0, 0))
@@ -219,7 +155,7 @@ class BER_Testovanie(gr.top_block, Qt.QWidget):
         self.connect((self.blocks_unpack_k_bits_bb_0, 0), (self.ErTools_BER_0, 2))
         self.connect((self.digital_constellation_decoder_cb_0, 0), (self.ErTools_SER_0, 2))
         self.connect((self.digital_constellation_decoder_cb_0, 0), (self.blocks_unpack_k_bits_bb_0, 0))
-        self.connect((self.digital_constellation_encoder_bc_0, 0), (self.ErTools_AWGN_kanal_0, 0))
+        self.connect((self.digital_constellation_encoder_bc_0, 0), (self.ErTools_AWGN_0, 0))
         self.connect((self.digital_constellation_encoder_bc_0, 0), (self.blocks_throttle2_0, 0))
 
 
@@ -237,7 +173,6 @@ class BER_Testovanie(gr.top_block, Qt.QWidget):
     def set_samp_rate(self, samp_rate):
         self.samp_rate = samp_rate
         self.blocks_throttle2_0.set_sample_rate(self.samp_rate)
-        self.qtgui_sink_x_0.set_frequency_range(0, self.samp_rate)
 
     def get_SNR_min(self):
         return self.SNR_min
@@ -270,6 +205,12 @@ class BER_Testovanie(gr.top_block, Qt.QWidget):
         self.Modulacia = Modulacia
         self.digital_constellation_decoder_cb_0.set_constellation(self.Modulacia)
         self.digital_constellation_encoder_bc_0.set_constellation(self.Modulacia)
+
+    def get_M(self):
+        return self.M
+
+    def set_M(self, M):
+        self.M = M
 
 
 

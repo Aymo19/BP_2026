@@ -24,6 +24,7 @@ namespace py = pybind11;
     void bind_AWGN_kanal(py::module& m);
     void bind_BER(py::module& m);
     void bind_SER(py::module& m);
+    void bind_AWGN(py::module& m);
 // ) END BINDING_FUNCTION_PROTOTYPES
 
 
@@ -55,5 +56,6 @@ PYBIND11_MODULE(ErTools_python, m)
     bind_AWGN_kanal(m);
     bind_BER(m);
     bind_SER(m);
+    bind_AWGN(m);
     // ) END BINDING_FUNCTION_CALLS
 }

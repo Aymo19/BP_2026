@@ -1,5 +1,7 @@
 file(REMOVE_RECURSE
   ".1.0.0"
+  "CMakeFiles/gnuradio-ErTools.dir/AWGN_impl.cc.o"
+  "CMakeFiles/gnuradio-ErTools.dir/AWGN_impl.cc.o.d"
   "CMakeFiles/gnuradio-ErTools.dir/AWGN_kanal_impl.cc.o"
   "CMakeFiles/gnuradio-ErTools.dir/AWGN_kanal_impl.cc.o.d"
   "CMakeFiles/gnuradio-ErTools.dir/BER_impl.cc.o"

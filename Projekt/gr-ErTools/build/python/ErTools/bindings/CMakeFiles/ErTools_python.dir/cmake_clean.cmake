@@ -1,6 +1,8 @@
 file(REMOVE_RECURSE
   "CMakeFiles/ErTools_python.dir/AWGN_kanal_python.cc.o"
   "CMakeFiles/ErTools_python.dir/AWGN_kanal_python.cc.o.d"
+  "CMakeFiles/ErTools_python.dir/AWGN_python.cc.o"
+  "CMakeFiles/ErTools_python.dir/AWGN_python.cc.o.d"
   "CMakeFiles/ErTools_python.dir/BER_python.cc.o"
   "CMakeFiles/ErTools_python.dir/BER_python.cc.o.d"
   "CMakeFiles/ErTools_python.dir/SER_python.cc.o"
