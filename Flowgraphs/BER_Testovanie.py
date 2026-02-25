@@ -90,7 +90,7 @@ class BER_Testovanie(gr.top_block, Qt.QWidget):
         self.qtgui_vector_sink_f_0_0.set_update_time(0.10)
         self.qtgui_vector_sink_f_0_0.set_y_axis((-6), 1)
         self.qtgui_vector_sink_f_0_0.enable_autoscale(False)
-        self.qtgui_vector_sink_f_0_0.enable_grid(False)
+        self.qtgui_vector_sink_f_0_0.enable_grid(True)
         self.qtgui_vector_sink_f_0_0.set_x_axis_units("dB")
         self.qtgui_vector_sink_f_0_0.set_y_axis_units("")
         self.qtgui_vector_sink_f_0_0.set_ref_level(0)
