@@ -65,8 +65,14 @@ gr_complex Sum2(float EDB, int stav, float Es) {
   int k = std::log2(stav);
 
   // Premena z dB na pomer
-  EbN0 = pow(10.0, EDB/10.0);
-  EsN0 = EbN0; // * k;
+  if(k > 2) {
+    EbN0 = EbN0 + std::log10(k);
+    EbN0 = pow(10.0, EDB/10.0);
+    EsN0 = EbN0;
+  }else {
+    EbN0 = pow(10.0, EDB/10.0);
+    EsN0 = EbN0 * k;
+  }
   
   odchylka = std::sqrt(Es / (EsN0 * 2));
   REAL = Sum_vypocet2() * odchylka;

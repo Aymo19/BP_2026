@@ -1,0 +1,176 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="classgr_1_1ErTools_1_1BER__impl" kind="class" language="C++" prot="public">
+    <compoundname>gr::ErTools::BER_impl</compoundname>
+    <basecompoundref refid="classgr_1_1ErTools_1_1BER" prot="public" virt="non-virtual">gr::ErTools::BER</basecompoundref>
+    <includes refid="BER__impl_8h" local="no">BER_impl.h</includes>
+    <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classgr_1_1ErTools_1_1BER__impl_1a646875331c3a666c5f45baef1b8a7506" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int gr::ErTools::BER_impl::_N</definition>
+        <argsstring></argsstring>
+        <name>_N</name>
+        <qualifiedname>gr::ErTools::BER_impl::_N</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/aymo/BC/Projekt/gr-ErTools/lib/BER_impl.h" line="19" column="7" bodyfile="/home/aymo/BC/Projekt/gr-ErTools/lib/BER_impl.h" bodystart="19" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgr_1_1ErTools_1_1BER__impl_1ae027d779cd1785ace0ab535c946c5e55" prot="private" static="no" mutable="no">
+        <type>std::vector&lt; int &gt;</type>
+        <definition>std::vector&lt;int&gt; gr::ErTools::BER_impl::_count</definition>
+        <argsstring></argsstring>
+        <name>_count</name>
+        <qualifiedname>gr::ErTools::BER_impl::_count</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/aymo/BC/Projekt/gr-ErTools/lib/BER_impl.h" line="22" column="15" bodyfile="/home/aymo/BC/Projekt/gr-ErTools/lib/BER_impl.h" bodystart="22" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgr_1_1ErTools_1_1BER__impl_1ab18d7297f443b1021b20c7bcf5189526" prot="private" static="no" mutable="no">
+        <type>std::vector&lt; double &gt;</type>
+        <definition>std::vector&lt;double&gt; gr::ErTools::BER_impl::_pamat_BER</definition>
+        <argsstring></argsstring>
+        <name>_pamat_BER</name>
+        <qualifiedname>gr::ErTools::BER_impl::_pamat_BER</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/aymo/BC/Projekt/gr-ErTools/lib/BER_impl.h" line="23" column="15" bodyfile="/home/aymo/BC/Projekt/gr-ErTools/lib/BER_impl.h" bodystart="23" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgr_1_1ErTools_1_1BER__impl_1a551252fd75556617d6e1f3330deb0863" prot="private" static="no" mutable="no">
+        <type>std::vector&lt; int &gt;</type>
+        <definition>std::vector&lt;int&gt; gr::ErTools::BER_impl::_pocet_chyb</definition>
+        <argsstring></argsstring>
+        <name>_pocet_chyb</name>
+        <qualifiedname>gr::ErTools::BER_impl::_pocet_chyb</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/aymo/BC/Projekt/gr-ErTools/lib/BER_impl.h" line="24" column="15" bodyfile="/home/aymo/BC/Projekt/gr-ErTools/lib/BER_impl.h" bodystart="24" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="classgr_1_1ErTools_1_1BER__impl_1a30d9ad8dc7aa4b05dfa587b52f6d67d3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>gr::ErTools::BER_impl::BER_impl</definition>
+        <argsstring>(int N)</argsstring>
+        <name>BER_impl</name>
+        <qualifiedname>gr::ErTools::BER_impl::BER_impl</qualifiedname>
+        <param>
+          <type>int</type>
+          <declname>N</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/aymo/BC/Projekt/gr-ErTools/lib/BER_impl.h" line="27" column="5"/>
+      </memberdef>
+      <memberdef kind="function" id="classgr_1_1ErTools_1_1BER__impl_1a6127ddac53ee3af58c361975ea4876e7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>gr::ErTools::BER_impl::~BER_impl</definition>
+        <argsstring>()</argsstring>
+        <name>~BER_impl</name>
+        <qualifiedname>gr::ErTools::BER_impl::~BER_impl</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/aymo/BC/Projekt/gr-ErTools/lib/BER_impl.h" line="28" column="5"/>
+      </memberdef>
+      <memberdef kind="function" id="classgr_1_1ErTools_1_1BER__impl_1a175d43f680cf4aee664de1ac01934f57" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int gr::ErTools::BER_impl::work</definition>
+        <argsstring>(int noutput_items, gr_vector_const_void_star &amp;input_items, gr_vector_void_star &amp;output_items)</argsstring>
+        <name>work</name>
+        <qualifiedname>gr::ErTools::BER_impl::work</qualifiedname>
+        <param>
+          <type>int</type>
+          <declname>noutput_items</declname>
+        </param>
+        <param>
+          <type>gr_vector_const_void_star &amp;</type>
+          <declname>input_items</declname>
+        </param>
+        <param>
+          <type>gr_vector_void_star &amp;</type>
+          <declname>output_items</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/aymo/BC/Projekt/gr-ErTools/lib/BER_impl.h" line="31" column="9"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="2">
+        <label>gr::ErTools::BER</label>
+        <link refid="classgr_1_1ErTools_1_1BER"/>
+        <childnode refid="3" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>gr::ErTools::BER_impl</label>
+        <link refid="classgr_1_1ErTools_1_1BER__impl"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>gr::sync_block</label>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="2">
+        <label>gr::ErTools::BER</label>
+        <link refid="classgr_1_1ErTools_1_1BER"/>
+        <childnode refid="3" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>gr::ErTools::BER_impl</label>
+        <link refid="classgr_1_1ErTools_1_1BER__impl"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>gr::sync_block</label>
+      </node>
+    </collaborationgraph>
+    <location file="/home/aymo/BC/Projekt/gr-ErTools/lib/BER_impl.h" line="16" column="1" bodyfile="/home/aymo/BC/Projekt/gr-ErTools/lib/BER_impl.h" bodystart="17" bodyend="34"/>
+    <listofallmembers>
+      <member refid="classgr_1_1ErTools_1_1BER__impl_1ae027d779cd1785ace0ab535c946c5e55" prot="private" virt="non-virtual"><scope>gr::ErTools::BER_impl</scope><name>_count</name></member>
+      <member refid="classgr_1_1ErTools_1_1BER__impl_1a646875331c3a666c5f45baef1b8a7506" prot="private" virt="non-virtual"><scope>gr::ErTools::BER_impl</scope><name>_N</name></member>
+      <member refid="classgr_1_1ErTools_1_1BER__impl_1ab18d7297f443b1021b20c7bcf5189526" prot="private" virt="non-virtual"><scope>gr::ErTools::BER_impl</scope><name>_pamat_BER</name></member>
+      <member refid="classgr_1_1ErTools_1_1BER__impl_1a551252fd75556617d6e1f3330deb0863" prot="private" virt="non-virtual"><scope>gr::ErTools::BER_impl</scope><name>_pocet_chyb</name></member>
+      <member refid="classgr_1_1ErTools_1_1BER__impl_1a30d9ad8dc7aa4b05dfa587b52f6d67d3" prot="public" virt="non-virtual"><scope>gr::ErTools::BER_impl</scope><name>BER_impl</name></member>
+      <member refid="classgr_1_1ErTools_1_1BER_1a7b7c378c60827c21bd06986c0cfaf43b" prot="public" virt="non-virtual"><scope>gr::ErTools::BER_impl</scope><name>make</name></member>
+      <member refid="classgr_1_1ErTools_1_1BER_1a194735ba854cf2b55471d8a46d12c58b" prot="public" virt="non-virtual"><scope>gr::ErTools::BER_impl</scope><name>sptr</name></member>
+      <member refid="classgr_1_1ErTools_1_1BER__impl_1a175d43f680cf4aee664de1ac01934f57" prot="public" virt="non-virtual"><scope>gr::ErTools::BER_impl</scope><name>work</name></member>
+      <member refid="classgr_1_1ErTools_1_1BER__impl_1a6127ddac53ee3af58c361975ea4876e7" prot="public" virt="non-virtual"><scope>gr::ErTools::BER_impl</scope><name>~BER_impl</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

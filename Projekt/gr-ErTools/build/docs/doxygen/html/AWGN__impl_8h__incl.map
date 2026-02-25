@@ -1,0 +1,11 @@
+<map id="AWGN_impl.h" name="AWGN_impl.h">
+<area shape="rect" id="Node000001" title=" " alt="" coords="127,5,238,31"/>
+<area shape="rect" id="Node000002" href="$AWGN_8h.html" title=" " alt="" coords="89,79,276,104"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="185,31,185,65,180,65,180,31"/>
+<area shape="rect" id="Node000003" href="$api_8h.html" title=" " alt="" coords="5,152,171,177"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="169,106,116,146,113,141,166,102"/>
+<area shape="rect" id="Node000005" title=" " alt="" coords="195,152,362,177"/>
+<area shape="poly" id="edge4_Node000002_Node000005" title=" " alt="" coords="200,102,253,141,250,146,197,106"/>
+<area shape="rect" id="Node000004" title=" " alt="" coords="9,225,167,251"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="91,178,91,212,85,212,85,178"/>
+</map>

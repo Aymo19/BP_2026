@@ -1,0 +1,19 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="namespacegr_1_1ErTools" kind="namespace" language="C++">
+    <compoundname>gr::ErTools</compoundname>
+    <innerclass refid="classgr_1_1ErTools_1_1AWGN" prot="public">gr::ErTools::AWGN</innerclass>
+    <innerclass refid="classgr_1_1ErTools_1_1AWGN__impl" prot="public">gr::ErTools::AWGN_impl</innerclass>
+    <innerclass refid="classgr_1_1ErTools_1_1AWGN__kanal" prot="public">gr::ErTools::AWGN_kanal</innerclass>
+    <innerclass refid="classgr_1_1ErTools_1_1AWGN__kanal__impl" prot="public">gr::ErTools::AWGN_kanal_impl</innerclass>
+    <innerclass refid="classgr_1_1ErTools_1_1BER" prot="public">gr::ErTools::BER</innerclass>
+    <innerclass refid="classgr_1_1ErTools_1_1BER__impl" prot="public">gr::ErTools::BER_impl</innerclass>
+    <innerclass refid="classgr_1_1ErTools_1_1SER" prot="public">gr::ErTools::SER</innerclass>
+    <innerclass refid="classgr_1_1ErTools_1_1SER__impl" prot="public">gr::ErTools::SER_impl</innerclass>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/aymo/BC/Projekt/gr-ErTools/include/gnuradio/ErTools/AWGN.h" line="15" column="1"/>
+  </compounddef>
+</doxygen>

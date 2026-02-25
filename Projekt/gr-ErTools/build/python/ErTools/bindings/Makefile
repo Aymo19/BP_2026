@@ -186,6 +186,20 @@ ErTools_python/fast:
 .PHONY : ErTools_python/fast
 
 # Convenience name for target.
+python/ErTools/bindings/CMakeFiles/extracted_docstrings.dir/rule:
+	cd /home/aymo/BC/Projekt/gr-ErTools/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 python/ErTools/bindings/CMakeFiles/extracted_docstrings.dir/rule
+.PHONY : python/ErTools/bindings/CMakeFiles/extracted_docstrings.dir/rule
+
+# Convenience name for target.
+extracted_docstrings: python/ErTools/bindings/CMakeFiles/extracted_docstrings.dir/rule
+.PHONY : extracted_docstrings
+
+# fast build rule for target.
+extracted_docstrings/fast:
+	cd /home/aymo/BC/Projekt/gr-ErTools/build && $(MAKE) $(MAKESILENT) -f python/ErTools/bindings/CMakeFiles/extracted_docstrings.dir/build.make python/ErTools/bindings/CMakeFiles/extracted_docstrings.dir/build
+.PHONY : extracted_docstrings/fast
+
+# Convenience name for target.
 python/ErTools/bindings/CMakeFiles/ErTools_docstrings.dir/rule:
 	cd /home/aymo/BC/Projekt/gr-ErTools/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 python/ErTools/bindings/CMakeFiles/ErTools_docstrings.dir/rule
 .PHONY : python/ErTools/bindings/CMakeFiles/ErTools_docstrings.dir/rule
@@ -333,6 +347,7 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... test"
 	@echo "... ErTools_docstrings"
+	@echo "... extracted_docstrings"
 	@echo "... ErTools_python"
 	@echo "... AWGN_kanal_python.o"
 	@echo "... AWGN_kanal_python.i"

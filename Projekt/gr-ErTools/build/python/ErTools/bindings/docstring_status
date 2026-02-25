@@ -1,1 +1,8 @@
-DONE
+PASS: /home/aymo/BC/Projekt/gr-ErTools/python/ErTools/bindings/docstrings/AWGN_kanal_pydoc_template.h
+PASS: /home/aymo/BC/Projekt/gr-ErTools/python/ErTools/bindings/docstrings/AWGN_kanal_pydoc_template.h
+PASS: /home/aymo/BC/Projekt/gr-ErTools/python/ErTools/bindings/docstrings/BER_pydoc_template.h
+PASS: /home/aymo/BC/Projekt/gr-ErTools/python/ErTools/bindings/docstrings/BER_pydoc_template.h
+PASS: /home/aymo/BC/Projekt/gr-ErTools/python/ErTools/bindings/docstrings/AWGN_pydoc_template.h
+PASS: /home/aymo/BC/Projekt/gr-ErTools/python/ErTools/bindings/docstrings/AWGN_pydoc_template.h
+PASS: /home/aymo/BC/Projekt/gr-ErTools/python/ErTools/bindings/docstrings/SER_pydoc_template.h
+PASS: /home/aymo/BC/Projekt/gr-ErTools/python/ErTools/bindings/docstrings/SER_pydoc_template.h

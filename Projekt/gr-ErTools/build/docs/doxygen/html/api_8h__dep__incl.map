@@ -1,0 +1,19 @@
+<map id="api.h" name="api.h">
+<area shape="rect" id="Node000001" title=" " alt="" coords="255,5,309,31"/>
+<area shape="rect" id="Node000002" href="$AWGN_8h.html" title=" " alt="" coords="51,79,126,104"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="242,37,121,81,119,76,240,32"/>
+<area shape="rect" id="Node000004" href="$AWGN__kanal_8h.html" title=" " alt="" coords="167,79,285,104"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="266,43,237,80,233,77,262,40"/>
+<area shape="rect" id="Node000006" href="$BER_8h.html" title=" " alt="" coords="327,79,387,104"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="306,38,346,77,343,80,302,42"/>
+<area shape="rect" id="Node000008" href="$SER_8h.html" title=" " alt="" coords="438,79,497,104"/>
+<area shape="poly" id="edge7_Node000001_Node000008" title=" " alt="" coords="323,32,438,76,436,81,321,37"/>
+<area shape="rect" id="Node000003" href="$AWGN__impl_8h.html" title=" " alt="" coords="5,152,116,177"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="81,118,68,153,63,151,77,116"/>
+<area shape="rect" id="Node000005" href="$AWGN__kanal__impl_8h.html" title=" " alt="" coords="140,152,293,177"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="225,118,221,152,216,152,220,117"/>
+<area shape="rect" id="Node000007" href="$BER__impl_8h.html" title=" " alt="" coords="318,152,414,177"/>
+<area shape="poly" id="edge6_Node000006_Node000007" title=" " alt="" coords="363,117,367,152,362,152,357,118"/>
+<area shape="rect" id="Node000009" href="$SER__impl_8h.html" title=" " alt="" coords="439,152,533,177"/>
+<area shape="poly" id="edge8_Node000008_Node000009" title=" " alt="" coords="476,117,486,151,480,153,471,118"/>
+</map>
