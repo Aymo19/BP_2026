@@ -17,8 +17,11 @@ class Teoreticka_BER_impl : public Teoreticka_BER
 {
 private:
   int _N, _M, _EbN0min, _EbN0max, koniec;
-
+  
+  int j;
+  double rozpatieT, rozpatiePostupT;
   std::vector<double> _bodyBER;
+  std::vector<double> EDB;
 
 public:
     Teoreticka_BER_impl(int N, int M, int EbN0min, int EbN0max);

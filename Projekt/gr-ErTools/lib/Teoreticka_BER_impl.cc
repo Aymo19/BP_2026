@@ -21,22 +21,6 @@ Teoreticka_BER::sptr Teoreticka_BER::make(int N, int M, int EbN0min, int EbN0max
     return gnuradio::make_block_sptr<Teoreticka_BER_impl>(N, M, EbN0min, EbN0max);
 }
 
-
-// The private constructor
-Teoreticka_BER_impl::Teoreticka_BER_impl(int N, int M, int EbN0min, int EbN0max)
-    : gr::sync_block("Teoreticka_BER",
-                     gr::io_signature::make(0, 0, 0),
-                     gr::io_signature::make(1, 1, sizeof(output_type)))
-{
-  _N = N;
-  _M = M;
-  _EbN0min = EbN0min;
-  _EbN0max = EbN0max;
-
-  _bodyBER = std::vector<double>(N, 1.0);
-  koniec = 0;
-}
-
 // Our virtual destructor.
 Teoreticka_BER_impl::~Teoreticka_BER_impl() {}
 
@@ -53,13 +37,49 @@ double BPSK(double EbN0) {
 
   EbN0 = pow(10.0, EbN0/10.0);
   
-  argument = std::sqrt(EbN0 / 2);  
+  argument = std::sqrt(EbN0);  
   Pb = QFunkcia(argument);
 
   return Pb;
 }
 
-double rozpatieT, rozpatiePostupT;
+// The private constructor
+Teoreticka_BER_impl::Teoreticka_BER_impl(int N, int M, int EbN0min, int EbN0max)
+    : gr::sync_block("Teoreticka_BER",
+                     gr::io_signature::make(0, 0, 0),
+                     gr::io_signature::make(1, 1, sizeof(output_type)))
+{
+  _N = N;
+  _M = M;
+  _EbN0min = EbN0min;
+  _EbN0max = EbN0max;
+
+  _bodyBER = std::vector<double>(N, 1.0);
+  koniec = 0;
+  j = 0;
+  EDB = std::vector<double>(N, 0);
+
+
+  // Linearne rozlozenie EbN0db bodov
+  rozpatieT = double((_EbN0max - _EbN0min)) / double((_N-1));
+  rozpatiePostupT = double(_EbN0min);
+
+  for(int i = 0; i < _N; i++) {
+    EDB.at(i) = rozpatiePostupT;
+    rozpatiePostupT += rozpatieT;
+      //GR_LOG_INFO(d_logger, std::string("R: ") + std::to_string(rozpatiePostupT) + std::string("\n"));
+
+  }
+
+  double k = std::log2(_M);
+
+  if(k == 1) {
+    for(int y = 0; y < _N; y++) {
+      _bodyBER.at(y) = BPSK(EDB[y]);  
+    }
+  }
+
+}
 
 int Teoreticka_BER_impl::work(int noutput_items,
                               gr_vector_const_void_star& input_items,
@@ -67,38 +87,14 @@ int Teoreticka_BER_impl::work(int noutput_items,
 {
     auto out = static_cast<output_type*>(output_items[0]);
     
-    if(koniec)
-      return WORK_DONE;
-
-    //lin rozdelit
-    double EDB[_N];
-
-    // Linearne rozlozenie EbN0db bodov
-    rozpatieT = double((_EbN0max - _EbN0min)) / double((_N-1));
-    rozpatiePostupT = double(_EbN0min);
-
-    for(int i = 0; i < _N; i++) {
-      EDB[i] = rozpatiePostupT;
-      rozpatiePostupT += rozpatieT;
-      //GR_LOG_INFO(d_logger, std::string("R: ") + std::to_string(rozpatiePostupT) + std::string("\n"));
-
-    }
-    
-    double k = std::log2(_M);
-    int j = 0;
-    if(k == 1) {
-    for(int y = 0; y < noutput_items; y++) {
-
-        out[y] = BPSK(EDB[j]);
+    for(int b = 0; b < noutput_items; b++) {
+        out[b] = _bodyBER.at(j);
         if(j < _N-1) {
           j += 1;
         }else {
-          break;
+          j = 0;
         }
-      }
     }
-
-    koniec = 1;
 
     // Tell runtime system how many output items we produced.
     return noutput_items;

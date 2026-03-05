@@ -974,9 +974,9 @@ blocks:
     comment: ''
     grid: 'True'
     gui_hint: 2,0,1,1
-    label1: '"BPSK"'
+    label1: '"Realna BPSK"'
     label10: ''
-    label2: '"QPSK"'
+    label2: '"Teoreticka BPSK"'
     label3: '"8PSK"'
     label4: '"16QAM"'
     label5: ''

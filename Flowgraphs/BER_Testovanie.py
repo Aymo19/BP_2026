@@ -95,7 +95,7 @@ class BER_Testovanie(gr.top_block, Qt.QWidget):
         self.qtgui_vector_sink_f_0_0.set_ref_level(0)
 
 
-        labels = ["BPSK", "QPSK", "8PSK", "16QAM", '',
+        labels = ["Realna BPSK", "Teoreticka BPSK", "8PSK", "16QAM", '',
             '', '', '', '', '']
         widths = [2, 2, 2, 2, 1,
             1, 1, 1, 1, 1]

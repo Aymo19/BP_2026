@@ -62,7 +62,12 @@
     <member refid="classgr_1_1ErTools_1_1Teoreticka__BER__impl_1a463d127d973c895fde2f64b980a22470" kind="variable"><name>_M</name></member>
     <member refid="classgr_1_1ErTools_1_1Teoreticka__BER__impl_1a644a47b1e50a28303b67a58e654330d0" kind="variable"><name>_EbN0min</name></member>
     <member refid="classgr_1_1ErTools_1_1Teoreticka__BER__impl_1a40097c1c7a0e9dcda02842458b9d0db9" kind="variable"><name>_EbN0max</name></member>
+    <member refid="classgr_1_1ErTools_1_1Teoreticka__BER__impl_1aa3c78ed839b51372df5466ac72522f56" kind="variable"><name>koniec</name></member>
+    <member refid="classgr_1_1ErTools_1_1Teoreticka__BER__impl_1aabc553532053c41b2441b884bdbbd813" kind="variable"><name>j</name></member>
+    <member refid="classgr_1_1ErTools_1_1Teoreticka__BER__impl_1af53d0d602d261be6d142ec290b02c2f6" kind="variable"><name>rozpatieT</name></member>
+    <member refid="classgr_1_1ErTools_1_1Teoreticka__BER__impl_1a7472a976173dd20661d0ef96647e1223" kind="variable"><name>rozpatiePostupT</name></member>
     <member refid="classgr_1_1ErTools_1_1Teoreticka__BER__impl_1afaedd6226d64f7eb946bd9d0a2985496" kind="variable"><name>_bodyBER</name></member>
+    <member refid="classgr_1_1ErTools_1_1Teoreticka__BER__impl_1af7df04f5abd1e4610d29b2a1d818b8cd" kind="variable"><name>EDB</name></member>
     <member refid="classgr_1_1ErTools_1_1Teoreticka__BER__impl_1ac3f4153f42e0f665fb7b71a8cf9750b5" kind="function"><name>Teoreticka_BER_impl</name></member>
     <member refid="classgr_1_1ErTools_1_1Teoreticka__BER__impl_1a071dc2582bb62fab7150e3b73c765470" kind="function"><name>~Teoreticka_BER_impl</name></member>
     <member refid="classgr_1_1ErTools_1_1Teoreticka__BER__impl_1adefb6f4a7d977e0a57780d66ae1727d7" kind="function"><name>work</name></member>
