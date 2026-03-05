@@ -1,0 +1,32 @@
+id: ErTools_Teoreticka_BER
+label: Teoreticka_BER
+category: '[ErTools]'
+
+templates:
+  imports: from gnuradio import ErTools
+  make: ErTools.Teoreticka_BER(${N}, ${M}, ${EbN0min}, ${EbN0max})
+
+parameters:
+ - id: N
+   label: Počet Eb/N0 bodov
+   dtype: int
+   default: 128
+ - id: M
+   label: Počet stavov modulácie
+   dtype: int
+   default: 2
+ - id: EbN0min
+   label: EbN0 min
+   dtype: int
+   default: 0
+ - id: EbN0max
+   label: EbN0 max
+   dtype: int
+   default: 20
+
+outputs:
+ - label: out
+   domain: stream 
+   dtype: float
+
+file_format: 1 

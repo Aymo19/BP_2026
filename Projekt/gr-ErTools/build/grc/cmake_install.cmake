@@ -48,6 +48,7 @@ if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT
     "/home/aymo/BC/Projekt/gr-ErTools/grc/ErTools_BER.block.yml"
     "/home/aymo/BC/Projekt/gr-ErTools/grc/ErTools_SER.block.yml"
     "/home/aymo/BC/Projekt/gr-ErTools/grc/ErTools_AWGN.block.yml"
+    "/home/aymo/BC/Projekt/gr-ErTools/grc/ErTools_Teoreticka_BER.block.yml"
     )
 endif()
 

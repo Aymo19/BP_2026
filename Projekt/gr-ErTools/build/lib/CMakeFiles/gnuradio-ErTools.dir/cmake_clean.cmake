@@ -8,6 +8,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/gnuradio-ErTools.dir/BER_impl.cc.o.d"
   "CMakeFiles/gnuradio-ErTools.dir/SER_impl.cc.o"
   "CMakeFiles/gnuradio-ErTools.dir/SER_impl.cc.o.d"
+  "CMakeFiles/gnuradio-ErTools.dir/Teoreticka_BER_impl.cc.o"
+  "CMakeFiles/gnuradio-ErTools.dir/Teoreticka_BER_impl.cc.o.d"
   "libgnuradio-ErTools.pdb"
   "libgnuradio-ErTools.so"
   "libgnuradio-ErTools.so.1.0.0"

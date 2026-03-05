@@ -53,6 +53,20 @@
     <member refid="classgr_1_1ErTools_1_1SER__impl_1afdacc4dc3333c24b3832b4268c786509" kind="function"><name>~SER_impl</name></member>
     <member refid="classgr_1_1ErTools_1_1SER__impl_1a05b79c5078775611fd7f55f52a8c346b" kind="function"><name>work</name></member>
   </compound>
+  <compound refid="classgr_1_1ErTools_1_1Teoreticka__BER" kind="class"><name>gr::ErTools::Teoreticka_BER</name>
+    <member refid="classgr_1_1ErTools_1_1Teoreticka__BER_1aa90ff4d234e916ba7582974f171f05cd" kind="typedef"><name>sptr</name></member>
+    <member refid="classgr_1_1ErTools_1_1Teoreticka__BER_1a628de7663c08254194daf1ee3660d604" kind="function"><name>make</name></member>
+  </compound>
+  <compound refid="classgr_1_1ErTools_1_1Teoreticka__BER__impl" kind="class"><name>gr::ErTools::Teoreticka_BER_impl</name>
+    <member refid="classgr_1_1ErTools_1_1Teoreticka__BER__impl_1aab1965dd1f05c922f3959ea3f2af6fa7" kind="variable"><name>_N</name></member>
+    <member refid="classgr_1_1ErTools_1_1Teoreticka__BER__impl_1a463d127d973c895fde2f64b980a22470" kind="variable"><name>_M</name></member>
+    <member refid="classgr_1_1ErTools_1_1Teoreticka__BER__impl_1a644a47b1e50a28303b67a58e654330d0" kind="variable"><name>_EbN0min</name></member>
+    <member refid="classgr_1_1ErTools_1_1Teoreticka__BER__impl_1a40097c1c7a0e9dcda02842458b9d0db9" kind="variable"><name>_EbN0max</name></member>
+    <member refid="classgr_1_1ErTools_1_1Teoreticka__BER__impl_1afaedd6226d64f7eb946bd9d0a2985496" kind="variable"><name>_bodyBER</name></member>
+    <member refid="classgr_1_1ErTools_1_1Teoreticka__BER__impl_1ac3f4153f42e0f665fb7b71a8cf9750b5" kind="function"><name>Teoreticka_BER_impl</name></member>
+    <member refid="classgr_1_1ErTools_1_1Teoreticka__BER__impl_1a071dc2582bb62fab7150e3b73c765470" kind="function"><name>~Teoreticka_BER_impl</name></member>
+    <member refid="classgr_1_1ErTools_1_1Teoreticka__BER__impl_1adefb6f4a7d977e0a57780d66ae1727d7" kind="function"><name>work</name></member>
+  </compound>
   <compound refid="namespacegr" kind="namespace"><name>gr</name>
   </compound>
   <compound refid="namespacegr_1_1ErTools" kind="namespace"><name>gr::ErTools</name>
@@ -104,6 +118,8 @@
   </compound>
   <compound refid="SER_8h" kind="file"><name>SER.h</name>
   </compound>
+  <compound refid="Teoreticka__BER_8h" kind="file"><name>Teoreticka_BER.h</name>
+  </compound>
   <compound refid="AWGN__impl_8h" kind="file"><name>AWGN_impl.h</name>
   </compound>
   <compound refid="AWGN__kanal__impl_8h" kind="file"><name>AWGN_kanal_impl.h</name>
@@ -111,6 +127,8 @@
   <compound refid="BER__impl_8h" kind="file"><name>BER_impl.h</name>
   </compound>
   <compound refid="SER__impl_8h" kind="file"><name>SER_impl.h</name>
+  </compound>
+  <compound refid="Teoreticka__BER__impl_8h" kind="file"><name>Teoreticka_BER_impl.h</name>
   </compound>
   <compound refid="AWGN__kanal__pydoc__template_8h" kind="file"><name>AWGN_kanal_pydoc_template.h</name>
     <member refid="AWGN__kanal__pydoc__template_8h_1a74021f021dcdfbb22891787b79c5529d" kind="define"><name>D</name></member>
@@ -135,6 +153,12 @@
     <member refid="SER__pydoc__template_8h_1a7597f9fff5ea416bd53483a93b13c4ad" kind="variable"><name>__doc_gr_ErTools_SER</name></member>
     <member refid="SER__pydoc__template_8h_1a5119deec7d053171c14f32396e2540df" kind="variable"><name>__doc_gr_ErTools_SER_SER</name></member>
     <member refid="SER__pydoc__template_8h_1a5760fd0844144e4aa4c33f58376ba665" kind="variable"><name>__doc_gr_ErTools_SER_make</name></member>
+  </compound>
+  <compound refid="Teoreticka__BER__pydoc__template_8h" kind="file"><name>Teoreticka_BER_pydoc_template.h</name>
+    <member refid="Teoreticka__BER__pydoc__template_8h_1a74021f021dcdfbb22891787b79c5529d" kind="define"><name>D</name></member>
+    <member refid="Teoreticka__BER__pydoc__template_8h_1a989b56b3c0b88879695aed178f853570" kind="variable"><name>__doc_gr_ErTools_Teoreticka_BER</name></member>
+    <member refid="Teoreticka__BER__pydoc__template_8h_1ab97ea49c46b38d90a5fe3327b977e73b" kind="variable"><name>__doc_gr_ErTools_Teoreticka_BER_Teoreticka_BER</name></member>
+    <member refid="Teoreticka__BER__pydoc__template_8h_1a4ad231a85987257319a50c5cd379f38e" kind="variable"><name>__doc_gr_ErTools_Teoreticka_BER_make</name></member>
   </compound>
   <compound refid="group__block" kind="group"><name>block</name>
   </compound>

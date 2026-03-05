@@ -12,6 +12,9 @@ var hierarchy =
       ] ],
       [ "gr::ErTools::SER", "classgr_1_1ErTools_1_1SER.html", [
         [ "gr::ErTools::SER_impl", "classgr_1_1ErTools_1_1SER__impl.html", null ]
+      ] ],
+      [ "gr::ErTools::Teoreticka_BER", "classgr_1_1ErTools_1_1Teoreticka__BER.html", [
+        [ "gr::ErTools::Teoreticka_BER_impl", "classgr_1_1ErTools_1_1Teoreticka__BER__impl.html", null ]
       ] ]
     ] ]
 ];

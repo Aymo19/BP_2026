@@ -7,10 +7,10 @@ templates:
   make: ErTools.BER(${N})
 
 parameters:
-- id: N
-  label: Počet Eb/N0 bodov
-  dtype: int
-  default: 128
+ - id: N
+   label: Počet Eb/N0 bodov
+   dtype: int
+   default: 128
 
 inputs:
  - label: in0

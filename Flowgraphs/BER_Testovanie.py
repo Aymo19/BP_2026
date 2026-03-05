@@ -67,11 +67,10 @@ class BER_Testovanie(gr.top_block, Qt.QWidget):
         self.samp_rate = samp_rate = 10000000
         self.SNR_min = SNR_min = 0
         self.SNR_max = SNR_max = 20
-        self.Num_samp = Num_samp = 500
+        self.Num_samp = Num_samp = 1000000
         self.N = N = 256
-        self.Modulacia = Modulacia = digital.constellation_8psk().base()
-        self.Modulacia.set_npwr(1.0)
-        self.M = M = 8
+        self.BPSK = BPSK = digital.constellation_bpsk().base()
+        self.BPSK.set_npwr(1.0)
 
         ##################################################
         # Blocks
@@ -87,7 +86,7 @@ class BER_Testovanie(gr.top_block, Qt.QWidget):
             2, # Number of inputs
             None # parent
         )
-        self.qtgui_vector_sink_f_0_0.set_update_time(0.10)
+        self.qtgui_vector_sink_f_0_0.set_update_time(0.1)
         self.qtgui_vector_sink_f_0_0.set_y_axis((-6), 1)
         self.qtgui_vector_sink_f_0_0.enable_autoscale(False)
         self.qtgui_vector_sink_f_0_0.enable_grid(True)
@@ -96,9 +95,9 @@ class BER_Testovanie(gr.top_block, Qt.QWidget):
         self.qtgui_vector_sink_f_0_0.set_ref_level(0)
 
 
-        labels = ["BER", "SER", '8PSK', "16QAM", '',
+        labels = ["BPSK", "QPSK", "8PSK", "16QAM", '',
             '', '', '', '', '']
-        widths = [2, 2, 4, 4, 1,
+        widths = [2, 2, 2, 2, 1,
             1, 1, 1, 1, 1]
         colors = ["blue", "red", "green", "black", "cyan",
             "magenta", "yellow", "dark red", "dark green", "dark blue"]
@@ -120,40 +119,37 @@ class BER_Testovanie(gr.top_block, Qt.QWidget):
             self.top_grid_layout.setRowStretch(r, 1)
         for c in range(0, 1):
             self.top_grid_layout.setColumnStretch(c, 1)
-        self.digital_constellation_encoder_bc_0 = digital.constellation_encoder_bc(Modulacia)
-        self.digital_constellation_decoder_cb_0 = digital.constellation_decoder_cb(Modulacia)
+        self.digital_constellation_encoder_bc_0 = digital.constellation_encoder_bc(BPSK)
+        self.digital_constellation_decoder_cb_0 = digital.constellation_decoder_cb(BPSK)
         self.blocks_unpack_k_bits_bb_0 = blocks.unpack_k_bits_bb(1)
         self.blocks_throttle2_0 = blocks.throttle( gr.sizeof_gr_complex*1, samp_rate, True, 0 if "auto" == "auto" else max( int(float(0.1) * samp_rate) if "auto" == "time" else int(0.1), 1) )
-        self.blocks_stream_to_vector_0_1 = blocks.stream_to_vector(gr.sizeof_float*1, N)
+        self.blocks_stream_to_vector_0_1_0 = blocks.stream_to_vector(gr.sizeof_float*1, N)
         self.blocks_stream_to_vector_0 = blocks.stream_to_vector(gr.sizeof_float*1, N)
-        self.blocks_nlog10_ff_0_1 = blocks.nlog10_ff(1, 1, 0)
+        self.blocks_nlog10_ff_0_1_0 = blocks.nlog10_ff(1, 1, 0)
         self.blocks_nlog10_ff_0 = blocks.nlog10_ff(1, 1, 0)
         self.blocks_add_xx_0 = blocks.add_vcc(1)
         self.analog_random_source_x_0 = blocks.vector_source_b(list(map(int, numpy.random.randint(0, 2, Num_samp))), True)
-        self.ErTools_SER_0 = ErTools.SER(N)
+        self.ErTools_Teoreticka_BER_0 = ErTools.Teoreticka_BER(N, 2, 0, 20)
         self.ErTools_BER_0 = ErTools.BER(N)
-        self.ErTools_AWGN_0 = ErTools.AWGN(N, M, 0, 20)
+        self.ErTools_AWGN_0 = ErTools.AWGN(N, 2, 0, 20)
 
 
         ##################################################
         # Connections
         ##################################################
         self.connect((self.ErTools_AWGN_0, 1), (self.ErTools_BER_0, 0))
-        self.connect((self.ErTools_AWGN_0, 1), (self.ErTools_SER_0, 0))
         self.connect((self.ErTools_AWGN_0, 0), (self.blocks_add_xx_0, 1))
         self.connect((self.ErTools_BER_0, 0), (self.blocks_nlog10_ff_0, 0))
-        self.connect((self.ErTools_SER_0, 0), (self.blocks_nlog10_ff_0_1, 0))
+        self.connect((self.ErTools_Teoreticka_BER_0, 0), (self.blocks_nlog10_ff_0_1_0, 0))
         self.connect((self.analog_random_source_x_0, 0), (self.ErTools_BER_0, 1))
-        self.connect((self.analog_random_source_x_0, 0), (self.ErTools_SER_0, 1))
         self.connect((self.analog_random_source_x_0, 0), (self.digital_constellation_encoder_bc_0, 0))
         self.connect((self.blocks_add_xx_0, 0), (self.digital_constellation_decoder_cb_0, 0))
         self.connect((self.blocks_nlog10_ff_0, 0), (self.blocks_stream_to_vector_0, 0))
-        self.connect((self.blocks_nlog10_ff_0_1, 0), (self.blocks_stream_to_vector_0_1, 0))
+        self.connect((self.blocks_nlog10_ff_0_1_0, 0), (self.blocks_stream_to_vector_0_1_0, 0))
         self.connect((self.blocks_stream_to_vector_0, 0), (self.qtgui_vector_sink_f_0_0, 0))
-        self.connect((self.blocks_stream_to_vector_0_1, 0), (self.qtgui_vector_sink_f_0_0, 1))
+        self.connect((self.blocks_stream_to_vector_0_1_0, 0), (self.qtgui_vector_sink_f_0_0, 1))
         self.connect((self.blocks_throttle2_0, 0), (self.blocks_add_xx_0, 0))
         self.connect((self.blocks_unpack_k_bits_bb_0, 0), (self.ErTools_BER_0, 2))
-        self.connect((self.digital_constellation_decoder_cb_0, 0), (self.ErTools_SER_0, 2))
         self.connect((self.digital_constellation_decoder_cb_0, 0), (self.blocks_unpack_k_bits_bb_0, 0))
         self.connect((self.digital_constellation_encoder_bc_0, 0), (self.ErTools_AWGN_0, 0))
         self.connect((self.digital_constellation_encoder_bc_0, 0), (self.blocks_throttle2_0, 0))
@@ -198,19 +194,13 @@ class BER_Testovanie(gr.top_block, Qt.QWidget):
     def set_N(self, N):
         self.N = N
 
-    def get_Modulacia(self):
-        return self.Modulacia
+    def get_BPSK(self):
+        return self.BPSK
 
-    def set_Modulacia(self, Modulacia):
-        self.Modulacia = Modulacia
-        self.digital_constellation_decoder_cb_0.set_constellation(self.Modulacia)
-        self.digital_constellation_encoder_bc_0.set_constellation(self.Modulacia)
-
-    def get_M(self):
-        return self.M
-
-    def set_M(self, M):
-        self.M = M
+    def set_BPSK(self, BPSK):
+        self.BPSK = BPSK
+        self.digital_constellation_decoder_cb_0.set_constellation(self.BPSK)
+        self.digital_constellation_encoder_bc_0.set_constellation(self.BPSK)
 
 
 

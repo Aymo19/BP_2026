@@ -10,6 +10,8 @@
     <innerclass refid="classgr_1_1ErTools_1_1BER__impl" prot="public">gr::ErTools::BER_impl</innerclass>
     <innerclass refid="classgr_1_1ErTools_1_1SER" prot="public">gr::ErTools::SER</innerclass>
     <innerclass refid="classgr_1_1ErTools_1_1SER__impl" prot="public">gr::ErTools::SER_impl</innerclass>
+    <innerclass refid="classgr_1_1ErTools_1_1Teoreticka__BER" prot="public">gr::ErTools::Teoreticka_BER</innerclass>
+    <innerclass refid="classgr_1_1ErTools_1_1Teoreticka__BER__impl" prot="public">gr::ErTools::Teoreticka_BER_impl</innerclass>
     <briefdescription>
     </briefdescription>
     <detaileddescription>

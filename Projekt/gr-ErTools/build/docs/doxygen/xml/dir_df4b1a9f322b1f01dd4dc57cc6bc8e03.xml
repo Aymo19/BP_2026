@@ -7,6 +7,7 @@
     <innerfile refid="AWGN__kanal_8h">AWGN_kanal.h</innerfile>
     <innerfile refid="BER_8h">BER.h</innerfile>
     <innerfile refid="SER_8h">SER.h</innerfile>
+    <innerfile refid="Teoreticka__BER_8h">Teoreticka_BER.h</innerfile>
     <briefdescription>
     </briefdescription>
     <detaileddescription>

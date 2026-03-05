@@ -309,6 +309,30 @@ SER_python.cc.s:
 	cd /home/aymo/BC/Projekt/gr-ErTools/build && $(MAKE) $(MAKESILENT) -f python/ErTools/bindings/CMakeFiles/ErTools_python.dir/build.make python/ErTools/bindings/CMakeFiles/ErTools_python.dir/SER_python.cc.s
 .PHONY : SER_python.cc.s
 
+Teoreticka_BER_python.o: Teoreticka_BER_python.cc.o
+.PHONY : Teoreticka_BER_python.o
+
+# target to build an object file
+Teoreticka_BER_python.cc.o:
+	cd /home/aymo/BC/Projekt/gr-ErTools/build && $(MAKE) $(MAKESILENT) -f python/ErTools/bindings/CMakeFiles/ErTools_python.dir/build.make python/ErTools/bindings/CMakeFiles/ErTools_python.dir/Teoreticka_BER_python.cc.o
+.PHONY : Teoreticka_BER_python.cc.o
+
+Teoreticka_BER_python.i: Teoreticka_BER_python.cc.i
+.PHONY : Teoreticka_BER_python.i
+
+# target to preprocess a source file
+Teoreticka_BER_python.cc.i:
+	cd /home/aymo/BC/Projekt/gr-ErTools/build && $(MAKE) $(MAKESILENT) -f python/ErTools/bindings/CMakeFiles/ErTools_python.dir/build.make python/ErTools/bindings/CMakeFiles/ErTools_python.dir/Teoreticka_BER_python.cc.i
+.PHONY : Teoreticka_BER_python.cc.i
+
+Teoreticka_BER_python.s: Teoreticka_BER_python.cc.s
+.PHONY : Teoreticka_BER_python.s
+
+# target to generate assembly for a file
+Teoreticka_BER_python.cc.s:
+	cd /home/aymo/BC/Projekt/gr-ErTools/build && $(MAKE) $(MAKESILENT) -f python/ErTools/bindings/CMakeFiles/ErTools_python.dir/build.make python/ErTools/bindings/CMakeFiles/ErTools_python.dir/Teoreticka_BER_python.cc.s
+.PHONY : Teoreticka_BER_python.cc.s
+
 python_bindings.o: python_bindings.cc.o
 .PHONY : python_bindings.o
 
@@ -361,6 +385,9 @@ help:
 	@echo "... SER_python.o"
 	@echo "... SER_python.i"
 	@echo "... SER_python.s"
+	@echo "... Teoreticka_BER_python.o"
+	@echo "... Teoreticka_BER_python.i"
+	@echo "... Teoreticka_BER_python.s"
 	@echo "... python_bindings.o"
 	@echo "... python_bindings.i"
 	@echo "... python_bindings.s"

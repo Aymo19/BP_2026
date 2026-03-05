@@ -281,6 +281,30 @@ SER_impl.cc.s:
 	cd /home/aymo/BC/Projekt/gr-ErTools/build && $(MAKE) $(MAKESILENT) -f lib/CMakeFiles/gnuradio-ErTools.dir/build.make lib/CMakeFiles/gnuradio-ErTools.dir/SER_impl.cc.s
 .PHONY : SER_impl.cc.s
 
+Teoreticka_BER_impl.o: Teoreticka_BER_impl.cc.o
+.PHONY : Teoreticka_BER_impl.o
+
+# target to build an object file
+Teoreticka_BER_impl.cc.o:
+	cd /home/aymo/BC/Projekt/gr-ErTools/build && $(MAKE) $(MAKESILENT) -f lib/CMakeFiles/gnuradio-ErTools.dir/build.make lib/CMakeFiles/gnuradio-ErTools.dir/Teoreticka_BER_impl.cc.o
+.PHONY : Teoreticka_BER_impl.cc.o
+
+Teoreticka_BER_impl.i: Teoreticka_BER_impl.cc.i
+.PHONY : Teoreticka_BER_impl.i
+
+# target to preprocess a source file
+Teoreticka_BER_impl.cc.i:
+	cd /home/aymo/BC/Projekt/gr-ErTools/build && $(MAKE) $(MAKESILENT) -f lib/CMakeFiles/gnuradio-ErTools.dir/build.make lib/CMakeFiles/gnuradio-ErTools.dir/Teoreticka_BER_impl.cc.i
+.PHONY : Teoreticka_BER_impl.cc.i
+
+Teoreticka_BER_impl.s: Teoreticka_BER_impl.cc.s
+.PHONY : Teoreticka_BER_impl.s
+
+# target to generate assembly for a file
+Teoreticka_BER_impl.cc.s:
+	cd /home/aymo/BC/Projekt/gr-ErTools/build && $(MAKE) $(MAKESILENT) -f lib/CMakeFiles/gnuradio-ErTools.dir/build.make lib/CMakeFiles/gnuradio-ErTools.dir/Teoreticka_BER_impl.cc.s
+.PHONY : Teoreticka_BER_impl.cc.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -307,6 +331,9 @@ help:
 	@echo "... SER_impl.o"
 	@echo "... SER_impl.i"
 	@echo "... SER_impl.s"
+	@echo "... Teoreticka_BER_impl.o"
+	@echo "... Teoreticka_BER_impl.i"
+	@echo "... Teoreticka_BER_impl.s"
 .PHONY : help
 
 
