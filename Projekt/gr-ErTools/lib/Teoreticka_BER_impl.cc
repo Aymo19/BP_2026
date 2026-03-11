@@ -24,10 +24,10 @@ Teoreticka_BER::sptr Teoreticka_BER::make(int N, int M, int EbN0min, int EbN0max
 // Our virtual destructor.
 Teoreticka_BER_impl::~Teoreticka_BER_impl() {}
 
-double QFunkcia(double bod) {
+double ErrFunkcia(double bod) {
   double BER_lin;
 
-  BER_lin = 0.5 * std::erfc(bod); // / std::sqrt(2));
+  BER_lin = std::erfc(bod);
 
   return BER_lin;
 }
@@ -38,7 +38,41 @@ double BPSK(double EbN0) {
   EbN0 = pow(10.0, EbN0/10.0);
   
   argument = std::sqrt(EbN0);  
-  Pb = QFunkcia(argument);
+  Pb = 0.5 * ErrFunkcia(argument);
+
+  return Pb;
+}
+
+double QPSK(double EbN0) {
+  double argument, Pb;
+
+  EbN0 = pow(10.0, EbN0/10.0);
+  
+  argument = std::sqrt(EbN0);  
+  Pb = 0.5 * ErrFunkcia(argument);
+
+  return Pb;
+}
+
+double MPSK(double EbN0, int M, int k) {
+  double argument, Pb;
+
+  EbN0 = pow(10.0, (EbN0 + 10*std::log10(k))/10.0);
+  
+  argument = std::sin(M_PI / M) * std::sqrt(2*EbN0);
+  
+  Pb = ErrFunkcia(argument / std::sqrt(2)) / k;
+  //printf("%lf %lf\n", argument, Pb);
+  return Pb;
+}
+
+double MQAM(double EbN0, int k) {
+  double argument, Pb;
+
+  EbN0 = pow(10.0, EbN0/10.0);
+  
+  argument = std::sqrt(EbN0);  
+  Pb = ErrFunkcia(argument);
 
   return Pb;
 }
@@ -54,11 +88,14 @@ Teoreticka_BER_impl::Teoreticka_BER_impl(int N, int M, int EbN0min, int EbN0max)
   _EbN0min = EbN0min;
   _EbN0max = EbN0max;
 
-  _bodyBER = std::vector<double>(N, 1.0);
+  _bodyBPSK = std::vector<double>(N, 1.0);
+  _bodyQPSK = std::vector<double>(N, 1.0);
+  _bodyMPSK = std::vector<double>(N, 1.0);
+  _bodyMQAM = std::vector<double>(N, 1.0);
+  
   koniec = 0;
   j = 0;
   EDB = std::vector<double>(N, 0);
-
 
   // Linearne rozlozenie EbN0db bodov
   rozpatieT = double((_EbN0max - _EbN0min)) / double((_N-1));
@@ -71,12 +108,13 @@ Teoreticka_BER_impl::Teoreticka_BER_impl(int N, int M, int EbN0min, int EbN0max)
 
   }
 
-  double k = std::log2(_M);
+  int k = std::log2(_M);
 
-  if(k == 1) {
-    for(int y = 0; y < _N; y++) {
-      _bodyBER.at(y) = BPSK(EDB[y]);  
-    }
+  for(int y = 0; y < _N; y++) {
+    _bodyBPSK.at(y) = BPSK(EDB[y]);
+    _bodyQPSK.at(y) = QPSK(EDB[y]);
+    _bodyMPSK.at(y) = MPSK(EDB[y], _M, k);
+    _bodyMQAM.at(y) = MQAM(EDB[y], k);
   }
 
 }
@@ -88,7 +126,15 @@ int Teoreticka_BER_impl::work(int noutput_items,
     auto out = static_cast<output_type*>(output_items[0]);
     
     for(int b = 0; b < noutput_items; b++) {
-        out[b] = _bodyBER.at(j);
+        
+        if(_M == 2) {
+          out[b] = _bodyBPSK.at(j);
+        }else if(_M == 4) {
+          out[b] = _bodyQPSK.at(j);
+        }else {
+          out[b] = _bodyMPSK.at(j);
+        }
+
         if(j < _N-1) {
           j += 1;
         }else {

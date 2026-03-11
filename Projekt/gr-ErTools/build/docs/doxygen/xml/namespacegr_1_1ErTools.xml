@@ -8,6 +8,8 @@
     <innerclass refid="classgr_1_1ErTools_1_1AWGN__kanal__impl" prot="public">gr::ErTools::AWGN_kanal_impl</innerclass>
     <innerclass refid="classgr_1_1ErTools_1_1BER" prot="public">gr::ErTools::BER</innerclass>
     <innerclass refid="classgr_1_1ErTools_1_1BER__impl" prot="public">gr::ErTools::BER_impl</innerclass>
+    <innerclass refid="classgr_1_1ErTools_1_1Master__Hodiny" prot="public">gr::ErTools::Master_Hodiny</innerclass>
+    <innerclass refid="classgr_1_1ErTools_1_1Master__Hodiny__impl" prot="public">gr::ErTools::Master_Hodiny_impl</innerclass>
     <innerclass refid="classgr_1_1ErTools_1_1SER" prot="public">gr::ErTools::SER</innerclass>
     <innerclass refid="classgr_1_1ErTools_1_1SER__impl" prot="public">gr::ErTools::SER_impl</innerclass>
     <innerclass refid="classgr_1_1ErTools_1_1Teoreticka__BER" prot="public">gr::ErTools::Teoreticka_BER</innerclass>

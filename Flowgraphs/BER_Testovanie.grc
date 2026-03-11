@@ -45,7 +45,7 @@ blocks:
     rot_sym: '4'
     soft_dec_lut: None
     sym_map: '[0, 1, 3, 2]'
-    type: bpsk
+    type: 8psk
   states:
     bus_sink: false
     bus_source: false
@@ -64,7 +64,7 @@ blocks:
     bus_structure: null
     coordinate: [472, 96.0]
     rotation: 0
-    state: disabled
+    state: enabled
 - name: N
   id: variable
   parameters:
@@ -185,12 +185,42 @@ blocks:
     coordinate: [376, 16.0]
     rotation: 0
     state: enabled
+- name: variable_qtgui_chooser_0
+  id: variable_qtgui_chooser
+  parameters:
+    comment: ''
+    gui_hint: ''
+    label: ''
+    label0: ''
+    label1: ''
+    label2: ''
+    label3: ''
+    label4: ''
+    labels: '[]'
+    num_opts: '3'
+    option0: '0'
+    option1: '1'
+    option2: '2'
+    option3: '3'
+    option4: '4'
+    options: '[0, 1, 2]'
+    orient: Qt.QVBoxLayout
+    type: int
+    value: '0'
+    widget: combo_box
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [1184, 632.0]
+    rotation: 0
+    state: enabled
 - name: ErTools_AWGN_0
   id: ErTools_AWGN
   parameters:
     EbN0max: '20'
     EbN0min: '0'
-    M: '2'
+    M: M
     N: N
     affinity: ''
     alias: ''
@@ -357,16 +387,92 @@ blocks:
     bus_sink: false
     bus_source: false
     bus_structure: null
-    coordinate: [1400, 312.0]
+    coordinate: [1392, 312.0]
     rotation: 0
     state: enabled
+- name: ErTools_Teoreticka_BER_0_0
+  id: ErTools_Teoreticka_BER
+  parameters:
+    EbN0max: '20'
+    EbN0min: '0'
+    M: '4'
+    N: N
+    affinity: ''
+    alias: ''
+    comment: ''
+    maxoutbuf: '0'
+    minoutbuf: '0'
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [1408, 416.0]
+    rotation: 0
+    state: enabled
+- name: ErTools_Teoreticka_BER_0_1
+  id: ErTools_Teoreticka_BER
+  parameters:
+    EbN0max: '20'
+    EbN0min: '0'
+    M: '8'
+    N: N
+    affinity: ''
+    alias: ''
+    comment: ''
+    maxoutbuf: '0'
+    minoutbuf: '0'
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [1416, 528.0]
+    rotation: 0
+    state: enabled
+- name: ErTools_Teoreticka_BER_0_2
+  id: ErTools_Teoreticka_BER
+  parameters:
+    EbN0max: '20'
+    EbN0min: '0'
+    M: '16'
+    N: N
+    affinity: ''
+    alias: ''
+    comment: ''
+    maxoutbuf: '0'
+    minoutbuf: '0'
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [1432, 640.0]
+    rotation: 0
+    state: enabled
+- name: ErTools_Teoreticka_BER_0_2_0
+  id: ErTools_Teoreticka_BER
+  parameters:
+    EbN0max: '20'
+    EbN0min: '0'
+    M: '16'
+    N: N
+    affinity: ''
+    alias: ''
+    comment: ''
+    maxoutbuf: '0'
+    minoutbuf: '0'
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [1432, 752.0]
+    rotation: 0
+    state: disabled
 - name: analog_random_source_x_0
   id: analog_random_source_x
   parameters:
     affinity: ''
     alias: ''
     comment: ''
-    max: '2'
+    max: M
     maxoutbuf: '0'
     min: '0'
     minoutbuf: '0'
@@ -524,6 +630,78 @@ blocks:
     coordinate: [1584, 336.0]
     rotation: 0
     state: enabled
+- name: blocks_nlog10_ff_0_1_0_0
+  id: blocks_nlog10_ff
+  parameters:
+    affinity: ''
+    alias: ''
+    comment: ''
+    k: '0'
+    maxoutbuf: '0'
+    minoutbuf: '0'
+    n: '1'
+    vlen: '1'
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [1600, 440.0]
+    rotation: 0
+    state: enabled
+- name: blocks_nlog10_ff_0_1_0_1
+  id: blocks_nlog10_ff
+  parameters:
+    affinity: ''
+    alias: ''
+    comment: ''
+    k: '0'
+    maxoutbuf: '0'
+    minoutbuf: '0'
+    n: '1'
+    vlen: '1'
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [1608, 552.0]
+    rotation: 0
+    state: enabled
+- name: blocks_nlog10_ff_0_1_0_2
+  id: blocks_nlog10_ff
+  parameters:
+    affinity: ''
+    alias: ''
+    comment: ''
+    k: '0'
+    maxoutbuf: '0'
+    minoutbuf: '0'
+    n: '1'
+    vlen: '1'
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [1624, 664.0]
+    rotation: 0
+    state: enabled
+- name: blocks_nlog10_ff_0_1_0_2_0
+  id: blocks_nlog10_ff
+  parameters:
+    affinity: ''
+    alias: ''
+    comment: ''
+    k: '0'
+    maxoutbuf: '0'
+    minoutbuf: '0'
+    n: '1'
+    vlen: '1'
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [1624, 776.0]
+    rotation: 0
+    state: disabled
 - name: blocks_nlog10_ff_0_2
   id: blocks_nlog10_ff
   parameters:
@@ -629,9 +807,81 @@ blocks:
     bus_sink: false
     bus_source: false
     bus_structure: null
-    coordinate: [1688, 320.0]
+    coordinate: [1720, 304.0]
     rotation: 0
     state: enabled
+- name: blocks_stream_to_vector_0_1_0_0
+  id: blocks_stream_to_vector
+  parameters:
+    affinity: ''
+    alias: ''
+    comment: ''
+    maxoutbuf: '0'
+    minoutbuf: '0'
+    num_items: N
+    type: float
+    vlen: '1'
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [1736, 408.0]
+    rotation: 0
+    state: enabled
+- name: blocks_stream_to_vector_0_1_0_1
+  id: blocks_stream_to_vector
+  parameters:
+    affinity: ''
+    alias: ''
+    comment: ''
+    maxoutbuf: '0'
+    minoutbuf: '0'
+    num_items: N
+    type: float
+    vlen: '1'
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [1744, 520.0]
+    rotation: 0
+    state: enabled
+- name: blocks_stream_to_vector_0_1_0_2
+  id: blocks_stream_to_vector
+  parameters:
+    affinity: ''
+    alias: ''
+    comment: ''
+    maxoutbuf: '0'
+    minoutbuf: '0'
+    num_items: N
+    type: float
+    vlen: '1'
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [1760, 632.0]
+    rotation: 0
+    state: enabled
+- name: blocks_stream_to_vector_0_1_0_2_0
+  id: blocks_stream_to_vector
+  parameters:
+    affinity: ''
+    alias: ''
+    comment: ''
+    maxoutbuf: '0'
+    minoutbuf: '0'
+    num_items: N
+    type: float
+    vlen: '1'
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [1760, 744.0]
+    rotation: 0
+    state: disabled
 - name: blocks_stream_to_vector_0_2
   id: blocks_stream_to_vector
   parameters:
@@ -752,22 +1002,6 @@ blocks:
     coordinate: [440, 1064.0]
     rotation: 0
     state: disabled
-- name: blocks_unpack_k_bits_bb_0
-  id: blocks_unpack_k_bits_bb
-  parameters:
-    affinity: ''
-    alias: ''
-    comment: ''
-    k: '1'
-    maxoutbuf: '0'
-    minoutbuf: '0'
-  states:
-    bus_sink: false
-    bus_source: false
-    bus_structure: null
-    coordinate: [1256, 136.0]
-    rotation: 0
-    state: enabled
 - name: blocks_unpack_k_bits_bb_0_0
   id: blocks_unpack_k_bits_bb
   parameters:
@@ -829,7 +1063,7 @@ blocks:
     bus_sink: false
     bus_source: false
     bus_structure: null
-    coordinate: [736, 256.0]
+    coordinate: [752, 240.0]
     rotation: 0
     state: enabled
 - name: digital_constellation_decoder_cb_0_0
@@ -944,6 +1178,98 @@ blocks:
     coordinate: [184, 1144.0]
     rotation: 0
     state: disabled
+- name: qtgui_const_sink_x_0
+  id: qtgui_const_sink_x
+  parameters:
+    affinity: ''
+    alias: ''
+    alpha1: '1.0'
+    alpha10: '1.0'
+    alpha2: '1.0'
+    alpha3: '1.0'
+    alpha4: '1.0'
+    alpha5: '1.0'
+    alpha6: '1.0'
+    alpha7: '1.0'
+    alpha8: '1.0'
+    alpha9: '1.0'
+    autoscale: 'False'
+    axislabels: 'True'
+    color1: '"blue"'
+    color10: '"dark blue"'
+    color2: '"red"'
+    color3: '"green"'
+    color4: '"black"'
+    color5: '"cyan"'
+    color6: '"magenta"'
+    color7: '"yellow"'
+    color8: '"dark red"'
+    color9: '"dark green"'
+    comment: ''
+    grid: 'True'
+    gui_hint: ''
+    label1: ''
+    label10: ''
+    label2: ''
+    label3: ''
+    label4: ''
+    label5: ''
+    label6: ''
+    label7: ''
+    label8: ''
+    label9: ''
+    legend: 'True'
+    marker1: '0'
+    marker10: '0'
+    marker2: '0'
+    marker3: '0'
+    marker4: '0'
+    marker5: '0'
+    marker6: '0'
+    marker7: '0'
+    marker8: '0'
+    marker9: '0'
+    name: '""'
+    nconnections: '1'
+    size: '1024'
+    style1: '0'
+    style10: '0'
+    style2: '0'
+    style3: '0'
+    style4: '0'
+    style5: '0'
+    style6: '0'
+    style7: '0'
+    style8: '0'
+    style9: '0'
+    tr_chan: '0'
+    tr_level: '0.0'
+    tr_mode: qtgui.TRIG_MODE_FREE
+    tr_slope: qtgui.TRIG_SLOPE_POS
+    tr_tag: '""'
+    type: complex
+    update_time: '0.10'
+    width1: '1'
+    width10: '1'
+    width2: '1'
+    width3: '1'
+    width4: '1'
+    width5: '1'
+    width6: '1'
+    width7: '1'
+    width8: '1'
+    width9: '1'
+    xmax: '2'
+    xmin: '-2'
+    ymax: '2'
+    ymin: '-2'
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [728, 384.0]
+    rotation: 0
+    state: enabled
 - name: qtgui_vector_sink_f_0_0
   id: qtgui_vector_sink_f
   parameters:
@@ -961,12 +1287,12 @@ blocks:
     alpha9: '1.0'
     autoscale: 'False'
     average: '1.0'
-    color1: '"blue"'
+    color1: '"magenta"'
     color10: '"dark blue"'
     color2: '"red"'
-    color3: '"green"'
-    color4: '"black"'
-    color5: '"cyan"'
+    color3: '"blue"'
+    color4: '"green"'
+    color5: '"black"'
     color6: '"magenta"'
     color7: '"yellow"'
     color8: '"dark red"'
@@ -977,9 +1303,9 @@ blocks:
     label1: '"Realna BPSK"'
     label10: ''
     label2: '"Teoreticka BPSK"'
-    label3: '"8PSK"'
-    label4: '"16QAM"'
-    label5: ''
+    label3: '"Teoreticka QPSK"'
+    label4: '"Teoreticka 8PSK"'
+    label5: '"Teoreticka 16PSK"'
     label6: ''
     label7: ''
     label8: ''
@@ -988,7 +1314,7 @@ blocks:
     maxoutbuf: '0'
     minoutbuf: '0'
     name: '"BER"'
-    nconnections: '2'
+    nconnections: '5'
     ref_level: '0'
     showports: 'False'
     update_time: '0.1'
@@ -998,7 +1324,7 @@ blocks:
     width2: '2'
     width3: '2'
     width4: '2'
-    width5: '1'
+    width5: '2'
     width6: '1'
     width7: '1'
     width8: '1'
@@ -1018,80 +1344,6 @@ blocks:
     coordinate: [1848, 116.0]
     rotation: 0
     state: enabled
-- name: qtgui_vector_sink_f_0_0_0
-  id: qtgui_vector_sink_f
-  parameters:
-    affinity: ''
-    alias: ''
-    alpha1: '1'
-    alpha10: '1.0'
-    alpha2: '1.0'
-    alpha3: '1.0'
-    alpha4: '1.0'
-    alpha5: '1.0'
-    alpha6: '1.0'
-    alpha7: '1.0'
-    alpha8: '1.0'
-    alpha9: '1.0'
-    autoscale: 'False'
-    average: '1.0'
-    color1: '"blue"'
-    color10: '"dark blue"'
-    color2: '"red"'
-    color3: '"green"'
-    color4: '"black"'
-    color5: '"cyan"'
-    color6: '"magenta"'
-    color7: '"yellow"'
-    color8: '"dark red"'
-    color9: '"dark green"'
-    comment: ''
-    grid: 'True'
-    gui_hint: 2,0,1,1
-    label1: '"BPSK"'
-    label10: ''
-    label2: '"QPSK"'
-    label3: '"8PSK"'
-    label4: '"16QAM"'
-    label5: ''
-    label6: ''
-    label7: ''
-    label8: ''
-    label9: ''
-    legend: 'True'
-    maxoutbuf: '0'
-    minoutbuf: '0'
-    name: '"BER"'
-    nconnections: '1'
-    ref_level: '0'
-    showports: 'False'
-    update_time: '0.1'
-    vlen: N
-    width1: '2'
-    width10: '1'
-    width2: '2'
-    width3: '2'
-    width4: '2'
-    width5: '1'
-    width6: '1'
-    width7: '1'
-    width8: '1'
-    width9: '1'
-    x_axis_label: '"Eb/N0 [dB]"'
-    x_start: '0'
-    x_step: '0.078125'
-    x_units: '"dB"'
-    y_axis_label: '"log Pe"'
-    y_units: '""'
-    ymax: '1'
-    ymin: '-6'
-  states:
-    bus_sink: false
-    bus_source: false
-    bus_structure: null
-    coordinate: [1856, 308.0]
-    rotation: 0
-    state: disabled
 - name: virtual_sink_0
   id: virtual_sink
   parameters:
@@ -1102,7 +1354,7 @@ blocks:
     bus_sink: false
     bus_source: false
     bus_structure: null
-    coordinate: [960, 240.0]
+    coordinate: [992, 240.0]
     rotation: 0
     state: enabled
 - name: virtual_sink_0_0
@@ -1219,7 +1471,7 @@ blocks:
     bus_sink: false
     bus_source: false
     bus_structure: null
-    coordinate: [1112, 168.0]
+    coordinate: [1112, 152.0]
     rotation: 0
     state: enabled
 - name: virtual_source_0_0_0
@@ -1349,7 +1601,7 @@ blocks:
     bus_sink: false
     bus_source: false
     bus_structure: null
-    coordinate: [1096, 96.0]
+    coordinate: [1120, 96.0]
     rotation: 0
     state: enabled
 - name: virtual_source_0_0_3
@@ -1433,6 +1685,10 @@ connections:
 - [ErTools_BER_0_2, '0', blocks_nlog10_ff_0_3, '0']
 - [ErTools_SER_0, '0', blocks_nlog10_ff_0_1, '0']
 - [ErTools_Teoreticka_BER_0, '0', blocks_nlog10_ff_0_1_0, '0']
+- [ErTools_Teoreticka_BER_0_0, '0', blocks_nlog10_ff_0_1_0_0, '0']
+- [ErTools_Teoreticka_BER_0_1, '0', blocks_nlog10_ff_0_1_0_1, '0']
+- [ErTools_Teoreticka_BER_0_2, '0', blocks_nlog10_ff_0_1_0_2, '0']
+- [ErTools_Teoreticka_BER_0_2_0, '0', blocks_nlog10_ff_0_1_0_2_0, '0']
 - [analog_random_source_x_0, '0', virtual_sink_0_0, '0']
 - [blocks_add_xx_0, '0', digital_constellation_decoder_cb_0, '0']
 - [blocks_add_xx_0_0, '0', digital_constellation_decoder_cb_0_0, '0']
@@ -1442,47 +1698,53 @@ connections:
 - [blocks_nlog10_ff_0_0, '0', blocks_stream_to_vector_0_0, '0']
 - [blocks_nlog10_ff_0_1, '0', blocks_stream_to_vector_0_1, '0']
 - [blocks_nlog10_ff_0_1_0, '0', blocks_stream_to_vector_0_1_0, '0']
+- [blocks_nlog10_ff_0_1_0_0, '0', blocks_stream_to_vector_0_1_0_0, '0']
+- [blocks_nlog10_ff_0_1_0_1, '0', blocks_stream_to_vector_0_1_0_1, '0']
+- [blocks_nlog10_ff_0_1_0_2, '0', blocks_stream_to_vector_0_1_0_2, '0']
+- [blocks_nlog10_ff_0_1_0_2_0, '0', blocks_stream_to_vector_0_1_0_2_0, '0']
 - [blocks_nlog10_ff_0_2, '0', blocks_stream_to_vector_0_2, '0']
 - [blocks_nlog10_ff_0_3, '0', blocks_stream_to_vector_0_3, '0']
 - [blocks_stream_to_vector_0, '0', qtgui_vector_sink_f_0_0, '0']
-- [blocks_stream_to_vector_0_0, '0', qtgui_vector_sink_f_0_0, '1']
 - [blocks_stream_to_vector_0_1_0, '0', qtgui_vector_sink_f_0_0, '1']
+- [blocks_stream_to_vector_0_1_0_0, '0', qtgui_vector_sink_f_0_0, '2']
+- [blocks_stream_to_vector_0_1_0_1, '0', qtgui_vector_sink_f_0_0, '3']
+- [blocks_stream_to_vector_0_1_0_2, '0', qtgui_vector_sink_f_0_0, '4']
 - [blocks_throttle2_0, '0', blocks_add_xx_0, '0']
 - [blocks_throttle2_0_0, '0', blocks_add_xx_0_0, '0']
 - [blocks_throttle2_0_0_0, '0', blocks_add_xx_0_0_0, '0']
 - [blocks_throttle2_0_0_1, '0', blocks_add_xx_0_0_1, '0']
-- [blocks_unpack_k_bits_bb_0, '0', ErTools_BER_0, '2']
-- [blocks_unpack_k_bits_bb_0_0, '0', ErTools_BER_0_0, '2']
-- [blocks_unpack_k_bits_bb_0_1, '0', ErTools_BER_0_1, '2']
-- [blocks_unpack_k_bits_bb_0_2, '0', ErTools_BER_0_2, '2']
+- [blocks_unpack_k_bits_bb_0_0, '0', ErTools_BER_0_0, '0']
+- [blocks_unpack_k_bits_bb_0_1, '0', ErTools_BER_0_1, '0']
+- [blocks_unpack_k_bits_bb_0_2, '0', ErTools_BER_0_2, '0']
 - [digital_constellation_decoder_cb_0, '0', virtual_sink_0, '0']
 - [digital_constellation_decoder_cb_0_0, '0', virtual_sink_0_2, '0']
 - [digital_constellation_decoder_cb_0_0_0, '0', virtual_sink_0_2_0, '0']
 - [digital_constellation_decoder_cb_0_0_1, '0', virtual_sink_0_2_1, '0']
 - [digital_constellation_encoder_bc_0, '0', ErTools_AWGN_0, '0']
 - [digital_constellation_encoder_bc_0, '0', blocks_throttle2_0, '0']
+- [digital_constellation_encoder_bc_0, '0', qtgui_const_sink_x_0, '0']
 - [digital_constellation_encoder_bc_0_0, '0', ErTools_AWGN_0_0, '0']
 - [digital_constellation_encoder_bc_0_0, '0', blocks_throttle2_0_0, '0']
 - [digital_constellation_encoder_bc_0_0_0, '0', ErTools_AWGN_0_0_0, '0']
 - [digital_constellation_encoder_bc_0_0_0, '0', blocks_throttle2_0_0_0, '0']
 - [digital_constellation_encoder_bc_0_0_1, '0', ErTools_AWGN_0_0_1, '0']
 - [digital_constellation_encoder_bc_0_0_1, '0', blocks_throttle2_0_0_1, '0']
-- [virtual_source_0, '0', ErTools_SER_0, '2']
-- [virtual_source_0, '0', blocks_unpack_k_bits_bb_0, '0']
+- [virtual_source_0, '0', ErTools_BER_0, '2']
+- [virtual_source_0, '0', ErTools_SER_0, '0']
 - [virtual_source_0_0_0, '0', digital_constellation_encoder_bc_0, '0']
 - [virtual_source_0_0_0_0, '0', digital_constellation_encoder_bc_0_0, '0']
 - [virtual_source_0_0_0_0_0, '0', digital_constellation_encoder_bc_0_0_0, '0']
 - [virtual_source_0_0_0_0_1, '0', digital_constellation_encoder_bc_0_0_1, '0']
 - [virtual_source_0_0_1, '0', ErTools_BER_0, '0']
-- [virtual_source_0_0_1, '0', ErTools_SER_0, '0']
-- [virtual_source_0_0_1_0, '0', ErTools_BER_0_0, '0']
-- [virtual_source_0_0_1_1, '0', ErTools_BER_0_1, '0']
-- [virtual_source_0_0_1_2, '0', ErTools_BER_0_2, '0']
-- [virtual_source_0_0_2, '0', ErTools_BER_0_0, '1']
+- [virtual_source_0_0_1, '0', ErTools_SER_0, '1']
+- [virtual_source_0_0_1_0, '0', ErTools_BER_0_0, '1']
+- [virtual_source_0_0_1_1, '0', ErTools_BER_0_1, '1']
+- [virtual_source_0_0_1_2, '0', ErTools_BER_0_2, '1']
+- [virtual_source_0_0_2, '0', ErTools_BER_0_0, '2']
 - [virtual_source_0_0_2_0, '0', ErTools_BER_0, '1']
-- [virtual_source_0_0_2_0, '0', ErTools_SER_0, '1']
-- [virtual_source_0_0_3, '0', ErTools_BER_0_1, '1']
-- [virtual_source_0_0_4, '0', ErTools_BER_0_2, '1']
+- [virtual_source_0_0_2_0, '0', ErTools_SER_0, '2']
+- [virtual_source_0_0_3, '0', ErTools_BER_0_1, '2']
+- [virtual_source_0_0_4, '0', ErTools_BER_0_2, '2']
 - [virtual_source_0_1, '0', blocks_unpack_k_bits_bb_0_0, '0']
 - [virtual_source_0_2, '0', blocks_unpack_k_bits_bb_0_1, '0']
 - [virtual_source_0_3, '0', blocks_unpack_k_bits_bb_0_2, '0']

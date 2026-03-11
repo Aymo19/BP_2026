@@ -40,6 +40,26 @@
     <member refid="classgr_1_1ErTools_1_1BER__impl_1a6127ddac53ee3af58c361975ea4876e7" kind="function"><name>~BER_impl</name></member>
     <member refid="classgr_1_1ErTools_1_1BER__impl_1a175d43f680cf4aee664de1ac01934f57" kind="function"><name>work</name></member>
   </compound>
+  <compound refid="classgr_1_1ErTools_1_1Master__Hodiny" kind="class"><name>gr::ErTools::Master_Hodiny</name>
+    <member refid="classgr_1_1ErTools_1_1Master__Hodiny_1a79a0a177b860acdeda6e6f3f785b871b" kind="typedef"><name>sptr</name></member>
+    <member refid="classgr_1_1ErTools_1_1Master__Hodiny_1a9985ae69fc7e7ad27061d6679dd95970" kind="function"><name>make</name></member>
+    <member refid="classgr_1_1ErTools_1_1Master__Hodiny_1aa8a4dc8c366bc99b503135f9292aea13" kind="function"><name>EbN0</name></member>
+    <member refid="classgr_1_1ErTools_1_1Master__Hodiny_1a7541a8288b48e4075b7fc920b7acb0e8" kind="function"><name>set_takt</name></member>
+  </compound>
+  <compound refid="classgr_1_1ErTools_1_1Master__Hodiny__impl" kind="class"><name>gr::ErTools::Master_Hodiny_impl</name>
+    <member refid="classgr_1_1ErTools_1_1Master__Hodiny__impl_1a4d88bcd7749a3fb46da9bbd73a132e16" kind="variable"><name>c_EbN0</name></member>
+    <member refid="classgr_1_1ErTools_1_1Master__Hodiny__impl_1a2786c21b9b9782b8a57b468fe2cb5ba9" kind="variable"><name>_EbN0min</name></member>
+    <member refid="classgr_1_1ErTools_1_1Master__Hodiny__impl_1a7a3e41e8fce2262ae2bf0ebdca31e439" kind="variable"><name>_EbN0max</name></member>
+    <member refid="classgr_1_1ErTools_1_1Master__Hodiny__impl_1adb0d3c32c8b1b66dbaa7fa5fb78b2fc6" kind="variable"><name>_N</name></member>
+    <member refid="classgr_1_1ErTools_1_1Master__Hodiny__impl_1a6ffee10254b294a12c014778f1aaac02" kind="variable"><name>rozpatieC</name></member>
+    <member refid="classgr_1_1ErTools_1_1Master__Hodiny__impl_1ae501c251802908516ee6740ccf47a157" kind="variable"><name>rozpatiePostupC</name></member>
+    <member refid="classgr_1_1ErTools_1_1Master__Hodiny__impl_1a7220f955915aeaf686e508750a021725" kind="variable"><name>EDB</name></member>
+    <member refid="classgr_1_1ErTools_1_1Master__Hodiny__impl_1ab288e829926c8e5755b2ec708d0abed1" kind="function"><name>Master_Hodiny_impl</name></member>
+    <member refid="classgr_1_1ErTools_1_1Master__Hodiny__impl_1aff140b8ee3089983e4ae60709f53caa1" kind="function"><name>~Master_Hodiny_impl</name></member>
+    <member refid="classgr_1_1ErTools_1_1Master__Hodiny__impl_1ae0d480773b8d145bca9ee63cf12a5498" kind="function"><name>EbN0</name></member>
+    <member refid="classgr_1_1ErTools_1_1Master__Hodiny__impl_1a632a8028acd2abedcd5af3b1a5022a4a" kind="function"><name>set_takt</name></member>
+    <member refid="classgr_1_1ErTools_1_1Master__Hodiny__impl_1a317429a62c68c79f028215f9563dfd86" kind="function"><name>work</name></member>
+  </compound>
   <compound refid="classgr_1_1ErTools_1_1SER" kind="class"><name>gr::ErTools::SER</name>
     <member refid="classgr_1_1ErTools_1_1SER_1a8e5aefe3a8aa9ae3ac0d2fa8f46efd31" kind="typedef"><name>sptr</name></member>
     <member refid="classgr_1_1ErTools_1_1SER_1a88eb33f5873e3c8945e7b1ca0aefa64f" kind="function"><name>make</name></member>
@@ -121,6 +141,8 @@
   </compound>
   <compound refid="BER_8h" kind="file"><name>BER.h</name>
   </compound>
+  <compound refid="Master__Hodiny_8h" kind="file"><name>Master_Hodiny.h</name>
+  </compound>
   <compound refid="SER_8h" kind="file"><name>SER.h</name>
   </compound>
   <compound refid="Teoreticka__BER_8h" kind="file"><name>Teoreticka_BER.h</name>
@@ -130,6 +152,8 @@
   <compound refid="AWGN__kanal__impl_8h" kind="file"><name>AWGN_kanal_impl.h</name>
   </compound>
   <compound refid="BER__impl_8h" kind="file"><name>BER_impl.h</name>
+  </compound>
+  <compound refid="Master__Hodiny__impl_8h" kind="file"><name>Master_Hodiny_impl.h</name>
   </compound>
   <compound refid="SER__impl_8h" kind="file"><name>SER_impl.h</name>
   </compound>
@@ -152,6 +176,14 @@
     <member refid="BER__pydoc__template_8h_1a57bcc0a35fff1fa75fb2fb66f71a6e12" kind="variable"><name>__doc_gr_ErTools_BER</name></member>
     <member refid="BER__pydoc__template_8h_1ad4b76264bc1cbe5d7771c04a5e4dde70" kind="variable"><name>__doc_gr_ErTools_BER_BER</name></member>
     <member refid="BER__pydoc__template_8h_1a3628019838ecd2df807ddab8e4b9f8cc" kind="variable"><name>__doc_gr_ErTools_BER_make</name></member>
+  </compound>
+  <compound refid="Master__Hodiny__pydoc__template_8h" kind="file"><name>Master_Hodiny_pydoc_template.h</name>
+    <member refid="Master__Hodiny__pydoc__template_8h_1a74021f021dcdfbb22891787b79c5529d" kind="define"><name>D</name></member>
+    <member refid="Master__Hodiny__pydoc__template_8h_1a33de15d5a699a9d621e074aa0cc73674" kind="variable"><name>__doc_gr_ErTools_Master_Hodiny</name></member>
+    <member refid="Master__Hodiny__pydoc__template_8h_1a70134ec4b0ec9a74f504e9b6cf24317f" kind="variable"><name>__doc_gr_ErTools_Master_Hodiny_Master_Hodiny</name></member>
+    <member refid="Master__Hodiny__pydoc__template_8h_1ab259828831b054635266e8a9c37f88a9" kind="variable"><name>__doc_gr_ErTools_Master_Hodiny_make</name></member>
+    <member refid="Master__Hodiny__pydoc__template_8h_1a7ab6d3adc16b7bf7de732bbfa05be2a7" kind="variable"><name>__doc_gr_ErTools_Master_Hodiny_EbN0</name></member>
+    <member refid="Master__Hodiny__pydoc__template_8h_1aa3893068d2ed99c96094c71b12673c78" kind="variable"><name>__doc_gr_ErTools_Master_Hodiny_set_takt</name></member>
   </compound>
   <compound refid="SER__pydoc__template_8h" kind="file"><name>SER_pydoc_template.h</name>
     <member refid="SER__pydoc__template_8h_1a74021f021dcdfbb22891787b79c5529d" kind="define"><name>D</name></member>

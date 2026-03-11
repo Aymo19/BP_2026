@@ -10,6 +10,9 @@ var hierarchy =
       [ "gr::ErTools::BER", "classgr_1_1ErTools_1_1BER.html", [
         [ "gr::ErTools::BER_impl", "classgr_1_1ErTools_1_1BER__impl.html", null ]
       ] ],
+      [ "gr::ErTools::Master_Hodiny", "classgr_1_1ErTools_1_1Master__Hodiny.html", [
+        [ "gr::ErTools::Master_Hodiny_impl", "classgr_1_1ErTools_1_1Master__Hodiny__impl.html", null ]
+      ] ],
       [ "gr::ErTools::SER", "classgr_1_1ErTools_1_1SER.html", [
         [ "gr::ErTools::SER_impl", "classgr_1_1ErTools_1_1SER__impl.html", null ]
       ] ],

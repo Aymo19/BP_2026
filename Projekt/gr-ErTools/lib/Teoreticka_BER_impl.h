@@ -20,7 +20,13 @@ private:
   
   int j;
   double rozpatieT, rozpatiePostupT;
-  std::vector<double> _bodyBER;
+
+  std::vector<double> _bodyBPSK; // BPSK
+  std::vector<double> _bodyQPSK; // QPSK
+  std::vector<double> _bodyMPSK; // MPSK
+
+  std::vector<double> _bodyMQAM; // M-QAM
+
   std::vector<double> EDB;
 
 public:

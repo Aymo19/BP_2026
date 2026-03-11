@@ -12,6 +12,7 @@
 
 from PyQt5 import Qt
 from gnuradio import qtgui
+from PyQt5.QtCore import QObject, pyqtSlot
 from gnuradio import ErTools
 from gnuradio import blocks
 import numpy
@@ -64,18 +65,36 @@ class BER_Testovanie(gr.top_block, Qt.QWidget):
         ##################################################
         # Variables
         ##################################################
+        self.variable_qtgui_chooser_0 = variable_qtgui_chooser_0 = 0
         self.samp_rate = samp_rate = 10000000
         self.SNR_min = SNR_min = 0
         self.SNR_max = SNR_max = 20
         self.Num_samp = Num_samp = 1000000
         self.N = N = 256
-        self.BPSK = BPSK = digital.constellation_bpsk().base()
+        self.M = M = 8
+        self.BPSK = BPSK = digital.constellation_8psk().base()
         self.BPSK.set_npwr(1.0)
 
         ##################################################
         # Blocks
         ##################################################
 
+        # Create the options list
+        self._variable_qtgui_chooser_0_options = [0, 1, 2]
+        # Create the labels list
+        self._variable_qtgui_chooser_0_labels = ['0', '1', '2']
+        # Create the combo box
+        self._variable_qtgui_chooser_0_tool_bar = Qt.QToolBar(self)
+        self._variable_qtgui_chooser_0_tool_bar.addWidget(Qt.QLabel("'variable_qtgui_chooser_0'" + ": "))
+        self._variable_qtgui_chooser_0_combo_box = Qt.QComboBox()
+        self._variable_qtgui_chooser_0_tool_bar.addWidget(self._variable_qtgui_chooser_0_combo_box)
+        for _label in self._variable_qtgui_chooser_0_labels: self._variable_qtgui_chooser_0_combo_box.addItem(_label)
+        self._variable_qtgui_chooser_0_callback = lambda i: Qt.QMetaObject.invokeMethod(self._variable_qtgui_chooser_0_combo_box, "setCurrentIndex", Qt.Q_ARG("int", self._variable_qtgui_chooser_0_options.index(i)))
+        self._variable_qtgui_chooser_0_callback(self.variable_qtgui_chooser_0)
+        self._variable_qtgui_chooser_0_combo_box.currentIndexChanged.connect(
+            lambda i: self.set_variable_qtgui_chooser_0(self._variable_qtgui_chooser_0_options[i]))
+        # Create the radio buttons
+        self.top_layout.addWidget(self._variable_qtgui_chooser_0_tool_bar)
         self.qtgui_vector_sink_f_0_0 = qtgui.vector_sink_f(
             N,
             0,
@@ -83,7 +102,7 @@ class BER_Testovanie(gr.top_block, Qt.QWidget):
             "Eb/N0 [dB]",
             "log Pe",
             "BER",
-            2, # Number of inputs
+            5, # Number of inputs
             None # parent
         )
         self.qtgui_vector_sink_f_0_0.set_update_time(0.1)
@@ -95,16 +114,16 @@ class BER_Testovanie(gr.top_block, Qt.QWidget):
         self.qtgui_vector_sink_f_0_0.set_ref_level(0)
 
 
-        labels = ["Realna BPSK", "Teoreticka BPSK", "8PSK", "16QAM", '',
+        labels = ["Realna BPSK", "Teoreticka BPSK", "Teoreticka QPSK", "Teoreticka 8PSK", "Teoreticka 16PSK",
             '', '', '', '', '']
-        widths = [2, 2, 2, 2, 1,
+        widths = [2, 2, 2, 2, 2,
             1, 1, 1, 1, 1]
-        colors = ["blue", "red", "green", "black", "cyan",
+        colors = ["magenta", "red", "blue", "green", "black",
             "magenta", "yellow", "dark red", "dark green", "dark blue"]
         alphas = [1, 1.0, 1.0, 1.0, 1.0,
             1.0, 1.0, 1.0, 1.0, 1.0]
 
-        for i in range(2):
+        for i in range(5):
             if len(labels[i]) == 0:
                 self.qtgui_vector_sink_f_0_0.set_line_label(i, "Data {0}".format(i))
             else:
@@ -119,19 +138,68 @@ class BER_Testovanie(gr.top_block, Qt.QWidget):
             self.top_grid_layout.setRowStretch(r, 1)
         for c in range(0, 1):
             self.top_grid_layout.setColumnStretch(c, 1)
+        self.qtgui_const_sink_x_0 = qtgui.const_sink_c(
+            1024, #size
+            "", #name
+            1, #number of inputs
+            None # parent
+        )
+        self.qtgui_const_sink_x_0.set_update_time(0.10)
+        self.qtgui_const_sink_x_0.set_y_axis((-2), 2)
+        self.qtgui_const_sink_x_0.set_x_axis((-2), 2)
+        self.qtgui_const_sink_x_0.set_trigger_mode(qtgui.TRIG_MODE_FREE, qtgui.TRIG_SLOPE_POS, 0.0, 0, "")
+        self.qtgui_const_sink_x_0.enable_autoscale(False)
+        self.qtgui_const_sink_x_0.enable_grid(True)
+        self.qtgui_const_sink_x_0.enable_axis_labels(True)
+
+
+        labels = ['', '', '', '', '',
+            '', '', '', '', '']
+        widths = [1, 1, 1, 1, 1,
+            1, 1, 1, 1, 1]
+        colors = ["blue", "red", "green", "black", "cyan",
+            "magenta", "yellow", "dark red", "dark green", "dark blue"]
+        styles = [0, 0, 0, 0, 0,
+            0, 0, 0, 0, 0]
+        markers = [0, 0, 0, 0, 0,
+            0, 0, 0, 0, 0]
+        alphas = [1.0, 1.0, 1.0, 1.0, 1.0,
+            1.0, 1.0, 1.0, 1.0, 1.0]
+
+        for i in range(1):
+            if len(labels[i]) == 0:
+                self.qtgui_const_sink_x_0.set_line_label(i, "Data {0}".format(i))
+            else:
+                self.qtgui_const_sink_x_0.set_line_label(i, labels[i])
+            self.qtgui_const_sink_x_0.set_line_width(i, widths[i])
+            self.qtgui_const_sink_x_0.set_line_color(i, colors[i])
+            self.qtgui_const_sink_x_0.set_line_style(i, styles[i])
+            self.qtgui_const_sink_x_0.set_line_marker(i, markers[i])
+            self.qtgui_const_sink_x_0.set_line_alpha(i, alphas[i])
+
+        self._qtgui_const_sink_x_0_win = sip.wrapinstance(self.qtgui_const_sink_x_0.qwidget(), Qt.QWidget)
+        self.top_layout.addWidget(self._qtgui_const_sink_x_0_win)
         self.digital_constellation_encoder_bc_0 = digital.constellation_encoder_bc(BPSK)
         self.digital_constellation_decoder_cb_0 = digital.constellation_decoder_cb(BPSK)
-        self.blocks_unpack_k_bits_bb_0 = blocks.unpack_k_bits_bb(1)
         self.blocks_throttle2_0 = blocks.throttle( gr.sizeof_gr_complex*1, samp_rate, True, 0 if "auto" == "auto" else max( int(float(0.1) * samp_rate) if "auto" == "time" else int(0.1), 1) )
+        self.blocks_stream_to_vector_0_1_0_2 = blocks.stream_to_vector(gr.sizeof_float*1, N)
+        self.blocks_stream_to_vector_0_1_0_1 = blocks.stream_to_vector(gr.sizeof_float*1, N)
+        self.blocks_stream_to_vector_0_1_0_0 = blocks.stream_to_vector(gr.sizeof_float*1, N)
         self.blocks_stream_to_vector_0_1_0 = blocks.stream_to_vector(gr.sizeof_float*1, N)
         self.blocks_stream_to_vector_0 = blocks.stream_to_vector(gr.sizeof_float*1, N)
+        self.blocks_nlog10_ff_0_1_0_2 = blocks.nlog10_ff(1, 1, 0)
+        self.blocks_nlog10_ff_0_1_0_1 = blocks.nlog10_ff(1, 1, 0)
+        self.blocks_nlog10_ff_0_1_0_0 = blocks.nlog10_ff(1, 1, 0)
         self.blocks_nlog10_ff_0_1_0 = blocks.nlog10_ff(1, 1, 0)
         self.blocks_nlog10_ff_0 = blocks.nlog10_ff(1, 1, 0)
         self.blocks_add_xx_0 = blocks.add_vcc(1)
-        self.analog_random_source_x_0 = blocks.vector_source_b(list(map(int, numpy.random.randint(0, 2, Num_samp))), True)
+        self.analog_random_source_x_0 = blocks.vector_source_b(list(map(int, numpy.random.randint(0, M, Num_samp))), True)
+        self.ErTools_Teoreticka_BER_0_2 = ErTools.Teoreticka_BER(N, 16, 0, 20)
+        self.ErTools_Teoreticka_BER_0_1 = ErTools.Teoreticka_BER(N, 8, 0, 20)
+        self.ErTools_Teoreticka_BER_0_0 = ErTools.Teoreticka_BER(N, 4, 0, 20)
         self.ErTools_Teoreticka_BER_0 = ErTools.Teoreticka_BER(N, 2, 0, 20)
         self.ErTools_BER_0 = ErTools.BER(N)
-        self.ErTools_AWGN_0 = ErTools.AWGN(N, 2, 0, 20)
+        self.ErTools_AWGN_0 = ErTools.AWGN(N, M, 0, 20)
 
 
         ##################################################
@@ -141,18 +209,27 @@ class BER_Testovanie(gr.top_block, Qt.QWidget):
         self.connect((self.ErTools_AWGN_0, 0), (self.blocks_add_xx_0, 1))
         self.connect((self.ErTools_BER_0, 0), (self.blocks_nlog10_ff_0, 0))
         self.connect((self.ErTools_Teoreticka_BER_0, 0), (self.blocks_nlog10_ff_0_1_0, 0))
+        self.connect((self.ErTools_Teoreticka_BER_0_0, 0), (self.blocks_nlog10_ff_0_1_0_0, 0))
+        self.connect((self.ErTools_Teoreticka_BER_0_1, 0), (self.blocks_nlog10_ff_0_1_0_1, 0))
+        self.connect((self.ErTools_Teoreticka_BER_0_2, 0), (self.blocks_nlog10_ff_0_1_0_2, 0))
         self.connect((self.analog_random_source_x_0, 0), (self.ErTools_BER_0, 1))
         self.connect((self.analog_random_source_x_0, 0), (self.digital_constellation_encoder_bc_0, 0))
         self.connect((self.blocks_add_xx_0, 0), (self.digital_constellation_decoder_cb_0, 0))
         self.connect((self.blocks_nlog10_ff_0, 0), (self.blocks_stream_to_vector_0, 0))
         self.connect((self.blocks_nlog10_ff_0_1_0, 0), (self.blocks_stream_to_vector_0_1_0, 0))
+        self.connect((self.blocks_nlog10_ff_0_1_0_0, 0), (self.blocks_stream_to_vector_0_1_0_0, 0))
+        self.connect((self.blocks_nlog10_ff_0_1_0_1, 0), (self.blocks_stream_to_vector_0_1_0_1, 0))
+        self.connect((self.blocks_nlog10_ff_0_1_0_2, 0), (self.blocks_stream_to_vector_0_1_0_2, 0))
         self.connect((self.blocks_stream_to_vector_0, 0), (self.qtgui_vector_sink_f_0_0, 0))
         self.connect((self.blocks_stream_to_vector_0_1_0, 0), (self.qtgui_vector_sink_f_0_0, 1))
+        self.connect((self.blocks_stream_to_vector_0_1_0_0, 0), (self.qtgui_vector_sink_f_0_0, 2))
+        self.connect((self.blocks_stream_to_vector_0_1_0_1, 0), (self.qtgui_vector_sink_f_0_0, 3))
+        self.connect((self.blocks_stream_to_vector_0_1_0_2, 0), (self.qtgui_vector_sink_f_0_0, 4))
         self.connect((self.blocks_throttle2_0, 0), (self.blocks_add_xx_0, 0))
-        self.connect((self.blocks_unpack_k_bits_bb_0, 0), (self.ErTools_BER_0, 2))
-        self.connect((self.digital_constellation_decoder_cb_0, 0), (self.blocks_unpack_k_bits_bb_0, 0))
+        self.connect((self.digital_constellation_decoder_cb_0, 0), (self.ErTools_BER_0, 2))
         self.connect((self.digital_constellation_encoder_bc_0, 0), (self.ErTools_AWGN_0, 0))
         self.connect((self.digital_constellation_encoder_bc_0, 0), (self.blocks_throttle2_0, 0))
+        self.connect((self.digital_constellation_encoder_bc_0, 0), (self.qtgui_const_sink_x_0, 0))
 
 
     def closeEvent(self, event):
@@ -162,6 +239,13 @@ class BER_Testovanie(gr.top_block, Qt.QWidget):
         self.wait()
 
         event.accept()
+
+    def get_variable_qtgui_chooser_0(self):
+        return self.variable_qtgui_chooser_0
+
+    def set_variable_qtgui_chooser_0(self, variable_qtgui_chooser_0):
+        self.variable_qtgui_chooser_0 = variable_qtgui_chooser_0
+        self._variable_qtgui_chooser_0_callback(self.variable_qtgui_chooser_0)
 
     def get_samp_rate(self):
         return self.samp_rate
@@ -193,6 +277,12 @@ class BER_Testovanie(gr.top_block, Qt.QWidget):
 
     def set_N(self, N):
         self.N = N
+
+    def get_M(self):
+        return self.M
+
+    def set_M(self, M):
+        self.M = M
 
     def get_BPSK(self):
         return self.BPSK

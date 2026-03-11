@@ -14,4 +14,5 @@ install(FILES api.h
     BER.h
     SER.h
     AWGN.h
-    Teoreticka_BER.h DESTINATION include/gnuradio/ErTools)
+    Teoreticka_BER.h
+    DESTINATION include/gnuradio/ErTools)

@@ -52,23 +52,24 @@ BER_impl::~BER_impl() {}
 //----------------------------------------------------LOGIKA-FUNKCIE--------------------------------------------------------||
 
 //-------------------Zisti-kolko-chyb-je-v-slove---------------------| prerobim este
-int BitCounter(unsigned char slovo, int N) {
-  int sum = 0, sign = 0;
+int BitCounter(unsigned char slovo, int n) {
+  int sum = 0;//, sign = 1;
   unsigned char b_jedna = 1;
   
   // Ci hodnota slova je zaporna
-  if(slovo < 0)
-    sign = 1;
+  /*if(slovo < 0)
+    sign = 0;*/
   
-  for(int i = 0; i < N; i++) {
-    if((slovo & b_jedna) > 0)
+  for(int i = 0; i < n; i++) {
+    if(slovo & b_jedna)
       sum++;
 
-    if(sign) { //ked plus
+    slovo >>= 1;
+    /*if(sign) { //ked plus
       slovo >>= 1;
     }else { //ked minus
       b_jedna <<= 1;
-    }
+    }*/
   }
 
   return sum;
@@ -87,7 +88,7 @@ int BER_calc(unsigned char S1, unsigned char S2) {
   XORnute = S1 ^ S2;
   
   // Ak hej, tak nie je nulova hodnota e_sum
-  e_sum = BitCounter(XORnute, 1);
+  e_sum = BitCounter(XORnute, 3);
   
   // Logaritmicky vystup
   //log_BER = logf(e_sum);
@@ -149,7 +150,7 @@ int BER_impl::work(int noutput_items,
       out[i] = _pamat_BER.at(k);
       
       // Inkrementujeme celkovy pocet bitov
-      _count.at(k) += 1;
+      _count.at(k) += 3;
     }
 
     // Tell runtime system how many output items we produced.

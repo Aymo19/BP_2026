@@ -15,7 +15,8 @@ list(APPEND ErTools_sources
     BER_impl.cc
     SER_impl.cc
     AWGN_impl.cc
-    Teoreticka_BER_impl.cc )
+    Teoreticka_BER_impl.cc
+    )
 
 set(ErTools_sources
     "${ErTools_sources}"

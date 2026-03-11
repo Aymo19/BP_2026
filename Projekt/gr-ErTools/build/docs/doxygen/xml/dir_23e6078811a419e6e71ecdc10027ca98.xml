@@ -5,6 +5,7 @@
     <innerfile refid="AWGN__kanal__pydoc__template_8h">AWGN_kanal_pydoc_template.h</innerfile>
     <innerfile refid="AWGN__pydoc__template_8h">AWGN_pydoc_template.h</innerfile>
     <innerfile refid="BER__pydoc__template_8h">BER_pydoc_template.h</innerfile>
+    <innerfile refid="Master__Hodiny__pydoc__template_8h">Master_Hodiny_pydoc_template.h</innerfile>
     <innerfile refid="SER__pydoc__template_8h">SER_pydoc_template.h</innerfile>
     <innerfile refid="Teoreticka__BER__pydoc__template_8h">Teoreticka_BER_pydoc_template.h</innerfile>
     <briefdescription>
