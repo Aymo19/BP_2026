@@ -10,6 +10,7 @@
 
 #include <gnuradio/ErTools/api.h>
 #include <gnuradio/sync_block.h>
+#include <string>
 
 namespace gr {
 namespace ErTools {
@@ -32,7 +33,7 @@ public:
      * class. ErTools::Teoreticka_BER::make is the public interface for
      * creating new instances.
      */
-    static sptr make(int N, int M, int EbN0min, int EbN0max);
+    static sptr make(int N, int M, std::string Mod, int EbN0min, int EbN0max);
 };
 
 } // namespace ErTools

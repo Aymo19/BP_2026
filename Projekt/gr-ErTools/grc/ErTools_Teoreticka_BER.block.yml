@@ -4,7 +4,7 @@ category: '[ErTools]'
 
 templates:
   imports: from gnuradio import ErTools
-  make: ErTools.Teoreticka_BER(${N}, ${M}, ${EbN0min}, ${EbN0max})
+  make: ErTools.Teoreticka_BER(${N}, ${M}, ${Mod}, ${EbN0min}, ${EbN0max})
 
 parameters:
  - id: N
@@ -15,6 +15,9 @@ parameters:
    label: Počet stavov modulácie
    dtype: int
    default: 2
+ - id: Mod
+   label: Typ modulácie
+   dtype: string
  - id: EbN0min
    label: EbN0 min
    dtype: int

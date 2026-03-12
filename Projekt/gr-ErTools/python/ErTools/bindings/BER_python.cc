@@ -1,5 +1,5 @@
 /*
- * Copyright 2025 Free Software Foundation, Inc.
+ * Copyright 2026 Free Software Foundation, Inc.
  *
  * This file is part of GNU Radio
  *
@@ -14,7 +14,7 @@
 /* BINDTOOL_GEN_AUTOMATIC(0)                                                       */
 /* BINDTOOL_USE_PYGCCXML(0)                                                        */
 /* BINDTOOL_HEADER_FILE(BER.h)                                        */
-/* BINDTOOL_HEADER_FILE_HASH(9d8dffb833cc2b4e050b0491074dd3be)                     */
+/* BINDTOOL_HEADER_FILE_HASH(7c31818edc5b6c1053cc3c064438f2c2)                     */
 /***********************************************************************************/
 
 #include <pybind11/complex.h>
@@ -36,7 +36,7 @@ void bind_BER(py::module& m)
     py::class_<BER, gr::sync_block, gr::block, gr::basic_block, std::shared_ptr<BER>>(
         m, "BER", D(BER))
 
-        .def(py::init(&BER::make), py::arg("N"), D(BER, make))
+        .def(py::init(&BER::make), py::arg("N"), py::arg("M"), D(BER, make))
 
 
         ;

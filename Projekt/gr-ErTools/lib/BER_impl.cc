@@ -19,8 +19,8 @@ namespace ErTools {
 
 using output_type = float;
 
-BER::sptr BER::make(int N) {
-  return gnuradio::make_block_sptr<BER_impl>(N);
+BER::sptr BER::make(int N, int M) {
+  return gnuradio::make_block_sptr<BER_impl>(N, M);
 }
 
 // Input vector
@@ -28,12 +28,15 @@ static int is[] = { sizeof(int), sizeof(unsigned char), sizeof(unsigned char) };
 static std::vector<int> isig(is, is + sizeof(is) / sizeof(int));
 
 // The private constructor
-BER_impl::BER_impl(int N)
+BER_impl::BER_impl(int N, int M)
     : gr::sync_block("BER",
                      gr::io_signature::makev(2, 3, isig),
                      gr::io_signature::make(1, 1, sizeof(output_type)))
 {
   _N = N; // Pocet vzoriek EbN0 (kolko bodov na X-osi)
+  _M = M;
+
+  k = std::log2(M);
 
   // Vektory
   _count = std::vector<int>(N, 1);          // Celkovy pocet bitov co sme spracovali
@@ -77,7 +80,7 @@ int BitCounter(unsigned char slovo, int n) {
 
 
 //-------------------Zisti-ci-nastala-chyba---------------------|
-int BER_calc(unsigned char S1, unsigned char S2) {
+int BER_calc(unsigned char S1, unsigned char S2, int k) {
   unsigned char XORnute;
   int e_sum;
   
@@ -88,7 +91,7 @@ int BER_calc(unsigned char S1, unsigned char S2) {
   XORnute = S1 ^ S2;
   
   // Ak hej, tak nie je nulova hodnota e_sum
-  e_sum = BitCounter(XORnute, 3);
+  e_sum = BitCounter(XORnute, k);
   
   // Logaritmicky vystup
   //log_BER = logf(e_sum);
@@ -125,21 +128,21 @@ int BER_impl::work(int noutput_items,
     std::fill_n(pamat_SER, _N, 1.0);*/
     
     //velkost input vektora z AWGN kanala
-    int k;
+    int kk;
 
     //-----------------------Prejdeme-vsetkymi-I/O-items--------------------------|
     for(int i = 0; i < noutput_items; i++) {
-      k = in0[i];
+      kk = in0[i];
       
       // Zistime, ci nastala chyba v slove
-      _pocet_chyb.at(k) += BER_calc(in1[i], in2[i]);
+      _pocet_chyb.at(kk) += BER_calc(in1[i], in2[i], k);
       
       // Nastavenia pre logaritmus v pripade ze nenastala chyba
       // GR nedokaze zobrazit v QT GUI nekonecna
-      if(_pocet_chyb.at(k) == 0) {
-        _pamat_BER.at(k) = 0;//0.00000001; // log cisla je -8
+      if(_pocet_chyb.at(kk) == 0) {
+        _pamat_BER.at(kk) = 0;//0.00000001; // log cisla je -8
       }else {
-        _pamat_BER.at(k) = double(_pocet_chyb.at(k)) / double(_count.at(k)); // Tuto nastala chyba, nemenime umelo hodnotu, pocet chyb deleno pocet bitov za celu dobu
+        _pamat_BER.at(kk) = double(_pocet_chyb.at(kk)) / double(_count.at(kk)); // Tuto nastala chyba, nemenime umelo hodnotu, pocet chyb deleno pocet bitov za celu dobu
       }
 
      /* if(k%10000 == 0)
@@ -147,10 +150,10 @@ int BER_impl::work(int noutput_items,
       */
 
       // Float vystup = pravdepodobnost chyby na bit v danom Eb/N0
-      out[i] = _pamat_BER.at(k);
+      out[i] = _pamat_BER.at(kk);
       
       // Inkrementujeme celkovy pocet bitov
-      _count.at(k) += 3;
+      _count.at(kk) += k;
     }
 
     // Tell runtime system how many output items we produced.

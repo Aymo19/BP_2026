@@ -72,7 +72,7 @@ gr_complex Sum2(float EDB, int stav, float Es) {
   }else {         //pocitame s EbN0
     EsN0 = pow(10.0, EDB/10.0);
     EbN0 = EsN0 * k;
-    odchylka = std::sqrt(Es / (EbN0 * 2));
+    odchylka = std::sqrt(1 / (EbN0 * 2));
   }
   
   REAL = Sum_vypocet2() * odchylka;

@@ -14,7 +14,7 @@
 /* BINDTOOL_GEN_AUTOMATIC(0)                                                       */
 /* BINDTOOL_USE_PYGCCXML(0)                                                        */
 /* BINDTOOL_HEADER_FILE(Teoreticka_BER.h)                                        */
-/* BINDTOOL_HEADER_FILE_HASH(1d6f17bf618ff09913f554fc28a218a4)                     */
+/* BINDTOOL_HEADER_FILE_HASH(2a7dfc9c22fad16235436298c5587299)                     */
 /***********************************************************************************/
 
 #include <pybind11/complex.h>
@@ -30,30 +30,23 @@ namespace py = pybind11;
 void bind_Teoreticka_BER(py::module& m)
 {
 
-    using Teoreticka_BER    = gr::ErTools::Teoreticka_BER;
+    using Teoreticka_BER = ::gr::ErTools::Teoreticka_BER;
 
 
-    py::class_<Teoreticka_BER, gr::sync_block, gr::block, gr::basic_block,
-        std::shared_ptr<Teoreticka_BER>>(m, "Teoreticka_BER", D(Teoreticka_BER))
+    py::class_<Teoreticka_BER,
+               gr::sync_block,
+               gr::block,
+               gr::basic_block,
+               std::shared_ptr<Teoreticka_BER>>(m, "Teoreticka_BER", D(Teoreticka_BER))
 
         .def(py::init(&Teoreticka_BER::make),
-           D(Teoreticka_BER,make)
-        )
-        
-
+             py::arg("N"),
+             py::arg("M"),
+             py::arg("Mod"),
+             py::arg("EbN0min"),
+             py::arg("EbN0max"),
+             D(Teoreticka_BER, make))
 
 
         ;
-
-
-
-
 }
-
-
-
-
-
-
-
-

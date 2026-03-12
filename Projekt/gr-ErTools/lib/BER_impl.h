@@ -16,7 +16,9 @@ namespace ErTools {
 class BER_impl : public BER
 {
 private:
-  int _N;
+  int _N, _M;
+
+  int k;
 
   // Deklarovanie vektorov
   std::vector<int> _count;
@@ -24,7 +26,7 @@ private:
   std::vector<int> _pocet_chyb;
 
 public:
-    BER_impl(int N);
+    BER_impl(int N, int M);
     ~BER_impl();
 
     // Where all the action really happens

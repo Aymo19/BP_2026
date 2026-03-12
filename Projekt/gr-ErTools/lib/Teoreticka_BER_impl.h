@@ -9,6 +9,7 @@
 #define INCLUDED_ERTOOLS_TEORETICKA_BER_IMPL_H
 
 #include <gnuradio/ErTools/Teoreticka_BER.h>
+#include <string>
 
 namespace gr {
 namespace ErTools {
@@ -16,8 +17,8 @@ namespace ErTools {
 class Teoreticka_BER_impl : public Teoreticka_BER
 {
 private:
-  int _N, _M, _EbN0min, _EbN0max, koniec;
-  
+  int _N, _M, _EbN0min, _EbN0max;
+  std::string _Mod;
   int j;
   double rozpatieT, rozpatiePostupT;
 
@@ -30,7 +31,7 @@ private:
   std::vector<double> EDB;
 
 public:
-    Teoreticka_BER_impl(int N, int M, int EbN0min, int EbN0max);
+    Teoreticka_BER_impl(int N, int M, std::string Mod, int EbN0min, int EbN0max);
     ~Teoreticka_BER_impl();
 
     // Where all the action really happens

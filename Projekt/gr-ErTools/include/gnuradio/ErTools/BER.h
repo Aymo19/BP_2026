@@ -32,7 +32,7 @@ public:
      * class. ErTools::BER::make is the public interface for
      * creating new instances.
      */
-    static sptr make(int N);
+    static sptr make(int N, int M);
 };
 
 } // namespace ErTools

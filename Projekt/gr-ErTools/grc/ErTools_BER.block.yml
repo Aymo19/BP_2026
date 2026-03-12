@@ -4,13 +4,16 @@ category: '[ErTools]'
 
 templates:
   imports: from gnuradio import ErTools
-  make: ErTools.BER(${N})
+  make: ErTools.BER(${N}, ${M})
 
 parameters:
  - id: N
    label: Počet Eb/N0 bodov
    dtype: int
    default: 128
+ - id: M
+   label: Počet modulačných stavov
+   dtype: int
 
 inputs:
  - label: in0
