@@ -59,20 +59,12 @@ int BitCounter(unsigned char slovo, int n) {
   int sum = 0;//, sign = 1;
   unsigned char b_jedna = 1;
   
-  // Ci hodnota slova je zaporna
-  /*if(slovo < 0)
-    sign = 0;*/
-  
+  // Pracuje sa cisto s kladnými hodnotami, lebo GR dátový typ Byte je totožný s unsigned char v C++  
   for(int i = 0; i < n; i++) {
     if(slovo & b_jedna)
       sum++;
 
     slovo >>= 1;
-    /*if(sign) { //ked plus
-      slovo >>= 1;
-    }else { //ked minus
-      b_jedna <<= 1;
-    }*/
   }
 
   return sum;

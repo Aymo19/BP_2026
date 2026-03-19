@@ -25,6 +25,7 @@ Teoreticka_BER::sptr Teoreticka_BER::make(int N, int M, std::string Mod, int EbN
 // Our virtual destructor.
 Teoreticka_BER_impl::~Teoreticka_BER_impl() {}
 
+// Náhrada za Q-funkciu
 double ErrFunkcia(double bod) {
   double BER_lin;
 
@@ -33,6 +34,7 @@ double ErrFunkcia(double bod) {
   return BER_lin;
 }
 
+// BPSK M = 2
 double BPSK(double EbN0) {
   double argument, Pb;
 
@@ -44,6 +46,7 @@ double BPSK(double EbN0) {
   return Pb;
 }
 
+// QPSK, M = 4
 double QPSK(double EbN0) {
   double argument, Pb;
 
@@ -55,6 +58,7 @@ double QPSK(double EbN0) {
   return Pb;
 }
 
+// M-PSK, M > 4
 double MPSK(double EbN0, int M, int k) {
   double argument, Pb;
 
@@ -67,27 +71,33 @@ double MPSK(double EbN0, int M, int k) {
   return Pb;
 }
 
+// M-QAM
 double MQAM(double EbN0, int M, int k) {
   double argument, Pb, faktor;
 
   EbN0 = pow(10.0, (EbN0)/10); //+ 10*std::log10(k))/10.0);
   
-  /*faktor = (2 * (1 - pow(M, -1))) / k;
-  argument = std::sqrt((6 * EbN0 * k) / (pow(M, 2) - 1));
+  //Farkasove vzorce
+  /*faktor = (2 * (1 - pow(double(M), -1))) / double(k);
+  argument = std::sqrt((6 * EbN0 * double(k)) / (pow(double(M), 2) - 1));
 
-  Pb = faktor * ErrFunkcia(argument);*/
-  
-  /*faktor = (k / 2) * (1 - (1 / std::sqrt(M)));
-  argument = std::sqrt((3 * EbN0) / (M - 1));
-  Pb = faktor * ErrFunkcia(argument / std::sqrt(2)) / k;
+  Pb = faktor * ErrFunkcia(argument/std::sqrt(2));
   */
+  //internet - tento funguje spravne pre vsetky M-QAM
+  faktor = (2 / double(k)) * (1 - (1 / std::sqrt(M)));
+  argument = std::sqrt((3 * EbN0 * k) / (M - 1));
+  Pb = faktor * ErrFunkcia(argument / std::sqrt(2));
+  
 
-  faktor = (k/2) * (1 - (1 / std::sqrt(M)));
+  //internet pokus 2
+  /*faktor = 2/double(k);
   argument = std::sqrt((3*k*EbN0) / (M-1));
   Pb = faktor * ErrFunkcia(argument / std::sqrt(2));
-
+  if(M == 16)
+    printf("F: %lf\nA: %lf\nPb: %lf\n\n", faktor, argument, Pb);
+  */
   return Pb;
-}
+};
 
 // The private constructor
 Teoreticka_BER_impl::Teoreticka_BER_impl(int N, int M, std::string Mod, int EbN0min, int EbN0max)
@@ -101,6 +111,7 @@ Teoreticka_BER_impl::Teoreticka_BER_impl(int N, int M, std::string Mod, int EbN0
   _EbN0min = EbN0min;
   _EbN0max = EbN0max;
 
+  // vektory pre BER hodnoty
   _bodyBPSK = std::vector<double>(N, 1.0);
   _bodyQPSK = std::vector<double>(N, 1.0);
   _bodyMPSK = std::vector<double>(N, 1.0);
@@ -120,8 +131,10 @@ Teoreticka_BER_impl::Teoreticka_BER_impl(int N, int M, std::string Mod, int EbN0
 
   }
 
+  // pocet bitov na symbol
   int k = std::log2(_M);
 
+  // Volanie funkcii na vypocet
   for(int y = 0; y < _N; y++) {
     _bodyBPSK.at(y) = BPSK(EDB[y]);
     _bodyQPSK.at(y) = QPSK(EDB[y]);
@@ -137,7 +150,9 @@ int Teoreticka_BER_impl::work(int noutput_items,
 {
     auto out = static_cast<output_type*>(output_items[0]);
     
+
     for(int b = 0; b < noutput_items; b++) {
+        // Vypis podla toho aka modulacia(_Mod) a pocet stavov (_M)
         if(_Mod == "PSK") {
           if(_M == 2) {
             out[b] = _bodyBPSK.at(j);
@@ -149,7 +164,8 @@ int Teoreticka_BER_impl::work(int noutput_items,
         }else if(_Mod == "QAM") {
           out[b] = _bodyMQAM.at(j);
         }
-
+        
+        // Iteracia cez vsetky EbN0
         if(j < _N-1) {
           j += 1;
         }else {

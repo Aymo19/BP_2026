@@ -65,11 +65,11 @@ gr_complex Sum2(float EDB, int stav, float Es) {
   int k = std::log2(stav);
 
   // Premena z dB na pomer
-  if(stav > 4) {  //pocitame s EsN0
+  if(stav > 2) {  //pocitame s EsN0, šum na symbol
     //EsN0 = EbN0 + 10*std::log10(k);
     EsN0 = pow(10.0, (EDB + 10.0*std::log10(k)) / 10.0);
     odchylka = std::sqrt(Es / (EsN0 * 2));
-  }else {         //pocitame s EbN0
+  }else {         //pocitame s EbN0, šum na bit
     EsN0 = pow(10.0, EDB/10.0);
     EbN0 = EsN0 * k;
     odchylka = std::sqrt(1 / (EbN0 * 2));

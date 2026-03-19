@@ -65,15 +65,16 @@ class BER_Testovanie(gr.top_block, Qt.QWidget):
         ##################################################
         # Variables
         ##################################################
+        self.M = M = 16
+        self.QAM_Binary = QAM_Binary = digital.qam.qam_constellation(constellation_points=M, differential=False, mod_code="none", large_ampls_to_corners=False)
         self.variable_qtgui_chooser_0 = variable_qtgui_chooser_0 = 0
         self.samp_rate = samp_rate = 10000000
+        self.Typ_kodu = Typ_kodu = QAM_Binary
         self.SNR_min = SNR_min = 0
         self.SNR_max = SNR_max = 20
-        self.QAM = QAM = digital.constellation_16qam().base()
-        self.QAM.set_npwr(1.0)
-        self.Num_samp = Num_samp = 10000000
+        self.QAM_Gray = QAM_Gray = digital.qam.qam_constellation(constellation_points=M, differential=False, mod_code="gray", large_ampls_to_corners=False)
+        self.Num_samp = Num_samp = 1000000
         self.N = N = 256
-        self.M = M = 16
 
         ##################################################
         # Blocks
@@ -114,7 +115,7 @@ class BER_Testovanie(gr.top_block, Qt.QWidget):
         self.qtgui_vector_sink_f_0_0.set_ref_level(0)
 
 
-        labels = ["Realna 16QAM", "Teoreticka BPSK", "Teoreticka QPSK", "Teoreticka 8PSK", "Teoreticka 16PSK",
+        labels = ["Realna 16QAM", "Teoreticka BPSK", "Teoreticka QPSK", "Teoreticka 4QAM", "Teoreticka 16PSK",
             "Teoreticka 16QAM", "Teoreticka 32QAM", "Teoreticka 64QAM", "Teoreticka 128QAM", "Teoreticka 256QAM"]
         widths = [2, 2, 2, 2, 2,
             2, 2, 2, 2, 2]
@@ -138,8 +139,8 @@ class BER_Testovanie(gr.top_block, Qt.QWidget):
             self.top_grid_layout.setRowStretch(r, 1)
         for c in range(0, 1):
             self.top_grid_layout.setColumnStretch(c, 1)
-        self.digital_constellation_encoder_bc_0 = digital.constellation_encoder_bc(QAM)
-        self.digital_constellation_decoder_cb_0 = digital.constellation_decoder_cb(QAM)
+        self.digital_constellation_encoder_bc_0 = digital.constellation_encoder_bc(Typ_kodu)
+        self.digital_constellation_decoder_cb_0 = digital.constellation_decoder_cb(Typ_kodu)
         self.blocks_throttle2_0 = blocks.throttle( gr.sizeof_gr_complex*1, samp_rate, True, 0 if "auto" == "auto" else max( int(float(0.1) * samp_rate) if "auto" == "time" else int(0.1), 1) )
         self.blocks_stream_to_vector_0_1_0_2_0_1_0_0 = blocks.stream_to_vector(gr.sizeof_float*1, N)
         self.blocks_stream_to_vector_0_1_0_2_0_1_0 = blocks.stream_to_vector(gr.sizeof_float*1, N)
@@ -169,7 +170,7 @@ class BER_Testovanie(gr.top_block, Qt.QWidget):
         self.ErTools_Teoreticka_BER_0_2_0_0 = ErTools.Teoreticka_BER(N, 32, 'QAM', 0, 20)
         self.ErTools_Teoreticka_BER_0_2_0 = ErTools.Teoreticka_BER(N, 16, 'QAM', 0, 20)
         self.ErTools_Teoreticka_BER_0_2 = ErTools.Teoreticka_BER(N, 16, 'PSK', 0, 20)
-        self.ErTools_Teoreticka_BER_0_1 = ErTools.Teoreticka_BER(N, 8, 'PSK', 0, 20)
+        self.ErTools_Teoreticka_BER_0_1 = ErTools.Teoreticka_BER(N, 4, 'QAM', 0, 20)
         self.ErTools_Teoreticka_BER_0_0 = ErTools.Teoreticka_BER(N, 4, 'PSK', 0, 20)
         self.ErTools_Teoreticka_BER_0 = ErTools.Teoreticka_BER(N, 2, 'PSK', 0, 20)
         self.ErTools_BER_0 = ErTools.BER(N, M)
@@ -228,6 +229,21 @@ class BER_Testovanie(gr.top_block, Qt.QWidget):
 
         event.accept()
 
+    def get_M(self):
+        return self.M
+
+    def set_M(self, M):
+        self.M = M
+        self.set_QAM_Binary(digital.qam.qam_constellation(constellation_points=self.M, differential=False, mod_code="none", large_ampls_to_corners=False))
+        self.set_QAM_Gray(digital.qam.qam_constellation(constellation_points=self.M, differential=False, mod_code="gray", large_ampls_to_corners=False))
+
+    def get_QAM_Binary(self):
+        return self.QAM_Binary
+
+    def set_QAM_Binary(self, QAM_Binary):
+        self.QAM_Binary = QAM_Binary
+        self.set_Typ_kodu(self.QAM_Binary)
+
     def get_variable_qtgui_chooser_0(self):
         return self.variable_qtgui_chooser_0
 
@@ -242,6 +258,14 @@ class BER_Testovanie(gr.top_block, Qt.QWidget):
         self.samp_rate = samp_rate
         self.blocks_throttle2_0.set_sample_rate(self.samp_rate)
 
+    def get_Typ_kodu(self):
+        return self.Typ_kodu
+
+    def set_Typ_kodu(self, Typ_kodu):
+        self.Typ_kodu = Typ_kodu
+        self.digital_constellation_decoder_cb_0.set_constellation(self.Typ_kodu)
+        self.digital_constellation_encoder_bc_0.set_constellation(self.Typ_kodu)
+
     def get_SNR_min(self):
         return self.SNR_min
 
@@ -254,13 +278,11 @@ class BER_Testovanie(gr.top_block, Qt.QWidget):
     def set_SNR_max(self, SNR_max):
         self.SNR_max = SNR_max
 
-    def get_QAM(self):
-        return self.QAM
+    def get_QAM_Gray(self):
+        return self.QAM_Gray
 
-    def set_QAM(self, QAM):
-        self.QAM = QAM
-        self.digital_constellation_decoder_cb_0.set_constellation(self.QAM)
-        self.digital_constellation_encoder_bc_0.set_constellation(self.QAM)
+    def set_QAM_Gray(self, QAM_Gray):
+        self.QAM_Gray = QAM_Gray
 
     def get_Num_samp(self):
         return self.Num_samp
@@ -273,12 +295,6 @@ class BER_Testovanie(gr.top_block, Qt.QWidget):
 
     def set_N(self, N):
         self.N = N
-
-    def get_M(self):
-        return self.M
-
-    def set_M(self, M):
-        self.M = M
 
 
 
