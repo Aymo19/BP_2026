@@ -37,7 +37,7 @@ blocks:
   id: variable
   parameters:
     comment: ''
-    value: '16'
+    value: '256'
   states:
     bus_sink: false
     bus_source: false
@@ -121,7 +121,7 @@ blocks:
     bus_structure: null
     coordinate: [1240, 0.0]
     rotation: 0
-    state: enabled
+    state: disabled
 - name: QAM_Gray
   id: variable
   parameters:
@@ -159,7 +159,7 @@ blocks:
   id: variable
   parameters:
     comment: ''
-    value: '20'
+    value: '25'
   states:
     bus_sink: false
     bus_source: false
@@ -203,7 +203,7 @@ blocks:
   id: variable
   parameters:
     comment: ''
-    value: QAM_Binary
+    value: QAM_Gray
   states:
     bus_sink: false
     bus_source: false
@@ -221,36 +221,6 @@ blocks:
     bus_source: false
     bus_structure: null
     coordinate: [376, 16.0]
-    rotation: 0
-    state: enabled
-- name: variable_qtgui_chooser_0
-  id: variable_qtgui_chooser
-  parameters:
-    comment: ''
-    gui_hint: ''
-    label: ''
-    label0: ''
-    label1: ''
-    label2: ''
-    label3: ''
-    label4: ''
-    labels: '[]'
-    num_opts: '3'
-    option0: '0'
-    option1: '1'
-    option2: '2'
-    option3: '3'
-    option4: '4'
-    options: '[0, 1, 2]'
-    orient: Qt.QVBoxLayout
-    type: int
-    value: '0'
-    widget: combo_box
-  states:
-    bus_sink: false
-    bus_source: false
-    bus_structure: null
-    coordinate: [1184, 632.0]
     rotation: 0
     state: enabled
 - name: ErTools_AWGN_0
@@ -458,8 +428,8 @@ blocks:
   parameters:
     EbN0max: '20'
     EbN0min: '0'
-    M: '4'
-    Mod: QAM
+    M: '8'
+    Mod: PSK
     N: N
     affinity: ''
     alias: ''
@@ -683,23 +653,6 @@ blocks:
     bus_source: false
     bus_structure: null
     coordinate: [672, 1112.0]
-    rotation: 0
-    state: disabled
-- name: blocks_char_to_float_0
-  id: blocks_char_to_float
-  parameters:
-    affinity: ''
-    alias: ''
-    comment: ''
-    maxoutbuf: '0'
-    minoutbuf: '0'
-    scale: '1'
-    vlen: '1'
-  states:
-    bus_sink: false
-    bus_source: false
-    bus_structure: null
-    coordinate: [912, 168.0]
     rotation: 0
     state: disabled
 - name: blocks_nlog10_ff_0
@@ -1558,93 +1511,6 @@ blocks:
     coordinate: [728, 384.0]
     rotation: 0
     state: disabled
-- name: qtgui_histogram_sink_x_0
-  id: qtgui_histogram_sink_x
-  parameters:
-    accum: 'False'
-    affinity: ''
-    alias: ''
-    alpha1: '1.0'
-    alpha10: '1.0'
-    alpha2: '1.0'
-    alpha3: '1.0'
-    alpha4: '1.0'
-    alpha5: '1.0'
-    alpha6: '1.0'
-    alpha7: '1.0'
-    alpha8: '1.0'
-    alpha9: '1.0'
-    autoscale: 'False'
-    axislabels: 'True'
-    bins: '1024'
-    color1: '"blue"'
-    color10: '"dark blue"'
-    color2: '"red"'
-    color3: '"green"'
-    color4: '"black"'
-    color5: '"cyan"'
-    color6: '"magenta"'
-    color7: '"yellow"'
-    color8: '"dark red"'
-    color9: '"dark green"'
-    comment: ''
-    grid: 'True'
-    gui_hint: ''
-    label1: ''
-    label10: ''
-    label2: ''
-    label3: ''
-    label4: ''
-    label5: ''
-    label6: ''
-    label7: ''
-    label8: ''
-    label9: ''
-    legend: 'True'
-    marker1: '-1'
-    marker10: '-1'
-    marker2: '-1'
-    marker3: '-1'
-    marker4: '-1'
-    marker5: '-1'
-    marker6: '-1'
-    marker7: '-1'
-    marker8: '-1'
-    marker9: '-1'
-    name: '""'
-    nconnections: '1'
-    size: '1024'
-    style1: '1'
-    style10: '1'
-    style2: '1'
-    style3: '1'
-    style4: '1'
-    style5: '1'
-    style6: '1'
-    style7: '1'
-    style8: '1'
-    style9: '1'
-    type: float
-    update_time: '0.10'
-    width1: '1'
-    width10: '1'
-    width2: '1'
-    width3: '1'
-    width4: '1'
-    width5: '1'
-    width6: '1'
-    width7: '1'
-    width8: '1'
-    width9: '1'
-    xmax: '20'
-    xmin: '-1'
-  states:
-    bus_sink: false
-    bus_source: false
-    bus_structure: null
-    coordinate: [984, 296.0]
-    rotation: 0
-    state: disabled
 - name: qtgui_vector_sink_f_0_0
   id: qtgui_vector_sink_f
   parameters:
@@ -1679,7 +1545,7 @@ blocks:
     label10: '"Teoreticka 256QAM"'
     label2: '"Teoreticka BPSK"'
     label3: '"Teoreticka QPSK"'
-    label4: '"Teoreticka 4QAM"'
+    label4: '"Teoreticka 8PSK"'
     label5: '"Teoreticka 16PSK"'
     label6: '"Teoreticka 16QAM"'
     label7: '"Teoreticka 32QAM"'
@@ -1706,7 +1572,7 @@ blocks:
     width9: '2'
     x_axis_label: '"Eb/N0 [dB]"'
     x_start: '0'
-    x_step: '0.078125'
+    x_step: '0.098425197'
     x_units: '"dB"'
     y_axis_label: '"log Pb"'
     y_units: '""'
@@ -2068,13 +1934,11 @@ connections:
 - [ErTools_Teoreticka_BER_0_2_0_1, '0', blocks_nlog10_ff_0_1_0_2_0_1, '0']
 - [ErTools_Teoreticka_BER_0_2_0_1_0, '0', blocks_nlog10_ff_0_1_0_2_0_1_0, '0']
 - [ErTools_Teoreticka_BER_0_2_0_1_0_0, '0', blocks_nlog10_ff_0_1_0_2_0_1_0_0, '0']
-- [analog_random_source_x_0, '0', blocks_char_to_float_0, '0']
 - [analog_random_source_x_0, '0', virtual_sink_0_0, '0']
 - [blocks_add_xx_0, '0', digital_constellation_decoder_cb_0, '0']
 - [blocks_add_xx_0_0, '0', digital_constellation_decoder_cb_0_0, '0']
 - [blocks_add_xx_0_0_0, '0', digital_constellation_decoder_cb_0_0_0, '0']
 - [blocks_add_xx_0_0_1, '0', digital_constellation_decoder_cb_0_0_1, '0']
-- [blocks_char_to_float_0, '0', qtgui_histogram_sink_x_0, '0']
 - [blocks_nlog10_ff_0, '0', blocks_stream_to_vector_0, '0']
 - [blocks_nlog10_ff_0_0, '0', blocks_stream_to_vector_0_0, '0']
 - [blocks_nlog10_ff_0_1, '0', blocks_stream_to_vector_0_1, '0']

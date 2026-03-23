@@ -12,7 +12,6 @@
 
 from PyQt5 import Qt
 from gnuradio import qtgui
-from PyQt5.QtCore import QObject, pyqtSlot
 from gnuradio import ErTools
 from gnuradio import blocks
 import numpy
@@ -65,14 +64,12 @@ class BER_Testovanie(gr.top_block, Qt.QWidget):
         ##################################################
         # Variables
         ##################################################
-        self.M = M = 16
-        self.QAM_Binary = QAM_Binary = digital.qam.qam_constellation(constellation_points=M, differential=False, mod_code="none", large_ampls_to_corners=False)
-        self.variable_qtgui_chooser_0 = variable_qtgui_chooser_0 = 0
-        self.samp_rate = samp_rate = 10000000
-        self.Typ_kodu = Typ_kodu = QAM_Binary
-        self.SNR_min = SNR_min = 0
-        self.SNR_max = SNR_max = 20
+        self.M = M = 256
         self.QAM_Gray = QAM_Gray = digital.qam.qam_constellation(constellation_points=M, differential=False, mod_code="gray", large_ampls_to_corners=False)
+        self.samp_rate = samp_rate = 10000000
+        self.Typ_kodu = Typ_kodu = QAM_Gray
+        self.SNR_min = SNR_min = 0
+        self.SNR_max = SNR_max = 25
         self.Num_samp = Num_samp = 1000000
         self.N = N = 256
 
@@ -80,26 +77,10 @@ class BER_Testovanie(gr.top_block, Qt.QWidget):
         # Blocks
         ##################################################
 
-        # Create the options list
-        self._variable_qtgui_chooser_0_options = [0, 1, 2]
-        # Create the labels list
-        self._variable_qtgui_chooser_0_labels = ['0', '1', '2']
-        # Create the combo box
-        self._variable_qtgui_chooser_0_tool_bar = Qt.QToolBar(self)
-        self._variable_qtgui_chooser_0_tool_bar.addWidget(Qt.QLabel("'variable_qtgui_chooser_0'" + ": "))
-        self._variable_qtgui_chooser_0_combo_box = Qt.QComboBox()
-        self._variable_qtgui_chooser_0_tool_bar.addWidget(self._variable_qtgui_chooser_0_combo_box)
-        for _label in self._variable_qtgui_chooser_0_labels: self._variable_qtgui_chooser_0_combo_box.addItem(_label)
-        self._variable_qtgui_chooser_0_callback = lambda i: Qt.QMetaObject.invokeMethod(self._variable_qtgui_chooser_0_combo_box, "setCurrentIndex", Qt.Q_ARG("int", self._variable_qtgui_chooser_0_options.index(i)))
-        self._variable_qtgui_chooser_0_callback(self.variable_qtgui_chooser_0)
-        self._variable_qtgui_chooser_0_combo_box.currentIndexChanged.connect(
-            lambda i: self.set_variable_qtgui_chooser_0(self._variable_qtgui_chooser_0_options[i]))
-        # Create the radio buttons
-        self.top_layout.addWidget(self._variable_qtgui_chooser_0_tool_bar)
         self.qtgui_vector_sink_f_0_0 = qtgui.vector_sink_f(
             N,
             0,
-            0.078125,
+            0.098425197,
             "Eb/N0 [dB]",
             "log Pb",
             "BER",
@@ -115,7 +96,7 @@ class BER_Testovanie(gr.top_block, Qt.QWidget):
         self.qtgui_vector_sink_f_0_0.set_ref_level(0)
 
 
-        labels = ["Realna 16QAM", "Teoreticka BPSK", "Teoreticka QPSK", "Teoreticka 4QAM", "Teoreticka 16PSK",
+        labels = ["Realna 16QAM", "Teoreticka BPSK", "Teoreticka QPSK", "Teoreticka 8PSK", "Teoreticka 16PSK",
             "Teoreticka 16QAM", "Teoreticka 32QAM", "Teoreticka 64QAM", "Teoreticka 128QAM", "Teoreticka 256QAM"]
         widths = [2, 2, 2, 2, 2,
             2, 2, 2, 2, 2]
@@ -170,7 +151,7 @@ class BER_Testovanie(gr.top_block, Qt.QWidget):
         self.ErTools_Teoreticka_BER_0_2_0_0 = ErTools.Teoreticka_BER(N, 32, 'QAM', 0, 20)
         self.ErTools_Teoreticka_BER_0_2_0 = ErTools.Teoreticka_BER(N, 16, 'QAM', 0, 20)
         self.ErTools_Teoreticka_BER_0_2 = ErTools.Teoreticka_BER(N, 16, 'PSK', 0, 20)
-        self.ErTools_Teoreticka_BER_0_1 = ErTools.Teoreticka_BER(N, 4, 'QAM', 0, 20)
+        self.ErTools_Teoreticka_BER_0_1 = ErTools.Teoreticka_BER(N, 8, 'PSK', 0, 20)
         self.ErTools_Teoreticka_BER_0_0 = ErTools.Teoreticka_BER(N, 4, 'PSK', 0, 20)
         self.ErTools_Teoreticka_BER_0 = ErTools.Teoreticka_BER(N, 2, 'PSK', 0, 20)
         self.ErTools_BER_0 = ErTools.BER(N, M)
@@ -234,22 +215,14 @@ class BER_Testovanie(gr.top_block, Qt.QWidget):
 
     def set_M(self, M):
         self.M = M
-        self.set_QAM_Binary(digital.qam.qam_constellation(constellation_points=self.M, differential=False, mod_code="none", large_ampls_to_corners=False))
         self.set_QAM_Gray(digital.qam.qam_constellation(constellation_points=self.M, differential=False, mod_code="gray", large_ampls_to_corners=False))
 
-    def get_QAM_Binary(self):
-        return self.QAM_Binary
+    def get_QAM_Gray(self):
+        return self.QAM_Gray
 
-    def set_QAM_Binary(self, QAM_Binary):
-        self.QAM_Binary = QAM_Binary
-        self.set_Typ_kodu(self.QAM_Binary)
-
-    def get_variable_qtgui_chooser_0(self):
-        return self.variable_qtgui_chooser_0
-
-    def set_variable_qtgui_chooser_0(self, variable_qtgui_chooser_0):
-        self.variable_qtgui_chooser_0 = variable_qtgui_chooser_0
-        self._variable_qtgui_chooser_0_callback(self.variable_qtgui_chooser_0)
+    def set_QAM_Gray(self, QAM_Gray):
+        self.QAM_Gray = QAM_Gray
+        self.set_Typ_kodu(self.QAM_Gray)
 
     def get_samp_rate(self):
         return self.samp_rate
@@ -277,12 +250,6 @@ class BER_Testovanie(gr.top_block, Qt.QWidget):
 
     def set_SNR_max(self, SNR_max):
         self.SNR_max = SNR_max
-
-    def get_QAM_Gray(self):
-        return self.QAM_Gray
-
-    def set_QAM_Gray(self, QAM_Gray):
-        self.QAM_Gray = QAM_Gray
 
     def get_Num_samp(self):
         return self.Num_samp

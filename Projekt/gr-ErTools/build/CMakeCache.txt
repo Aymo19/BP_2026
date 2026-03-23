@@ -235,7 +235,7 @@ CMAKE_VERBOSE_MAKEFILE:BOOL=FALSE
 DOXYGEN_DOT_EXECUTABLE:FILEPATH=/usr/bin/dot
 
 //Doxygen documentation generation tool (https://www.doxygen.nl)
-DOXYGEN_EXECUTABLE:FILEPATH=/usr/bin/doxygen
+DOXYGEN_EXECUTABLE:FILEPATH=DOXYGEN_EXECUTABLE-NOTFOUND
 
 //Build docs using Doxygen
 ENABLE_DOXYGEN:BOOL=ON
