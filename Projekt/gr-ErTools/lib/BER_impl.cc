@@ -39,7 +39,7 @@ BER_impl::BER_impl(int N, int M)
   k = std::log2(M);
 
   // Vektory
-  _count = std::vector<int>(N, 2);          // Celkovy pocet bitov co sme spracovali
+  _count = std::vector<int>(N, k);          // Celkovy pocet bitov co sme spracovali
   _pocet_chyb = std::vector<int>(N, 0);     // Celkovy pocet zistenych chyb
   _pamat_BER = std::vector<double>(N, 1.0); // Vystupne hodnoty BER
   
@@ -83,7 +83,7 @@ int BER_calc(unsigned char S1, unsigned char S2, int k) {
   XORnute = S1 ^ S2;
   
   // Ak hej, tak nie je nulova hodnota e_sum
-  e_sum = BitCounter(XORnute, 2);
+  e_sum = BitCounter(XORnute, k);
   
   // Logaritmicky vystup
   //log_BER = logf(e_sum);
@@ -145,7 +145,7 @@ int BER_impl::work(int noutput_items,
       out[i] = _pamat_BER.at(kk);
       
       // Inkrementujeme celkovy pocet bitov
-      _count.at(kk) += 2;
+      _count.at(kk) += k;
     }
 
     // Tell runtime system how many output items we produced.
