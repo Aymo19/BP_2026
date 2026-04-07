@@ -1,0 +1,753 @@
+options:
+  parameters:
+    author: ''
+    catch_exceptions: 'True'
+    category: Custom
+    cmake_opt: ''
+    comment: ''
+    copyright: ''
+    description: ''
+    gen_cmake: 'On'
+    gen_linking: dynamic
+    generate_options: qt_gui
+    hier_block_src_path: '.:'
+    id: variant_b_hamming
+    max_nouts: '0'
+    output_language: python
+    placement: (0,0)
+    qt_qss_theme: ''
+    realtime_scheduling: ''
+    run: 'True'
+    run_command: '{python} -u {filename} '
+    run_options: prompt
+    sizing_mode: fixed
+    thread_safe_setters: ''
+    title: MPSK channel with Noise and Hamming Encoding
+    window_size: 2000,2000
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [16, 4.0]
+    rotation: 0
+    state: enabled
+
+blocks:
+- name: modulation
+  id: variable_constellation
+  parameters:
+    comment: ''
+    const_points: modulation_config.get_constellation(modulation_name)
+    dims: '1'
+    normalization: digital.constellation.AMPLITUDE_NORMALIZATION
+    npwr: '1.0'
+    precision: '8'
+    rot_sym: '4'
+    soft_dec_lut: None
+    sym_map: modulation_config.get_symbol_map(modulation_name)
+    type: calcdist
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [880, 12.0]
+    rotation: 0
+    state: enabled
+- name: samp_rate
+  id: variable
+  parameters:
+    comment: ''
+    value: 1e6
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [512, 4.0]
+    rotation: 0
+    state: enabled
+- name: ErTools_AWGN_0
+  id: ErTools_AWGN
+  parameters:
+    EbN0max: '15'
+    EbN0min: '0'
+    M: '4'
+    N: '256'
+    affinity: ''
+    alias: ''
+    comment: ''
+    maxoutbuf: '0'
+    minoutbuf: '0'
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [1248, 360.0]
+    rotation: 0
+    state: enabled
+- name: ErTools_BER_0
+  id: ErTools_BER
+  parameters:
+    M: '4'
+    N: '256'
+    affinity: ''
+    alias: ''
+    comment: ''
+    maxoutbuf: '0'
+    minoutbuf: '0'
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [1352, 624.0]
+    rotation: 0
+    state: enabled
+- name: analog_random_source_x_0
+  id: analog_random_source_x
+  parameters:
+    affinity: ''
+    alias: ''
+    comment: ''
+    max: 2**modulation.bits_per_symbol()
+    maxoutbuf: '0'
+    min: '0'
+    minoutbuf: '0'
+    num_samps: '1000000'
+    repeat: 'True'
+    type: byte
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [16, 256.0]
+    rotation: 0
+    state: enabled
+- name: blocks_add_xx_0
+  id: blocks_add_xx
+  parameters:
+    affinity: ''
+    alias: ''
+    comment: ''
+    maxoutbuf: '0'
+    minoutbuf: '0'
+    num_inputs: '2'
+    type: complex
+    vlen: '1'
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [1464, 296.0]
+    rotation: 0
+    state: true
+- name: blocks_nlog10_ff_0
+  id: blocks_nlog10_ff
+  parameters:
+    affinity: ''
+    alias: ''
+    comment: ''
+    k: '0'
+    maxoutbuf: '0'
+    minoutbuf: '0'
+    n: '1'
+    vlen: '1'
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [1568, 648.0]
+    rotation: 0
+    state: enabled
+- name: blocks_null_sink_0
+  id: blocks_null_sink
+  parameters:
+    affinity: ''
+    alias: ''
+    bus_structure_sink: '[[0,],]'
+    comment: ''
+    num_inputs: '1'
+    type: byte
+    vlen: '1'
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [1144, 368.0]
+    rotation: 0
+    state: enabled
+- name: blocks_repack_bits_bb_0
+  id: blocks_repack_bits_bb
+  parameters:
+    affinity: ''
+    alias: ''
+    align_output: 'False'
+    comment: ''
+    endianness: gr.GR_LSB_FIRST
+    k: '1'
+    l: modulation.bits_per_symbol()
+    len_tag_key: '""'
+    maxoutbuf: '0'
+    minoutbuf: '0'
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [864, 216.0]
+    rotation: 0
+    state: enabled
+- name: blocks_repack_bits_bb_0_0
+  id: blocks_repack_bits_bb
+  parameters:
+    affinity: ''
+    alias: ''
+    align_output: 'False'
+    comment: ''
+    endianness: gr.GR_LSB_FIRST
+    k: '1'
+    l: '4'
+    len_tag_key: '""'
+    maxoutbuf: '0'
+    minoutbuf: '0'
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [192, 216.0]
+    rotation: 0
+    state: enabled
+- name: blocks_repack_bits_bb_0_0_0
+  id: blocks_repack_bits_bb
+  parameters:
+    affinity: ''
+    alias: ''
+    align_output: 'False'
+    comment: ''
+    endianness: gr.GR_LSB_FIRST
+    k: modulation.bits_per_symbol()
+    l: '1'
+    len_tag_key: '""'
+    maxoutbuf: '0'
+    minoutbuf: '0'
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [368, 408.0]
+    rotation: 0
+    state: enabled
+- name: blocks_repack_bits_bb_0_1
+  id: blocks_repack_bits_bb
+  parameters:
+    affinity: ''
+    alias: ''
+    align_output: 'False'
+    comment: ''
+    endianness: gr.GR_LSB_FIRST
+    k: '1'
+    l: modulation.bits_per_symbol()
+    len_tag_key: '""'
+    maxoutbuf: '0'
+    minoutbuf: '0'
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [1016, 480.0]
+    rotation: 0
+    state: enabled
+- name: blocks_stream_demux_0
+  id: blocks_stream_demux
+  parameters:
+    affinity: ''
+    alias: ''
+    comment: ''
+    lengths: '[1] * 4'
+    maxoutbuf: '0'
+    minoutbuf: '0'
+    num_outputs: '4'
+    type: byte
+    vlen: '1'
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [360, 184.0]
+    rotation: 0
+    state: enabled
+- name: blocks_stream_demux_1
+  id: blocks_stream_demux
+  parameters:
+    affinity: ''
+    alias: ''
+    comment: ''
+    lengths: '[1]*7'
+    maxoutbuf: '0'
+    minoutbuf: '0'
+    num_outputs: '7'
+    type: byte
+    vlen: '1'
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [528, 400.0]
+    rotation: 0
+    state: true
+- name: blocks_stream_mux_0
+  id: blocks_stream_mux
+  parameters:
+    affinity: ''
+    alias: ''
+    comment: ''
+    lengths: '[1]*7'
+    maxoutbuf: '0'
+    minoutbuf: '0'
+    num_inputs: '7'
+    type: byte
+    vlen: '1'
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [688, 136.0]
+    rotation: 0
+    state: true
+- name: blocks_stream_mux_1
+  id: blocks_stream_mux
+  parameters:
+    affinity: ''
+    alias: ''
+    comment: ''
+    lengths: '[1]*4'
+    maxoutbuf: '0'
+    minoutbuf: '0'
+    num_inputs: '4'
+    type: byte
+    vlen: '1'
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [864, 448.0]
+    rotation: 0
+    state: true
+- name: blocks_stream_to_vector_0
+  id: blocks_stream_to_vector
+  parameters:
+    affinity: ''
+    alias: ''
+    comment: ''
+    maxoutbuf: '0'
+    minoutbuf: '0'
+    num_items: '256'
+    type: float
+    vlen: '1'
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [1640, 656.0]
+    rotation: 0
+    state: enabled
+- name: blocks_unpacked_to_packed_xx_0_1_0_0
+  id: blocks_unpacked_to_packed_xx
+  parameters:
+    affinity: ''
+    alias: ''
+    bits_per_chunk: modulation.bits_per_symbol()
+    comment: ''
+    endianness: gr.GR_MSB_FIRST
+    maxoutbuf: '0'
+    minoutbuf: '0'
+    num_ports: '1'
+    type: byte
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [1144, 696.0]
+    rotation: 0
+    state: disabled
+- name: blocks_unpacked_to_packed_xx_0_1_1
+  id: blocks_unpacked_to_packed_xx
+  parameters:
+    affinity: ''
+    alias: ''
+    bits_per_chunk: modulation.bits_per_symbol()
+    comment: ''
+    endianness: gr.GR_MSB_FIRST
+    maxoutbuf: '0'
+    minoutbuf: '0'
+    num_ports: '1'
+    type: byte
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [1144, 616.0]
+    rotation: 0
+    state: disabled
+- name: digital_constellation_decoder_cb_0
+  id: digital_constellation_decoder_cb
+  parameters:
+    affinity: ''
+    alias: ''
+    comment: ''
+    constellation: modulation
+    maxoutbuf: '0'
+    minoutbuf: '0'
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [176, 488.0]
+    rotation: 0
+    state: true
+- name: digital_constellation_encoder_bc_0
+  id: digital_constellation_encoder_bc
+  parameters:
+    affinity: ''
+    alias: ''
+    comment: ''
+    constellation: modulation
+    maxoutbuf: '0'
+    minoutbuf: '0'
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [1056, 256.0]
+    rotation: 0
+    state: true
+- name: epy_block_0
+  id: epy_block
+  parameters:
+    _source_code: "import numpy as np\nfrom gnuradio import gr\n\n\nclass blk(gr.sync_block):\
+      \  # other base classes are basic_block, decim_block, interp_block\n\n    def\
+      \ __init__(self):  # only default arguments here\n        gr.sync_block.__init__(\n\
+      \            self,\n            name='(7,4) Hamming encoder',   # will show\
+      \ up in GRC\n            in_sig=[np.int8]*4,\n            out_sig=[np.int8]*7\n\
+      \        )\n\n    def work(self, input_items, output_items):\n        output_items[0][:]\
+      \ = input_items[0]\n        output_items[1][:] = input_items[1]\n        output_items[2][:]\
+      \ = input_items[2]\n        output_items[3][:] = input_items[3]\n        output_items[4][:]\
+      \ = input_items[0] ^ input_items[1] ^ input_items[3]\n        output_items[5][:]\
+      \ = input_items[0] ^ input_items[2] ^ input_items[3]\n        output_items[6][:]\
+      \ = input_items[1] ^ input_items[2] ^ input_items[3]\n        return len(output_items[0])\n"
+    affinity: ''
+    alias: ''
+    comment: ''
+    maxoutbuf: '0'
+    minoutbuf: '0'
+  states:
+    _io_cache: ('(7,4) Hamming encoder', 'blk', [], [('0', 'byte', 1), ('1', 'byte',
+      1), ('2', 'byte', 1), ('3', 'byte', 1)], [('0', 'byte', 1), ('1', 'byte', 1),
+      ('2', 'byte', 1), ('3', 'byte', 1), ('4', 'byte', 1), ('5', 'byte', 1), ('6',
+      'byte', 1)], '', [])
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [512, 136.0]
+    rotation: 0
+    state: true
+- name: epy_block_1
+  id: epy_block
+  parameters:
+    _source_code: "import numpy as np\nfrom gnuradio import gr\n\nclass blk(gr.sync_block):\
+      \  # other base classes are basic_block, decim_block, interp_block\n\n    def\
+      \ __init__(self):  # only default arguments here\n        gr.sync_block.__init__(\n\
+      \            self,\n            name='(7,4) Hamming decoder',   # will show\
+      \ up in GRC\n            in_sig=[np.int8]*7,\n            out_sig=[np.int8]*4\n\
+      \        )\n\n    def work(self, input_items, output_items):\n        syndromes_map\
+      \ = {\n            1: 4,  # p0\n            2: 5,  # p1\n            3: 0, \
+      \ # c0\n            4: 6,  # p2\n            5: 1,  # c1\n            6: 2,\
+      \  # c2\n            7: 3   # c3\n        }\n        syndrome_1 = input_items[0]\
+      \ ^ input_items[1] ^ input_items[3] ^ input_items[4]\n        syndrome_2 = input_items[0]\
+      \ ^ input_items[2] ^ input_items[3] ^ input_items[5]\n        syndrome_3 = input_items[1]\
+      \ ^ input_items[2] ^ input_items[3] ^ input_items[6]\n        syndromes = syndrome_1\
+      \ + syndrome_2 * 2 + syndrome_3 * 4\n        for i, syndrome in enumerate(syndromes):\n\
+      \        \t#if syndrome != 0:\n        \t\t#input_items[syndromes_map[syndrome]][i]\
+      \ = 1 - input_items[syndromes_map[syndrome]][i]\n        \tif syndrome == 3:\n\
+      \        \t\tinput_items[0][i] = 1 - input_items[0][i]\n        \telif syndrome\
+      \ == 5:\n        \t\tinput_items[1][i] = 1 - input_items[1][i]\n        \telif\
+      \ syndrome == 6:\n        \t\tinput_items[2][i] = 1 - input_items[2][i]\n  \
+      \      \telif syndrome == 7:\n        \t\tinput_items[3][i] = 1 - input_items[3][i]\n\
+      \        \telif syndrome == 1:\n        \t\tinput_items[4][i] = 1 - input_items[4][i]\n\
+      \        \telif syndrome == 2:\n        \t\tinput_items[5][i] = 1 - input_items[5][i]\n\
+      \        \telif syndrome == 4:\n        \t\tinput_items[6][i] = 1 - input_items[6][i]\n\
+      \        output_items[0][:] = input_items[0]\n        output_items[1][:] = input_items[1]\n\
+      \        output_items[2][:] = input_items[2]\n        output_items[3][:] = input_items[3]\n\
+      \        return len(output_items[0])\n"
+    affinity: ''
+    alias: ''
+    comment: ''
+    maxoutbuf: '0'
+    minoutbuf: '0'
+  states:
+    _io_cache: ('(7,4) Hamming decoder', 'blk', [], [('0', 'byte', 1), ('1', 'byte',
+      1), ('2', 'byte', 1), ('3', 'byte', 1), ('4', 'byte', 1), ('5', 'byte', 1),
+      ('6', 'byte', 1)], [('0', 'byte', 1), ('1', 'byte', 1), ('2', 'byte', 1), ('3',
+      'byte', 1)], '', [])
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [696, 400.0]
+    rotation: 0
+    state: true
+- name: modulation_config
+  id: epy_module
+  parameters:
+    alias: ''
+    comment: ''
+    source_code: "\r\nimport numpy as np\r\n\r\ndef get_constellation(modulation):\r\
+      \n    \"\"\"\r\n    Returns the constellation points for the specified modulation\
+      \ scheme.\r\n\r\n    Parameters:\r\n    modulation (str): The modulation scheme\
+      \ ('BPSK', 'QPSK').\r\n\r\n    Returns:\r\n    numpy.ndarray: Array of constellation\
+      \ points.\r\n    \"\"\"\r\n    modulation = modulation.upper()\r\n\r\n    constellations\
+      \ = {\r\n    'BPSK': lambda: np.array([-1, 1]),\r\n    'QPSK': lambda: np.array([1+1j,\
+      \ 1-1j, -1+1j, -1-1j])\r\n    }\r\n\r\n\r\n    if modulation in constellations:\r\
+      \n        return constellations[modulation]()\r\n    else:\r\n        raise\
+      \ ValueError(\"Unsupported modulation type. Use 'BPSK', 'QPSK'.\")\r\n\r\ndef\
+      \ get_symbol_map(modulation):\r\n    \"\"\"\r\n    Returns the symbol map for\
+      \ the specified modulation scheme.\r\n\r\n    Parameters:\r\n    modulation\
+      \ (str): The modulation scheme ('BPSK', 'QPSK').\r\n\r\n    Returns:\r\n   \
+      \ list: A list of symbol indices for the specified modulation scheme.\r\n  \
+      \  \"\"\"\r\n    modulation = modulation.upper()\r\n    symbol_counts = {\r\n\
+      \        'BPSK': 2,\r\n        'QPSK': 4,\r\n    }\r\n\r\n    if modulation\
+      \ in symbol_counts:\r\n        return [i for i in range(symbol_counts[modulation])]\r\
+      \n    else:\r\n        raise ValueError(\"Unsupported modulation type. Use 'BPSK',\
+      \ 'QPSK'.\")\r\n\r\n\r\nimport math\r\n\r\ndef calculate_noise(modulation: str,\
+      \ ebno: float, k: int): \r\n    if modulation == 'BPSK':\r\n        snr_linear\
+      \ = 10 ** (ebno / 10) + 10*math.log(k/7,10)\r\n        noise_variance = 1 /\
+      \ snr_linear \r\n        noise = math.sqrt(noise_variance)\r\n        return\
+      \ noise\r\n\r\n    elif modulation == 'QPSK':\r\n        snr_db = ebno + 10*math.log(2,10)\
+      \ + 10*math.log(k/7,10)\r\n        snr_linear = 10 ** (snr_db / 10)\r\n    \
+      \    noise_variance = 1 / snr_linear \r\n        noise = math.sqrt(noise_variance)\r\
+      \n        return noise"
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [608, 16.0]
+    rotation: 0
+    state: enabled
+- name: modulation_name
+  id: parameter
+  parameters:
+    alias: ''
+    comment: ''
+    hide: none
+    label: Modulation Name
+    short_id: ''
+    type: str
+    value: QPSK
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [176, 8.0]
+    rotation: 0
+    state: enabled
+- name: qtgui_vector_sink_f_0_0
+  id: qtgui_vector_sink_f
+  parameters:
+    affinity: ''
+    alias: ''
+    alpha1: '1'
+    alpha10: '1.0'
+    alpha2: '1.0'
+    alpha3: '1.0'
+    alpha4: '1.0'
+    alpha5: '1.0'
+    alpha6: '1.0'
+    alpha7: '1.0'
+    alpha8: '1.0'
+    alpha9: '1.0'
+    autoscale: 'False'
+    average: '1.0'
+    color1: '"red"'
+    color10: '"red"'
+    color2: '"blue"'
+    color3: '"blue"'
+    color4: '"green"'
+    color5: '"black"'
+    color6: '"yellow"'
+    color7: '"dark blue"'
+    color8: '"dark red"'
+    color9: '"dark green"'
+    comment: ''
+    grid: 'True'
+    gui_hint: 2,0,1,1
+    label1: "\"Simul\xE1cia 8PSK\""
+    label10: '"Teoreticka 256QAM"'
+    label2: '"Teoreticka 8PSK'
+    label3: '"Teoreticka QPSK"'
+    label4: '"Teoreticka 8PSK"'
+    label5: '"Teoreticka 16PSK"'
+    label6: '"Teoreticka 16QAM"'
+    label7: '"Teoreticka 32QAM"'
+    label8: '"Teoreticka 64QAM"'
+    label9: '"Teoreticka 128QAM"'
+    legend: 'True'
+    maxoutbuf: '0'
+    minoutbuf: '0'
+    name: '"BER"'
+    nconnections: '1'
+    ref_level: '0'
+    showports: 'False'
+    update_time: '0.1'
+    vlen: '256'
+    width1: '2'
+    width10: '2'
+    width2: '2'
+    width3: '2'
+    width4: '2'
+    width5: '2'
+    width6: '2'
+    width7: '2'
+    width8: '2'
+    width9: '2'
+    x_axis_label: '"Eb/N0 [dB]"'
+    x_start: '0'
+    x_step: float(15) / float(256 - 1)
+    x_units: '"dB"'
+    y_axis_label: '"log Pb"'
+    y_units: '""'
+    ymax: '0'
+    ymin: '-6'
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [1792, 644.0]
+    rotation: 0
+    state: enabled
+- name: virtual_sink_0
+  id: virtual_sink
+  parameters:
+    alias: ''
+    comment: ''
+    stream_id: hamming_signal
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [1536, 304.0]
+    rotation: 0
+    state: true
+- name: virtual_sink_1
+  id: virtual_sink
+  parameters:
+    alias: ''
+    comment: ''
+    stream_id: hamming_signal_output
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [1184, 488.0]
+    rotation: 0
+    state: disabled
+- name: virtual_sink_2
+  id: virtual_sink
+  parameters:
+    alias: ''
+    comment: ''
+    stream_id: original_signal
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [192, 328.0]
+    rotation: 0
+    state: true
+- name: virtual_source_0
+  id: virtual_source
+  parameters:
+    alias: ''
+    comment: ''
+    stream_id: hamming_signal
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [8, 488.0]
+    rotation: 0
+    state: true
+- name: virtual_source_1_0_0_0_0
+  id: virtual_source
+  parameters:
+    alias: ''
+    comment: ''
+    stream_id: hamming_signal_output
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [928, 624.0]
+    rotation: 0
+    state: disabled
+- name: virtual_source_1_0_2_0
+  id: virtual_source
+  parameters:
+    alias: ''
+    comment: ''
+    stream_id: original_signal
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [944, 704.0]
+    rotation: 0
+    state: disabled
+
+connections:
+- [ErTools_AWGN_0, '0', blocks_add_xx_0, '1']
+- [ErTools_AWGN_0, '1', ErTools_BER_0, '0']
+- [ErTools_BER_0, '0', blocks_nlog10_ff_0, '0']
+- [analog_random_source_x_0, '0', blocks_repack_bits_bb_0_0, '0']
+- [analog_random_source_x_0, '0', virtual_sink_2, '0']
+- [blocks_add_xx_0, '0', virtual_sink_0, '0']
+- [blocks_nlog10_ff_0, '0', blocks_stream_to_vector_0, '0']
+- [blocks_repack_bits_bb_0, '0', ErTools_BER_0, '1']
+- [blocks_repack_bits_bb_0, '0', digital_constellation_encoder_bc_0, '0']
+- [blocks_repack_bits_bb_0_0, '0', blocks_stream_demux_0, '0']
+- [blocks_repack_bits_bb_0_0_0, '0', blocks_stream_demux_1, '0']
+- [blocks_repack_bits_bb_0_1, '0', blocks_null_sink_0, '0']
+- [blocks_repack_bits_bb_0_1, '0', virtual_sink_1, '0']
+- [blocks_stream_demux_0, '0', epy_block_0, '0']
+- [blocks_stream_demux_0, '1', epy_block_0, '1']
+- [blocks_stream_demux_0, '2', epy_block_0, '2']
+- [blocks_stream_demux_0, '3', epy_block_0, '3']
+- [blocks_stream_demux_1, '0', epy_block_1, '0']
+- [blocks_stream_demux_1, '1', epy_block_1, '1']
+- [blocks_stream_demux_1, '2', epy_block_1, '2']
+- [blocks_stream_demux_1, '3', epy_block_1, '3']
+- [blocks_stream_demux_1, '4', epy_block_1, '4']
+- [blocks_stream_demux_1, '5', epy_block_1, '5']
+- [blocks_stream_demux_1, '6', epy_block_1, '6']
+- [blocks_stream_mux_0, '0', blocks_repack_bits_bb_0, '0']
+- [blocks_stream_mux_1, '0', blocks_repack_bits_bb_0_1, '0']
+- [blocks_stream_to_vector_0, '0', qtgui_vector_sink_f_0_0, '0']
+- [blocks_unpacked_to_packed_xx_0_1_0_0, '0', ErTools_BER_0, '2']
+- [blocks_unpacked_to_packed_xx_0_1_1, '0', ErTools_BER_0, '1']
+- [digital_constellation_decoder_cb_0, '0', ErTools_BER_0, '2']
+- [digital_constellation_decoder_cb_0, '0', blocks_repack_bits_bb_0_0_0, '0']
+- [digital_constellation_encoder_bc_0, '0', ErTools_AWGN_0, '0']
+- [digital_constellation_encoder_bc_0, '0', blocks_add_xx_0, '0']
+- [epy_block_0, '0', blocks_stream_mux_0, '0']
+- [epy_block_0, '1', blocks_stream_mux_0, '1']
+- [epy_block_0, '2', blocks_stream_mux_0, '2']
+- [epy_block_0, '3', blocks_stream_mux_0, '3']
+- [epy_block_0, '4', blocks_stream_mux_0, '4']
+- [epy_block_0, '5', blocks_stream_mux_0, '5']
+- [epy_block_0, '6', blocks_stream_mux_0, '6']
+- [epy_block_1, '0', blocks_stream_mux_1, '0']
+- [epy_block_1, '1', blocks_stream_mux_1, '1']
+- [epy_block_1, '2', blocks_stream_mux_1, '2']
+- [epy_block_1, '3', blocks_stream_mux_1, '3']
+- [virtual_source_0, '0', digital_constellation_decoder_cb_0, '0']
+- [virtual_source_1_0_0_0_0, '0', blocks_unpacked_to_packed_xx_0_1_1, '0']
+- [virtual_source_1_0_2_0, '0', blocks_unpacked_to_packed_xx_0_1_0_0, '0']
+
+metadata:
+  file_format: 1
+  grc_version: 3.10.9.2

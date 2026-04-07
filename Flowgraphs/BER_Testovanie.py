@@ -67,11 +67,11 @@ class BER_Testovanie(gr.top_block, Qt.QWidget):
         self.M = M = 256
         self.QAM_Gray = QAM_Gray = digital.qam.qam_constellation(constellation_points=M, differential=False, mod_code="gray", large_ampls_to_corners=False)
         self.samp_rate = samp_rate = 10000000
-        self.Typ_kodu = Typ_kodu = QAM_Gray
-        self.SNR_min = SNR_min = 0
-        self.SNR_max = SNR_max = 25
-        self.Num_samp = Num_samp = 1000000
+        self.Num_samp = Num_samp = 100000000
         self.N = N = 256
+        self.Modulacia = Modulacia = QAM_Gray
+        self.EbN0_min = EbN0_min = 0
+        self.EbN0_max = EbN0_max = 25
 
         ##################################################
         # Blocks
@@ -80,15 +80,15 @@ class BER_Testovanie(gr.top_block, Qt.QWidget):
         self.qtgui_vector_sink_f_0_0 = qtgui.vector_sink_f(
             N,
             0,
-            0.098425197,
+            (float(EbN0_max - EbN0_min) / float(N - 1)),
             "Eb/N0 [dB]",
             "log Pb",
             "BER",
-            10, # Number of inputs
+            2, # Number of inputs
             None # parent
         )
         self.qtgui_vector_sink_f_0_0.set_update_time(0.1)
-        self.qtgui_vector_sink_f_0_0.set_y_axis((-6), 1)
+        self.qtgui_vector_sink_f_0_0.set_y_axis((-6), 0)
         self.qtgui_vector_sink_f_0_0.enable_autoscale(False)
         self.qtgui_vector_sink_f_0_0.enable_grid(True)
         self.qtgui_vector_sink_f_0_0.set_x_axis_units("dB")
@@ -96,16 +96,16 @@ class BER_Testovanie(gr.top_block, Qt.QWidget):
         self.qtgui_vector_sink_f_0_0.set_ref_level(0)
 
 
-        labels = ["Realna 16QAM", "Teoreticka BPSK", "Teoreticka QPSK", "Teoreticka 8PSK", "Teoreticka 16PSK",
+        labels = ["Simulácia 8PSK", '"Teoreticka 8PSK', "Teoreticka QPSK", "Teoreticka 8PSK", "Teoreticka 16PSK",
             "Teoreticka 16QAM", "Teoreticka 32QAM", "Teoreticka 64QAM", "Teoreticka 128QAM", "Teoreticka 256QAM"]
         widths = [2, 2, 2, 2, 2,
             2, 2, 2, 2, 2]
-        colors = ["magenta", "red", "blue", "green", "black",
+        colors = ["red", "blue", "blue", "green", "black",
             "yellow", "dark blue", "dark red", "dark green", "red"]
         alphas = [1, 1.0, 1.0, 1.0, 1.0,
             1.0, 1.0, 1.0, 1.0, 1.0]
 
-        for i in range(10):
+        for i in range(2):
             if len(labels[i]) == 0:
                 self.qtgui_vector_sink_f_0_0.set_line_label(i, "Data {0}".format(i))
             else:
@@ -120,42 +120,18 @@ class BER_Testovanie(gr.top_block, Qt.QWidget):
             self.top_grid_layout.setRowStretch(r, 1)
         for c in range(0, 1):
             self.top_grid_layout.setColumnStretch(c, 1)
-        self.digital_constellation_encoder_bc_0 = digital.constellation_encoder_bc(Typ_kodu)
-        self.digital_constellation_decoder_cb_0 = digital.constellation_decoder_cb(Typ_kodu)
+        self.digital_constellation_encoder_bc_0 = digital.constellation_encoder_bc(Modulacia)
+        self.digital_constellation_decoder_cb_0 = digital.constellation_decoder_cb(Modulacia)
         self.blocks_throttle2_0 = blocks.throttle( gr.sizeof_gr_complex*1, samp_rate, True, 0 if "auto" == "auto" else max( int(float(0.1) * samp_rate) if "auto" == "time" else int(0.1), 1) )
-        self.blocks_stream_to_vector_0_1_0_2_0_1_0_0 = blocks.stream_to_vector(gr.sizeof_float*1, N)
-        self.blocks_stream_to_vector_0_1_0_2_0_1_0 = blocks.stream_to_vector(gr.sizeof_float*1, N)
-        self.blocks_stream_to_vector_0_1_0_2_0_1 = blocks.stream_to_vector(gr.sizeof_float*1, N)
-        self.blocks_stream_to_vector_0_1_0_2_0_0 = blocks.stream_to_vector(gr.sizeof_float*1, N)
-        self.blocks_stream_to_vector_0_1_0_2_0 = blocks.stream_to_vector(gr.sizeof_float*1, N)
-        self.blocks_stream_to_vector_0_1_0_2 = blocks.stream_to_vector(gr.sizeof_float*1, N)
-        self.blocks_stream_to_vector_0_1_0_1 = blocks.stream_to_vector(gr.sizeof_float*1, N)
-        self.blocks_stream_to_vector_0_1_0_0 = blocks.stream_to_vector(gr.sizeof_float*1, N)
         self.blocks_stream_to_vector_0_1_0 = blocks.stream_to_vector(gr.sizeof_float*1, N)
         self.blocks_stream_to_vector_0 = blocks.stream_to_vector(gr.sizeof_float*1, N)
-        self.blocks_nlog10_ff_0_1_0_2_0_1_0_0 = blocks.nlog10_ff(1, 1, 0)
-        self.blocks_nlog10_ff_0_1_0_2_0_1_0 = blocks.nlog10_ff(1, 1, 0)
-        self.blocks_nlog10_ff_0_1_0_2_0_1 = blocks.nlog10_ff(1, 1, 0)
-        self.blocks_nlog10_ff_0_1_0_2_0_0 = blocks.nlog10_ff(1, 1, 0)
-        self.blocks_nlog10_ff_0_1_0_2_0 = blocks.nlog10_ff(1, 1, 0)
-        self.blocks_nlog10_ff_0_1_0_2 = blocks.nlog10_ff(1, 1, 0)
-        self.blocks_nlog10_ff_0_1_0_1 = blocks.nlog10_ff(1, 1, 0)
-        self.blocks_nlog10_ff_0_1_0_0 = blocks.nlog10_ff(1, 1, 0)
         self.blocks_nlog10_ff_0_1_0 = blocks.nlog10_ff(1, 1, 0)
         self.blocks_nlog10_ff_0 = blocks.nlog10_ff(1, 1, 0)
         self.blocks_add_xx_0 = blocks.add_vcc(1)
-        self.analog_random_source_x_0 = blocks.vector_source_b(list(map(int, numpy.random.randint(0, M, Num_samp))), True)
-        self.ErTools_Teoreticka_BER_0_2_0_1_0_0 = ErTools.Teoreticka_BER(N, 256, 'QAM', 0, 20)
-        self.ErTools_Teoreticka_BER_0_2_0_1_0 = ErTools.Teoreticka_BER(N, 128, 'QAM', 0, 20)
-        self.ErTools_Teoreticka_BER_0_2_0_1 = ErTools.Teoreticka_BER(N, 64, 'QAM', 0, 20)
-        self.ErTools_Teoreticka_BER_0_2_0_0 = ErTools.Teoreticka_BER(N, 32, 'QAM', 0, 20)
-        self.ErTools_Teoreticka_BER_0_2_0 = ErTools.Teoreticka_BER(N, 16, 'QAM', 0, 20)
-        self.ErTools_Teoreticka_BER_0_2 = ErTools.Teoreticka_BER(N, 16, 'PSK', 0, 20)
-        self.ErTools_Teoreticka_BER_0_1 = ErTools.Teoreticka_BER(N, 8, 'PSK', 0, 20)
-        self.ErTools_Teoreticka_BER_0_0 = ErTools.Teoreticka_BER(N, 4, 'PSK', 0, 20)
-        self.ErTools_Teoreticka_BER_0 = ErTools.Teoreticka_BER(N, 2, 'PSK', 0, 20)
+        self.analog_random_source_x_0 = blocks.vector_source_b(list(map(int, numpy.random.randint(0, M, Num_samp))), False)
+        self.ErTools_Teoreticka_BER_0 = ErTools.Teoreticka_BER(N, M, 'QAM', EbN0_min, EbN0_max)
         self.ErTools_BER_0 = ErTools.BER(N, M)
-        self.ErTools_AWGN_0 = ErTools.AWGN(N, M, 0, 20)
+        self.ErTools_AWGN_0 = ErTools.AWGN(N, M, 0, EbN0_max)
 
 
         ##################################################
@@ -165,37 +141,13 @@ class BER_Testovanie(gr.top_block, Qt.QWidget):
         self.connect((self.ErTools_AWGN_0, 0), (self.blocks_add_xx_0, 1))
         self.connect((self.ErTools_BER_0, 0), (self.blocks_nlog10_ff_0, 0))
         self.connect((self.ErTools_Teoreticka_BER_0, 0), (self.blocks_nlog10_ff_0_1_0, 0))
-        self.connect((self.ErTools_Teoreticka_BER_0_0, 0), (self.blocks_nlog10_ff_0_1_0_0, 0))
-        self.connect((self.ErTools_Teoreticka_BER_0_1, 0), (self.blocks_nlog10_ff_0_1_0_1, 0))
-        self.connect((self.ErTools_Teoreticka_BER_0_2, 0), (self.blocks_nlog10_ff_0_1_0_2, 0))
-        self.connect((self.ErTools_Teoreticka_BER_0_2_0, 0), (self.blocks_nlog10_ff_0_1_0_2_0, 0))
-        self.connect((self.ErTools_Teoreticka_BER_0_2_0_0, 0), (self.blocks_nlog10_ff_0_1_0_2_0_0, 0))
-        self.connect((self.ErTools_Teoreticka_BER_0_2_0_1, 0), (self.blocks_nlog10_ff_0_1_0_2_0_1, 0))
-        self.connect((self.ErTools_Teoreticka_BER_0_2_0_1_0, 0), (self.blocks_nlog10_ff_0_1_0_2_0_1_0, 0))
-        self.connect((self.ErTools_Teoreticka_BER_0_2_0_1_0_0, 0), (self.blocks_nlog10_ff_0_1_0_2_0_1_0_0, 0))
         self.connect((self.analog_random_source_x_0, 0), (self.ErTools_BER_0, 1))
         self.connect((self.analog_random_source_x_0, 0), (self.digital_constellation_encoder_bc_0, 0))
         self.connect((self.blocks_add_xx_0, 0), (self.digital_constellation_decoder_cb_0, 0))
         self.connect((self.blocks_nlog10_ff_0, 0), (self.blocks_stream_to_vector_0, 0))
         self.connect((self.blocks_nlog10_ff_0_1_0, 0), (self.blocks_stream_to_vector_0_1_0, 0))
-        self.connect((self.blocks_nlog10_ff_0_1_0_0, 0), (self.blocks_stream_to_vector_0_1_0_0, 0))
-        self.connect((self.blocks_nlog10_ff_0_1_0_1, 0), (self.blocks_stream_to_vector_0_1_0_1, 0))
-        self.connect((self.blocks_nlog10_ff_0_1_0_2, 0), (self.blocks_stream_to_vector_0_1_0_2, 0))
-        self.connect((self.blocks_nlog10_ff_0_1_0_2_0, 0), (self.blocks_stream_to_vector_0_1_0_2_0, 0))
-        self.connect((self.blocks_nlog10_ff_0_1_0_2_0_0, 0), (self.blocks_stream_to_vector_0_1_0_2_0_0, 0))
-        self.connect((self.blocks_nlog10_ff_0_1_0_2_0_1, 0), (self.blocks_stream_to_vector_0_1_0_2_0_1, 0))
-        self.connect((self.blocks_nlog10_ff_0_1_0_2_0_1_0, 0), (self.blocks_stream_to_vector_0_1_0_2_0_1_0, 0))
-        self.connect((self.blocks_nlog10_ff_0_1_0_2_0_1_0_0, 0), (self.blocks_stream_to_vector_0_1_0_2_0_1_0_0, 0))
         self.connect((self.blocks_stream_to_vector_0, 0), (self.qtgui_vector_sink_f_0_0, 0))
         self.connect((self.blocks_stream_to_vector_0_1_0, 0), (self.qtgui_vector_sink_f_0_0, 1))
-        self.connect((self.blocks_stream_to_vector_0_1_0_0, 0), (self.qtgui_vector_sink_f_0_0, 2))
-        self.connect((self.blocks_stream_to_vector_0_1_0_1, 0), (self.qtgui_vector_sink_f_0_0, 3))
-        self.connect((self.blocks_stream_to_vector_0_1_0_2, 0), (self.qtgui_vector_sink_f_0_0, 4))
-        self.connect((self.blocks_stream_to_vector_0_1_0_2_0, 0), (self.qtgui_vector_sink_f_0_0, 5))
-        self.connect((self.blocks_stream_to_vector_0_1_0_2_0_0, 0), (self.qtgui_vector_sink_f_0_0, 6))
-        self.connect((self.blocks_stream_to_vector_0_1_0_2_0_1, 0), (self.qtgui_vector_sink_f_0_0, 7))
-        self.connect((self.blocks_stream_to_vector_0_1_0_2_0_1_0, 0), (self.qtgui_vector_sink_f_0_0, 8))
-        self.connect((self.blocks_stream_to_vector_0_1_0_2_0_1_0_0, 0), (self.qtgui_vector_sink_f_0_0, 9))
         self.connect((self.blocks_throttle2_0, 0), (self.blocks_add_xx_0, 0))
         self.connect((self.digital_constellation_decoder_cb_0, 0), (self.ErTools_BER_0, 2))
         self.connect((self.digital_constellation_encoder_bc_0, 0), (self.ErTools_AWGN_0, 0))
@@ -222,7 +174,7 @@ class BER_Testovanie(gr.top_block, Qt.QWidget):
 
     def set_QAM_Gray(self, QAM_Gray):
         self.QAM_Gray = QAM_Gray
-        self.set_Typ_kodu(self.QAM_Gray)
+        self.set_Modulacia(self.QAM_Gray)
 
     def get_samp_rate(self):
         return self.samp_rate
@@ -230,26 +182,6 @@ class BER_Testovanie(gr.top_block, Qt.QWidget):
     def set_samp_rate(self, samp_rate):
         self.samp_rate = samp_rate
         self.blocks_throttle2_0.set_sample_rate(self.samp_rate)
-
-    def get_Typ_kodu(self):
-        return self.Typ_kodu
-
-    def set_Typ_kodu(self, Typ_kodu):
-        self.Typ_kodu = Typ_kodu
-        self.digital_constellation_decoder_cb_0.set_constellation(self.Typ_kodu)
-        self.digital_constellation_encoder_bc_0.set_constellation(self.Typ_kodu)
-
-    def get_SNR_min(self):
-        return self.SNR_min
-
-    def set_SNR_min(self, SNR_min):
-        self.SNR_min = SNR_min
-
-    def get_SNR_max(self):
-        return self.SNR_max
-
-    def set_SNR_max(self, SNR_max):
-        self.SNR_max = SNR_max
 
     def get_Num_samp(self):
         return self.Num_samp
@@ -262,6 +194,29 @@ class BER_Testovanie(gr.top_block, Qt.QWidget):
 
     def set_N(self, N):
         self.N = N
+        self.qtgui_vector_sink_f_0_0.set_x_axis(0, (float(self.EbN0_max - self.EbN0_min) / float(self.N - 1)))
+
+    def get_Modulacia(self):
+        return self.Modulacia
+
+    def set_Modulacia(self, Modulacia):
+        self.Modulacia = Modulacia
+        self.digital_constellation_decoder_cb_0.set_constellation(self.Modulacia)
+        self.digital_constellation_encoder_bc_0.set_constellation(self.Modulacia)
+
+    def get_EbN0_min(self):
+        return self.EbN0_min
+
+    def set_EbN0_min(self, EbN0_min):
+        self.EbN0_min = EbN0_min
+        self.qtgui_vector_sink_f_0_0.set_x_axis(0, (float(self.EbN0_max - self.EbN0_min) / float(self.N - 1)))
+
+    def get_EbN0_max(self):
+        return self.EbN0_max
+
+    def set_EbN0_max(self, EbN0_max):
+        self.EbN0_max = EbN0_max
+        self.qtgui_vector_sink_f_0_0.set_x_axis(0, (float(self.EbN0_max - self.EbN0_min) / float(self.N - 1)))
 
 
 

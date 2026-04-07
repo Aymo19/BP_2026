@@ -49,7 +49,7 @@ blocks:
   id: variable
   parameters:
     comment: ''
-    value: '50'
+    value: '20'
   states:
     bus_sink: false
     bus_source: false
@@ -86,8 +86,8 @@ blocks:
   parameters:
     EbN0max: SNR_max
     EbN0min: '0'
-    M: '16'
-    Mod: QAM
+    M: '2'
+    Mod: PSK
     N: N
     affinity: ''
     alias: ''
@@ -106,8 +106,8 @@ blocks:
   parameters:
     EbN0max: SNR_max
     EbN0min: '0'
-    M: '64'
-    Mod: QAM
+    M: '4'
+    Mod: PSK
     N: N
     affinity: ''
     alias: ''
@@ -121,7 +121,87 @@ blocks:
     coordinate: [56, 304.0]
     rotation: 0
     state: enabled
+- name: ErTools_Teoreticka_BER_0_0_0
+  id: ErTools_Teoreticka_BER
+  parameters:
+    EbN0max: SNR_max
+    EbN0min: '0'
+    M: '64'
+    Mod: QAM
+    N: N
+    affinity: ''
+    alias: ''
+    comment: ''
+    maxoutbuf: '0'
+    minoutbuf: '0'
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [1064, 352.0]
+    rotation: 0
+    state: disabled
 - name: ErTools_Teoreticka_BER_0_1
+  id: ErTools_Teoreticka_BER
+  parameters:
+    EbN0max: SNR_max
+    EbN0min: '0'
+    M: '8'
+    Mod: PSK
+    N: N
+    affinity: ''
+    alias: ''
+    comment: ''
+    maxoutbuf: '0'
+    minoutbuf: '0'
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [56, 424.0]
+    rotation: 0
+    state: enabled
+- name: ErTools_Teoreticka_BER_0_1_0
+  id: ErTools_Teoreticka_BER
+  parameters:
+    EbN0max: SNR_max
+    EbN0min: '0'
+    M: '128'
+    Mod: QAM
+    N: N
+    affinity: ''
+    alias: ''
+    comment: ''
+    maxoutbuf: '0'
+    minoutbuf: '0'
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [1864, 520.0]
+    rotation: 0
+    state: disabled
+- name: ErTools_Teoreticka_BER_0_2
+  id: ErTools_Teoreticka_BER
+  parameters:
+    EbN0max: SNR_max
+    EbN0min: '0'
+    M: '16'
+    Mod: PSK
+    N: N
+    affinity: ''
+    alias: ''
+    comment: ''
+    maxoutbuf: '0'
+    minoutbuf: '0'
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [56, 560.0]
+    rotation: 0
+    state: enabled
+- name: ErTools_Teoreticka_BER_0_2_0
   id: ErTools_Teoreticka_BER
   parameters:
     EbN0max: SNR_max
@@ -138,15 +218,15 @@ blocks:
     bus_sink: false
     bus_source: false
     bus_structure: null
-    coordinate: [56, 424.0]
+    coordinate: [1864, 656.0]
     rotation: 0
-    state: enabled
-- name: ErTools_Teoreticka_BER_0_2
+    state: disabled
+- name: ErTools_Teoreticka_BER_0_3
   id: ErTools_Teoreticka_BER
   parameters:
     EbN0max: SNR_max
     EbN0min: '0'
-    M: '8192'
+    M: '16'
     Mod: QAM
     N: N
     affinity: ''
@@ -158,9 +238,9 @@ blocks:
     bus_sink: false
     bus_source: false
     bus_structure: null
-    coordinate: [56, 560.0]
+    coordinate: [1056, 224.0]
     rotation: 0
-    state: enabled
+    state: disabled
 - name: blocks_nlog10_ff_0
   id: blocks_nlog10_ff
   parameters:
@@ -197,6 +277,24 @@ blocks:
     coordinate: [408, 352.0]
     rotation: 0
     state: enabled
+- name: blocks_nlog10_ff_0_0_0
+  id: blocks_nlog10_ff
+  parameters:
+    affinity: ''
+    alias: ''
+    comment: ''
+    k: '0'
+    maxoutbuf: '0'
+    minoutbuf: '0'
+    n: '1'
+    vlen: '1'
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [1416, 400.0]
+    rotation: 0
+    state: disabled
 - name: blocks_nlog10_ff_0_1
   id: blocks_nlog10_ff
   parameters:
@@ -215,6 +313,24 @@ blocks:
     coordinate: [408, 472.0]
     rotation: 0
     state: enabled
+- name: blocks_nlog10_ff_0_1_0
+  id: blocks_nlog10_ff
+  parameters:
+    affinity: ''
+    alias: ''
+    comment: ''
+    k: '0'
+    maxoutbuf: '0'
+    minoutbuf: '0'
+    n: '1'
+    vlen: '1'
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [2216, 568.0]
+    rotation: 0
+    state: disabled
 - name: blocks_nlog10_ff_0_2
   id: blocks_nlog10_ff
   parameters:
@@ -233,6 +349,42 @@ blocks:
     coordinate: [408, 608.0]
     rotation: 0
     state: enabled
+- name: blocks_nlog10_ff_0_2_0
+  id: blocks_nlog10_ff
+  parameters:
+    affinity: ''
+    alias: ''
+    comment: ''
+    k: '0'
+    maxoutbuf: '0'
+    minoutbuf: '0'
+    n: '1'
+    vlen: '1'
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [2216, 704.0]
+    rotation: 0
+    state: disabled
+- name: blocks_nlog10_ff_0_3
+  id: blocks_nlog10_ff
+  parameters:
+    affinity: ''
+    alias: ''
+    comment: ''
+    k: '0'
+    maxoutbuf: '0'
+    minoutbuf: '0'
+    n: '1'
+    vlen: '1'
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [1408, 272.0]
+    rotation: 0
+    state: disabled
 - name: blocks_stream_to_vector_0
   id: blocks_stream_to_vector
   parameters:
@@ -269,6 +421,24 @@ blocks:
     coordinate: [536, 336.0]
     rotation: 0
     state: enabled
+- name: blocks_stream_to_vector_0_0_0
+  id: blocks_stream_to_vector
+  parameters:
+    affinity: ''
+    alias: ''
+    comment: ''
+    maxoutbuf: '0'
+    minoutbuf: '0'
+    num_items: N
+    type: float
+    vlen: '1'
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [1544, 384.0]
+    rotation: 0
+    state: disabled
 - name: blocks_stream_to_vector_0_1
   id: blocks_stream_to_vector
   parameters:
@@ -287,6 +457,24 @@ blocks:
     coordinate: [536, 456.0]
     rotation: 0
     state: enabled
+- name: blocks_stream_to_vector_0_1_0
+  id: blocks_stream_to_vector
+  parameters:
+    affinity: ''
+    alias: ''
+    comment: ''
+    maxoutbuf: '0'
+    minoutbuf: '0'
+    num_items: N
+    type: float
+    vlen: '1'
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [2344, 552.0]
+    rotation: 0
+    state: disabled
 - name: blocks_stream_to_vector_0_2
   id: blocks_stream_to_vector
   parameters:
@@ -305,6 +493,42 @@ blocks:
     coordinate: [536, 592.0]
     rotation: 0
     state: enabled
+- name: blocks_stream_to_vector_0_2_0
+  id: blocks_stream_to_vector
+  parameters:
+    affinity: ''
+    alias: ''
+    comment: ''
+    maxoutbuf: '0'
+    minoutbuf: '0'
+    num_items: N
+    type: float
+    vlen: '1'
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [2344, 688.0]
+    rotation: 0
+    state: disabled
+- name: blocks_stream_to_vector_0_3
+  id: blocks_stream_to_vector
+  parameters:
+    affinity: ''
+    alias: ''
+    comment: ''
+    maxoutbuf: '0'
+    minoutbuf: '0'
+    num_items: N
+    type: float
+    vlen: '1'
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [1536, 256.0]
+    rotation: 0
+    state: disabled
 - name: blocks_throttle2_0
   id: blocks_throttle2
   parameters:
@@ -347,6 +571,27 @@ blocks:
     coordinate: [224, 344.0]
     rotation: 0
     state: enabled
+- name: blocks_throttle2_0_0_0
+  id: blocks_throttle2
+  parameters:
+    affinity: ''
+    alias: ''
+    comment: ''
+    ignoretag: 'True'
+    limit: auto
+    maximum: '0.1'
+    maxoutbuf: '0'
+    minoutbuf: '0'
+    samples_per_second: samp_rate
+    type: float
+    vlen: '1'
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [1232, 392.0]
+    rotation: 0
+    state: disabled
 - name: blocks_throttle2_0_1
   id: blocks_throttle2
   parameters:
@@ -368,6 +613,27 @@ blocks:
     coordinate: [224, 464.0]
     rotation: 0
     state: enabled
+- name: blocks_throttle2_0_1_0
+  id: blocks_throttle2
+  parameters:
+    affinity: ''
+    alias: ''
+    comment: ''
+    ignoretag: 'True'
+    limit: auto
+    maximum: '0.1'
+    maxoutbuf: '0'
+    minoutbuf: '0'
+    samples_per_second: samp_rate
+    type: float
+    vlen: '1'
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [2032, 560.0]
+    rotation: 0
+    state: disabled
 - name: blocks_throttle2_0_2
   id: blocks_throttle2
   parameters:
@@ -389,7 +655,207 @@ blocks:
     coordinate: [224, 600.0]
     rotation: 0
     state: enabled
+- name: blocks_throttle2_0_2_0
+  id: blocks_throttle2
+  parameters:
+    affinity: ''
+    alias: ''
+    comment: ''
+    ignoretag: 'True'
+    limit: auto
+    maximum: '0.1'
+    maxoutbuf: '0'
+    minoutbuf: '0'
+    samples_per_second: samp_rate
+    type: float
+    vlen: '1'
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [2032, 696.0]
+    rotation: 0
+    state: disabled
+- name: blocks_throttle2_0_3
+  id: blocks_throttle2
+  parameters:
+    affinity: ''
+    alias: ''
+    comment: ''
+    ignoretag: 'True'
+    limit: auto
+    maximum: '0.1'
+    maxoutbuf: '0'
+    minoutbuf: '0'
+    samples_per_second: samp_rate
+    type: float
+    vlen: '1'
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [1224, 264.0]
+    rotation: 0
+    state: disabled
+- name: qtgui_bercurve_sink_0
+  id: qtgui_bercurve_sink
+  parameters:
+    affinity: ''
+    alias: ''
+    alpha1: '1.0'
+    alpha10: '1.0'
+    alpha2: '1.0'
+    alpha3: '1.0'
+    alpha4: '1.0'
+    alpha5: '1.0'
+    alpha6: '1.0'
+    alpha7: '1.0'
+    alpha8: '1.0'
+    alpha9: '1.0'
+    berlimit: '-7.0'
+    berminerrors: '100'
+    bus_structure_sink: list(map(lambda b:list(map(lambda a:b * len(esno) * 2 + a,
+      range(len(esno)*2))), range(num_curves)))
+    color1: '"blue"'
+    color10: '"blue"'
+    color2: '"red"'
+    color3: '"green"'
+    color4: '"black"'
+    color5: '"cyan"'
+    color6: '"magenta"'
+    color7: '"yellow"'
+    color8: '"dark red"'
+    color9: '"dark green"'
+    comment: ''
+    curvenames: '[]'
+    esno: numpy.arange(0.0, 4.0, .5)
+    gui_hint: ''
+    label1: ''
+    label10: ''
+    label2: ''
+    label3: ''
+    label4: ''
+    label5: ''
+    label6: ''
+    label7: ''
+    label8: ''
+    label9: ''
+    marker1: '0'
+    marker10: '0'
+    marker2: '0'
+    marker3: '0'
+    marker4: '0'
+    marker5: '0'
+    marker6: '0'
+    marker7: '0'
+    marker8: '0'
+    marker9: '0'
+    num_curves: '1'
+    style1: '1'
+    style10: '1'
+    style2: '1'
+    style3: '1'
+    style4: '1'
+    style5: '1'
+    style6: '1'
+    style7: '1'
+    style8: '1'
+    style9: '1'
+    update_time: '0.10'
+    width1: '1'
+    width10: '1'
+    width2: '1'
+    width3: '1'
+    width4: '1'
+    width5: '1'
+    width6: '1'
+    width7: '1'
+    width8: '1'
+    width9: '1'
+    ymax: '0'
+    ymin: '-10'
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [1120, 712.0]
+    rotation: 0
+    state: disabled
 - name: qtgui_vector_sink_f_0
+  id: qtgui_vector_sink_f
+  parameters:
+    affinity: ''
+    alias: ''
+    alpha1: '1.0'
+    alpha10: '1.0'
+    alpha2: '1.0'
+    alpha3: '1.0'
+    alpha4: '1.0'
+    alpha5: '1.0'
+    alpha6: '1.0'
+    alpha7: '1.0'
+    alpha8: '1.0'
+    alpha9: '1.0'
+    autoscale: 'False'
+    average: '0.05'
+    color1: '"blue"'
+    color10: '"dark blue"'
+    color2: '"red"'
+    color3: '"green"'
+    color4: '"black"'
+    color5: '"cyan"'
+    color6: '"magenta"'
+    color7: '"yellow"'
+    color8: '"dark red"'
+    color9: '"dark green"'
+    comment: ''
+    grid: 'True'
+    gui_hint: ''
+    label1: '"Teoreticka BPSK"'
+    label10: ''
+    label2: '"Teoreticka QPSK"'
+    label3: '"Teoreticka 8PSK"'
+    label4: '"Teoreticka 16PSK"'
+    label5: ''
+    label6: ''
+    label7: ''
+    label8: ''
+    label9: ''
+    legend: 'True'
+    maxoutbuf: '0'
+    minoutbuf: '0'
+    name: '"BER"'
+    nconnections: '4'
+    ref_level: '0'
+    showports: 'False'
+    update_time: '0.01'
+    vlen: N
+    width1: '2'
+    width10: '1'
+    width2: '2'
+    width3: '2'
+    width4: '2'
+    width5: '1'
+    width6: '1'
+    width7: '1'
+    width8: '1'
+    width9: '1'
+    x_axis_label: '"Eb/N0 [dB]"'
+    x_start: '0'
+    x_step: float(SNR_max) / float(N-1)
+    x_units: '""'
+    y_axis_label: '"log Pb"'
+    y_units: '""'
+    ymax: '0'
+    ymin: '-6'
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [776, 356.0]
+    rotation: 0
+    state: enabled
+- name: qtgui_vector_sink_f_0_0
   id: qtgui_vector_sink_f
   parameters:
     affinity: ''
@@ -422,8 +888,8 @@ blocks:
     label1: '"16-QAM"'
     label10: ''
     label2: '"64-QAM"'
-    label3: '"256-QAM"'
-    label4: '"1024-QAM"'
+    label3: '"128-QAM"'
+    label4: '"256-QAM"'
     label5: ''
     label6: ''
     label7: ''
@@ -452,35 +918,51 @@ blocks:
     x_start: '0'
     x_step: '0.196850394'
     x_units: '""'
-    y_axis_label: '"Pb"'
+    y_axis_label: '"log Pb"'
     y_units: '""'
-    ymax: '1'
+    ymax: '0'
     ymin: '-6'
   states:
     bus_sink: false
     bus_source: false
     bus_structure: null
-    coordinate: [776, 356.0]
+    coordinate: [1792, 252.0]
     rotation: 0
-    state: enabled
+    state: disabled
 
 connections:
 - [ErTools_Teoreticka_BER_0, '0', blocks_throttle2_0, '0']
 - [ErTools_Teoreticka_BER_0_0, '0', blocks_throttle2_0_0, '0']
+- [ErTools_Teoreticka_BER_0_0_0, '0', blocks_throttle2_0_0_0, '0']
 - [ErTools_Teoreticka_BER_0_1, '0', blocks_throttle2_0_1, '0']
+- [ErTools_Teoreticka_BER_0_1_0, '0', blocks_throttle2_0_1_0, '0']
 - [ErTools_Teoreticka_BER_0_2, '0', blocks_throttle2_0_2, '0']
+- [ErTools_Teoreticka_BER_0_2_0, '0', blocks_throttle2_0_2_0, '0']
+- [ErTools_Teoreticka_BER_0_3, '0', blocks_throttle2_0_3, '0']
 - [blocks_nlog10_ff_0, '0', blocks_stream_to_vector_0, '0']
 - [blocks_nlog10_ff_0_0, '0', blocks_stream_to_vector_0_0, '0']
+- [blocks_nlog10_ff_0_0_0, '0', blocks_stream_to_vector_0_0_0, '0']
 - [blocks_nlog10_ff_0_1, '0', blocks_stream_to_vector_0_1, '0']
+- [blocks_nlog10_ff_0_1_0, '0', blocks_stream_to_vector_0_1_0, '0']
 - [blocks_nlog10_ff_0_2, '0', blocks_stream_to_vector_0_2, '0']
+- [blocks_nlog10_ff_0_2_0, '0', blocks_stream_to_vector_0_2_0, '0']
+- [blocks_nlog10_ff_0_3, '0', blocks_stream_to_vector_0_3, '0']
 - [blocks_stream_to_vector_0, '0', qtgui_vector_sink_f_0, '0']
 - [blocks_stream_to_vector_0_0, '0', qtgui_vector_sink_f_0, '1']
+- [blocks_stream_to_vector_0_0_0, '0', qtgui_vector_sink_f_0_0, '1']
 - [blocks_stream_to_vector_0_1, '0', qtgui_vector_sink_f_0, '2']
+- [blocks_stream_to_vector_0_1_0, '0', qtgui_vector_sink_f_0_0, '2']
 - [blocks_stream_to_vector_0_2, '0', qtgui_vector_sink_f_0, '3']
+- [blocks_stream_to_vector_0_2_0, '0', qtgui_vector_sink_f_0_0, '3']
+- [blocks_stream_to_vector_0_3, '0', qtgui_vector_sink_f_0_0, '0']
 - [blocks_throttle2_0, '0', blocks_nlog10_ff_0, '0']
 - [blocks_throttle2_0_0, '0', blocks_nlog10_ff_0_0, '0']
+- [blocks_throttle2_0_0_0, '0', blocks_nlog10_ff_0_0_0, '0']
 - [blocks_throttle2_0_1, '0', blocks_nlog10_ff_0_1, '0']
+- [blocks_throttle2_0_1_0, '0', blocks_nlog10_ff_0_1_0, '0']
 - [blocks_throttle2_0_2, '0', blocks_nlog10_ff_0_2, '0']
+- [blocks_throttle2_0_2_0, '0', blocks_nlog10_ff_0_2_0, '0']
+- [blocks_throttle2_0_3, '0', blocks_nlog10_ff_0_3, '0']
 
 metadata:
   file_format: 1

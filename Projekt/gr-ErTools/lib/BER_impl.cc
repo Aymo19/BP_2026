@@ -39,7 +39,7 @@ BER_impl::BER_impl(int N, int M)
   k = std::log2(M);
 
   // Vektory
-  _count = std::vector<int>(N, 1);          // Celkovy pocet bitov co sme spracovali
+  _count = std::vector<int>(N, k);          // Celkovy pocet bitov co sme spracovali
   _pocet_chyb = std::vector<int>(N, 0);     // Celkovy pocet zistenych chyb
   _pamat_BER = std::vector<double>(N, 1.0); // Vystupne hodnoty BER
   
@@ -137,8 +137,8 @@ int BER_impl::work(int noutput_items,
         _pamat_BER.at(kk) = double(_pocet_chyb.at(kk)) / double(_count.at(kk)); // Tuto nastala chyba, nemenime umelo hodnotu, pocet chyb deleno pocet bitov za celu dobu
       }
 
-     /* if(k%10000 == 0)
-        GR_LOG_INFO(d_logger, std::string("b: ") + std::to_string(in2[i]) + std::string("\n"));
+     /*if(k%2 == 0)
+        GR_LOG_INFO(d_logger,std::to_string(_pocet_chyb.at(kk)) + std::string(" - ") + std::to_string(_count.at(kk)) + std::string("\n"));
       */
 
       // Float vystup = pravdepodobnost chyby na bit v danom Eb/N0

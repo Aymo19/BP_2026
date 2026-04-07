@@ -62,7 +62,7 @@ class TeoretickyBER(gr.top_block, Qt.QWidget):
         ##################################################
         self.samp_rate = samp_rate = 32000
         self.SNR_min = SNR_min = 0
-        self.SNR_max = SNR_max = 50
+        self.SNR_max = SNR_max = 20
         self.N = N = 256
 
         ##################################################
@@ -72,15 +72,15 @@ class TeoretickyBER(gr.top_block, Qt.QWidget):
         self.qtgui_vector_sink_f_0 = qtgui.vector_sink_f(
             N,
             0,
-            0.196850394,
+            (float(SNR_max) / float(N-1)),
             "Eb/N0 [dB]",
-            "Pb",
+            "log Pb",
             "BER",
             4, # Number of inputs
             None # parent
         )
         self.qtgui_vector_sink_f_0.set_update_time(0.01)
-        self.qtgui_vector_sink_f_0.set_y_axis((-6), 1)
+        self.qtgui_vector_sink_f_0.set_y_axis((-6), 0)
         self.qtgui_vector_sink_f_0.enable_autoscale(False)
         self.qtgui_vector_sink_f_0.enable_grid(True)
         self.qtgui_vector_sink_f_0.set_x_axis_units("")
@@ -88,7 +88,7 @@ class TeoretickyBER(gr.top_block, Qt.QWidget):
         self.qtgui_vector_sink_f_0.set_ref_level(0)
 
 
-        labels = ["16-QAM", "64-QAM", "256-QAM", "1024-QAM", '',
+        labels = ["Teoreticka BPSK", "Teoreticka QPSK", "Teoreticka 8PSK", "Teoreticka 16PSK", '',
             '', '', '', '', '']
         widths = [2, 2, 2, 2, 1,
             1, 1, 1, 1, 1]
@@ -120,10 +120,10 @@ class TeoretickyBER(gr.top_block, Qt.QWidget):
         self.blocks_nlog10_ff_0_1 = blocks.nlog10_ff(1, 1, 0)
         self.blocks_nlog10_ff_0_0 = blocks.nlog10_ff(1, 1, 0)
         self.blocks_nlog10_ff_0 = blocks.nlog10_ff(1, 1, 0)
-        self.ErTools_Teoreticka_BER_0_2 = ErTools.Teoreticka_BER(N, 8192, 'QAM', 0, SNR_max)
-        self.ErTools_Teoreticka_BER_0_1 = ErTools.Teoreticka_BER(N, 256, 'QAM', 0, SNR_max)
-        self.ErTools_Teoreticka_BER_0_0 = ErTools.Teoreticka_BER(N, 64, 'QAM', 0, SNR_max)
-        self.ErTools_Teoreticka_BER_0 = ErTools.Teoreticka_BER(N, 16, 'QAM', 0, SNR_max)
+        self.ErTools_Teoreticka_BER_0_2 = ErTools.Teoreticka_BER(N, 16, 'PSK', 0, SNR_max)
+        self.ErTools_Teoreticka_BER_0_1 = ErTools.Teoreticka_BER(N, 8, 'PSK', 0, SNR_max)
+        self.ErTools_Teoreticka_BER_0_0 = ErTools.Teoreticka_BER(N, 4, 'PSK', 0, SNR_max)
+        self.ErTools_Teoreticka_BER_0 = ErTools.Teoreticka_BER(N, 2, 'PSK', 0, SNR_max)
 
 
         ##################################################
@@ -176,12 +176,14 @@ class TeoretickyBER(gr.top_block, Qt.QWidget):
 
     def set_SNR_max(self, SNR_max):
         self.SNR_max = SNR_max
+        self.qtgui_vector_sink_f_0.set_x_axis(0, (float(self.SNR_max) / float(self.N-1)))
 
     def get_N(self):
         return self.N
 
     def set_N(self, N):
         self.N = N
+        self.qtgui_vector_sink_f_0.set_x_axis(0, (float(self.SNR_max) / float(self.N-1)))
 
 
 
