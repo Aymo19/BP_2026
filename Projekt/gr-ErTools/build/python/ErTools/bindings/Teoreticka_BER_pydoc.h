@@ -15,37 +15,10 @@
  */
 
 
-
- static const char *__doc_gr_ErTools_Teoreticka_BER = R"doc(<+description of block+>
-
-Constructor Specific Documentation:
-
-Return a shared_ptr to a new instance of ErTools::Teoreticka_BER.
-
-To avoid accidental use of raw pointers, ErTools::Teoreticka_BER's constructor is in a private implementation class. ErTools::Teoreticka_BER::make is the public interface for creating new instances.
-
-Args:
-    N : 
-    M : 
-    EbN0min : 
-    EbN0max : )doc";
+static const char* __doc_gr_ErTools_Teoreticka_BER = R"doc()doc";
 
 
- static const char *__doc_gr_ErTools_Teoreticka_BER_Teoreticka_BER = R"doc()doc";
+static const char* __doc_gr_ErTools_Teoreticka_BER_Teoreticka_BER = R"doc()doc";
 
 
- static const char *__doc_gr_ErTools_Teoreticka_BER_make = R"doc(<+description of block+>
-
-Constructor Specific Documentation:
-
-Return a shared_ptr to a new instance of ErTools::Teoreticka_BER.
-
-To avoid accidental use of raw pointers, ErTools::Teoreticka_BER's constructor is in a private implementation class. ErTools::Teoreticka_BER::make is the public interface for creating new instances.
-
-Args:
-    N : 
-    M : 
-    EbN0min : 
-    EbN0max : )doc";
-
-  
+static const char* __doc_gr_ErTools_Teoreticka_BER_make = R"doc()doc";

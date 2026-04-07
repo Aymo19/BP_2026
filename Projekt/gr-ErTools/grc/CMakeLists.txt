@@ -11,4 +11,4 @@ install(FILES
     ErTools_SER.block.yml
     ErTools_AWGN.block.yml
     ErTools_Teoreticka_BER.block.yml
-    DESTINATION share/gnuradio/grc/blocks)
+    ErTools_MC.block.yml DESTINATION share/gnuradio/grc/blocks)

@@ -69,8 +69,8 @@ include python/ErTools/bindings/CMakeFiles/ErTools_docstrings.dir/progress.make
 python/ErTools/bindings/CMakeFiles/ErTools_docstrings: python/ErTools/bindings/docstring_status
 
 python/ErTools/bindings/docstring_status:
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=/home/aymo/BC/Projekt/gr-ErTools/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Adding docstrings into ErTools pybind headers ..."
-	cd /home/aymo/BC/Projekt/gr-ErTools/build/python/ErTools/bindings && /usr/bin/python3 /home/aymo/BC/Projekt/gr-ErTools/docs/doxygen/update_pydoc.py sub --json_path /home/aymo/BC/Projekt/gr-ErTools/build/python/ErTools/bindings/extracted_docstrings.json --bindings_dir /home/aymo/BC/Projekt/gr-ErTools/python/ErTools/bindings/docstrings --output_dir /home/aymo/BC/Projekt/gr-ErTools/build/python/ErTools/bindings --filter gr::ErTools
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=/home/aymo/BC/Projekt/gr-ErTools/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Copying ErTools docstring templates as pybind headers ..."
+	cd /home/aymo/BC/Projekt/gr-ErTools/build/python/ErTools/bindings && /usr/bin/python3 /home/aymo/BC/Projekt/gr-ErTools/docs/doxygen/update_pydoc.py copy --bindings_dir /home/aymo/BC/Projekt/gr-ErTools/python/ErTools/bindings/docstrings --output_dir /home/aymo/BC/Projekt/gr-ErTools/build/python/ErTools/bindings
 
 ErTools_docstrings: python/ErTools/bindings/CMakeFiles/ErTools_docstrings
 ErTools_docstrings: python/ErTools/bindings/docstring_status

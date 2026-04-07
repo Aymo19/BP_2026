@@ -28,14 +28,13 @@ inputs:
  - label: in0
    domain: stream
    dtype: complex
+ - label: in1
+   domain: stream
+   dtype: float
 
 outputs:
  - label: out0
    domain: stream
    dtype: complex
- - label: out1
-   domain: stream
-   dtype: int
-   optional: true
 
 file_format: 1

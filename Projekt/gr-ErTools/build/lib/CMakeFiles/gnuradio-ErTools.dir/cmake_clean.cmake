@@ -6,6 +6,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/gnuradio-ErTools.dir/AWGN_kanal_impl.cc.o.d"
   "CMakeFiles/gnuradio-ErTools.dir/BER_impl.cc.o"
   "CMakeFiles/gnuradio-ErTools.dir/BER_impl.cc.o.d"
+  "CMakeFiles/gnuradio-ErTools.dir/MC_impl.cc.o"
+  "CMakeFiles/gnuradio-ErTools.dir/MC_impl.cc.o.d"
   "CMakeFiles/gnuradio-ErTools.dir/SER_impl.cc.o"
   "CMakeFiles/gnuradio-ErTools.dir/SER_impl.cc.o.d"
   "CMakeFiles/gnuradio-ErTools.dir/Teoreticka_BER_impl.cc.o"

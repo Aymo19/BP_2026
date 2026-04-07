@@ -22,13 +22,16 @@ AWGN::sptr AWGN::make(int N, int M, int EbN0min, int EbN0max) {
 }
 
 // Output vector
-static int os[] = { sizeof(gr_complex), sizeof(int) };
+static int os[] = { sizeof(gr_complex)};
 static std::vector<int> osig(os, os + sizeof(os) / sizeof(int));
+
+static int is[] = { sizeof(gr_complex), sizeof(float) };
+static std::vector<int> isig(is, is + sizeof(is) / sizeof(int));
 
 // The private constructor
 AWGN_impl::AWGN_impl(int N, int M, int EbN0min, int EbN0max)
     : gr::sync_block("AWGN",
-                     gr::io_signature::make(1, 1, sizeof(gr_complex)),
+                     gr::io_signature::makev(1, 2, isig),
                      gr::io_signature::makev(1, 2, osig))
 {
   _N = N;             // Pocet vzoriek EbN0 (kolko bodov na X-osi)
@@ -65,9 +68,10 @@ gr_complex Sum2(float EDB, int stav, float Es) {
   int k = std::log2(stav);
 
   // Premena z dB na pomer
+  EDB += 10.0*std::log10(4.0/7.0);
   if(stav > 2) {  //pocitame s EsN0, šum na symbol
     //EsN0 = EbN0 + 10*std::log10(k);
-    EsN0 = pow(10.0, (EDB + 10.0*std::log10(k)) / 10.0);
+    EsN0 = pow(10.0, (EDB + 10.0*std::log10(4)) / 10.0);
     odchylka = std::sqrt(Es / (EsN0 * 2));
   }else {         //pocitame s EbN0, šum na bit
     EsN0 = pow(10.0, EDB/10.0);
@@ -87,8 +91,8 @@ gr_complex Sum2(float EDB, int stav, float Es) {
 //-------------------------------------------------------PREMENNE----------------------------------------------------------||
 
 //docasne, musim upravit
-float rozpatie2, rozpatiePostup2;
-int k2 = 0;
+//float rozpatie2, rozpatiePostup2;
+//int k2 = 0;
 
 //-------------------------------------------------------------------------------------------------------------------------||
 //---------------------------------------------------------WORK------------------------------------------------------------||
@@ -105,24 +109,16 @@ int AWGN_impl::work(int noutput_items,
       //-----------------------Inicializacia-I/O--------------------------|
     // INPUT
     gr_complex *in0 = (gr_complex *) input_items[0];
+    float *in1 = (float *) input_items[1];
     
     // OUTPUT
     gr_complex *out0 = (gr_complex *) output_items[0];
-    int *out1 = (int *) output_items[1];
 
     //-----------------------LOGIKA--------------------------|
     //-------------------Prvotne-vypocty---------------------|
-    float EDB[_N];
-
-    // Linearne rozlozenie EbN0db bodov
-    rozpatie2 = float((_EbN0max - _EbN0min)) / float((_N-1));
-    rozpatiePostup2 = float(_EbN0min);
-
-    for(int i = 0; i < _N; i++) {
-      EDB[i] = rozpatiePostup2;
-      rozpatiePostup2 += rozpatie2;
-    }
     
+    float EBQ;
+
     Ps = 0;
     sumPs = 0;
     // Vypocet vykonu vstupneho signalu Ps = E(x)
@@ -130,17 +126,12 @@ int AWGN_impl::work(int noutput_items,
       sumPs += std::norm(in0[a]);
     
     Ps = sumPs / noutput_items;
-    //GR_LOG_INFO(d_logger, std::to_string(Ps) + std::string("\n"));
-   /* GR_LOG_INFO(d_logger, std::to_string(in0[0].real()) + std::string("\n"));
-    GR_LOG_INFO(d_logger, std::string("Es: ") + std::to_string(Ps) + std::string("\n"));
-    GR_LOG_INFO(d_logger, std::string("Sum: ") + std::to_string(sumPs) + std::string("\n"));
-    GR_LOG_INFO(d_logger, std::string("items: ") + std::to_string(noutput_items) + std::string("\n"));
-  */
     //-----------------------Prejdeme-vsetkymi-I/O-items--------------------------|
     for(int b = 0; b < noutput_items; b++) {
       
+      EBQ = in1[b];
       // Ziskanie komplexneho sumu
-      gr_complex sg_n = Sum2(EDB[k2], _M, Ps);
+      gr_complex sg_n = Sum2(EBQ, _M, Ps);
       
       // Tuto by sa malo scitat ale C++ neznasa komplexne cisla, alebo mna...
       //gr_complex spolu(in0[b].real() + sg_n.real(), in0[b].imag() + sg_n.imag());
@@ -149,14 +140,8 @@ int AWGN_impl::work(int noutput_items,
       out0[b] = sg_n;
 
       // Int vystup = N-ta vzorka EbN0, ktoru sme pocitali
-      out1[b] = k2;
 
       // Iterujeme po vsetkych vzorkach EbN0, t.j. od 0 do N-1
-      if(k2 < _N-1) {
-        k2 += 1;
-      }else {
-        k2 = 0;
-      }
     }
 
     // Tell runtime system how many output items we produced.

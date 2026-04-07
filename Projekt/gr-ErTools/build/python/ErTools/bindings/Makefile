@@ -186,20 +186,6 @@ ErTools_python/fast:
 .PHONY : ErTools_python/fast
 
 # Convenience name for target.
-python/ErTools/bindings/CMakeFiles/extracted_docstrings.dir/rule:
-	cd /home/aymo/BC/Projekt/gr-ErTools/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 python/ErTools/bindings/CMakeFiles/extracted_docstrings.dir/rule
-.PHONY : python/ErTools/bindings/CMakeFiles/extracted_docstrings.dir/rule
-
-# Convenience name for target.
-extracted_docstrings: python/ErTools/bindings/CMakeFiles/extracted_docstrings.dir/rule
-.PHONY : extracted_docstrings
-
-# fast build rule for target.
-extracted_docstrings/fast:
-	cd /home/aymo/BC/Projekt/gr-ErTools/build && $(MAKE) $(MAKESILENT) -f python/ErTools/bindings/CMakeFiles/extracted_docstrings.dir/build.make python/ErTools/bindings/CMakeFiles/extracted_docstrings.dir/build
-.PHONY : extracted_docstrings/fast
-
-# Convenience name for target.
 python/ErTools/bindings/CMakeFiles/ErTools_docstrings.dir/rule:
 	cd /home/aymo/BC/Projekt/gr-ErTools/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 python/ErTools/bindings/CMakeFiles/ErTools_docstrings.dir/rule
 .PHONY : python/ErTools/bindings/CMakeFiles/ErTools_docstrings.dir/rule
@@ -284,6 +270,30 @@ BER_python.s: BER_python.cc.s
 BER_python.cc.s:
 	cd /home/aymo/BC/Projekt/gr-ErTools/build && $(MAKE) $(MAKESILENT) -f python/ErTools/bindings/CMakeFiles/ErTools_python.dir/build.make python/ErTools/bindings/CMakeFiles/ErTools_python.dir/BER_python.cc.s
 .PHONY : BER_python.cc.s
+
+MC_python.o: MC_python.cc.o
+.PHONY : MC_python.o
+
+# target to build an object file
+MC_python.cc.o:
+	cd /home/aymo/BC/Projekt/gr-ErTools/build && $(MAKE) $(MAKESILENT) -f python/ErTools/bindings/CMakeFiles/ErTools_python.dir/build.make python/ErTools/bindings/CMakeFiles/ErTools_python.dir/MC_python.cc.o
+.PHONY : MC_python.cc.o
+
+MC_python.i: MC_python.cc.i
+.PHONY : MC_python.i
+
+# target to preprocess a source file
+MC_python.cc.i:
+	cd /home/aymo/BC/Projekt/gr-ErTools/build && $(MAKE) $(MAKESILENT) -f python/ErTools/bindings/CMakeFiles/ErTools_python.dir/build.make python/ErTools/bindings/CMakeFiles/ErTools_python.dir/MC_python.cc.i
+.PHONY : MC_python.cc.i
+
+MC_python.s: MC_python.cc.s
+.PHONY : MC_python.s
+
+# target to generate assembly for a file
+MC_python.cc.s:
+	cd /home/aymo/BC/Projekt/gr-ErTools/build && $(MAKE) $(MAKESILENT) -f python/ErTools/bindings/CMakeFiles/ErTools_python.dir/build.make python/ErTools/bindings/CMakeFiles/ErTools_python.dir/MC_python.cc.s
+.PHONY : MC_python.cc.s
 
 SER_python.o: SER_python.cc.o
 .PHONY : SER_python.o
@@ -371,7 +381,6 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... test"
 	@echo "... ErTools_docstrings"
-	@echo "... extracted_docstrings"
 	@echo "... ErTools_python"
 	@echo "... AWGN_kanal_python.o"
 	@echo "... AWGN_kanal_python.i"
@@ -382,6 +391,9 @@ help:
 	@echo "... BER_python.o"
 	@echo "... BER_python.i"
 	@echo "... BER_python.s"
+	@echo "... MC_python.o"
+	@echo "... MC_python.i"
+	@echo "... MC_python.s"
 	@echo "... SER_python.o"
 	@echo "... SER_python.i"
 	@echo "... SER_python.s"

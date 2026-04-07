@@ -257,6 +257,30 @@ BER_impl.cc.s:
 	cd /home/aymo/BC/Projekt/gr-ErTools/build && $(MAKE) $(MAKESILENT) -f lib/CMakeFiles/gnuradio-ErTools.dir/build.make lib/CMakeFiles/gnuradio-ErTools.dir/BER_impl.cc.s
 .PHONY : BER_impl.cc.s
 
+MC_impl.o: MC_impl.cc.o
+.PHONY : MC_impl.o
+
+# target to build an object file
+MC_impl.cc.o:
+	cd /home/aymo/BC/Projekt/gr-ErTools/build && $(MAKE) $(MAKESILENT) -f lib/CMakeFiles/gnuradio-ErTools.dir/build.make lib/CMakeFiles/gnuradio-ErTools.dir/MC_impl.cc.o
+.PHONY : MC_impl.cc.o
+
+MC_impl.i: MC_impl.cc.i
+.PHONY : MC_impl.i
+
+# target to preprocess a source file
+MC_impl.cc.i:
+	cd /home/aymo/BC/Projekt/gr-ErTools/build && $(MAKE) $(MAKESILENT) -f lib/CMakeFiles/gnuradio-ErTools.dir/build.make lib/CMakeFiles/gnuradio-ErTools.dir/MC_impl.cc.i
+.PHONY : MC_impl.cc.i
+
+MC_impl.s: MC_impl.cc.s
+.PHONY : MC_impl.s
+
+# target to generate assembly for a file
+MC_impl.cc.s:
+	cd /home/aymo/BC/Projekt/gr-ErTools/build && $(MAKE) $(MAKESILENT) -f lib/CMakeFiles/gnuradio-ErTools.dir/build.make lib/CMakeFiles/gnuradio-ErTools.dir/MC_impl.cc.s
+.PHONY : MC_impl.cc.s
+
 SER_impl.o: SER_impl.cc.o
 .PHONY : SER_impl.o
 
@@ -328,6 +352,9 @@ help:
 	@echo "... BER_impl.o"
 	@echo "... BER_impl.i"
 	@echo "... BER_impl.s"
+	@echo "... MC_impl.o"
+	@echo "... MC_impl.i"
+	@echo "... MC_impl.s"
 	@echo "... SER_impl.o"
 	@echo "... SER_impl.i"
 	@echo "... SER_impl.s"
