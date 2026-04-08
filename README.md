@@ -6,10 +6,10 @@
 - Testing: vsetky moje testovacie C a C++ kody, vacsinou na tvorbu algoritmov, ktore pouzivam
 
 ## Schéma zapojenia (Flowgraph)
-![picture](./Dokument/Fotky/Flowgraph_3.png)
+![picture](./Galeria/Flowgraph_3.png)
 
 ## Výstup z flowgraphu = simulácia + teória
-![picture](./Dokument/Fotky/Vysledok_1.png)
+![picture](./Galeria/Vysledok_1.png)
 
 ## Zobrazenie blokov v bočnej knižnici
-![picture](./Dokument/Fotky/Side.png)
+![picture](./Galeria/Side.png)
