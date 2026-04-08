@@ -297,7 +297,7 @@ blocks:
     bus_sink: false
     bus_source: false
     bus_structure: null
-    coordinate: [680, 144.0]
+    coordinate: [672, 136.0]
     rotation: 0
     state: enabled
 - name: ErTools_Teoreticka_BER_0
