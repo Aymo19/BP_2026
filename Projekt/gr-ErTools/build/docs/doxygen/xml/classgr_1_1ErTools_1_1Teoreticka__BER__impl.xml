@@ -1,0 +1,327 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="classgr_1_1ErTools_1_1Teoreticka__BER__impl" kind="class" language="C++" prot="public">
+    <compoundname>gr::ErTools::Teoreticka_BER_impl</compoundname>
+    <basecompoundref refid="classgr_1_1ErTools_1_1Teoreticka__BER" prot="public" virt="non-virtual">gr::ErTools::Teoreticka_BER</basecompoundref>
+    <includes refid="Teoreticka__BER__impl_8h" local="no">Teoreticka_BER_impl.h</includes>
+    <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classgr_1_1ErTools_1_1Teoreticka__BER__impl_1aab1965dd1f05c922f3959ea3f2af6fa7" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int gr::ErTools::Teoreticka_BER_impl::_N</definition>
+        <argsstring></argsstring>
+        <name>_N</name>
+        <qualifiedname>gr::ErTools::Teoreticka_BER_impl::_N</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/aymo/BC/Projekt/gr-ErTools/lib/Teoreticka_BER_impl.h" line="20" column="7" bodyfile="/home/aymo/BC/Projekt/gr-ErTools/lib/Teoreticka_BER_impl.h" bodystart="20" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgr_1_1ErTools_1_1Teoreticka__BER__impl_1a463d127d973c895fde2f64b980a22470" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int gr::ErTools::Teoreticka_BER_impl::_M</definition>
+        <argsstring></argsstring>
+        <name>_M</name>
+        <qualifiedname>gr::ErTools::Teoreticka_BER_impl::_M</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/aymo/BC/Projekt/gr-ErTools/lib/Teoreticka_BER_impl.h" line="20" column="10" bodyfile="/home/aymo/BC/Projekt/gr-ErTools/lib/Teoreticka_BER_impl.h" bodystart="20" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgr_1_1ErTools_1_1Teoreticka__BER__impl_1a644a47b1e50a28303b67a58e654330d0" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int gr::ErTools::Teoreticka_BER_impl::_EbN0min</definition>
+        <argsstring></argsstring>
+        <name>_EbN0min</name>
+        <qualifiedname>gr::ErTools::Teoreticka_BER_impl::_EbN0min</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/aymo/BC/Projekt/gr-ErTools/lib/Teoreticka_BER_impl.h" line="20" column="13" bodyfile="/home/aymo/BC/Projekt/gr-ErTools/lib/Teoreticka_BER_impl.h" bodystart="20" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgr_1_1ErTools_1_1Teoreticka__BER__impl_1a40097c1c7a0e9dcda02842458b9d0db9" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int gr::ErTools::Teoreticka_BER_impl::_EbN0max</definition>
+        <argsstring></argsstring>
+        <name>_EbN0max</name>
+        <qualifiedname>gr::ErTools::Teoreticka_BER_impl::_EbN0max</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/aymo/BC/Projekt/gr-ErTools/lib/Teoreticka_BER_impl.h" line="20" column="22" bodyfile="/home/aymo/BC/Projekt/gr-ErTools/lib/Teoreticka_BER_impl.h" bodystart="20" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgr_1_1ErTools_1_1Teoreticka__BER__impl_1a47ecc2cedb536f97714c3e1d7e112636" prot="private" static="no" mutable="no">
+        <type>std::string</type>
+        <definition>std::string gr::ErTools::Teoreticka_BER_impl::_Mod</definition>
+        <argsstring></argsstring>
+        <name>_Mod</name>
+        <qualifiedname>gr::ErTools::Teoreticka_BER_impl::_Mod</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/aymo/BC/Projekt/gr-ErTools/lib/Teoreticka_BER_impl.h" line="21" column="15" bodyfile="/home/aymo/BC/Projekt/gr-ErTools/lib/Teoreticka_BER_impl.h" bodystart="21" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgr_1_1ErTools_1_1Teoreticka__BER__impl_1aabc553532053c41b2441b884bdbbd813" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int gr::ErTools::Teoreticka_BER_impl::j</definition>
+        <argsstring></argsstring>
+        <name>j</name>
+        <qualifiedname>gr::ErTools::Teoreticka_BER_impl::j</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/aymo/BC/Projekt/gr-ErTools/lib/Teoreticka_BER_impl.h" line="22" column="7" bodyfile="/home/aymo/BC/Projekt/gr-ErTools/lib/Teoreticka_BER_impl.h" bodystart="22" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgr_1_1ErTools_1_1Teoreticka__BER__impl_1af53d0d602d261be6d142ec290b02c2f6" prot="private" static="no" mutable="no">
+        <type>double</type>
+        <definition>double gr::ErTools::Teoreticka_BER_impl::rozpatieT</definition>
+        <argsstring></argsstring>
+        <name>rozpatieT</name>
+        <qualifiedname>gr::ErTools::Teoreticka_BER_impl::rozpatieT</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/aymo/BC/Projekt/gr-ErTools/lib/Teoreticka_BER_impl.h" line="23" column="10" bodyfile="/home/aymo/BC/Projekt/gr-ErTools/lib/Teoreticka_BER_impl.h" bodystart="23" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgr_1_1ErTools_1_1Teoreticka__BER__impl_1a7472a976173dd20661d0ef96647e1223" prot="private" static="no" mutable="no">
+        <type>double</type>
+        <definition>double gr::ErTools::Teoreticka_BER_impl::rozpatiePostupT</definition>
+        <argsstring></argsstring>
+        <name>rozpatiePostupT</name>
+        <qualifiedname>gr::ErTools::Teoreticka_BER_impl::rozpatiePostupT</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/aymo/BC/Projekt/gr-ErTools/lib/Teoreticka_BER_impl.h" line="23" column="20" bodyfile="/home/aymo/BC/Projekt/gr-ErTools/lib/Teoreticka_BER_impl.h" bodystart="23" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgr_1_1ErTools_1_1Teoreticka__BER__impl_1a3acc6081519048720df5ab6201bb9f7b" prot="private" static="no" mutable="no">
+        <type>std::vector&lt; double &gt;</type>
+        <definition>std::vector&lt;double&gt; gr::ErTools::Teoreticka_BER_impl::_bodyBPSK</definition>
+        <argsstring></argsstring>
+        <name>_bodyBPSK</name>
+        <qualifiedname>gr::ErTools::Teoreticka_BER_impl::_bodyBPSK</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/aymo/BC/Projekt/gr-ErTools/lib/Teoreticka_BER_impl.h" line="25" column="15" bodyfile="/home/aymo/BC/Projekt/gr-ErTools/lib/Teoreticka_BER_impl.h" bodystart="25" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgr_1_1ErTools_1_1Teoreticka__BER__impl_1aa825df76b1e42330c630519d0690a16d" prot="private" static="no" mutable="no">
+        <type>std::vector&lt; double &gt;</type>
+        <definition>std::vector&lt;double&gt; gr::ErTools::Teoreticka_BER_impl::_bodyQPSK</definition>
+        <argsstring></argsstring>
+        <name>_bodyQPSK</name>
+        <qualifiedname>gr::ErTools::Teoreticka_BER_impl::_bodyQPSK</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/aymo/BC/Projekt/gr-ErTools/lib/Teoreticka_BER_impl.h" line="26" column="15" bodyfile="/home/aymo/BC/Projekt/gr-ErTools/lib/Teoreticka_BER_impl.h" bodystart="26" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgr_1_1ErTools_1_1Teoreticka__BER__impl_1a53502113235de108722e430eea7244f1" prot="private" static="no" mutable="no">
+        <type>std::vector&lt; double &gt;</type>
+        <definition>std::vector&lt;double&gt; gr::ErTools::Teoreticka_BER_impl::_bodyMPSK</definition>
+        <argsstring></argsstring>
+        <name>_bodyMPSK</name>
+        <qualifiedname>gr::ErTools::Teoreticka_BER_impl::_bodyMPSK</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/aymo/BC/Projekt/gr-ErTools/lib/Teoreticka_BER_impl.h" line="27" column="15" bodyfile="/home/aymo/BC/Projekt/gr-ErTools/lib/Teoreticka_BER_impl.h" bodystart="27" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgr_1_1ErTools_1_1Teoreticka__BER__impl_1a065f6ae94c969a870f5e316a43d34758" prot="private" static="no" mutable="no">
+        <type>std::vector&lt; double &gt;</type>
+        <definition>std::vector&lt;double&gt; gr::ErTools::Teoreticka_BER_impl::_bodyMQAM</definition>
+        <argsstring></argsstring>
+        <name>_bodyMQAM</name>
+        <qualifiedname>gr::ErTools::Teoreticka_BER_impl::_bodyMQAM</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/aymo/BC/Projekt/gr-ErTools/lib/Teoreticka_BER_impl.h" line="29" column="15" bodyfile="/home/aymo/BC/Projekt/gr-ErTools/lib/Teoreticka_BER_impl.h" bodystart="29" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgr_1_1ErTools_1_1Teoreticka__BER__impl_1af7df04f5abd1e4610d29b2a1d818b8cd" prot="private" static="no" mutable="no">
+        <type>std::vector&lt; double &gt;</type>
+        <definition>std::vector&lt;double&gt; gr::ErTools::Teoreticka_BER_impl::EDB</definition>
+        <argsstring></argsstring>
+        <name>EDB</name>
+        <qualifiedname>gr::ErTools::Teoreticka_BER_impl::EDB</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/aymo/BC/Projekt/gr-ErTools/lib/Teoreticka_BER_impl.h" line="31" column="15" bodyfile="/home/aymo/BC/Projekt/gr-ErTools/lib/Teoreticka_BER_impl.h" bodystart="31" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="classgr_1_1ErTools_1_1Teoreticka__BER__impl_1a1596e0f581147deeb70316efe459e04b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>gr::ErTools::Teoreticka_BER_impl::Teoreticka_BER_impl</definition>
+        <argsstring>(int N, int M, std::string Mod, int EbN0min, int EbN0max)</argsstring>
+        <name>Teoreticka_BER_impl</name>
+        <qualifiedname>gr::ErTools::Teoreticka_BER_impl::Teoreticka_BER_impl</qualifiedname>
+        <param>
+          <type>int</type>
+          <declname>N</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>M</declname>
+        </param>
+        <param>
+          <type>std::string</type>
+          <declname>Mod</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>EbN0min</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>EbN0max</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/aymo/BC/Projekt/gr-ErTools/lib/Teoreticka_BER_impl.h" line="34" column="5"/>
+      </memberdef>
+      <memberdef kind="function" id="classgr_1_1ErTools_1_1Teoreticka__BER__impl_1a071dc2582bb62fab7150e3b73c765470" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>gr::ErTools::Teoreticka_BER_impl::~Teoreticka_BER_impl</definition>
+        <argsstring>()</argsstring>
+        <name>~Teoreticka_BER_impl</name>
+        <qualifiedname>gr::ErTools::Teoreticka_BER_impl::~Teoreticka_BER_impl</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/aymo/BC/Projekt/gr-ErTools/lib/Teoreticka_BER_impl.h" line="35" column="5"/>
+      </memberdef>
+      <memberdef kind="function" id="classgr_1_1ErTools_1_1Teoreticka__BER__impl_1adefb6f4a7d977e0a57780d66ae1727d7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int gr::ErTools::Teoreticka_BER_impl::work</definition>
+        <argsstring>(int noutput_items, gr_vector_const_void_star &amp;input_items, gr_vector_void_star &amp;output_items)</argsstring>
+        <name>work</name>
+        <qualifiedname>gr::ErTools::Teoreticka_BER_impl::work</qualifiedname>
+        <param>
+          <type>int</type>
+          <declname>noutput_items</declname>
+        </param>
+        <param>
+          <type>gr_vector_const_void_star &amp;</type>
+          <declname>input_items</declname>
+        </param>
+        <param>
+          <type>gr_vector_void_star &amp;</type>
+          <declname>output_items</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/aymo/BC/Projekt/gr-ErTools/lib/Teoreticka_BER_impl.h" line="38" column="9"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="2">
+        <label>gr::ErTools::Teoreticka_BER</label>
+        <link refid="classgr_1_1ErTools_1_1Teoreticka__BER"/>
+        <childnode refid="3" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>gr::ErTools::Teoreticka_BER_impl</label>
+        <link refid="classgr_1_1ErTools_1_1Teoreticka__BER__impl"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>gr::sync_block</label>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="2">
+        <label>gr::ErTools::Teoreticka_BER</label>
+        <link refid="classgr_1_1ErTools_1_1Teoreticka__BER"/>
+        <childnode refid="3" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>gr::ErTools::Teoreticka_BER_impl</label>
+        <link refid="classgr_1_1ErTools_1_1Teoreticka__BER__impl"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>gr::sync_block</label>
+      </node>
+    </collaborationgraph>
+    <location file="/home/aymo/BC/Projekt/gr-ErTools/lib/Teoreticka_BER_impl.h" line="17" column="1" bodyfile="/home/aymo/BC/Projekt/gr-ErTools/lib/Teoreticka_BER_impl.h" bodystart="18" bodyend="41"/>
+    <listofallmembers>
+      <member refid="classgr_1_1ErTools_1_1Teoreticka__BER__impl_1a3acc6081519048720df5ab6201bb9f7b" prot="private" virt="non-virtual"><scope>gr::ErTools::Teoreticka_BER_impl</scope><name>_bodyBPSK</name></member>
+      <member refid="classgr_1_1ErTools_1_1Teoreticka__BER__impl_1a53502113235de108722e430eea7244f1" prot="private" virt="non-virtual"><scope>gr::ErTools::Teoreticka_BER_impl</scope><name>_bodyMPSK</name></member>
+      <member refid="classgr_1_1ErTools_1_1Teoreticka__BER__impl_1a065f6ae94c969a870f5e316a43d34758" prot="private" virt="non-virtual"><scope>gr::ErTools::Teoreticka_BER_impl</scope><name>_bodyMQAM</name></member>
+      <member refid="classgr_1_1ErTools_1_1Teoreticka__BER__impl_1aa825df76b1e42330c630519d0690a16d" prot="private" virt="non-virtual"><scope>gr::ErTools::Teoreticka_BER_impl</scope><name>_bodyQPSK</name></member>
+      <member refid="classgr_1_1ErTools_1_1Teoreticka__BER__impl_1a40097c1c7a0e9dcda02842458b9d0db9" prot="private" virt="non-virtual"><scope>gr::ErTools::Teoreticka_BER_impl</scope><name>_EbN0max</name></member>
+      <member refid="classgr_1_1ErTools_1_1Teoreticka__BER__impl_1a644a47b1e50a28303b67a58e654330d0" prot="private" virt="non-virtual"><scope>gr::ErTools::Teoreticka_BER_impl</scope><name>_EbN0min</name></member>
+      <member refid="classgr_1_1ErTools_1_1Teoreticka__BER__impl_1a463d127d973c895fde2f64b980a22470" prot="private" virt="non-virtual"><scope>gr::ErTools::Teoreticka_BER_impl</scope><name>_M</name></member>
+      <member refid="classgr_1_1ErTools_1_1Teoreticka__BER__impl_1a47ecc2cedb536f97714c3e1d7e112636" prot="private" virt="non-virtual"><scope>gr::ErTools::Teoreticka_BER_impl</scope><name>_Mod</name></member>
+      <member refid="classgr_1_1ErTools_1_1Teoreticka__BER__impl_1aab1965dd1f05c922f3959ea3f2af6fa7" prot="private" virt="non-virtual"><scope>gr::ErTools::Teoreticka_BER_impl</scope><name>_N</name></member>
+      <member refid="classgr_1_1ErTools_1_1Teoreticka__BER__impl_1af7df04f5abd1e4610d29b2a1d818b8cd" prot="private" virt="non-virtual"><scope>gr::ErTools::Teoreticka_BER_impl</scope><name>EDB</name></member>
+      <member refid="classgr_1_1ErTools_1_1Teoreticka__BER__impl_1aabc553532053c41b2441b884bdbbd813" prot="private" virt="non-virtual"><scope>gr::ErTools::Teoreticka_BER_impl</scope><name>j</name></member>
+      <member refid="classgr_1_1ErTools_1_1Teoreticka__BER_1afbbd41fcaa3885747248af04385e5d9e" prot="public" virt="non-virtual"><scope>gr::ErTools::Teoreticka_BER_impl</scope><name>make</name></member>
+      <member refid="classgr_1_1ErTools_1_1Teoreticka__BER__impl_1a7472a976173dd20661d0ef96647e1223" prot="private" virt="non-virtual"><scope>gr::ErTools::Teoreticka_BER_impl</scope><name>rozpatiePostupT</name></member>
+      <member refid="classgr_1_1ErTools_1_1Teoreticka__BER__impl_1af53d0d602d261be6d142ec290b02c2f6" prot="private" virt="non-virtual"><scope>gr::ErTools::Teoreticka_BER_impl</scope><name>rozpatieT</name></member>
+      <member refid="classgr_1_1ErTools_1_1Teoreticka__BER_1aa90ff4d234e916ba7582974f171f05cd" prot="public" virt="non-virtual"><scope>gr::ErTools::Teoreticka_BER_impl</scope><name>sptr</name></member>
+      <member refid="classgr_1_1ErTools_1_1Teoreticka__BER__impl_1a1596e0f581147deeb70316efe459e04b" prot="public" virt="non-virtual"><scope>gr::ErTools::Teoreticka_BER_impl</scope><name>Teoreticka_BER_impl</name></member>
+      <member refid="classgr_1_1ErTools_1_1Teoreticka__BER__impl_1adefb6f4a7d977e0a57780d66ae1727d7" prot="public" virt="non-virtual"><scope>gr::ErTools::Teoreticka_BER_impl</scope><name>work</name></member>
+      <member refid="classgr_1_1ErTools_1_1Teoreticka__BER__impl_1a071dc2582bb62fab7150e3b73c765470" prot="public" virt="non-virtual"><scope>gr::ErTools::Teoreticka_BER_impl</scope><name>~Teoreticka_BER_impl</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

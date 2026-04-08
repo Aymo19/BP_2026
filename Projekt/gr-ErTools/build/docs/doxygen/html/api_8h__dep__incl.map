@@ -1,0 +1,27 @@
+<map id="api.h" name="api.h">
+<area shape="rect" id="Node000001" title=" " alt="" coords="388,5,443,31"/>
+<area shape="rect" id="Node000002" href="$AWGN_8h.html" title=" " alt="" coords="59,79,134,104"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="375,31,135,84,134,79,374,26"/>
+<area shape="rect" id="Node000004" href="$AWGN__kanal_8h.html" title=" " alt="" coords="175,79,293,104"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="376,37,265,81,263,76,374,33"/>
+<area shape="rect" id="Node000006" href="$BER_8h.html" title=" " alt="" coords="345,79,405,104"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="404,44,384,80,379,77,400,42"/>
+<area shape="rect" id="Node000008" href="$MC_8h.html" title=" " alt="" coords="447,79,501,104"/>
+<area shape="poly" id="edge7_Node000001_Node000008" title=" " alt="" coords="436,40,467,77,462,80,432,43"/>
+<area shape="rect" id="Node000010" href="$SER_8h.html" title=" " alt="" coords="553,79,611,104"/>
+<area shape="poly" id="edge9_Node000001_Node000010" title=" " alt="" coords="456,34,556,76,554,81,454,38"/>
+<area shape="rect" id="Node000012" href="$Teoreticka__BER_8h.html" title=" " alt="" coords="667,79,801,104"/>
+<area shape="poly" id="edge11_Node000001_Node000012" title=" " alt="" coords="457,26,683,76,682,81,456,31"/>
+<area shape="rect" id="Node000003" href="$AWGN__impl_8h.html" title=" " alt="" coords="5,152,116,177"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="87,117,69,153,64,151,82,115"/>
+<area shape="rect" id="Node000005" href="$AWGN__kanal__impl_8h.html" title=" " alt="" coords="140,152,293,177"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="231,118,222,153,217,151,225,117"/>
+<area shape="rect" id="Node000007" href="$BER__impl_8h.html" title=" " alt="" coords="318,152,414,177"/>
+<area shape="poly" id="edge6_Node000006_Node000007" title=" " alt="" coords="375,118,370,152,365,152,369,117"/>
+<area shape="rect" id="Node000009" href="$MC__impl_8h.html" title=" " alt="" coords="438,152,529,177"/>
+<area shape="poly" id="edge8_Node000008_Node000009" title=" " alt="" coords="480,117,484,152,479,152,475,118"/>
+<area shape="rect" id="Node000011" href="$SER__impl_8h.html" title=" " alt="" coords="553,152,648,177"/>
+<area shape="poly" id="edge10_Node000010_Node000011" title=" " alt="" coords="591,117,600,151,595,153,586,118"/>
+<area shape="rect" id="Node000013" href="$Teoreticka__BER__impl_8h.html" title=" " alt="" coords="672,152,841,177"/>
+<area shape="poly" id="edge12_Node000012_Node000013" title=" " alt="" coords="744,117,756,151,750,153,739,118"/>
+</map>

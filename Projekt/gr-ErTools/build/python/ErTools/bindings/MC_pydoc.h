@@ -16,12 +16,34 @@
 
 
 
- static const char *__doc_gr_ErTools_MC = R"doc()doc";
+ static const char *__doc_gr_ErTools_MC = R"doc(<+description of block+>
+
+Constructor Specific Documentation:
+
+Return a shared_ptr to a new instance of ErTools::MC.
+
+To avoid accidental use of raw pointers, ErTools::MC's constructor is in a private implementation class. ErTools::MC::make is the public interface for creating new instances.
+
+Args:
+    N : 
+    EbN0min : 
+    EbN0max : )doc";
 
 
  static const char *__doc_gr_ErTools_MC_MC = R"doc()doc";
 
 
- static const char *__doc_gr_ErTools_MC_make = R"doc()doc";
+ static const char *__doc_gr_ErTools_MC_make = R"doc(<+description of block+>
+
+Constructor Specific Documentation:
+
+Return a shared_ptr to a new instance of ErTools::MC.
+
+To avoid accidental use of raw pointers, ErTools::MC's constructor is in a private implementation class. ErTools::MC::make is the public interface for creating new instances.
+
+Args:
+    N : 
+    EbN0min : 
+    EbN0max : )doc";
 
   

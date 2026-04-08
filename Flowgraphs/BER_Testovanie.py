@@ -64,9 +64,9 @@ class BER_Testovanie(gr.top_block, Qt.QWidget):
         ##################################################
         # Variables
         ##################################################
-        self.samp_rate = samp_rate = 10000000
+        self.samp_rate = samp_rate = int(10e6)
         self.QAM_Gray = QAM_Gray = digital.qam.qam_constellation(constellation_points=16, differential=False, mod_code="gray", large_ampls_to_corners=False)
-        self.Num_samp = Num_samp = 10000000
+        self.Num_samp = Num_samp = int(10e6)
         self.N = N = 256
         self.Modulacia_0 = Modulacia_0 = digital.constellation_8psk().base()
         self.Modulacia_0.set_npwr(1.0)
@@ -99,8 +99,8 @@ class BER_Testovanie(gr.top_block, Qt.QWidget):
         self.qtgui_vector_sink_f_0_0.set_ref_level(0)
 
 
-        labels = ["Simulácia 8PSK", '"Teoreticka 8PSK', "Teoreticka QPSK", "Teoreticka 8PSK", "Teoreticka 16PSK",
-            "Teoreticka 16QAM", "Teoreticka 32QAM", "Teoreticka 64QAM", "Teoreticka 128QAM", "Teoreticka 256QAM"]
+        labels = ["Simulácia BPSK", "Simulácia 8PSK", "Simulácia 16-QAM", "Teoreticka BPSK", "Teoreticka 8PSK",
+            "Teoreticka 16-QAM", "Teoreticka 32QAM", "Teoreticka 64QAM", "Teoreticka 128QAM", "Teoreticka 256QAM"]
         widths = [2, 2, 2, 2, 2,
             2, 2, 2, 2, 2]
         colors = ["red", "blue", "green", "cyan", "black",

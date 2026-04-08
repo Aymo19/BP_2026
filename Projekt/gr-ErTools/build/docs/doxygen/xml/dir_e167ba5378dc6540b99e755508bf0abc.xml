@@ -1,0 +1,12 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="dir_e167ba5378dc6540b99e755508bf0abc" kind="dir">
+    <compoundname>ErTools</compoundname>
+    <innerdir refid="dir_f0ee746cf45e3b730ff0d711d1e77b2a">bindings</innerdir>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/aymo/BC/Projekt/gr-ErTools/python/ErTools/"/>
+  </compounddef>
+</doxygen>
