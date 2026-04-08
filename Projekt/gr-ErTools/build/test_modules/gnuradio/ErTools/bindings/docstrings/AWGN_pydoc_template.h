@@ -15,13 +15,10 @@
  */
 
 
-
- static const char *__doc_gr_ErTools_AWGN = R"doc()doc";
-
-
- static const char *__doc_gr_ErTools_AWGN_AWGN = R"doc()doc";
+static const char* __doc_gr_ErTools_AWGN = R"doc()doc";
 
 
- static const char *__doc_gr_ErTools_AWGN_make = R"doc()doc";
+static const char* __doc_gr_ErTools_AWGN_AWGN = R"doc()doc";
 
-  
+
+static const char* __doc_gr_ErTools_AWGN_make = R"doc()doc";

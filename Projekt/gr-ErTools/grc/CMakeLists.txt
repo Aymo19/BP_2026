@@ -6,7 +6,6 @@
 # SPDX-License-Identifier: GPL-3.0-or-later
 #
 install(FILES
-    ErTools_AWGN_kanal.block.yml
     ErTools_BER.block.yml
     ErTools_SER.block.yml
     ErTools_AWGN.block.yml

@@ -10,7 +10,6 @@
 # Install public header files
 ########################################################################
 install(FILES api.h
-    AWGN_kanal.h
     BER.h
     SER.h
     AWGN.h

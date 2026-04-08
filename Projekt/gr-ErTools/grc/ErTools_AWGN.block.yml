@@ -4,25 +4,13 @@ category: '[ErTools]'
 
 templates:
   imports: from gnuradio import ErTools
-  make: ErTools.AWGN(${N}, ${M}, ${EbN0min}, ${EbN0max})
+  make: ErTools.AWGN(${M})
 
 parameters:
-- id: N
-  label: Počet EbN0 bodov
-  dtype: int
-  default: 128
 - id: M
   label: Počet modulačných stavov
   dtype: int
   default: 2
-- id: EbN0min
-  label: EbN0 min
-  dtype: int
-  default: 0
-- id: EbN0max
-  label: EbN0 max
-  dtype: int
-  default: 20
 
 inputs:
  - label: in0
@@ -33,7 +21,7 @@ inputs:
    dtype: float
 
 outputs:
- - label: out0
+ - label: out
    domain: stream
    dtype: complex
 

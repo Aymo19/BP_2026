@@ -47,6 +47,20 @@
         </inbodydescription>
         <location file="/home/aymo/BC/Projekt/gr-ErTools/lib/BER_impl.h" line="21" column="7" bodyfile="/home/aymo/BC/Projekt/gr-ErTools/lib/BER_impl.h" bodystart="21" bodyend="-1"/>
       </memberdef>
+      <memberdef kind="variable" id="classgr_1_1ErTools_1_1BER__impl_1aa11f6d310e7eeb8839451cd310ac8b3b" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int gr::ErTools::BER_impl::index</definition>
+        <argsstring></argsstring>
+        <name>index</name>
+        <qualifiedname>gr::ErTools::BER_impl::index</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/aymo/BC/Projekt/gr-ErTools/lib/BER_impl.h" line="21" column="9" bodyfile="/home/aymo/BC/Projekt/gr-ErTools/lib/BER_impl.h" bodystart="21" bodyend="-1"/>
+      </memberdef>
       <memberdef kind="variable" id="classgr_1_1ErTools_1_1BER__impl_1ae027d779cd1785ace0ab535c946c5e55" prot="private" static="no" mutable="no">
         <type>std::vector&lt; int &gt;</type>
         <definition>std::vector&lt;int&gt; gr::ErTools::BER_impl::_count</definition>
@@ -200,6 +214,7 @@
       <member refid="classgr_1_1ErTools_1_1BER__impl_1ab18d7297f443b1021b20c7bcf5189526" prot="private" virt="non-virtual"><scope>gr::ErTools::BER_impl</scope><name>_pamat_BER</name></member>
       <member refid="classgr_1_1ErTools_1_1BER__impl_1a551252fd75556617d6e1f3330deb0863" prot="private" virt="non-virtual"><scope>gr::ErTools::BER_impl</scope><name>_pocet_chyb</name></member>
       <member refid="classgr_1_1ErTools_1_1BER__impl_1aa96b80fc8e989286cca365a5c67f6612" prot="public" virt="non-virtual"><scope>gr::ErTools::BER_impl</scope><name>BER_impl</name></member>
+      <member refid="classgr_1_1ErTools_1_1BER__impl_1aa11f6d310e7eeb8839451cd310ac8b3b" prot="private" virt="non-virtual"><scope>gr::ErTools::BER_impl</scope><name>index</name></member>
       <member refid="classgr_1_1ErTools_1_1BER__impl_1ab4c67152d40a3cfdb9ea46156380c8d2" prot="private" virt="non-virtual"><scope>gr::ErTools::BER_impl</scope><name>k</name></member>
       <member refid="classgr_1_1ErTools_1_1BER_1a5c4afb204a13bcf643c1fa2925a681e2" prot="public" virt="non-virtual"><scope>gr::ErTools::BER_impl</scope><name>make</name></member>
       <member refid="classgr_1_1ErTools_1_1BER_1a194735ba854cf2b55471d8a46d12c58b" prot="public" virt="non-virtual"><scope>gr::ErTools::BER_impl</scope><name>sptr</name></member>

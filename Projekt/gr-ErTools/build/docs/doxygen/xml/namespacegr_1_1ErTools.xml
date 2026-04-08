@@ -4,8 +4,6 @@
     <compoundname>gr::ErTools</compoundname>
     <innerclass refid="classgr_1_1ErTools_1_1AWGN" prot="public">gr::ErTools::AWGN</innerclass>
     <innerclass refid="classgr_1_1ErTools_1_1AWGN__impl" prot="public">gr::ErTools::AWGN_impl</innerclass>
-    <innerclass refid="classgr_1_1ErTools_1_1AWGN__kanal" prot="public">gr::ErTools::AWGN_kanal</innerclass>
-    <innerclass refid="classgr_1_1ErTools_1_1AWGN__kanal__impl" prot="public">gr::ErTools::AWGN_kanal_impl</innerclass>
     <innerclass refid="classgr_1_1ErTools_1_1BER" prot="public">gr::ErTools::BER</innerclass>
     <innerclass refid="classgr_1_1ErTools_1_1BER__impl" prot="public">gr::ErTools::BER_impl</innerclass>
     <innerclass refid="classgr_1_1ErTools_1_1MC" prot="public">gr::ErTools::MC</innerclass>

@@ -16,11 +16,11 @@ namespace ErTools {
 class AWGN_impl : public AWGN
 {
 private:
-  int _N, _M, _EbN0min, _EbN0max;
-  float Ps, sumPs;
+  int _M;
+  float Ps, sumPs, EBQ;
 
 public:
-    AWGN_impl(int N, int M, int EbN0min, int EbN0max);
+    AWGN_impl(int M);
     ~AWGN_impl();
 
     // Where all the action really happens

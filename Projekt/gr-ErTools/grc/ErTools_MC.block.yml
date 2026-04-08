@@ -8,14 +8,17 @@ templates:
 
 parameters:
 - id: N
-  label: N
+  label: Počet Eb/N0 bodov
   dtype: int
+  default: 256
 - id: EbN0min
-  label: min
+  label: Minimálna Eb/N0
   dtype: int
+  default: 0
 - id: EbN0max
-  label: max
+  label: Maximálna Eb/N0
   dtype: int
+  default: 15
 
 outputs:
  - label: out0

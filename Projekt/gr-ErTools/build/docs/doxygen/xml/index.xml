@@ -2,30 +2,16 @@
 <doxygenindex xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="index.xsd" version="1.9.8" xml:lang="en-US">
   <compound refid="classgr_1_1ErTools_1_1AWGN" kind="class"><name>gr::ErTools::AWGN</name>
     <member refid="classgr_1_1ErTools_1_1AWGN_1abbd70d87c16c12d9b2ac473587e02cea" kind="typedef"><name>sptr</name></member>
-    <member refid="classgr_1_1ErTools_1_1AWGN_1a8882a18adaabe88cdaaeb1093c628f3f" kind="function"><name>make</name></member>
+    <member refid="classgr_1_1ErTools_1_1AWGN_1a5f536d1d27509c146036228f916d2b12" kind="function"><name>make</name></member>
   </compound>
   <compound refid="classgr_1_1ErTools_1_1AWGN__impl" kind="class"><name>gr::ErTools::AWGN_impl</name>
-    <member refid="classgr_1_1ErTools_1_1AWGN__impl_1ac77bbe5f8f945372e83845808712defe" kind="variable"><name>_N</name></member>
     <member refid="classgr_1_1ErTools_1_1AWGN__impl_1a5599e40447995126fb0a60b9f800b72a" kind="variable"><name>_M</name></member>
-    <member refid="classgr_1_1ErTools_1_1AWGN__impl_1a025183b0b6c011d346e9fca07615d10e" kind="variable"><name>_EbN0min</name></member>
-    <member refid="classgr_1_1ErTools_1_1AWGN__impl_1ad350a98220e6496fb67d94108c7f594e" kind="variable"><name>_EbN0max</name></member>
     <member refid="classgr_1_1ErTools_1_1AWGN__impl_1a867e72499ba919f74851f5aff1526cd7" kind="variable"><name>Ps</name></member>
     <member refid="classgr_1_1ErTools_1_1AWGN__impl_1a44a81ec6cc7997845aefc3d31fbabd06" kind="variable"><name>sumPs</name></member>
-    <member refid="classgr_1_1ErTools_1_1AWGN__impl_1afbc6482a03076c4d483b78f49779af7c" kind="function"><name>AWGN_impl</name></member>
+    <member refid="classgr_1_1ErTools_1_1AWGN__impl_1a2fea35583438c4391d49a50f85f879ad" kind="variable"><name>EBQ</name></member>
+    <member refid="classgr_1_1ErTools_1_1AWGN__impl_1a33d692b578a763f13db17b98b65e4727" kind="function"><name>AWGN_impl</name></member>
     <member refid="classgr_1_1ErTools_1_1AWGN__impl_1a63be0847606f51c682850e095dccf7d8" kind="function"><name>~AWGN_impl</name></member>
     <member refid="classgr_1_1ErTools_1_1AWGN__impl_1a1c1d31a0ca34abc4e20ce55d08fccd7b" kind="function"><name>work</name></member>
-  </compound>
-  <compound refid="classgr_1_1ErTools_1_1AWGN__kanal" kind="class"><name>gr::ErTools::AWGN_kanal</name>
-    <member refid="classgr_1_1ErTools_1_1AWGN__kanal_1a19fee0aa22fa30c4de406353f5d0a0fb" kind="typedef"><name>sptr</name></member>
-    <member refid="classgr_1_1ErTools_1_1AWGN__kanal_1a0f7185d46db7038cef342a06bd19ac52" kind="function"><name>make</name></member>
-  </compound>
-  <compound refid="classgr_1_1ErTools_1_1AWGN__kanal__impl" kind="class"><name>gr::ErTools::AWGN_kanal_impl</name>
-    <member refid="classgr_1_1ErTools_1_1AWGN__kanal__impl_1acde59139bdefcd6a6c46da780721cb2b" kind="variable"><name>_N</name></member>
-    <member refid="classgr_1_1ErTools_1_1AWGN__kanal__impl_1ac1a20ac5c4cec54caf21bb9066124da7" kind="variable"><name>_EbN0min</name></member>
-    <member refid="classgr_1_1ErTools_1_1AWGN__kanal__impl_1a61a098b3eb58c796ef31f9b4b6b292c2" kind="variable"><name>_EbN0max</name></member>
-    <member refid="classgr_1_1ErTools_1_1AWGN__kanal__impl_1a71ef01eb77c003e80eef5bee37fab3a8" kind="function"><name>AWGN_kanal_impl</name></member>
-    <member refid="classgr_1_1ErTools_1_1AWGN__kanal__impl_1a96387c13960e1cf8f67cabeed98c2dd3" kind="function"><name>~AWGN_kanal_impl</name></member>
-    <member refid="classgr_1_1ErTools_1_1AWGN__kanal__impl_1a9a3a625b7a0fe9818f0fdd1644ba5c9c" kind="function"><name>work</name></member>
   </compound>
   <compound refid="classgr_1_1ErTools_1_1BER" kind="class"><name>gr::ErTools::BER</name>
     <member refid="classgr_1_1ErTools_1_1BER_1a194735ba854cf2b55471d8a46d12c58b" kind="typedef"><name>sptr</name></member>
@@ -35,6 +21,7 @@
     <member refid="classgr_1_1ErTools_1_1BER__impl_1a646875331c3a666c5f45baef1b8a7506" kind="variable"><name>_N</name></member>
     <member refid="classgr_1_1ErTools_1_1BER__impl_1af72d31ea68f0afb6724be92de5b6ee44" kind="variable"><name>_M</name></member>
     <member refid="classgr_1_1ErTools_1_1BER__impl_1ab4c67152d40a3cfdb9ea46156380c8d2" kind="variable"><name>k</name></member>
+    <member refid="classgr_1_1ErTools_1_1BER__impl_1aa11f6d310e7eeb8839451cd310ac8b3b" kind="variable"><name>index</name></member>
     <member refid="classgr_1_1ErTools_1_1BER__impl_1ae027d779cd1785ace0ab535c946c5e55" kind="variable"><name>_count</name></member>
     <member refid="classgr_1_1ErTools_1_1BER__impl_1ab18d7297f443b1021b20c7bcf5189526" kind="variable"><name>_pamat_BER</name></member>
     <member refid="classgr_1_1ErTools_1_1BER__impl_1a551252fd75556617d6e1f3330deb0863" kind="variable"><name>_pocet_chyb</name></member>
@@ -134,8 +121,6 @@
   </compound>
   <compound refid="AWGN_8h" kind="file"><name>AWGN.h</name>
   </compound>
-  <compound refid="AWGN__kanal_8h" kind="file"><name>AWGN_kanal.h</name>
-  </compound>
   <compound refid="BER_8h" kind="file"><name>BER.h</name>
   </compound>
   <compound refid="MC_8h" kind="file"><name>MC.h</name>
@@ -146,8 +131,6 @@
   </compound>
   <compound refid="AWGN__impl_8h" kind="file"><name>AWGN_impl.h</name>
   </compound>
-  <compound refid="AWGN__kanal__impl_8h" kind="file"><name>AWGN_kanal_impl.h</name>
-  </compound>
   <compound refid="BER__impl_8h" kind="file"><name>BER_impl.h</name>
   </compound>
   <compound refid="MC__impl_8h" kind="file"><name>MC_impl.h</name>
@@ -155,12 +138,6 @@
   <compound refid="SER__impl_8h" kind="file"><name>SER_impl.h</name>
   </compound>
   <compound refid="Teoreticka__BER__impl_8h" kind="file"><name>Teoreticka_BER_impl.h</name>
-  </compound>
-  <compound refid="AWGN__kanal__pydoc__template_8h" kind="file"><name>AWGN_kanal_pydoc_template.h</name>
-    <member refid="AWGN__kanal__pydoc__template_8h_1a74021f021dcdfbb22891787b79c5529d" kind="define"><name>D</name></member>
-    <member refid="AWGN__kanal__pydoc__template_8h_1a46dd74fe223fa0e660974ebdd13b55fa" kind="variable"><name>__doc_gr_ErTools_AWGN_kanal</name></member>
-    <member refid="AWGN__kanal__pydoc__template_8h_1ae9385552c881e4edd0e225bb5647f206" kind="variable"><name>__doc_gr_ErTools_AWGN_kanal_AWGN_kanal</name></member>
-    <member refid="AWGN__kanal__pydoc__template_8h_1a4cf721111bb1adb9504571e3535f3acc" kind="variable"><name>__doc_gr_ErTools_AWGN_kanal_make</name></member>
   </compound>
   <compound refid="AWGN__pydoc__template_8h" kind="file"><name>AWGN_pydoc_template.h</name>
     <member refid="AWGN__pydoc__template_8h_1a74021f021dcdfbb22891787b79c5529d" kind="define"><name>D</name></member>

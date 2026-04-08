@@ -17,8 +17,8 @@
 namespace gr {
 namespace ErTools {
 
-AWGN::sptr AWGN::make(int N, int M, int EbN0min, int EbN0max) {
-    return gnuradio::make_block_sptr<AWGN_impl>(N, M, EbN0min, EbN0max);
+AWGN::sptr AWGN::make(int M) {
+    return gnuradio::make_block_sptr<AWGN_impl>(M);
 }
 
 // Output vector
@@ -29,15 +29,12 @@ static int is[] = { sizeof(gr_complex), sizeof(float) };
 static std::vector<int> isig(is, is + sizeof(is) / sizeof(int));
 
 // The private constructor
-AWGN_impl::AWGN_impl(int N, int M, int EbN0min, int EbN0max)
+AWGN_impl::AWGN_impl(int M)
     : gr::sync_block("AWGN",
                      gr::io_signature::makev(1, 2, isig),
                      gr::io_signature::makev(1, 2, osig))
 {
-  _N = N;             // Pocet vzoriek EbN0 (kolko bodov na X-osi)
-  _M = M;             // Pocet modulacnych stavov
-  _EbN0min = EbN0min; // Zaciatok EbN0 [dB]
-  _EbN0max = EbN0max; // Koniec EbN0 [dB]
+  _M = M; // Pocet modulacnych stavov
 }
 
 //----------------------------------------------------LOGIKA-FUNKCIE--------------------------------------------------------||
@@ -50,10 +47,10 @@ double Sum_vypocet2() {
   std::random_device rd;
   std::mt19937 R(rd());
   
-  // Tvorba Gaussovky podla odchylky
-  std::normal_distribution<double> Gauss{0, 1}; //mi = 0 lebo AWGN
+  // Normalne rozdelenie N(0,1)
+  std::normal_distribution<double> Gauss{0, 1};
   
-  // Vyberieme nahodne hodnoty z Gaussovky
+  // Vyberieme nahodne hodnoty z N(0,1)
   GR = Gauss(R);
 
   return GR;
@@ -62,14 +59,14 @@ double Sum_vypocet2() {
 
 //-------------------Odvodenie-varianci-esumu-z-EbN0-[db]---------------------|
 gr_complex Sum2(float EDB, int stav, float Es) {
-  double EbN0, N, EsN0;
-  double REAL, IMAG;
-  double odchylka;
+  double EbN0, EsN0, REAL, IMAG, odchylka;
   int k = std::log2(stav);
 
   // Premena z dB na pomer
+
   //LEN PRE HAMMING
   //EDB += 10.0*std::log10(4.0/7.0);
+  
   if(stav > 2) {  //pocitame s EsN0, šum na symbol
     //EsN0 = EbN0 + 10*std::log10(k);
     EsN0 = pow(10.0, (EDB + 10.0*std::log10(k)) / 10.0);
@@ -80,6 +77,7 @@ gr_complex Sum2(float EDB, int stav, float Es) {
     odchylka = std::sqrt(1 / (EbN0 * 2));
   }
   
+  //Denormalizacia
   REAL = Sum_vypocet2() * odchylka;
   IMAG = Sum_vypocet2() * odchylka;
 
@@ -88,21 +86,11 @@ gr_complex Sum2(float EDB, int stav, float Es) {
   return n;
 }
 
-//-------------------------------------------------------------------------------------------------------------------------||
-//-------------------------------------------------------PREMENNE----------------------------------------------------------||
-
-//docasne, musim upravit
-//float rozpatie2, rozpatiePostup2;
-//int k2 = 0;
-
-//-------------------------------------------------------------------------------------------------------------------------||
-//---------------------------------------------------------WORK------------------------------------------------------------||
-
 // Our virtual destructor.
 AWGN_impl::~AWGN_impl() {}
 
-
-
+//-------------------------------------------------------------------------------------------------------------------------||
+//---------------------------------------------------------WORK------------------------------------------------------------||
 int AWGN_impl::work(int noutput_items,
                     gr_vector_const_void_star& input_items,
                     gr_vector_void_star& output_items)
@@ -113,13 +101,11 @@ int AWGN_impl::work(int noutput_items,
     float *in1 = (float *) input_items[1];
     
     // OUTPUT
-    gr_complex *out0 = (gr_complex *) output_items[0];
+    gr_complex *out = (gr_complex *) output_items[0];
 
     //-----------------------LOGIKA--------------------------|
     //-------------------Prvotne-vypocty---------------------|
     
-    float EBQ;
-
     Ps = 0;
     sumPs = 0;
     // Vypocet vykonu vstupneho signalu Ps = E(x)
@@ -127,6 +113,7 @@ int AWGN_impl::work(int noutput_items,
       sumPs += std::norm(in0[a]);
     
     Ps = sumPs / noutput_items;
+
     //-----------------------Prejdeme-vsetkymi-I/O-items--------------------------|
     for(int b = 0; b < noutput_items; b++) {
       
@@ -138,11 +125,7 @@ int AWGN_impl::work(int noutput_items,
       //gr_complex spolu(in0[b].real() + sg_n.real(), in0[b].imag() + sg_n.imag());
 
       // Komplexny vystup = AWGN sum
-      out0[b] = sg_n;
-
-      // Int vystup = N-ta vzorka EbN0, ktoru sme pocitali
-
-      // Iterujeme po vsetkych vzorkach EbN0, t.j. od 0 do N-1
+      out[b] = sg_n;
     }
 
     // Tell runtime system how many output items we produced.

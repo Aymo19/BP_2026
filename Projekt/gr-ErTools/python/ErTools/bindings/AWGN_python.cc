@@ -14,7 +14,7 @@
 /* BINDTOOL_GEN_AUTOMATIC(0)                                                       */
 /* BINDTOOL_USE_PYGCCXML(0)                                                        */
 /* BINDTOOL_HEADER_FILE(AWGN.h)                                        */
-/* BINDTOOL_HEADER_FILE_HASH(c14a3ff1b82fb133ad1000dd269fa585)                     */
+/* BINDTOOL_HEADER_FILE_HASH(86e9625776d208a5671e73e8d07787a7)                     */
 /***********************************************************************************/
 
 #include <pybind11/complex.h>
@@ -30,30 +30,14 @@ namespace py = pybind11;
 void bind_AWGN(py::module& m)
 {
 
-    using AWGN    = gr::ErTools::AWGN;
+    using AWGN = ::gr::ErTools::AWGN;
 
 
-    py::class_<AWGN, gr::sync_block, gr::block, gr::basic_block,
-        std::shared_ptr<AWGN>>(m, "AWGN", D(AWGN))
+    py::class_<AWGN, gr::sync_block, gr::block, gr::basic_block, std::shared_ptr<AWGN>>(
+        m, "AWGN", D(AWGN))
 
-        .def(py::init(&AWGN::make),
-           D(AWGN,make)
-        )
-        
-
+        .def(py::init(&AWGN::make), py::arg("M"), D(AWGN, make))
 
 
         ;
-
-
-
-
 }
-
-
-
-
-
-
-
-

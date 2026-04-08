@@ -11,7 +11,7 @@
 ########################################################################
 include(GrPlatform) #define LIB_SUFFIX
 list(APPEND ErTools_sources
-    AWGN_kanal_impl.cc
+    #AWGN_kanal_impl.cc
     BER_impl.cc
     SER_impl.cc
     AWGN_impl.cc

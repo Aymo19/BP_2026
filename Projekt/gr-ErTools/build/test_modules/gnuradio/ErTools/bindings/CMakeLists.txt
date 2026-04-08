@@ -24,7 +24,6 @@ include(GrPybind)
 # Python Bindings
 ########################################################################
 list(APPEND ErTools_python_files
-    AWGN_kanal_python.cc
     BER_python.cc
     SER_python.cc
     AWGN_python.cc

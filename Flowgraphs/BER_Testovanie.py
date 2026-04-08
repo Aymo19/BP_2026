@@ -157,9 +157,9 @@ class BER_Testovanie(gr.top_block, Qt.QWidget):
         self.ErTools_BER_0_0_0 = ErTools.BER(N, 16)
         self.ErTools_BER_0_0 = ErTools.BER(N, 8)
         self.ErTools_BER_0 = ErTools.BER(N, M)
-        self.ErTools_AWGN_0_0_0 = ErTools.AWGN(N, 16, 0, EbN0_max)
-        self.ErTools_AWGN_0_0 = ErTools.AWGN(N, 8, 0, EbN0_max)
-        self.ErTools_AWGN_0 = ErTools.AWGN(N, M, 0, EbN0_max)
+        self.ErTools_AWGN_0_0_0 = ErTools.AWGN(16)
+        self.ErTools_AWGN_0_0 = ErTools.AWGN(8)
+        self.ErTools_AWGN_0 = ErTools.AWGN(M)
 
 
         ##################################################

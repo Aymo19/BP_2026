@@ -186,10 +186,7 @@ blocks:
 - name: ErTools_AWGN_0
   id: ErTools_AWGN
   parameters:
-    EbN0max: EbN0_max
-    EbN0min: '0'
     M: M
-    N: N
     affinity: ''
     alias: ''
     comment: ''
@@ -199,16 +196,13 @@ blocks:
     bus_sink: false
     bus_source: false
     bus_structure: null
-    coordinate: [392, 312.0]
+    coordinate: [392, 328.0]
     rotation: 0
     state: enabled
 - name: ErTools_AWGN_0_0
   id: ErTools_AWGN
   parameters:
-    EbN0max: EbN0_max
-    EbN0min: '0'
     M: '8'
-    N: N
     affinity: ''
     alias: ''
     comment: ''
@@ -224,10 +218,7 @@ blocks:
 - name: ErTools_AWGN_0_0_0
   id: ErTools_AWGN
   parameters:
-    EbN0max: EbN0_max
-    EbN0min: '0'
     M: '16'
-    N: N
     affinity: ''
     alias: ''
     comment: ''
@@ -968,7 +959,7 @@ blocks:
     bus_sink: false
     bus_source: false
     bus_structure: null
-    coordinate: [808, 200.0]
+    coordinate: [896, 192.0]
     rotation: 0
     state: enabled
 - name: virtual_sink_0_2
@@ -1007,7 +998,7 @@ blocks:
     bus_sink: false
     bus_source: false
     bus_structure: null
-    coordinate: [808, 120.0]
+    coordinate: [904, 128.0]
     rotation: 0
     state: enabled
 - name: virtual_source_0

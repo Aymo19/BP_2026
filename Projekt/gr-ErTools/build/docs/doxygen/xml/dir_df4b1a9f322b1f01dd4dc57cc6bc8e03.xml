@@ -4,7 +4,6 @@
     <compoundname>ErTools</compoundname>
     <innerfile refid="api_8h">api.h</innerfile>
     <innerfile refid="AWGN_8h">AWGN.h</innerfile>
-    <innerfile refid="AWGN__kanal_8h">AWGN_kanal.h</innerfile>
     <innerfile refid="BER_8h">BER.h</innerfile>
     <innerfile refid="MC_8h">MC.h</innerfile>
     <innerfile refid="SER_8h">SER.h</innerfile>

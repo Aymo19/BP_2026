@@ -10,7 +10,7 @@ parameters:
 - id: N
   label: Počet Es/N0 bodov
   dtype: int
-  default: 128
+  default: 256
 
 inputs:
  - label: in0

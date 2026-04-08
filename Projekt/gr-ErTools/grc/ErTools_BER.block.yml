@@ -10,10 +10,11 @@ parameters:
  - id: N
    label: Počet Eb/N0 bodov
    dtype: int
-   default: 128
+   default: 256
  - id: M
    label: Počet modulačných stavov
    dtype: int
+   default: 2
 
 inputs:
  - label: in0

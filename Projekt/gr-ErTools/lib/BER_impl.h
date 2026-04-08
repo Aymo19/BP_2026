@@ -18,7 +18,7 @@ class BER_impl : public BER
 private:
   int _N, _M;
 
-  int k;
+  int k, index;
 
   // Deklarovanie vektorov
   std::vector<int> _count;
