@@ -9,7 +9,7 @@
 ![picture](./Dokument/Fotky/Flowgraph_3.png)
 
 ## Výstup z flowgraphu = simulácia + teória
-![picture](./Dokument/Fotky/Vysledok_1.png.)
+![picture](./Dokument/Fotky/Vysledok_1.png)
 
 ## Zobrazenie blokov v bočnej knižnici
 ![picture](./Dokument/Fotky/Side.png)
