@@ -4,18 +4,27 @@ category: '[ErTools]'
 
 templates:
   imports: from gnuradio import ErTools
-  make: ErTools.AWGN(${M})
+  make: ErTools.AWGN(${M}, ${k}, ${n})
 
 parameters:
 - id: M
   label: Počet modulačných stavov
   dtype: int
   default: 2
+- id: k
+  label: Dĺžka informačného slova
+  dtype: int
+  default: 1
+- id: n
+  label: Dĺžka kódového slova
+  dtype: int
+  default: 1
 
 inputs:
  - label: in0
    domain: stream
    dtype: complex
+   vlen: 7
  - label: in1
    domain: stream
    dtype: float
@@ -24,5 +33,6 @@ outputs:
  - label: out
    domain: stream
    dtype: complex
+   vlen: 7
 
 file_format: 1

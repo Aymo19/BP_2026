@@ -18,8 +18,10 @@ class MC_impl : public MC
 private:
   int _N, _EbN0min, _EbN0max;
   
-  int index_CLK;
-  float Rz, Rz_krok;
+  int index_CLK, counter;
+  double Rz, Rz_krok;
+
+  std::vector<double> v_EDB;
 
 public:
     MC_impl(int N, int EbN0min, int EbN0max);

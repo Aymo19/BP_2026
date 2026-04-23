@@ -32,7 +32,7 @@ import variant_b_hamming_modulation_config as modulation_config  # embedded pyth
 
 class variant_b_hamming(gr.top_block, Qt.QWidget):
 
-    def __init__(self, modulation_name='QPSK'):
+    def __init__(self, modulation_name='BPSK'):
         gr.top_block.__init__(self, "MPSK channel with Noise and Hamming Encoding", catch_exceptions=True)
         Qt.QWidget.__init__(self)
         self.setWindowTitle("MPSK channel with Noise and Hamming Encoding")
@@ -74,8 +74,6 @@ class variant_b_hamming(gr.top_block, Qt.QWidget):
         self.modulation = modulation = digital.constellation_bpsk().base()
         self.modulation.set_npwr(1.0)
         self.N = N = 2
-        self.Modulacia = Modulacia = digital.constellation_bpsk().base()
-        self.Modulacia.set_npwr(1.0)
 
         ##################################################
         # Blocks
@@ -124,19 +122,21 @@ class variant_b_hamming(gr.top_block, Qt.QWidget):
             self.top_grid_layout.setRowStretch(r, 1)
         for c in range(0, 1):
             self.top_grid_layout.setColumnStretch(c, 1)
-        self.qtgui_const_sink_x_0 = qtgui.const_sink_c(
-            1024, #size
-            "", #name
-            2, #number of inputs
+        self.qtgui_histogram_sink_x_0_0 = qtgui.histogram_sink_f(
+            1024,
+            1024,
+            (-1),
+            6,
+            "",
+            1,
             None # parent
         )
-        self.qtgui_const_sink_x_0.set_update_time(0.10)
-        self.qtgui_const_sink_x_0.set_y_axis((-2), 2)
-        self.qtgui_const_sink_x_0.set_x_axis((-2), 2)
-        self.qtgui_const_sink_x_0.set_trigger_mode(qtgui.TRIG_MODE_FREE, qtgui.TRIG_SLOPE_POS, 0.0, 0, "")
-        self.qtgui_const_sink_x_0.enable_autoscale(False)
-        self.qtgui_const_sink_x_0.enable_grid(False)
-        self.qtgui_const_sink_x_0.enable_axis_labels(True)
+
+        self.qtgui_histogram_sink_x_0_0.set_update_time(0.10)
+        self.qtgui_histogram_sink_x_0_0.enable_autoscale(True)
+        self.qtgui_histogram_sink_x_0_0.enable_accumulate(False)
+        self.qtgui_histogram_sink_x_0_0.enable_grid(False)
+        self.qtgui_histogram_sink_x_0_0.enable_axis_labels(True)
 
 
         labels = ['', '', '', '', '',
@@ -145,47 +145,87 @@ class variant_b_hamming(gr.top_block, Qt.QWidget):
             1, 1, 1, 1, 1]
         colors = ["blue", "red", "green", "black", "cyan",
             "magenta", "yellow", "dark red", "dark green", "dark blue"]
-        styles = [0, 0, 0, 0, 0,
-            0, 0, 0, 0, 0]
-        markers = [0, 0, 0, 0, 0,
-            0, 0, 0, 0, 0]
+        styles = [1, 1, 1, 1, 1,
+            1, 1, 1, 1, 1]
+        markers= [-1, -1, -1, -1, -1,
+            -1, -1, -1, -1, -1]
         alphas = [1.0, 1.0, 1.0, 1.0, 1.0,
             1.0, 1.0, 1.0, 1.0, 1.0]
 
-        for i in range(2):
+        for i in range(1):
             if len(labels[i]) == 0:
-                self.qtgui_const_sink_x_0.set_line_label(i, "Data {0}".format(i))
+                self.qtgui_histogram_sink_x_0_0.set_line_label(i, "Data {0}".format(i))
             else:
-                self.qtgui_const_sink_x_0.set_line_label(i, labels[i])
-            self.qtgui_const_sink_x_0.set_line_width(i, widths[i])
-            self.qtgui_const_sink_x_0.set_line_color(i, colors[i])
-            self.qtgui_const_sink_x_0.set_line_style(i, styles[i])
-            self.qtgui_const_sink_x_0.set_line_marker(i, markers[i])
-            self.qtgui_const_sink_x_0.set_line_alpha(i, alphas[i])
+                self.qtgui_histogram_sink_x_0_0.set_line_label(i, labels[i])
+            self.qtgui_histogram_sink_x_0_0.set_line_width(i, widths[i])
+            self.qtgui_histogram_sink_x_0_0.set_line_color(i, colors[i])
+            self.qtgui_histogram_sink_x_0_0.set_line_style(i, styles[i])
+            self.qtgui_histogram_sink_x_0_0.set_line_marker(i, markers[i])
+            self.qtgui_histogram_sink_x_0_0.set_line_alpha(i, alphas[i])
 
-        self._qtgui_const_sink_x_0_win = sip.wrapinstance(self.qtgui_const_sink_x_0.qwidget(), Qt.QWidget)
-        self.top_layout.addWidget(self._qtgui_const_sink_x_0_win)
-        self.epy_block_1 = epy_block_1.blk()
-        self.epy_block_0 = epy_block_0.blk()
-        self.digital_constellation_encoder_bc_0 = digital.constellation_encoder_bc(Modulacia)
-        self.digital_constellation_decoder_cb_0 = digital.constellation_decoder_cb(Modulacia)
+        self._qtgui_histogram_sink_x_0_0_win = sip.wrapinstance(self.qtgui_histogram_sink_x_0_0.qwidget(), Qt.QWidget)
+        self.top_layout.addWidget(self._qtgui_histogram_sink_x_0_0_win)
+        self.qtgui_histogram_sink_x_0 = qtgui.histogram_sink_f(
+            1024,
+            1024,
+            (-1),
+            6,
+            "",
+            1,
+            None # parent
+        )
+
+        self.qtgui_histogram_sink_x_0.set_update_time(0.10)
+        self.qtgui_histogram_sink_x_0.enable_autoscale(True)
+        self.qtgui_histogram_sink_x_0.enable_accumulate(False)
+        self.qtgui_histogram_sink_x_0.enable_grid(False)
+        self.qtgui_histogram_sink_x_0.enable_axis_labels(True)
+
+
+        labels = ['', '', '', '', '',
+            '', '', '', '', '']
+        widths = [1, 1, 1, 1, 1,
+            1, 1, 1, 1, 1]
+        colors = ["blue", "red", "green", "black", "cyan",
+            "magenta", "yellow", "dark red", "dark green", "dark blue"]
+        styles = [1, 1, 1, 1, 1,
+            1, 1, 1, 1, 1]
+        markers= [-1, -1, -1, -1, -1,
+            -1, -1, -1, -1, -1]
+        alphas = [1.0, 1.0, 1.0, 1.0, 1.0,
+            1.0, 1.0, 1.0, 1.0, 1.0]
+
+        for i in range(1):
+            if len(labels[i]) == 0:
+                self.qtgui_histogram_sink_x_0.set_line_label(i, "Data {0}".format(i))
+            else:
+                self.qtgui_histogram_sink_x_0.set_line_label(i, labels[i])
+            self.qtgui_histogram_sink_x_0.set_line_width(i, widths[i])
+            self.qtgui_histogram_sink_x_0.set_line_color(i, colors[i])
+            self.qtgui_histogram_sink_x_0.set_line_style(i, styles[i])
+            self.qtgui_histogram_sink_x_0.set_line_marker(i, markers[i])
+            self.qtgui_histogram_sink_x_0.set_line_alpha(i, alphas[i])
+
+        self._qtgui_histogram_sink_x_0_win = sip.wrapinstance(self.qtgui_histogram_sink_x_0.qwidget(), Qt.QWidget)
+        self.top_layout.addWidget(self._qtgui_histogram_sink_x_0_win)
+        self.epy_block_1 = epy_block_1.hamming74_dec()
+        self.epy_block_0 = epy_block_0.hamming74_enc()
+        self.digital_constellation_encoder_bc_0 = digital.constellation_encoder_bc(modulation)
+        self.digital_constellation_decoder_cb_0 = digital.constellation_decoder_cb(modulation)
         self.blocks_throttle2_0 = blocks.throttle( gr.sizeof_gr_complex*1, samp_rate, True, 0 if "auto" == "auto" else max( int(float(0.1) * samp_rate) if "auto" == "time" else int(0.1), 1) )
         self.blocks_stream_to_vector_0 = blocks.stream_to_vector(gr.sizeof_float*1, 256)
-        self.blocks_stream_mux_1 = blocks.stream_mux(gr.sizeof_char*1, [1]*4)
-        self.blocks_stream_mux_0 = blocks.stream_mux(gr.sizeof_char*1, [1]*7)
-        self.blocks_stream_demux_1 = blocks.stream_demux(gr.sizeof_char*1, [1]*7)
-        self.blocks_stream_demux_0 = blocks.stream_demux(gr.sizeof_char*1, [1] * 4)
-        self.blocks_repack_bits_bb_0_1 = blocks.repack_bits_bb(1, modulation.bits_per_symbol(), "", False, gr.GR_LSB_FIRST)
-        self.blocks_repack_bits_bb_0_0_0 = blocks.repack_bits_bb(modulation.bits_per_symbol(), 1, "", False, gr.GR_LSB_FIRST)
-        self.blocks_repack_bits_bb_0_0 = blocks.repack_bits_bb(modulation.bits_per_symbol(), 1, "", False, gr.GR_LSB_FIRST)
-        self.blocks_repack_bits_bb_0 = blocks.repack_bits_bb(1, modulation.bits_per_symbol(), "", False, gr.GR_LSB_FIRST)
-        self.blocks_null_sink_0 = blocks.null_sink(gr.sizeof_char*1)
+        self.blocks_repack_bits_bb_0_1 = blocks.repack_bits_bb(4, 1, "", False, gr.GR_LSB_FIRST)
+        self.blocks_repack_bits_bb_0_0_0 = blocks.repack_bits_bb(1, 7, "", False, gr.GR_LSB_FIRST)
+        self.blocks_repack_bits_bb_0_0 = blocks.repack_bits_bb(1, 4, "", False, gr.GR_LSB_FIRST)
+        self.blocks_repack_bits_bb_0 = blocks.repack_bits_bb(7, 1, "", False, gr.GR_LSB_FIRST)
         self.blocks_nlog10_ff_0 = blocks.nlog10_ff(1, 1, 0)
+        self.blocks_char_to_float_0_0_0_0 = blocks.char_to_float(1, 1)
+        self.blocks_char_to_float_0_0_0 = blocks.char_to_float(1, 1)
         self.blocks_add_xx_0 = blocks.add_vcc(1)
-        self.analog_random_source_x_0 = blocks.vector_source_b(list(map(int, numpy.random.randint(0, N, 10000))), True)
+        self.analog_random_source_x_0 = blocks.vector_source_b(list(map(int, numpy.random.randint(0, 2, 100000))), True)
         self.ErTools_MC_0 = ErTools.MC(256, 0, 15)
-        self.ErTools_BER_0 = ErTools.BER(256, N)
-        self.ErTools_AWGN_0 = ErTools.AWGN(N)
+        self.ErTools_BER_0 = ErTools.BER(256, 2)
+        self.ErTools_AWGN_0 = ErTools.AWGN(2, 4, 7)
 
 
         ##################################################
@@ -196,45 +236,24 @@ class variant_b_hamming(gr.top_block, Qt.QWidget):
         self.connect((self.ErTools_MC_0, 0), (self.ErTools_AWGN_0, 1))
         self.connect((self.ErTools_MC_0, 1), (self.ErTools_BER_0, 0))
         self.connect((self.analog_random_source_x_0, 0), (self.ErTools_BER_0, 2))
+        self.connect((self.analog_random_source_x_0, 0), (self.blocks_char_to_float_0_0_0_0, 0))
         self.connect((self.analog_random_source_x_0, 0), (self.blocks_repack_bits_bb_0_0, 0))
         self.connect((self.blocks_add_xx_0, 0), (self.digital_constellation_decoder_cb_0, 0))
-        self.connect((self.blocks_add_xx_0, 0), (self.qtgui_const_sink_x_0, 0))
+        self.connect((self.blocks_char_to_float_0_0_0, 0), (self.qtgui_histogram_sink_x_0, 0))
+        self.connect((self.blocks_char_to_float_0_0_0_0, 0), (self.qtgui_histogram_sink_x_0_0, 0))
         self.connect((self.blocks_nlog10_ff_0, 0), (self.blocks_stream_to_vector_0, 0))
         self.connect((self.blocks_repack_bits_bb_0, 0), (self.digital_constellation_encoder_bc_0, 0))
-        self.connect((self.blocks_repack_bits_bb_0_0, 0), (self.blocks_stream_demux_0, 0))
-        self.connect((self.blocks_repack_bits_bb_0_0_0, 0), (self.blocks_stream_demux_1, 0))
+        self.connect((self.blocks_repack_bits_bb_0_0, 0), (self.epy_block_0, 0))
+        self.connect((self.blocks_repack_bits_bb_0_0_0, 0), (self.epy_block_1, 0))
         self.connect((self.blocks_repack_bits_bb_0_1, 0), (self.ErTools_BER_0, 1))
-        self.connect((self.blocks_repack_bits_bb_0_1, 0), (self.blocks_null_sink_0, 0))
-        self.connect((self.blocks_stream_demux_0, 1), (self.epy_block_0, 1))
-        self.connect((self.blocks_stream_demux_0, 3), (self.epy_block_0, 3))
-        self.connect((self.blocks_stream_demux_0, 0), (self.epy_block_0, 0))
-        self.connect((self.blocks_stream_demux_0, 2), (self.epy_block_0, 2))
-        self.connect((self.blocks_stream_demux_1, 0), (self.epy_block_1, 0))
-        self.connect((self.blocks_stream_demux_1, 4), (self.epy_block_1, 4))
-        self.connect((self.blocks_stream_demux_1, 3), (self.epy_block_1, 3))
-        self.connect((self.blocks_stream_demux_1, 1), (self.epy_block_1, 1))
-        self.connect((self.blocks_stream_demux_1, 6), (self.epy_block_1, 6))
-        self.connect((self.blocks_stream_demux_1, 2), (self.epy_block_1, 2))
-        self.connect((self.blocks_stream_demux_1, 5), (self.epy_block_1, 5))
-        self.connect((self.blocks_stream_mux_0, 0), (self.blocks_repack_bits_bb_0, 0))
-        self.connect((self.blocks_stream_mux_1, 0), (self.blocks_repack_bits_bb_0_1, 0))
         self.connect((self.blocks_stream_to_vector_0, 0), (self.qtgui_vector_sink_f_0_0, 0))
         self.connect((self.blocks_throttle2_0, 0), (self.blocks_add_xx_0, 0))
         self.connect((self.digital_constellation_decoder_cb_0, 0), (self.blocks_repack_bits_bb_0_0_0, 0))
         self.connect((self.digital_constellation_encoder_bc_0, 0), (self.ErTools_AWGN_0, 0))
         self.connect((self.digital_constellation_encoder_bc_0, 0), (self.blocks_throttle2_0, 0))
-        self.connect((self.digital_constellation_encoder_bc_0, 0), (self.qtgui_const_sink_x_0, 1))
-        self.connect((self.epy_block_0, 0), (self.blocks_stream_mux_0, 0))
-        self.connect((self.epy_block_0, 3), (self.blocks_stream_mux_0, 3))
-        self.connect((self.epy_block_0, 4), (self.blocks_stream_mux_0, 4))
-        self.connect((self.epy_block_0, 2), (self.blocks_stream_mux_0, 2))
-        self.connect((self.epy_block_0, 6), (self.blocks_stream_mux_0, 6))
-        self.connect((self.epy_block_0, 1), (self.blocks_stream_mux_0, 1))
-        self.connect((self.epy_block_0, 5), (self.blocks_stream_mux_0, 5))
-        self.connect((self.epy_block_1, 1), (self.blocks_stream_mux_1, 1))
-        self.connect((self.epy_block_1, 0), (self.blocks_stream_mux_1, 0))
-        self.connect((self.epy_block_1, 3), (self.blocks_stream_mux_1, 3))
-        self.connect((self.epy_block_1, 2), (self.blocks_stream_mux_1, 2))
+        self.connect((self.epy_block_0, 0), (self.blocks_repack_bits_bb_0, 0))
+        self.connect((self.epy_block_1, 0), (self.blocks_char_to_float_0_0_0, 0))
+        self.connect((self.epy_block_1, 0), (self.blocks_repack_bits_bb_0_1, 0))
 
 
     def closeEvent(self, event):
@@ -263,6 +282,8 @@ class variant_b_hamming(gr.top_block, Qt.QWidget):
 
     def set_modulation(self, modulation):
         self.modulation = modulation
+        self.digital_constellation_decoder_cb_0.set_constellation(self.modulation)
+        self.digital_constellation_encoder_bc_0.set_constellation(self.modulation)
 
     def get_N(self):
         return self.N
@@ -270,20 +291,12 @@ class variant_b_hamming(gr.top_block, Qt.QWidget):
     def set_N(self, N):
         self.N = N
 
-    def get_Modulacia(self):
-        return self.Modulacia
-
-    def set_Modulacia(self, Modulacia):
-        self.Modulacia = Modulacia
-        self.digital_constellation_decoder_cb_0.set_constellation(self.Modulacia)
-        self.digital_constellation_encoder_bc_0.set_constellation(self.Modulacia)
-
 
 
 def argument_parser():
     parser = ArgumentParser()
     parser.add_argument(
-        "--modulation-name", dest="modulation_name", type=str, default='QPSK',
+        "--modulation-name", dest="modulation_name", type=str, default='BPSK',
         help="Set Modulation Name [default=%(default)r]")
     return parser
 

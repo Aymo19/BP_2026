@@ -2,14 +2,16 @@
 <doxygenindex xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="index.xsd" version="1.9.8" xml:lang="en-US">
   <compound refid="classgr_1_1ErTools_1_1AWGN" kind="class"><name>gr::ErTools::AWGN</name>
     <member refid="classgr_1_1ErTools_1_1AWGN_1abbd70d87c16c12d9b2ac473587e02cea" kind="typedef"><name>sptr</name></member>
-    <member refid="classgr_1_1ErTools_1_1AWGN_1a5f536d1d27509c146036228f916d2b12" kind="function"><name>make</name></member>
+    <member refid="classgr_1_1ErTools_1_1AWGN_1ae86072f4a50a0d95ccadc830403ab605" kind="function"><name>make</name></member>
   </compound>
   <compound refid="classgr_1_1ErTools_1_1AWGN__impl" kind="class"><name>gr::ErTools::AWGN_impl</name>
     <member refid="classgr_1_1ErTools_1_1AWGN__impl_1a5599e40447995126fb0a60b9f800b72a" kind="variable"><name>_M</name></member>
+    <member refid="classgr_1_1ErTools_1_1AWGN__impl_1a21f34ab35a3d2e522fe2c403b6f5b85c" kind="variable"><name>_k</name></member>
+    <member refid="classgr_1_1ErTools_1_1AWGN__impl_1acadc9c84fae6bcc2e3c603700679e367" kind="variable"><name>_n</name></member>
     <member refid="classgr_1_1ErTools_1_1AWGN__impl_1a867e72499ba919f74851f5aff1526cd7" kind="variable"><name>Ps</name></member>
     <member refid="classgr_1_1ErTools_1_1AWGN__impl_1a44a81ec6cc7997845aefc3d31fbabd06" kind="variable"><name>sumPs</name></member>
     <member refid="classgr_1_1ErTools_1_1AWGN__impl_1a2fea35583438c4391d49a50f85f879ad" kind="variable"><name>EBQ</name></member>
-    <member refid="classgr_1_1ErTools_1_1AWGN__impl_1a33d692b578a763f13db17b98b65e4727" kind="function"><name>AWGN_impl</name></member>
+    <member refid="classgr_1_1ErTools_1_1AWGN__impl_1a0ac22fdbcdfc4f8a00789df782f02efb" kind="function"><name>AWGN_impl</name></member>
     <member refid="classgr_1_1ErTools_1_1AWGN__impl_1a63be0847606f51c682850e095dccf7d8" kind="function"><name>~AWGN_impl</name></member>
     <member refid="classgr_1_1ErTools_1_1AWGN__impl_1a1c1d31a0ca34abc4e20ce55d08fccd7b" kind="function"><name>work</name></member>
   </compound>
@@ -37,6 +39,9 @@
     <member refid="classgr_1_1ErTools_1_1MC__impl_1a85e7a1d06afe3dcdbc3a63d9fd1f0a54" kind="variable"><name>_N</name></member>
     <member refid="classgr_1_1ErTools_1_1MC__impl_1ae0747851e9f9cd215b7f335baf7b9adb" kind="variable"><name>_EbN0min</name></member>
     <member refid="classgr_1_1ErTools_1_1MC__impl_1adcc3da591386ac30782cc4c6090e6deb" kind="variable"><name>_EbN0max</name></member>
+    <member refid="classgr_1_1ErTools_1_1MC__impl_1ae130be5d4334b3cca20573d2452d7a55" kind="variable"><name>index_CLK</name></member>
+    <member refid="classgr_1_1ErTools_1_1MC__impl_1a42404b0cc65544f29d53f5c6b939b353" kind="variable"><name>Rz</name></member>
+    <member refid="classgr_1_1ErTools_1_1MC__impl_1a8266eeed6c2b039137073b530079b10c" kind="variable"><name>Rz_krok</name></member>
     <member refid="classgr_1_1ErTools_1_1MC__impl_1a4d95cf2adf2711aaf40b26d89d537c9e" kind="function"><name>MC_impl</name></member>
     <member refid="classgr_1_1ErTools_1_1MC__impl_1ad7edc424526ccc418405624933074edd" kind="function"><name>~MC_impl</name></member>
     <member refid="classgr_1_1ErTools_1_1MC__impl_1a80f7d84de1b70e0eec6e098c163dca13" kind="function"><name>work</name></member>

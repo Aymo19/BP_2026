@@ -17,69 +17,50 @@
 namespace gr {
 namespace ErTools {
 
-AWGN::sptr AWGN::make(int M) {
-    return gnuradio::make_block_sptr<AWGN_impl>(M);
+AWGN::sptr AWGN::make(int M, int k, int n) {
+    return gnuradio::make_block_sptr<AWGN_impl>(M, k, n);
 }
 
 // Output vector
-static int os[] = { sizeof(gr_complex)};
+static int os[] = { sizeof(gr_complex) * 7};
 static std::vector<int> osig(os, os + sizeof(os) / sizeof(int));
 
-static int is[] = { sizeof(gr_complex), sizeof(float) };
+static int is[] = { sizeof(gr_complex) * 7, sizeof(float) };
 static std::vector<int> isig(is, is + sizeof(is) / sizeof(int));
 
 // The private constructor
-AWGN_impl::AWGN_impl(int M)
+AWGN_impl::AWGN_impl(int M, int k, int n)
     : gr::sync_block("AWGN",
                      gr::io_signature::makev(1, 2, isig),
-                     gr::io_signature::makev(1, 2, osig))
+                     gr::io_signature::makev(1, 2, osig)),
+    R(rd()),
+    Gauss(0,1)
 {
   _M = M; // Pocet modulacnych stavov
+  _k = k; // informacne slovo
+  _n = n; // kodove slovo
+  
+  Rs = double(_k) / double(_n);
+  printf("%lf\n", Rs);
+  
+  EBQ = -10000000.0;
 }
 
 //----------------------------------------------------LOGIKA-FUNKCIE--------------------------------------------------------||
 
-//-------------------Tvorba-Gaussovky-a-random-bodu---------------------|
-double Sum_vypocet2() {
-  double GR;
-
-  // Generovanie nahodneho cisla podla seed
-  std::random_device rd;
-  std::mt19937 R(rd());
-  
-  // Normalne rozdelenie N(0,1)
-  std::normal_distribution<double> Gauss{0, 1};
-  
-  // Vyberieme nahodne hodnoty z N(0,1)
-  GR = Gauss(R);
-
-  return GR;
-}
-
-
 //-------------------Odvodenie-varianci-esumu-z-EbN0-[db]---------------------|
-gr_complex Sum2(float EDB, int stav, float Es) {
+gr_complex AWGN_impl::Sum(float EDB, int stav, float Es, double Rs) {
   double EbN0, EsN0, REAL, IMAG, odchylka;
-  int k = std::log2(stav);
+  double k = std::log2(stav);
 
   // Premena z dB na pomer
-
-  //LEN PRE HAMMING
-  //EDB += 10.0*std::log10(4.0/7.0);
   
-  if(stav > 2) {  //pocitame s EsN0, šum na symbol
-    //EsN0 = EbN0 + 10*std::log10(k);
-    EsN0 = pow(10.0, (EDB + 10.0*std::log10(k)) / 10.0);
-    odchylka = std::sqrt(Es / (EsN0 * 2));
-  }else {         //pocitame s EbN0, šum na bit
-    EsN0 = pow(10.0, EDB/10.0);
-    EbN0 = EsN0 * k;
-    odchylka = std::sqrt(1 / (EbN0 * 2));
-  }
+  EsN0 = pow(10.0, (EDB + 10.0*std::log10(k) + 10.0*std::log10(Rs)) / 10.0);
+  odchylka = std::sqrt(Es / (EsN0 * 2.0));
   
   //Denormalizacia
-  REAL = Sum_vypocet2() * odchylka;
-  IMAG = Sum_vypocet2() * odchylka;
+  REAL = Gauss(R) * odchylka;
+  IMAG = Gauss(R) * odchylka;
 
   gr_complex n(REAL, IMAG);
 
@@ -105,7 +86,7 @@ int AWGN_impl::work(int noutput_items,
 
     //-----------------------LOGIKA--------------------------|
     //-------------------Prvotne-vypocty---------------------|
-    
+   
     Ps = 0;
     sumPs = 0;
     // Vypocet vykonu vstupneho signalu Ps = E(x)
@@ -115,17 +96,13 @@ int AWGN_impl::work(int noutput_items,
     Ps = sumPs / noutput_items;
 
     //-----------------------Prejdeme-vsetkymi-I/O-items--------------------------|
-    for(int b = 0; b < noutput_items; b++) {
-      
+    for(int b = 0; b < noutput_items; b++) { 
       EBQ = in1[b];
-      // Ziskanie komplexneho sumu
-      gr_complex sg_n = Sum2(EBQ, _M, Ps);
-      
-      // Tuto by sa malo scitat ale C++ neznasa komplexne cisla, alebo mna...
-      //gr_complex spolu(in0[b].real() + sg_n.real(), in0[b].imag() + sg_n.imag());
-
-      // Komplexny vystup = AWGN sum
-      out[b] = sg_n;
+      sg_n = Sum(EBQ, _M, Ps, Rs);
+    
+      for(int c = 0; c < 7; c++) {
+        out[b * 7 + c] = in0[b * 7 + c] + sg_n;
+      } 
     }
 
     // Tell runtime system how many output items we produced.

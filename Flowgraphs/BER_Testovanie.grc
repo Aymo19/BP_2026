@@ -190,8 +190,10 @@ blocks:
     affinity: ''
     alias: ''
     comment: ''
+    k: '1'
     maxoutbuf: '0'
     minoutbuf: '0'
+    n: '1'
   states:
     bus_sink: false
     bus_source: false
@@ -206,8 +208,10 @@ blocks:
     affinity: ''
     alias: ''
     comment: ''
+    k: '1'
     maxoutbuf: '0'
     minoutbuf: '0'
+    n: '1'
   states:
     bus_sink: false
     bus_source: false
@@ -222,8 +226,10 @@ blocks:
     affinity: ''
     alias: ''
     comment: ''
+    k: '1'
     maxoutbuf: '0'
     minoutbuf: '0'
+    n: '1'
   states:
     bus_sink: false
     bus_source: false
@@ -849,6 +855,24 @@ blocks:
     coordinate: [208, 904.0]
     rotation: 0
     state: enabled
+- name: fec_generic_encoder_0
+  id: fec_generic_encoder
+  parameters:
+    affinity: ''
+    alias: ''
+    comment: ''
+    encoder: encoder_variable
+    itype: byte
+    maxoutbuf: '0'
+    minoutbuf: '0'
+    otype: byte
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [1280, 264.0]
+    rotation: 0
+    state: disabled
 - name: qtgui_vector_sink_f_0_0
   id: qtgui_vector_sink_f
   parameters:
@@ -998,7 +1022,7 @@ blocks:
     bus_sink: false
     bus_source: false
     bus_structure: null
-    coordinate: [904, 128.0]
+    coordinate: [896, 128.0]
     rotation: 0
     state: enabled
 - name: virtual_source_0

@@ -24,7 +24,9 @@ Return a shared_ptr to a new instance of ErTools::AWGN.
 To avoid accidental use of raw pointers, ErTools::AWGN's constructor is in a private implementation class. ErTools::AWGN::make is the public interface for creating new instances.
 
 Args:
-    M : )doc";
+    M : 
+    k : 
+    n : )doc";
 
 
 static const char* __doc_gr_ErTools_AWGN_AWGN = R"doc()doc";
@@ -39,4 +41,6 @@ Return a shared_ptr to a new instance of ErTools::AWGN.
 To avoid accidental use of raw pointers, ErTools::AWGN's constructor is in a private implementation class. ErTools::AWGN::make is the public interface for creating new instances.
 
 Args:
-    M : )doc";
+    M : 
+    k : 
+    n : )doc";

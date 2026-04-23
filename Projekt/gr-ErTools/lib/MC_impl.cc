@@ -12,6 +12,7 @@ namespace gr {
 namespace ErTools {
 
 using output_type = float;
+
 MC::sptr MC::make(int N, int EbN0min, int EbN0max) {
     return gnuradio::make_block_sptr<MC_impl>(N, EbN0min, EbN0max);
 }
@@ -28,6 +29,15 @@ MC_impl::MC_impl(int N, int EbN0min, int EbN0max)
   _EbN0max = EbN0max;
 
   index_CLK = 0;
+
+  Rz = double((_EbN0max - _EbN0min)) / double((_N-1));
+  Rz_krok = double(_EbN0min);
+  v_EDB = std::vector<double>(_N, 0);
+
+  for(int i = 0; i < _N; i++) {
+    v_EDB.at(i) = Rz_krok;
+    Rz_krok += Rz;
+  }
 }
 
 // Our virtual destructor.
@@ -44,21 +54,10 @@ int MC_impl::work(int noutput_items,
 
 
     //LOGIKA
-    float EDB[_N];
-
-    // Linearne rozlozenie EbN0db bodov
-    Rz = float((_EbN0max - _EbN0min)) / float((_N-1));
-    Rz_krok = float(_EbN0min);
-
-    for(int i = 0; i < _N; i++) {
-      EDB[i] = Rz_krok;
-      Rz_krok += Rz;
-    }
-
     for(int b = 0; b < noutput_items; b++) {
       
-      out0[b] = EDB[index_CLK];
-      out1[b] = index_CLK;
+      out0[b] = v_EDB.at(index_CLK);  // AWGN
+      out1[b] = index_CLK;  // BER
 
       if(index_CLK < _N-1) {
         index_CLK += 1;

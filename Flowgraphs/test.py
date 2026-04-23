@@ -131,7 +131,7 @@ class test(gr.top_block, Qt.QWidget):
         self.ErTools_Teoreticka_BER_0 = ErTools.Teoreticka_BER(N, M, 'QAM', EbN0_min, EbN0_max)
         self.ErTools_MC_0 = ErTools.MC(N, EbN0_min, EbN0_max)
         self.ErTools_BER_0 = ErTools.BER(N, M)
-        self.ErTools_AWGN_0 = ErTools.AWGN(M)
+        self.ErTools_AWGN_0 = ErTools.AWGN(M, 1, 1)
 
 
         ##################################################

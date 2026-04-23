@@ -19,6 +19,34 @@
         </inbodydescription>
         <location file="/home/aymo/BC/Projekt/gr-ErTools/lib/AWGN_impl.h" line="19" column="7" bodyfile="/home/aymo/BC/Projekt/gr-ErTools/lib/AWGN_impl.h" bodystart="19" bodyend="-1"/>
       </memberdef>
+      <memberdef kind="variable" id="classgr_1_1ErTools_1_1AWGN__impl_1a21f34ab35a3d2e522fe2c403b6f5b85c" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int gr::ErTools::AWGN_impl::_k</definition>
+        <argsstring></argsstring>
+        <name>_k</name>
+        <qualifiedname>gr::ErTools::AWGN_impl::_k</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/aymo/BC/Projekt/gr-ErTools/lib/AWGN_impl.h" line="19" column="10" bodyfile="/home/aymo/BC/Projekt/gr-ErTools/lib/AWGN_impl.h" bodystart="19" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgr_1_1ErTools_1_1AWGN__impl_1acadc9c84fae6bcc2e3c603700679e367" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int gr::ErTools::AWGN_impl::_n</definition>
+        <argsstring></argsstring>
+        <name>_n</name>
+        <qualifiedname>gr::ErTools::AWGN_impl::_n</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/aymo/BC/Projekt/gr-ErTools/lib/AWGN_impl.h" line="19" column="13" bodyfile="/home/aymo/BC/Projekt/gr-ErTools/lib/AWGN_impl.h" bodystart="19" bodyend="-1"/>
+      </memberdef>
       <memberdef kind="variable" id="classgr_1_1ErTools_1_1AWGN__impl_1a867e72499ba919f74851f5aff1526cd7" prot="private" static="no" mutable="no">
         <type>float</type>
         <definition>float gr::ErTools::AWGN_impl::Ps</definition>
@@ -63,15 +91,23 @@
       </memberdef>
     </sectiondef>
     <sectiondef kind="public-func">
-      <memberdef kind="function" id="classgr_1_1ErTools_1_1AWGN__impl_1a33d692b578a763f13db17b98b65e4727" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+      <memberdef kind="function" id="classgr_1_1ErTools_1_1AWGN__impl_1a0ac22fdbcdfc4f8a00789df782f02efb" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
         <definition>gr::ErTools::AWGN_impl::AWGN_impl</definition>
-        <argsstring>(int M)</argsstring>
+        <argsstring>(int M, int k, int n)</argsstring>
         <name>AWGN_impl</name>
         <qualifiedname>gr::ErTools::AWGN_impl::AWGN_impl</qualifiedname>
         <param>
           <type>int</type>
           <declname>M</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>k</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>n</declname>
         </param>
         <briefdescription>
         </briefdescription>
@@ -162,10 +198,12 @@
     </collaborationgraph>
     <location file="/home/aymo/BC/Projekt/gr-ErTools/lib/AWGN_impl.h" line="16" column="1" bodyfile="/home/aymo/BC/Projekt/gr-ErTools/lib/AWGN_impl.h" bodystart="17" bodyend="30"/>
     <listofallmembers>
+      <member refid="classgr_1_1ErTools_1_1AWGN__impl_1a21f34ab35a3d2e522fe2c403b6f5b85c" prot="private" virt="non-virtual"><scope>gr::ErTools::AWGN_impl</scope><name>_k</name></member>
       <member refid="classgr_1_1ErTools_1_1AWGN__impl_1a5599e40447995126fb0a60b9f800b72a" prot="private" virt="non-virtual"><scope>gr::ErTools::AWGN_impl</scope><name>_M</name></member>
-      <member refid="classgr_1_1ErTools_1_1AWGN__impl_1a33d692b578a763f13db17b98b65e4727" prot="public" virt="non-virtual"><scope>gr::ErTools::AWGN_impl</scope><name>AWGN_impl</name></member>
+      <member refid="classgr_1_1ErTools_1_1AWGN__impl_1acadc9c84fae6bcc2e3c603700679e367" prot="private" virt="non-virtual"><scope>gr::ErTools::AWGN_impl</scope><name>_n</name></member>
+      <member refid="classgr_1_1ErTools_1_1AWGN__impl_1a0ac22fdbcdfc4f8a00789df782f02efb" prot="public" virt="non-virtual"><scope>gr::ErTools::AWGN_impl</scope><name>AWGN_impl</name></member>
       <member refid="classgr_1_1ErTools_1_1AWGN__impl_1a2fea35583438c4391d49a50f85f879ad" prot="private" virt="non-virtual"><scope>gr::ErTools::AWGN_impl</scope><name>EBQ</name></member>
-      <member refid="classgr_1_1ErTools_1_1AWGN_1a5f536d1d27509c146036228f916d2b12" prot="public" virt="non-virtual"><scope>gr::ErTools::AWGN_impl</scope><name>make</name></member>
+      <member refid="classgr_1_1ErTools_1_1AWGN_1ae86072f4a50a0d95ccadc830403ab605" prot="public" virt="non-virtual"><scope>gr::ErTools::AWGN_impl</scope><name>make</name></member>
       <member refid="classgr_1_1ErTools_1_1AWGN__impl_1a867e72499ba919f74851f5aff1526cd7" prot="private" virt="non-virtual"><scope>gr::ErTools::AWGN_impl</scope><name>Ps</name></member>
       <member refid="classgr_1_1ErTools_1_1AWGN_1abbd70d87c16c12d9b2ac473587e02cea" prot="public" virt="non-virtual"><scope>gr::ErTools::AWGN_impl</scope><name>sptr</name></member>
       <member refid="classgr_1_1ErTools_1_1AWGN__impl_1a44a81ec6cc7997845aefc3d31fbabd06" prot="private" virt="non-virtual"><scope>gr::ErTools::AWGN_impl</scope><name>sumPs</name></member>

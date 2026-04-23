@@ -101,6 +101,9 @@ int BER_impl::work(int noutput_items,
     //-------------------Prvotne-vypocty---------------------|
     
     //-----------------------Prejdeme-vsetkymi-I/O-items--------------------------|
+    //GR_LOG_INFO(d_logger, "index: " + std::to_string(in0[0]));
+    //GR_LOG_INFO(d_logger, "Singal: " + std::to_string(in1[0]));
+    //GR_LOG_INFO(d_logger, "AWGN: " + std::to_string(in2[0]));
     for(int i = 0; i < noutput_items; i++) {
       index = in0[i];
       
@@ -110,7 +113,7 @@ int BER_impl::work(int noutput_items,
       // Nastavenia pre logaritmus v pripade ze nenastala chyba
       // GR nedokaze zobrazit v QT GUI nekonecna
       if(_pocet_chyb.at(index) == 0) {
-        _pamat_BER.at(index) = 0;
+        _pamat_BER.at(index) += 0;
       }else {
         _pamat_BER.at(index) = double(_pocet_chyb.at(index)) / double(_count.at(index));
       }
@@ -118,10 +121,14 @@ int BER_impl::work(int noutput_items,
       // Float vystup = pravdepodobnost chyby na bit v danom Eb/N0
       out[i] = _pamat_BER.at(index);
       
+      GR_LOG_INFO(d_logger, "INDEX--------------------: " + std::to_string(index));
+      GR_LOG_INFO(d_logger, "BER: " + std::to_string(_pamat_BER.at(index)));
+      GR_LOG_INFO(d_logger, "ERR: " + std::to_string(_pocet_chyb.at(index)));
+      GR_LOG_INFO(d_logger, "COUNT: " + std::to_string(_count.at(index)));
       // Inkrementujeme celkovy pocet bitov
       _count.at(index) += k;
-    }
 
+    }
     // Tell runtime system how many output items we produced.
     return noutput_items;
 }
