@@ -42,8 +42,6 @@ AWGN_impl::AWGN_impl(int M, int k, int n)
   
   Rs = double(_k) / double(_n);
   printf("%lf\n", Rs);
-  
-  EBQ = -10000000.0;
 }
 
 //----------------------------------------------------LOGIKA-FUNKCIE--------------------------------------------------------||
@@ -98,9 +96,9 @@ int AWGN_impl::work(int noutput_items,
     //-----------------------Prejdeme-vsetkymi-I/O-items--------------------------|
     for(int b = 0; b < noutput_items; b++) { 
       EBQ = in1[b];
-      sg_n = Sum(EBQ, _M, Ps, Rs);
     
       for(int c = 0; c < 7; c++) {
+        gr_complex sg_n = Sum(EBQ, _M, Ps, Rs);
         out[b * 7 + c] = in0[b * 7 + c] + sg_n;
       } 
     }

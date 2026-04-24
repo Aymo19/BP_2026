@@ -21,7 +21,7 @@ private:
   int _M, _k, _n, index, counter;
   float Ps, sumPs, EBQ;
   double Rs;
-  gr_complex sg_n;
+//  gr_complex sg_n;
 
   std::random_device rd;
   std::mt19937 R;

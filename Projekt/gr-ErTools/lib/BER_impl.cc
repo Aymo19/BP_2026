@@ -1,4 +1,3 @@
-/* -*- c++ -*- */
 /*
  * Copyright 2025 Marek Hetteš.
  *
@@ -38,10 +37,14 @@ BER_impl::BER_impl(int N, int M)
 
   k = std::log2(M);
 
+  p = 0;
+
   // Vektory
   _count = std::vector<int>(N, k);          // Celkovy pocet bitov co sme spracovali
   _pocet_chyb = std::vector<int>(N, 0);     // Celkovy pocet zistenych chyb
   _pamat_BER = std::vector<double>(N, 1.0); // Vystupne hodnoty BER
+
+  counter = 0;
 }
 
 //Our virtual destructor.
@@ -113,7 +116,7 @@ int BER_impl::work(int noutput_items,
       // Nastavenia pre logaritmus v pripade ze nenastala chyba
       // GR nedokaze zobrazit v QT GUI nekonecna
       if(_pocet_chyb.at(index) == 0) {
-        _pamat_BER.at(index) += 0;
+        _pamat_BER.at(index) = 0;
       }else {
         _pamat_BER.at(index) = double(_pocet_chyb.at(index)) / double(_count.at(index));
       }
@@ -121,13 +124,23 @@ int BER_impl::work(int noutput_items,
       // Float vystup = pravdepodobnost chyby na bit v danom Eb/N0
       out[i] = _pamat_BER.at(index);
       
-      GR_LOG_INFO(d_logger, "INDEX--------------------: " + std::to_string(index));
-      GR_LOG_INFO(d_logger, "BER: " + std::to_string(_pamat_BER.at(index)));
-      GR_LOG_INFO(d_logger, "ERR: " + std::to_string(_pocet_chyb.at(index)));
-      GR_LOG_INFO(d_logger, "COUNT: " + std::to_string(_count.at(index)));
+      //GR_LOG_INFO(d_logger, "INDEX--------------------: " + std::to_string(index));
+      //GR_LOG_INFO(d_logger, "BER: " + std::to_string(_pamat_BER.at(index)));
+      //GR_LOG_INFO(d_logger, "ERR: " + std::to_string(_pocet_chyb.at(index)));
+      //GR_LOG_INFO(d_logger, "COUNT: " + std::to_string(_count.at(index)));
       // Inkrementujeme celkovy pocet bitov
       _count.at(index) += k;
 
+      if(counter < 4) {
+        counter++;
+      }else{
+        if(p < _N-1){
+          p++;
+        }else{
+          p = 0;
+        }
+        counter = 0;
+      }
     }
     // Tell runtime system how many output items we produced.
     return noutput_items;

@@ -25,6 +25,8 @@ private:
   std::vector<double> _pamat_BER;
   std::vector<int> _pocet_chyb;
 
+  int p, counter;
+
 public:
     BER_impl(int N, int M);
     ~BER_impl();
