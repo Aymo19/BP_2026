@@ -5,6 +5,7 @@
 /usr/local/include/gnuradio/ErTools/AWGN.h
 /usr/local/include/gnuradio/ErTools/Teoreticka_BER.h
 /usr/local/include/gnuradio/ErTools/MC.h
+/usr/local/include/gnuradio/ErTools/AWGN_bez_FEC.h
 /usr/local/lib/x86_64-linux-gnu/libgnuradio-ErTools.so.1.0.0.0
 /usr/local/lib/x86_64-linux-gnu/libgnuradio-ErTools.so.1.0.0
 /usr/local/lib/x86_64-linux-gnu/libgnuradio-ErTools.so
@@ -22,8 +23,10 @@
 /usr/local/share/doc/gr-ErTools/xml/SER__impl_8h.xml
 /usr/local/share/doc/gr-ErTools/xml/namespacegr_1_1ErTools.xml
 /usr/local/share/doc/gr-ErTools/xml/AWGN__pydoc__template_8h.xml
+/usr/local/share/doc/gr-ErTools/xml/classgr_1_1ErTools_1_1AWGN__bez__FEC.xml
 /usr/local/share/doc/gr-ErTools/xml/SER_8h.xml
 /usr/local/share/doc/gr-ErTools/xml/classgr_1_1ErTools_1_1MC.xml
+/usr/local/share/doc/gr-ErTools/xml/AWGN__bez__FEC__impl_8h.xml
 /usr/local/share/doc/gr-ErTools/xml/namespacegr.xml
 /usr/local/share/doc/gr-ErTools/xml/MC__impl_8h.xml
 /usr/local/share/doc/gr-ErTools/xml/AWGN__impl_8h.xml
@@ -31,6 +34,7 @@
 /usr/local/share/doc/gr-ErTools/xml/Teoreticka__BER_8h.xml
 /usr/local/share/doc/gr-ErTools/xml/classgr_1_1ErTools_1_1SER__impl.xml
 /usr/local/share/doc/gr-ErTools/xml/group__defs_8dox.xml
+/usr/local/share/doc/gr-ErTools/xml/classgr_1_1ErTools_1_1AWGN__bez__FEC__impl.xml
 /usr/local/share/doc/gr-ErTools/xml/index.xml
 /usr/local/share/doc/gr-ErTools/xml/AWGN_8h.xml
 /usr/local/share/doc/gr-ErTools/xml/dir_902d6fe55786be073ae6681293cdb979.xml
@@ -41,6 +45,7 @@
 /usr/local/share/doc/gr-ErTools/xml/dir_49e56c817e5e54854c35e136979f97ca.xml
 /usr/local/share/doc/gr-ErTools/xml/dir_f2cd86917185299abf5a1f0679072f3c.xml
 /usr/local/share/doc/gr-ErTools/xml/indexpage.xml
+/usr/local/share/doc/gr-ErTools/xml/AWGN__bez__FEC_8h.xml
 /usr/local/share/doc/gr-ErTools/xml/BER__pydoc__template_8h.xml
 /usr/local/share/doc/gr-ErTools/xml/Doxyfile.xml
 /usr/local/share/doc/gr-ErTools/xml/build_2python_2ErTools_2bindings_2pydoc__macros_8h.xml
@@ -55,6 +60,7 @@
 /usr/local/share/doc/gr-ErTools/xml/dir_ce8b6c94ea4ea5cabfbf22cbe553d724.xml
 /usr/local/share/doc/gr-ErTools/xml/Teoreticka__BER__pydoc__template_8h.xml
 /usr/local/share/doc/gr-ErTools/xml/dir_97aefd0d527b934f1d99a682da8fe6a9.xml
+/usr/local/share/doc/gr-ErTools/xml/AWGN__bez__FEC__pydoc__template_8h.xml
 /usr/local/share/doc/gr-ErTools/xml/dir_ab3dd591509f89c87d6a9fd8136a6d03.xml
 /usr/local/share/doc/gr-ErTools/xml/BER_8h.xml
 /usr/local/share/doc/gr-ErTools/xml/MC_8h.xml
@@ -71,13 +77,16 @@
 /usr/local/share/doc/gr-ErTools/html/MC__impl_8h.js
 /usr/local/share/doc/gr-ErTools/html/classgr_1_1ErTools_1_1Teoreticka__BER__impl__inherit__graph.svg
 /usr/local/share/doc/gr-ErTools/html/navtreedata.js
+/usr/local/share/doc/gr-ErTools/html/AWGN__bez__FEC_8h__dep__incl.md5
 /usr/local/share/doc/gr-ErTools/html/SER_8h__incl.map
 /usr/local/share/doc/gr-ErTools/html/dir_902d6fe55786be073ae6681293cdb979_dep.md5
 /usr/local/share/doc/gr-ErTools/html/classgr_1_1ErTools_1_1AWGN__impl__inherit__graph.md5
+/usr/local/share/doc/gr-ErTools/html/classgr_1_1ErTools_1_1AWGN__bez__FEC.js
 /usr/local/share/doc/gr-ErTools/html/dir_ce8b6c94ea4ea5cabfbf22cbe553d724_dep.md5
 /usr/local/share/doc/gr-ErTools/html/files.html
 /usr/local/share/doc/gr-ErTools/html/SER_8h__dep__incl.map
 /usr/local/share/doc/gr-ErTools/html/dir_902d6fe55786be073ae6681293cdb979.js
+/usr/local/share/doc/gr-ErTools/html/classgr_1_1ErTools_1_1AWGN__bez__FEC__inherit__graph.md5
 /usr/local/share/doc/gr-ErTools/html/classgr_1_1ErTools_1_1AWGN__impl__inherit__graph.svg
 /usr/local/share/doc/gr-ErTools/html/folderopen.svg
 /usr/local/share/doc/gr-ErTools/html/dir_e167ba5378dc6540b99e755508bf0abc_dep.map
@@ -90,6 +99,7 @@
 /usr/local/share/doc/gr-ErTools/html/dir_902d6fe55786be073ae6681293cdb979.html
 /usr/local/share/doc/gr-ErTools/html/classgr_1_1ErTools_1_1BER__impl-members.html
 /usr/local/share/doc/gr-ErTools/html/BER__pydoc__template_8h.js
+/usr/local/share/doc/gr-ErTools/html/AWGN__bez__FEC_8h_source.html
 /usr/local/share/doc/gr-ErTools/html/nav_h.png
 /usr/local/share/doc/gr-ErTools/html/dir_f2cd86917185299abf5a1f0679072f3c_dep.svg
 /usr/local/share/doc/gr-ErTools/html/classgr_1_1ErTools_1_1SER__impl__inherit__graph.map
@@ -109,6 +119,7 @@
 /usr/local/share/doc/gr-ErTools/html/classgr_1_1ErTools_1_1SER__inherit__graph.map
 /usr/local/share/doc/gr-ErTools/html/dir_49e56c817e5e54854c35e136979f97ca.html
 /usr/local/share/doc/gr-ErTools/html/dir_df4b1a9f322b1f01dd4dc57cc6bc8e03_dep.map
+/usr/local/share/doc/gr-ErTools/html/AWGN__bez__FEC_8h__dep__incl.map
 /usr/local/share/doc/gr-ErTools/html/BER__pydoc__template_8h__incl.map
 /usr/local/share/doc/gr-ErTools/html/classgr_1_1ErTools_1_1AWGN__inherit__graph.md5
 /usr/local/share/doc/gr-ErTools/html/docs_2doxygen_2pydoc__macros_8h_source.html
@@ -117,6 +128,7 @@
 /usr/local/share/doc/gr-ErTools/html/bc_s.png
 /usr/local/share/doc/gr-ErTools/html/SER__impl_8h__incl.map
 /usr/local/share/doc/gr-ErTools/html/Teoreticka__BER_8h__dep__incl.map
+/usr/local/share/doc/gr-ErTools/html/classgr_1_1ErTools_1_1AWGN__bez__FEC__impl.js
 /usr/local/share/doc/gr-ErTools/html/graph_legend.md5
 /usr/local/share/doc/gr-ErTools/html/classgr_1_1ErTools_1_1BER-members.html
 /usr/local/share/doc/gr-ErTools/html/dir_598ebd83f96cc8375fbff06849432c85_dep.svg
@@ -132,6 +144,7 @@
 /usr/local/share/doc/gr-ErTools/html/AWGN__impl_8h.js
 /usr/local/share/doc/gr-ErTools/html/AWGN_8h__dep__incl.svg
 /usr/local/share/doc/gr-ErTools/html/BER__impl_8h_source.html
+/usr/local/share/doc/gr-ErTools/html/classgr_1_1ErTools_1_1AWGN__bez__FEC__impl__inherit__graph.map
 /usr/local/share/doc/gr-ErTools/html/Teoreticka__BER__impl_8h.html
 /usr/local/share/doc/gr-ErTools/html/minusd.svg
 /usr/local/share/doc/gr-ErTools/html/classgr_1_1ErTools_1_1BER__impl__inherit__graph.md5
@@ -146,6 +159,7 @@
 /usr/local/share/doc/gr-ErTools/html/dir_23e6078811a419e6e71ecdc10027ca98.html
 /usr/local/share/doc/gr-ErTools/html/dir_97aefd0d527b934f1d99a682da8fe6a9_dep.map
 /usr/local/share/doc/gr-ErTools/html/classgr_1_1ErTools_1_1BER__impl__inherit__graph.map
+/usr/local/share/doc/gr-ErTools/html/AWGN__bez__FEC__impl_8h__incl.md5
 /usr/local/share/doc/gr-ErTools/html/BER_8h.js
 /usr/local/share/doc/gr-ErTools/html/Teoreticka__BER_8h.js
 /usr/local/share/doc/gr-ErTools/html/AWGN_8h_source.html
@@ -167,9 +181,12 @@
 /usr/local/share/doc/gr-ErTools/html/classgr_1_1ErTools_1_1AWGN__impl.js
 /usr/local/share/doc/gr-ErTools/html/dir_f0ee746cf45e3b730ff0d711d1e77b2a_dep.svg
 /usr/local/share/doc/gr-ErTools/html/dir_000010_000009.html
+/usr/local/share/doc/gr-ErTools/html/AWGN__bez__FEC_8h__incl.map
 /usr/local/share/doc/gr-ErTools/html/AWGN__pydoc__template_8h__incl.svg
+/usr/local/share/doc/gr-ErTools/html/AWGN__bez__FEC__impl_8h_source.html
 /usr/local/share/doc/gr-ErTools/html/group__defs_8dox.html
 /usr/local/share/doc/gr-ErTools/html/classgr_1_1ErTools_1_1Teoreticka__BER.js
+/usr/local/share/doc/gr-ErTools/html/classgr_1_1ErTools_1_1AWGN__bez__FEC__impl__inherit__graph.md5
 /usr/local/share/doc/gr-ErTools/html/docs_2doxygen_2pydoc__macros_8h.html
 /usr/local/share/doc/gr-ErTools/html/topics.js
 /usr/local/share/doc/gr-ErTools/html/MC__impl_8h__incl.svg
@@ -177,6 +194,7 @@
 /usr/local/share/doc/gr-ErTools/html/doxygen.svg
 /usr/local/share/doc/gr-ErTools/html/api_8h__incl.svg
 /usr/local/share/doc/gr-ErTools/html/globals_vars.html
+/usr/local/share/doc/gr-ErTools/html/classgr_1_1ErTools_1_1AWGN__bez__FEC__inherit__graph.map
 /usr/local/share/doc/gr-ErTools/html/dir_f2cd86917185299abf5a1f0679072f3c_dep.map
 /usr/local/share/doc/gr-ErTools/html/BER_8h__dep__incl.svg
 /usr/local/share/doc/gr-ErTools/html/dir_df4b1a9f322b1f01dd4dc57cc6bc8e03.js
@@ -184,6 +202,7 @@
 /usr/local/share/doc/gr-ErTools/html/dir_23e6078811a419e6e71ecdc10027ca98_dep.map
 /usr/local/share/doc/gr-ErTools/html/classgr_1_1ErTools_1_1Teoreticka__BER__inherit__graph.md5
 /usr/local/share/doc/gr-ErTools/html/tab_hd.png
+/usr/local/share/doc/gr-ErTools/html/AWGN__bez__FEC__pydoc__template_8h_source.html
 /usr/local/share/doc/gr-ErTools/html/Teoreticka__BER__pydoc__template_8h.js
 /usr/local/share/doc/gr-ErTools/html/classgr_1_1ErTools_1_1SER__impl__inherit__graph.svg
 /usr/local/share/doc/gr-ErTools/html/classgr_1_1ErTools_1_1MC.js
@@ -195,6 +214,7 @@
 /usr/local/share/doc/gr-ErTools/html/BER__impl_8h.js
 /usr/local/share/doc/gr-ErTools/html/doc.svg
 /usr/local/share/doc/gr-ErTools/html/inherit_graph_0.map
+/usr/local/share/doc/gr-ErTools/html/AWGN__bez__FEC_8h.html
 /usr/local/share/doc/gr-ErTools/html/BER__pydoc__template_8h.html
 /usr/local/share/doc/gr-ErTools/html/classgr_1_1ErTools_1_1AWGN.js
 /usr/local/share/doc/gr-ErTools/html/MC__impl_8h__incl.map
@@ -222,16 +242,21 @@
 /usr/local/share/doc/gr-ErTools/html/AWGN__impl_8h.html
 /usr/local/share/doc/gr-ErTools/html/SER_8h__dep__incl.svg
 /usr/local/share/doc/gr-ErTools/html/globals_defs.html
+/usr/local/share/doc/gr-ErTools/html/AWGN__bez__FEC_8h__dep__incl.svg
 /usr/local/share/doc/gr-ErTools/html/folderclosed.svg
 /usr/local/share/doc/gr-ErTools/html/Teoreticka__BER__impl_8h_source.html
 /usr/local/share/doc/gr-ErTools/html/AWGN_8h__incl.md5
 /usr/local/share/doc/gr-ErTools/html/build_2python_2ErTools_2bindings_2pydoc__macros_8h.html
 /usr/local/share/doc/gr-ErTools/html/folderclosedd.svg
 /usr/local/share/doc/gr-ErTools/html/BER_8h__incl.map
+/usr/local/share/doc/gr-ErTools/html/classgr_1_1ErTools_1_1AWGN__bez__FEC__impl.html
+/usr/local/share/doc/gr-ErTools/html/AWGN__bez__FEC_8h.js
+/usr/local/share/doc/gr-ErTools/html/AWGN__bez__FEC__impl_8h.js
 /usr/local/share/doc/gr-ErTools/html/AWGN__pydoc__template_8h__incl.map
 /usr/local/share/doc/gr-ErTools/html/SER_8h_source.html
 /usr/local/share/doc/gr-ErTools/html/classgr_1_1ErTools_1_1SER__inherit__graph.md5
 /usr/local/share/doc/gr-ErTools/html/dir_598ebd83f96cc8375fbff06849432c85_dep.md5
+/usr/local/share/doc/gr-ErTools/html/AWGN__bez__FEC__impl_8h__incl.svg
 /usr/local/share/doc/gr-ErTools/html/Teoreticka__BER_8h_source.html
 /usr/local/share/doc/gr-ErTools/html/dir_97aefd0d527b934f1d99a682da8fe6a9.html
 /usr/local/share/doc/gr-ErTools/html/dir_7837fde3ab9c1fb2fc5be7b717af8d79.js
@@ -240,6 +265,7 @@
 /usr/local/share/doc/gr-ErTools/html/dir_f2cd86917185299abf5a1f0679072f3c.html
 /usr/local/share/doc/gr-ErTools/html/classgr_1_1ErTools_1_1AWGN__impl__inherit__graph.map
 /usr/local/share/doc/gr-ErTools/html/dir_359d2bec989c9a8deeeb9aee335c1c76_dep.map
+/usr/local/share/doc/gr-ErTools/html/AWGN__bez__FEC__pydoc__template_8h.html
 /usr/local/share/doc/gr-ErTools/html/dir_23e6078811a419e6e71ecdc10027ca98.js
 /usr/local/share/doc/gr-ErTools/html/classgr_1_1ErTools_1_1SER__impl__inherit__graph.md5
 /usr/local/share/doc/gr-ErTools/html/AWGN_8h__incl.map
@@ -263,21 +289,27 @@
 /usr/local/share/doc/gr-ErTools/html/SER_8h__incl.svg
 /usr/local/share/doc/gr-ErTools/html/dir_359d2bec989c9a8deeeb9aee335c1c76_dep.md5
 /usr/local/share/doc/gr-ErTools/html/nav_hd.png
+/usr/local/share/doc/gr-ErTools/html/AWGN__bez__FEC_8h__incl.md5
 /usr/local/share/doc/gr-ErTools/html/SER_8h__incl.md5
 /usr/local/share/doc/gr-ErTools/html/plusd.svg
 /usr/local/share/doc/gr-ErTools/html/group__block.html
 /usr/local/share/doc/gr-ErTools/html/index.html
+/usr/local/share/doc/gr-ErTools/html/classgr_1_1ErTools_1_1AWGN__bez__FEC-members.html
 /usr/local/share/doc/gr-ErTools/html/BER_8h.html
 /usr/local/share/doc/gr-ErTools/html/Teoreticka__BER_8h__dep__incl.svg
 /usr/local/share/doc/gr-ErTools/html/classgr_1_1ErTools_1_1SER.html
 /usr/local/share/doc/gr-ErTools/html/dir_902d6fe55786be073ae6681293cdb979_dep.map
+/usr/local/share/doc/gr-ErTools/html/AWGN__bez__FEC__pydoc__template_8h__incl.md5
 /usr/local/share/doc/gr-ErTools/html/dir_359d2bec989c9a8deeeb9aee335c1c76.js
 /usr/local/share/doc/gr-ErTools/html/classgr_1_1ErTools_1_1MC__impl__inherit__graph.svg
 /usr/local/share/doc/gr-ErTools/html/classgr_1_1ErTools_1_1SER__impl.html
+/usr/local/share/doc/gr-ErTools/html/classgr_1_1ErTools_1_1AWGN__bez__FEC.html
 /usr/local/share/doc/gr-ErTools/html/tab_bd.png
 /usr/local/share/doc/gr-ErTools/html/BER__impl_8h__incl.map
 /usr/local/share/doc/gr-ErTools/html/dir_f0ee746cf45e3b730ff0d711d1e77b2a.html
+/usr/local/share/doc/gr-ErTools/html/classgr_1_1ErTools_1_1AWGN__bez__FEC__impl-members.html
 /usr/local/share/doc/gr-ErTools/html/classgr_1_1ErTools_1_1BER__inherit__graph.svg
+/usr/local/share/doc/gr-ErTools/html/AWGN__bez__FEC__pydoc__template_8h.js
 /usr/local/share/doc/gr-ErTools/html/graph_legend.html
 /usr/local/share/doc/gr-ErTools/html/bc_sd.png
 /usr/local/share/doc/gr-ErTools/html/main__page_8dox.html
@@ -295,6 +327,7 @@
 /usr/local/share/doc/gr-ErTools/html/nav_g.png
 /usr/local/share/doc/gr-ErTools/html/AWGN__impl_8h_source.html
 /usr/local/share/doc/gr-ErTools/html/SER_8h.html
+/usr/local/share/doc/gr-ErTools/html/AWGN__bez__FEC__impl_8h.html
 /usr/local/share/doc/gr-ErTools/html/BER_8h__incl.svg
 /usr/local/share/doc/gr-ErTools/html/plus.svg
 /usr/local/share/doc/gr-ErTools/html/api_8h__dep__incl.svg
@@ -315,6 +348,7 @@
 /usr/local/share/doc/gr-ErTools/html/BER__impl_8h.html
 /usr/local/share/doc/gr-ErTools/html/splitbard.png
 /usr/local/share/doc/gr-ErTools/html/hierarchy.html
+/usr/local/share/doc/gr-ErTools/html/AWGN__bez__FEC__pydoc__template_8h__incl.map
 /usr/local/share/doc/gr-ErTools/html/dir_ce8b6c94ea4ea5cabfbf22cbe553d724_dep.svg
 /usr/local/share/doc/gr-ErTools/html/Teoreticka__BER_8h__incl.md5
 /usr/local/share/doc/gr-ErTools/html/splitbar.png
@@ -333,11 +367,13 @@
 /usr/local/share/doc/gr-ErTools/html/inherit_graph_0.svg
 /usr/local/share/doc/gr-ErTools/html/dir_f2cd86917185299abf5a1f0679072f3c_dep.md5
 /usr/local/share/doc/gr-ErTools/html/classgr_1_1ErTools_1_1MC__impl.html
+/usr/local/share/doc/gr-ErTools/html/AWGN__bez__FEC_8h__incl.svg
 /usr/local/share/doc/gr-ErTools/html/dir_e167ba5378dc6540b99e755508bf0abc_dep.svg
 /usr/local/share/doc/gr-ErTools/html/dir_7837fde3ab9c1fb2fc5be7b717af8d79.html
 /usr/local/share/doc/gr-ErTools/html/dir_23e6078811a419e6e71ecdc10027ca98_dep.md5
 /usr/local/share/doc/gr-ErTools/html/classgr_1_1ErTools_1_1MC__impl.js
 /usr/local/share/doc/gr-ErTools/html/classgr_1_1ErTools_1_1BER.html
+/usr/local/share/doc/gr-ErTools/html/classgr_1_1ErTools_1_1AWGN__bez__FEC__inherit__graph.svg
 /usr/local/share/doc/gr-ErTools/html/tab_ad.png
 /usr/local/share/doc/gr-ErTools/html/AWGN__pydoc__template_8h_source.html
 /usr/local/share/doc/gr-ErTools/html/tab_b.png
@@ -348,6 +384,7 @@
 /usr/local/share/doc/gr-ErTools/html/closed.png
 /usr/local/share/doc/gr-ErTools/html/tab_sd.png
 /usr/local/share/doc/gr-ErTools/html/dir_ce8b6c94ea4ea5cabfbf22cbe553d724_dep.map
+/usr/local/share/doc/gr-ErTools/html/classgr_1_1ErTools_1_1AWGN__bez__FEC__impl__inherit__graph.svg
 /usr/local/share/doc/gr-ErTools/html/dir_e167ba5378dc6540b99e755508bf0abc.html
 /usr/local/share/doc/gr-ErTools/html/api_8h__incl.map
 /usr/local/share/doc/gr-ErTools/html/classgr_1_1ErTools_1_1AWGN__inherit__graph.map
@@ -356,7 +393,9 @@
 /usr/local/share/doc/gr-ErTools/html/graph_legend.svg
 /usr/local/share/doc/gr-ErTools/html/MC_8h__incl.md5
 /usr/local/share/doc/gr-ErTools/html/navtreeindex0.js
+/usr/local/share/doc/gr-ErTools/html/AWGN__bez__FEC__impl_8h__incl.map
 /usr/local/share/doc/gr-ErTools/html/MC__pydoc__template_8h_source.html
+/usr/local/share/doc/gr-ErTools/html/AWGN__bez__FEC__pydoc__template_8h__incl.svg
 /usr/local/share/doc/gr-ErTools/html/classgr_1_1ErTools_1_1MC.html
 /usr/local/share/doc/gr-ErTools/html/SER__pydoc__template_8h.js
 /usr/local/share/doc/gr-ErTools/html/BER_8h__dep__incl.map
@@ -383,3 +422,4 @@
 /usr/local/share/gnuradio/grc/blocks/ErTools_AWGN.block.yml
 /usr/local/share/gnuradio/grc/blocks/ErTools_Teoreticka_BER.block.yml
 /usr/local/share/gnuradio/grc/blocks/ErTools_MC.block.yml
+/usr/local/share/gnuradio/grc/blocks/ErTools_AWGN_bez_FEC.block.yml

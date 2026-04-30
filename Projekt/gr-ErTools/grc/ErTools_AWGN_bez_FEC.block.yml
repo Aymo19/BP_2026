@@ -1,0 +1,28 @@
+id: ErTools_AWGN_bez_FEC
+label: AWGN_bez_FEC
+category: '[ErTools]'
+
+templates:
+  imports: from gnuradio import ErTools
+  make: ErTools.AWGN_bez_FEC(${M})
+
+parameters:
+- id: M
+  label: Počet modulačných stavov
+  dtype: int
+  default: 2
+
+inputs:
+ - label: in0
+   domain: stream
+   dtype: complex
+ - label: in1
+   domain: stream
+   dtype: float
+
+outputs:
+ - label: out
+   domain: stream
+   dtype: complex
+
+file_format: 1

@@ -1,0 +1,310 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="classgr_1_1ErTools_1_1AWGN__bez__FEC__impl" kind="class" language="C++" prot="public">
+    <compoundname>gr::ErTools::AWGN_bez_FEC_impl</compoundname>
+    <basecompoundref refid="classgr_1_1ErTools_1_1AWGN__bez__FEC" prot="public" virt="non-virtual">gr::ErTools::AWGN_bez_FEC</basecompoundref>
+    <includes refid="AWGN__bez__FEC__impl_8h" local="no">AWGN_bez_FEC_impl.h</includes>
+    <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classgr_1_1ErTools_1_1AWGN__bez__FEC__impl_1a5b6083042d23c4ea3110c81c20c1efb4" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int gr::ErTools::AWGN_bez_FEC_impl::_M</definition>
+        <argsstring></argsstring>
+        <name>_M</name>
+        <qualifiedname>gr::ErTools::AWGN_bez_FEC_impl::_M</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/aymo/BC/Projekt/gr-ErTools/lib/AWGN_bez_FEC_impl.h" line="21" column="7" bodyfile="/home/aymo/BC/Projekt/gr-ErTools/lib/AWGN_bez_FEC_impl.h" bodystart="21" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgr_1_1ErTools_1_1AWGN__bez__FEC__impl_1abbd5ee3ef2d511d882c2d08bf40111c4" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int gr::ErTools::AWGN_bez_FEC_impl::_k</definition>
+        <argsstring></argsstring>
+        <name>_k</name>
+        <qualifiedname>gr::ErTools::AWGN_bez_FEC_impl::_k</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/aymo/BC/Projekt/gr-ErTools/lib/AWGN_bez_FEC_impl.h" line="21" column="10" bodyfile="/home/aymo/BC/Projekt/gr-ErTools/lib/AWGN_bez_FEC_impl.h" bodystart="21" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgr_1_1ErTools_1_1AWGN__bez__FEC__impl_1a2e276b9f6c719ae15cf4816240e85648" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int gr::ErTools::AWGN_bez_FEC_impl::_n</definition>
+        <argsstring></argsstring>
+        <name>_n</name>
+        <qualifiedname>gr::ErTools::AWGN_bez_FEC_impl::_n</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/aymo/BC/Projekt/gr-ErTools/lib/AWGN_bez_FEC_impl.h" line="21" column="13" bodyfile="/home/aymo/BC/Projekt/gr-ErTools/lib/AWGN_bez_FEC_impl.h" bodystart="21" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgr_1_1ErTools_1_1AWGN__bez__FEC__impl_1a21548a8c693bf6e08c366e26a398985b" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int gr::ErTools::AWGN_bez_FEC_impl::index</definition>
+        <argsstring></argsstring>
+        <name>index</name>
+        <qualifiedname>gr::ErTools::AWGN_bez_FEC_impl::index</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/aymo/BC/Projekt/gr-ErTools/lib/AWGN_bez_FEC_impl.h" line="21" column="16" bodyfile="/home/aymo/BC/Projekt/gr-ErTools/lib/AWGN_bez_FEC_impl.h" bodystart="21" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgr_1_1ErTools_1_1AWGN__bez__FEC__impl_1a54351ba8c8966ce2039f081853213d4d" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int gr::ErTools::AWGN_bez_FEC_impl::counter</definition>
+        <argsstring></argsstring>
+        <name>counter</name>
+        <qualifiedname>gr::ErTools::AWGN_bez_FEC_impl::counter</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/aymo/BC/Projekt/gr-ErTools/lib/AWGN_bez_FEC_impl.h" line="21" column="22" bodyfile="/home/aymo/BC/Projekt/gr-ErTools/lib/AWGN_bez_FEC_impl.h" bodystart="21" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgr_1_1ErTools_1_1AWGN__bez__FEC__impl_1a15d60e9867621fa2f8a226b2a5613421" prot="private" static="no" mutable="no">
+        <type>double</type>
+        <definition>double gr::ErTools::AWGN_bez_FEC_impl::Es</definition>
+        <argsstring></argsstring>
+        <name>Es</name>
+        <qualifiedname>gr::ErTools::AWGN_bez_FEC_impl::Es</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/aymo/BC/Projekt/gr-ErTools/lib/AWGN_bez_FEC_impl.h" line="22" column="10" bodyfile="/home/aymo/BC/Projekt/gr-ErTools/lib/AWGN_bez_FEC_impl.h" bodystart="22" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgr_1_1ErTools_1_1AWGN__bez__FEC__impl_1a9fcae99c500e4c46dfa42137e6887fa6" prot="private" static="no" mutable="no">
+        <type>double</type>
+        <definition>double gr::ErTools::AWGN_bez_FEC_impl::sumEs</definition>
+        <argsstring></argsstring>
+        <name>sumEs</name>
+        <qualifiedname>gr::ErTools::AWGN_bez_FEC_impl::sumEs</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/aymo/BC/Projekt/gr-ErTools/lib/AWGN_bez_FEC_impl.h" line="22" column="13" bodyfile="/home/aymo/BC/Projekt/gr-ErTools/lib/AWGN_bez_FEC_impl.h" bodystart="22" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgr_1_1ErTools_1_1AWGN__bez__FEC__impl_1aae11f47e54ca05b00ecb6b2e95b9a9e3" prot="private" static="no" mutable="no">
+        <type>double</type>
+        <definition>double gr::ErTools::AWGN_bez_FEC_impl::EBQ_B</definition>
+        <argsstring></argsstring>
+        <name>EBQ_B</name>
+        <qualifiedname>gr::ErTools::AWGN_bez_FEC_impl::EBQ_B</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/aymo/BC/Projekt/gr-ErTools/lib/AWGN_bez_FEC_impl.h" line="22" column="19" bodyfile="/home/aymo/BC/Projekt/gr-ErTools/lib/AWGN_bez_FEC_impl.h" bodystart="22" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgr_1_1ErTools_1_1AWGN__bez__FEC__impl_1a2d812336e7c28ebb7446c20139b03a9a" prot="private" static="no" mutable="no">
+        <type>std::random_device</type>
+        <definition>std::random_device gr::ErTools::AWGN_bez_FEC_impl::rd_B</definition>
+        <argsstring></argsstring>
+        <name>rd_B</name>
+        <qualifiedname>gr::ErTools::AWGN_bez_FEC_impl::rd_B</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/aymo/BC/Projekt/gr-ErTools/lib/AWGN_bez_FEC_impl.h" line="24" column="22" bodyfile="/home/aymo/BC/Projekt/gr-ErTools/lib/AWGN_bez_FEC_impl.h" bodystart="24" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgr_1_1ErTools_1_1AWGN__bez__FEC__impl_1abf8821da4a963a0a46cd70c0670d4c04" prot="private" static="no" mutable="no">
+        <type>std::mt19937</type>
+        <definition>std::mt19937 gr::ErTools::AWGN_bez_FEC_impl::R_B</definition>
+        <argsstring></argsstring>
+        <name>R_B</name>
+        <qualifiedname>gr::ErTools::AWGN_bez_FEC_impl::R_B</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/aymo/BC/Projekt/gr-ErTools/lib/AWGN_bez_FEC_impl.h" line="25" column="16" bodyfile="/home/aymo/BC/Projekt/gr-ErTools/lib/AWGN_bez_FEC_impl.h" bodystart="25" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgr_1_1ErTools_1_1AWGN__bez__FEC__impl_1ac0ba6f1738b481db50086c3206be5798" prot="private" static="no" mutable="no">
+        <type>std::normal_distribution&lt; double &gt;</type>
+        <definition>std::normal_distribution&lt;double&gt; gr::ErTools::AWGN_bez_FEC_impl::Gauss_B</definition>
+        <argsstring></argsstring>
+        <name>Gauss_B</name>
+        <qualifiedname>gr::ErTools::AWGN_bez_FEC_impl::Gauss_B</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/aymo/BC/Projekt/gr-ErTools/lib/AWGN_bez_FEC_impl.h" line="26" column="28" bodyfile="/home/aymo/BC/Projekt/gr-ErTools/lib/AWGN_bez_FEC_impl.h" bodystart="26" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="private-func">
+      <memberdef kind="function" id="classgr_1_1ErTools_1_1AWGN__bez__FEC__impl_1ab6e193dbfcdc96871cb584b11e051aeb" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>gr_complex</type>
+        <definition>gr_complex gr::ErTools::AWGN_bez_FEC_impl::Sum_B</definition>
+        <argsstring>(double EDB, int stav, double Es)</argsstring>
+        <name>Sum_B</name>
+        <qualifiedname>gr::ErTools::AWGN_bez_FEC_impl::Sum_B</qualifiedname>
+        <param>
+          <type>double</type>
+          <declname>EDB</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>stav</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>Es</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/aymo/BC/Projekt/gr-ErTools/lib/AWGN_bez_FEC_impl.h" line="28" column="14"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="classgr_1_1ErTools_1_1AWGN__bez__FEC__impl_1a42b1329834bc4432da24655921b287d4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>gr::ErTools::AWGN_bez_FEC_impl::AWGN_bez_FEC_impl</definition>
+        <argsstring>(int M)</argsstring>
+        <name>AWGN_bez_FEC_impl</name>
+        <qualifiedname>gr::ErTools::AWGN_bez_FEC_impl::AWGN_bez_FEC_impl</qualifiedname>
+        <param>
+          <type>int</type>
+          <declname>M</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/aymo/BC/Projekt/gr-ErTools/lib/AWGN_bez_FEC_impl.h" line="31" column="5"/>
+      </memberdef>
+      <memberdef kind="function" id="classgr_1_1ErTools_1_1AWGN__bez__FEC__impl_1ab1d034d99126a119e41bd2c6ab5eb2fe" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>gr::ErTools::AWGN_bez_FEC_impl::~AWGN_bez_FEC_impl</definition>
+        <argsstring>()</argsstring>
+        <name>~AWGN_bez_FEC_impl</name>
+        <qualifiedname>gr::ErTools::AWGN_bez_FEC_impl::~AWGN_bez_FEC_impl</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/aymo/BC/Projekt/gr-ErTools/lib/AWGN_bez_FEC_impl.h" line="32" column="5"/>
+      </memberdef>
+      <memberdef kind="function" id="classgr_1_1ErTools_1_1AWGN__bez__FEC__impl_1adb46f4d783c634a7dc1ed20b73613a50" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int gr::ErTools::AWGN_bez_FEC_impl::work</definition>
+        <argsstring>(int noutput_items, gr_vector_const_void_star &amp;input_items, gr_vector_void_star &amp;output_items)</argsstring>
+        <name>work</name>
+        <qualifiedname>gr::ErTools::AWGN_bez_FEC_impl::work</qualifiedname>
+        <param>
+          <type>int</type>
+          <declname>noutput_items</declname>
+        </param>
+        <param>
+          <type>gr_vector_const_void_star &amp;</type>
+          <declname>input_items</declname>
+        </param>
+        <param>
+          <type>gr_vector_void_star &amp;</type>
+          <declname>output_items</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/aymo/BC/Projekt/gr-ErTools/lib/AWGN_bez_FEC_impl.h" line="35" column="9"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="2">
+        <label>gr::ErTools::AWGN_bez_FEC</label>
+        <link refid="classgr_1_1ErTools_1_1AWGN__bez__FEC"/>
+        <childnode refid="3" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>gr::ErTools::AWGN_bez_FEC_impl</label>
+        <link refid="classgr_1_1ErTools_1_1AWGN__bez__FEC__impl"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>gr::sync_block</label>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="2">
+        <label>gr::ErTools::AWGN_bez_FEC</label>
+        <link refid="classgr_1_1ErTools_1_1AWGN__bez__FEC"/>
+        <childnode refid="3" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>gr::ErTools::AWGN_bez_FEC_impl</label>
+        <link refid="classgr_1_1ErTools_1_1AWGN__bez__FEC__impl"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>gr::sync_block</label>
+      </node>
+    </collaborationgraph>
+    <location file="/home/aymo/BC/Projekt/gr-ErTools/lib/AWGN_bez_FEC_impl.h" line="18" column="1" bodyfile="/home/aymo/BC/Projekt/gr-ErTools/lib/AWGN_bez_FEC_impl.h" bodystart="19" bodyend="38"/>
+    <listofallmembers>
+      <member refid="classgr_1_1ErTools_1_1AWGN__bez__FEC__impl_1abbd5ee3ef2d511d882c2d08bf40111c4" prot="private" virt="non-virtual"><scope>gr::ErTools::AWGN_bez_FEC_impl</scope><name>_k</name></member>
+      <member refid="classgr_1_1ErTools_1_1AWGN__bez__FEC__impl_1a5b6083042d23c4ea3110c81c20c1efb4" prot="private" virt="non-virtual"><scope>gr::ErTools::AWGN_bez_FEC_impl</scope><name>_M</name></member>
+      <member refid="classgr_1_1ErTools_1_1AWGN__bez__FEC__impl_1a2e276b9f6c719ae15cf4816240e85648" prot="private" virt="non-virtual"><scope>gr::ErTools::AWGN_bez_FEC_impl</scope><name>_n</name></member>
+      <member refid="classgr_1_1ErTools_1_1AWGN__bez__FEC__impl_1a42b1329834bc4432da24655921b287d4" prot="public" virt="non-virtual"><scope>gr::ErTools::AWGN_bez_FEC_impl</scope><name>AWGN_bez_FEC_impl</name></member>
+      <member refid="classgr_1_1ErTools_1_1AWGN__bez__FEC__impl_1a54351ba8c8966ce2039f081853213d4d" prot="private" virt="non-virtual"><scope>gr::ErTools::AWGN_bez_FEC_impl</scope><name>counter</name></member>
+      <member refid="classgr_1_1ErTools_1_1AWGN__bez__FEC__impl_1aae11f47e54ca05b00ecb6b2e95b9a9e3" prot="private" virt="non-virtual"><scope>gr::ErTools::AWGN_bez_FEC_impl</scope><name>EBQ_B</name></member>
+      <member refid="classgr_1_1ErTools_1_1AWGN__bez__FEC__impl_1a15d60e9867621fa2f8a226b2a5613421" prot="private" virt="non-virtual"><scope>gr::ErTools::AWGN_bez_FEC_impl</scope><name>Es</name></member>
+      <member refid="classgr_1_1ErTools_1_1AWGN__bez__FEC__impl_1ac0ba6f1738b481db50086c3206be5798" prot="private" virt="non-virtual"><scope>gr::ErTools::AWGN_bez_FEC_impl</scope><name>Gauss_B</name></member>
+      <member refid="classgr_1_1ErTools_1_1AWGN__bez__FEC__impl_1a21548a8c693bf6e08c366e26a398985b" prot="private" virt="non-virtual"><scope>gr::ErTools::AWGN_bez_FEC_impl</scope><name>index</name></member>
+      <member refid="classgr_1_1ErTools_1_1AWGN__bez__FEC_1a4813422503bf900d2641a73ed1b934b2" prot="public" virt="non-virtual"><scope>gr::ErTools::AWGN_bez_FEC_impl</scope><name>make</name></member>
+      <member refid="classgr_1_1ErTools_1_1AWGN__bez__FEC__impl_1abf8821da4a963a0a46cd70c0670d4c04" prot="private" virt="non-virtual"><scope>gr::ErTools::AWGN_bez_FEC_impl</scope><name>R_B</name></member>
+      <member refid="classgr_1_1ErTools_1_1AWGN__bez__FEC__impl_1a2d812336e7c28ebb7446c20139b03a9a" prot="private" virt="non-virtual"><scope>gr::ErTools::AWGN_bez_FEC_impl</scope><name>rd_B</name></member>
+      <member refid="classgr_1_1ErTools_1_1AWGN__bez__FEC_1aea69c8744143ddcbc6b71f10788f4840" prot="public" virt="non-virtual"><scope>gr::ErTools::AWGN_bez_FEC_impl</scope><name>sptr</name></member>
+      <member refid="classgr_1_1ErTools_1_1AWGN__bez__FEC__impl_1ab6e193dbfcdc96871cb584b11e051aeb" prot="private" virt="non-virtual"><scope>gr::ErTools::AWGN_bez_FEC_impl</scope><name>Sum_B</name></member>
+      <member refid="classgr_1_1ErTools_1_1AWGN__bez__FEC__impl_1a9fcae99c500e4c46dfa42137e6887fa6" prot="private" virt="non-virtual"><scope>gr::ErTools::AWGN_bez_FEC_impl</scope><name>sumEs</name></member>
+      <member refid="classgr_1_1ErTools_1_1AWGN__bez__FEC__impl_1adb46f4d783c634a7dc1ed20b73613a50" prot="public" virt="non-virtual"><scope>gr::ErTools::AWGN_bez_FEC_impl</scope><name>work</name></member>
+      <member refid="classgr_1_1ErTools_1_1AWGN__bez__FEC__impl_1ab1d034d99126a119e41bd2c6ab5eb2fe" prot="public" virt="non-virtual"><scope>gr::ErTools::AWGN_bez_FEC_impl</scope><name>~AWGN_bez_FEC_impl</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

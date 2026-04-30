@@ -185,6 +185,30 @@ gnuradio-ErTools/fast:
 	cd /home/aymo/BC/Projekt/gr-ErTools/build && $(MAKE) $(MAKESILENT) -f lib/CMakeFiles/gnuradio-ErTools.dir/build.make lib/CMakeFiles/gnuradio-ErTools.dir/build
 .PHONY : gnuradio-ErTools/fast
 
+AWGN_bez_FEC_impl.o: AWGN_bez_FEC_impl.cc.o
+.PHONY : AWGN_bez_FEC_impl.o
+
+# target to build an object file
+AWGN_bez_FEC_impl.cc.o:
+	cd /home/aymo/BC/Projekt/gr-ErTools/build && $(MAKE) $(MAKESILENT) -f lib/CMakeFiles/gnuradio-ErTools.dir/build.make lib/CMakeFiles/gnuradio-ErTools.dir/AWGN_bez_FEC_impl.cc.o
+.PHONY : AWGN_bez_FEC_impl.cc.o
+
+AWGN_bez_FEC_impl.i: AWGN_bez_FEC_impl.cc.i
+.PHONY : AWGN_bez_FEC_impl.i
+
+# target to preprocess a source file
+AWGN_bez_FEC_impl.cc.i:
+	cd /home/aymo/BC/Projekt/gr-ErTools/build && $(MAKE) $(MAKESILENT) -f lib/CMakeFiles/gnuradio-ErTools.dir/build.make lib/CMakeFiles/gnuradio-ErTools.dir/AWGN_bez_FEC_impl.cc.i
+.PHONY : AWGN_bez_FEC_impl.cc.i
+
+AWGN_bez_FEC_impl.s: AWGN_bez_FEC_impl.cc.s
+.PHONY : AWGN_bez_FEC_impl.s
+
+# target to generate assembly for a file
+AWGN_bez_FEC_impl.cc.s:
+	cd /home/aymo/BC/Projekt/gr-ErTools/build && $(MAKE) $(MAKESILENT) -f lib/CMakeFiles/gnuradio-ErTools.dir/build.make lib/CMakeFiles/gnuradio-ErTools.dir/AWGN_bez_FEC_impl.cc.s
+.PHONY : AWGN_bez_FEC_impl.cc.s
+
 AWGN_impl.o: AWGN_impl.cc.o
 .PHONY : AWGN_impl.o
 
@@ -319,6 +343,9 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... test"
 	@echo "... gnuradio-ErTools"
+	@echo "... AWGN_bez_FEC_impl.o"
+	@echo "... AWGN_bez_FEC_impl.i"
+	@echo "... AWGN_bez_FEC_impl.s"
 	@echo "... AWGN_impl.o"
 	@echo "... AWGN_impl.i"
 	@echo "... AWGN_impl.s"

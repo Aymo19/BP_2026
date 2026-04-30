@@ -3,6 +3,8 @@
   <compounddef id="namespacegr_1_1ErTools" kind="namespace" language="C++">
     <compoundname>gr::ErTools</compoundname>
     <innerclass refid="classgr_1_1ErTools_1_1AWGN" prot="public">gr::ErTools::AWGN</innerclass>
+    <innerclass refid="classgr_1_1ErTools_1_1AWGN__bez__FEC" prot="public">gr::ErTools::AWGN_bez_FEC</innerclass>
+    <innerclass refid="classgr_1_1ErTools_1_1AWGN__bez__FEC__impl" prot="public">gr::ErTools::AWGN_bez_FEC_impl</innerclass>
     <innerclass refid="classgr_1_1ErTools_1_1AWGN__impl" prot="public">gr::ErTools::AWGN_impl</innerclass>
     <innerclass refid="classgr_1_1ErTools_1_1BER" prot="public">gr::ErTools::BER</innerclass>
     <innerclass refid="classgr_1_1ErTools_1_1BER__impl" prot="public">gr::ErTools::BER_impl</innerclass>

@@ -3,6 +3,7 @@
   <compounddef id="AWGN__impl_8h" kind="file" language="C++">
     <compoundname>AWGN_impl.h</compoundname>
     <includes refid="AWGN_8h" local="no">gnuradio/ErTools/AWGN.h</includes>
+    <includes local="no">random</includes>
     <incdepgraph>
       <node id="2">
         <label>gnuradio/ErTools/AWGN.h</label>
@@ -23,12 +24,17 @@
         <link refid="AWGN__impl_8h"/>
         <childnode refid="2" relation="include">
         </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
       </node>
       <node id="4">
         <label>gnuradio/attributes.h</label>
       </node>
       <node id="5">
         <label>gnuradio/sync_block.h</label>
+      </node>
+      <node id="6">
+        <label>random</label>
       </node>
     </incdepgraph>
     <innerclass refid="classgr_1_1ErTools_1_1AWGN__impl" prot="public">gr::ErTools::AWGN_impl</innerclass>

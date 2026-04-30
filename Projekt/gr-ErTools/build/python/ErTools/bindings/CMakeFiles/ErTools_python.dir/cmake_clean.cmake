@@ -1,4 +1,6 @@
 file(REMOVE_RECURSE
+  "CMakeFiles/ErTools_python.dir/AWGN_bez_FEC_python.cc.o"
+  "CMakeFiles/ErTools_python.dir/AWGN_bez_FEC_python.cc.o.d"
   "CMakeFiles/ErTools_python.dir/AWGN_python.cc.o"
   "CMakeFiles/ErTools_python.dir/AWGN_python.cc.o.d"
   "CMakeFiles/ErTools_python.dir/BER_python.cc.o"

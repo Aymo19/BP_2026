@@ -4,6 +4,7 @@
     <compoundname>api.h</compoundname>
     <includes local="no">gnuradio/attributes.h</includes>
     <includedby refid="AWGN_8h" local="no">AWGN.h</includedby>
+    <includedby refid="AWGN__bez__FEC_8h" local="no">AWGN_bez_FEC.h</includedby>
     <includedby refid="BER_8h" local="no">BER.h</includedby>
     <includedby refid="MC_8h" local="no">MC.h</includedby>
     <includedby refid="SER_8h" local="no">SER.h</includedby>
@@ -27,27 +28,33 @@
         </childnode>
       </node>
       <node id="4">
-        <label>BER.h</label>
-        <link refid="BER_8h"/>
+        <label>AWGN_bez_FEC.h</label>
+        <link refid="AWGN__bez__FEC_8h"/>
         <childnode refid="5" relation="include">
         </childnode>
       </node>
       <node id="6">
-        <label>MC.h</label>
-        <link refid="MC_8h"/>
+        <label>BER.h</label>
+        <link refid="BER_8h"/>
         <childnode refid="7" relation="include">
         </childnode>
       </node>
       <node id="8">
-        <label>SER.h</label>
-        <link refid="SER_8h"/>
+        <label>MC.h</label>
+        <link refid="MC_8h"/>
         <childnode refid="9" relation="include">
         </childnode>
       </node>
       <node id="10">
+        <label>SER.h</label>
+        <link refid="SER_8h"/>
+        <childnode refid="11" relation="include">
+        </childnode>
+      </node>
+      <node id="12">
         <label>Teoreticka_BER.h</label>
         <link refid="Teoreticka__BER_8h"/>
-        <childnode refid="11" relation="include">
+        <childnode refid="13" relation="include">
         </childnode>
       </node>
       <node id="1">
@@ -63,24 +70,30 @@
         </childnode>
         <childnode refid="10" relation="include">
         </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>AWGN_bez_FEC_impl.h</label>
+        <link refid="AWGN__bez__FEC__impl_8h"/>
       </node>
       <node id="3">
         <label>AWGN_impl.h</label>
         <link refid="AWGN__impl_8h"/>
       </node>
-      <node id="5">
+      <node id="7">
         <label>BER_impl.h</label>
         <link refid="BER__impl_8h"/>
       </node>
-      <node id="7">
+      <node id="9">
         <label>MC_impl.h</label>
         <link refid="MC__impl_8h"/>
       </node>
-      <node id="9">
+      <node id="11">
         <label>SER_impl.h</label>
         <link refid="SER__impl_8h"/>
       </node>
-      <node id="11">
+      <node id="13">
         <label>Teoreticka_BER_impl.h</label>
         <link refid="Teoreticka__BER__impl_8h"/>
       </node>

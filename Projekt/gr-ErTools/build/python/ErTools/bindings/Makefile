@@ -213,6 +213,30 @@ ErTools_docstrings/fast:
 	cd /home/aymo/BC/Projekt/gr-ErTools/build && $(MAKE) $(MAKESILENT) -f python/ErTools/bindings/CMakeFiles/ErTools_docstrings.dir/build.make python/ErTools/bindings/CMakeFiles/ErTools_docstrings.dir/build
 .PHONY : ErTools_docstrings/fast
 
+AWGN_bez_FEC_python.o: AWGN_bez_FEC_python.cc.o
+.PHONY : AWGN_bez_FEC_python.o
+
+# target to build an object file
+AWGN_bez_FEC_python.cc.o:
+	cd /home/aymo/BC/Projekt/gr-ErTools/build && $(MAKE) $(MAKESILENT) -f python/ErTools/bindings/CMakeFiles/ErTools_python.dir/build.make python/ErTools/bindings/CMakeFiles/ErTools_python.dir/AWGN_bez_FEC_python.cc.o
+.PHONY : AWGN_bez_FEC_python.cc.o
+
+AWGN_bez_FEC_python.i: AWGN_bez_FEC_python.cc.i
+.PHONY : AWGN_bez_FEC_python.i
+
+# target to preprocess a source file
+AWGN_bez_FEC_python.cc.i:
+	cd /home/aymo/BC/Projekt/gr-ErTools/build && $(MAKE) $(MAKESILENT) -f python/ErTools/bindings/CMakeFiles/ErTools_python.dir/build.make python/ErTools/bindings/CMakeFiles/ErTools_python.dir/AWGN_bez_FEC_python.cc.i
+.PHONY : AWGN_bez_FEC_python.cc.i
+
+AWGN_bez_FEC_python.s: AWGN_bez_FEC_python.cc.s
+.PHONY : AWGN_bez_FEC_python.s
+
+# target to generate assembly for a file
+AWGN_bez_FEC_python.cc.s:
+	cd /home/aymo/BC/Projekt/gr-ErTools/build && $(MAKE) $(MAKESILENT) -f python/ErTools/bindings/CMakeFiles/ErTools_python.dir/build.make python/ErTools/bindings/CMakeFiles/ErTools_python.dir/AWGN_bez_FEC_python.cc.s
+.PHONY : AWGN_bez_FEC_python.cc.s
+
 AWGN_python.o: AWGN_python.cc.o
 .PHONY : AWGN_python.o
 
@@ -373,6 +397,9 @@ help:
 	@echo "... ErTools_docstrings"
 	@echo "... extracted_docstrings"
 	@echo "... ErTools_python"
+	@echo "... AWGN_bez_FEC_python.o"
+	@echo "... AWGN_bez_FEC_python.i"
+	@echo "... AWGN_bez_FEC_python.s"
 	@echo "... AWGN_python.o"
 	@echo "... AWGN_python.i"
 	@echo "... AWGN_python.s"

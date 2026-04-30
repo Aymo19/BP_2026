@@ -50,6 +50,7 @@ if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT
     "/home/aymo/BC/Projekt/gr-ErTools/include/gnuradio/ErTools/AWGN.h"
     "/home/aymo/BC/Projekt/gr-ErTools/include/gnuradio/ErTools/Teoreticka_BER.h"
     "/home/aymo/BC/Projekt/gr-ErTools/include/gnuradio/ErTools/MC.h"
+    "/home/aymo/BC/Projekt/gr-ErTools/include/gnuradio/ErTools/AWGN_bez_FEC.h"
     )
 endif()
 

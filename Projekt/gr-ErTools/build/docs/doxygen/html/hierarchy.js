@@ -4,6 +4,9 @@ var hierarchy =
       [ "gr::ErTools::AWGN", "classgr_1_1ErTools_1_1AWGN.html", [
         [ "gr::ErTools::AWGN_impl", "classgr_1_1ErTools_1_1AWGN__impl.html", null ]
       ] ],
+      [ "gr::ErTools::AWGN_bez_FEC", "classgr_1_1ErTools_1_1AWGN__bez__FEC.html", [
+        [ "gr::ErTools::AWGN_bez_FEC_impl", "classgr_1_1ErTools_1_1AWGN__bez__FEC__impl.html", null ]
+      ] ],
       [ "gr::ErTools::BER", "classgr_1_1ErTools_1_1BER.html", [
         [ "gr::ErTools::BER_impl", "classgr_1_1ErTools_1_1BER__impl.html", null ]
       ] ],

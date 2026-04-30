@@ -4,13 +4,41 @@
     <member refid="classgr_1_1ErTools_1_1AWGN_1abbd70d87c16c12d9b2ac473587e02cea" kind="typedef"><name>sptr</name></member>
     <member refid="classgr_1_1ErTools_1_1AWGN_1ae86072f4a50a0d95ccadc830403ab605" kind="function"><name>make</name></member>
   </compound>
+  <compound refid="classgr_1_1ErTools_1_1AWGN__bez__FEC" kind="class"><name>gr::ErTools::AWGN_bez_FEC</name>
+    <member refid="classgr_1_1ErTools_1_1AWGN__bez__FEC_1aea69c8744143ddcbc6b71f10788f4840" kind="typedef"><name>sptr</name></member>
+    <member refid="classgr_1_1ErTools_1_1AWGN__bez__FEC_1a4813422503bf900d2641a73ed1b934b2" kind="function"><name>make</name></member>
+  </compound>
+  <compound refid="classgr_1_1ErTools_1_1AWGN__bez__FEC__impl" kind="class"><name>gr::ErTools::AWGN_bez_FEC_impl</name>
+    <member refid="classgr_1_1ErTools_1_1AWGN__bez__FEC__impl_1a5b6083042d23c4ea3110c81c20c1efb4" kind="variable"><name>_M</name></member>
+    <member refid="classgr_1_1ErTools_1_1AWGN__bez__FEC__impl_1abbd5ee3ef2d511d882c2d08bf40111c4" kind="variable"><name>_k</name></member>
+    <member refid="classgr_1_1ErTools_1_1AWGN__bez__FEC__impl_1a2e276b9f6c719ae15cf4816240e85648" kind="variable"><name>_n</name></member>
+    <member refid="classgr_1_1ErTools_1_1AWGN__bez__FEC__impl_1a21548a8c693bf6e08c366e26a398985b" kind="variable"><name>index</name></member>
+    <member refid="classgr_1_1ErTools_1_1AWGN__bez__FEC__impl_1a54351ba8c8966ce2039f081853213d4d" kind="variable"><name>counter</name></member>
+    <member refid="classgr_1_1ErTools_1_1AWGN__bez__FEC__impl_1a15d60e9867621fa2f8a226b2a5613421" kind="variable"><name>Es</name></member>
+    <member refid="classgr_1_1ErTools_1_1AWGN__bez__FEC__impl_1a9fcae99c500e4c46dfa42137e6887fa6" kind="variable"><name>sumEs</name></member>
+    <member refid="classgr_1_1ErTools_1_1AWGN__bez__FEC__impl_1aae11f47e54ca05b00ecb6b2e95b9a9e3" kind="variable"><name>EBQ_B</name></member>
+    <member refid="classgr_1_1ErTools_1_1AWGN__bez__FEC__impl_1a2d812336e7c28ebb7446c20139b03a9a" kind="variable"><name>rd_B</name></member>
+    <member refid="classgr_1_1ErTools_1_1AWGN__bez__FEC__impl_1abf8821da4a963a0a46cd70c0670d4c04" kind="variable"><name>R_B</name></member>
+    <member refid="classgr_1_1ErTools_1_1AWGN__bez__FEC__impl_1ac0ba6f1738b481db50086c3206be5798" kind="variable"><name>Gauss_B</name></member>
+    <member refid="classgr_1_1ErTools_1_1AWGN__bez__FEC__impl_1ab6e193dbfcdc96871cb584b11e051aeb" kind="function"><name>Sum_B</name></member>
+    <member refid="classgr_1_1ErTools_1_1AWGN__bez__FEC__impl_1a42b1329834bc4432da24655921b287d4" kind="function"><name>AWGN_bez_FEC_impl</name></member>
+    <member refid="classgr_1_1ErTools_1_1AWGN__bez__FEC__impl_1ab1d034d99126a119e41bd2c6ab5eb2fe" kind="function"><name>~AWGN_bez_FEC_impl</name></member>
+    <member refid="classgr_1_1ErTools_1_1AWGN__bez__FEC__impl_1adb46f4d783c634a7dc1ed20b73613a50" kind="function"><name>work</name></member>
+  </compound>
   <compound refid="classgr_1_1ErTools_1_1AWGN__impl" kind="class"><name>gr::ErTools::AWGN_impl</name>
     <member refid="classgr_1_1ErTools_1_1AWGN__impl_1a5599e40447995126fb0a60b9f800b72a" kind="variable"><name>_M</name></member>
     <member refid="classgr_1_1ErTools_1_1AWGN__impl_1a21f34ab35a3d2e522fe2c403b6f5b85c" kind="variable"><name>_k</name></member>
     <member refid="classgr_1_1ErTools_1_1AWGN__impl_1acadc9c84fae6bcc2e3c603700679e367" kind="variable"><name>_n</name></member>
+    <member refid="classgr_1_1ErTools_1_1AWGN__impl_1a9970a855acbd363cb19f25cdf08345e1" kind="variable"><name>index</name></member>
+    <member refid="classgr_1_1ErTools_1_1AWGN__impl_1a53c0c068aa08b709b9a5cbf8dffd0b2f" kind="variable"><name>counter</name></member>
     <member refid="classgr_1_1ErTools_1_1AWGN__impl_1a867e72499ba919f74851f5aff1526cd7" kind="variable"><name>Ps</name></member>
     <member refid="classgr_1_1ErTools_1_1AWGN__impl_1a44a81ec6cc7997845aefc3d31fbabd06" kind="variable"><name>sumPs</name></member>
     <member refid="classgr_1_1ErTools_1_1AWGN__impl_1a2fea35583438c4391d49a50f85f879ad" kind="variable"><name>EBQ</name></member>
+    <member refid="classgr_1_1ErTools_1_1AWGN__impl_1a52b373aa24b38bd7ca3355a240c01b5d" kind="variable"><name>Rs</name></member>
+    <member refid="classgr_1_1ErTools_1_1AWGN__impl_1aae4da2f7c35cea5992aeb98acccacb39" kind="variable"><name>rd</name></member>
+    <member refid="classgr_1_1ErTools_1_1AWGN__impl_1a4623c290c8e4c27432a5bfd2c18bd390" kind="variable"><name>R</name></member>
+    <member refid="classgr_1_1ErTools_1_1AWGN__impl_1a8bf733d46e0ee36e96989786d3b98c1e" kind="variable"><name>Gauss</name></member>
+    <member refid="classgr_1_1ErTools_1_1AWGN__impl_1a571671b976fd56fea161e4c426d13178" kind="function"><name>Sum</name></member>
     <member refid="classgr_1_1ErTools_1_1AWGN__impl_1a0ac22fdbcdfc4f8a00789df782f02efb" kind="function"><name>AWGN_impl</name></member>
     <member refid="classgr_1_1ErTools_1_1AWGN__impl_1a63be0847606f51c682850e095dccf7d8" kind="function"><name>~AWGN_impl</name></member>
     <member refid="classgr_1_1ErTools_1_1AWGN__impl_1a1c1d31a0ca34abc4e20ce55d08fccd7b" kind="function"><name>work</name></member>
@@ -27,6 +55,8 @@
     <member refid="classgr_1_1ErTools_1_1BER__impl_1ae027d779cd1785ace0ab535c946c5e55" kind="variable"><name>_count</name></member>
     <member refid="classgr_1_1ErTools_1_1BER__impl_1ab18d7297f443b1021b20c7bcf5189526" kind="variable"><name>_pamat_BER</name></member>
     <member refid="classgr_1_1ErTools_1_1BER__impl_1a551252fd75556617d6e1f3330deb0863" kind="variable"><name>_pocet_chyb</name></member>
+    <member refid="classgr_1_1ErTools_1_1BER__impl_1a17f769a4fe6058cfa5df1855bc20097f" kind="variable"><name>p</name></member>
+    <member refid="classgr_1_1ErTools_1_1BER__impl_1ae7f10a883698026564e3030820ee2190" kind="variable"><name>counter</name></member>
     <member refid="classgr_1_1ErTools_1_1BER__impl_1aa96b80fc8e989286cca365a5c67f6612" kind="function"><name>BER_impl</name></member>
     <member refid="classgr_1_1ErTools_1_1BER__impl_1a6127ddac53ee3af58c361975ea4876e7" kind="function"><name>~BER_impl</name></member>
     <member refid="classgr_1_1ErTools_1_1BER__impl_1a175d43f680cf4aee664de1ac01934f57" kind="function"><name>work</name></member>
@@ -40,8 +70,10 @@
     <member refid="classgr_1_1ErTools_1_1MC__impl_1ae0747851e9f9cd215b7f335baf7b9adb" kind="variable"><name>_EbN0min</name></member>
     <member refid="classgr_1_1ErTools_1_1MC__impl_1adcc3da591386ac30782cc4c6090e6deb" kind="variable"><name>_EbN0max</name></member>
     <member refid="classgr_1_1ErTools_1_1MC__impl_1ae130be5d4334b3cca20573d2452d7a55" kind="variable"><name>index_CLK</name></member>
-    <member refid="classgr_1_1ErTools_1_1MC__impl_1a42404b0cc65544f29d53f5c6b939b353" kind="variable"><name>Rz</name></member>
-    <member refid="classgr_1_1ErTools_1_1MC__impl_1a8266eeed6c2b039137073b530079b10c" kind="variable"><name>Rz_krok</name></member>
+    <member refid="classgr_1_1ErTools_1_1MC__impl_1a1e19986e54ca91511734da8484e8225c" kind="variable"><name>counter</name></member>
+    <member refid="classgr_1_1ErTools_1_1MC__impl_1add8f3c1fdfa91dc571e4cca8fd87691e" kind="variable"><name>Rz</name></member>
+    <member refid="classgr_1_1ErTools_1_1MC__impl_1a36d61208a10ef4aaa02dcc2df00e89a6" kind="variable"><name>Rz_krok</name></member>
+    <member refid="classgr_1_1ErTools_1_1MC__impl_1a112ada8731b818c08f554c142d792dae" kind="variable"><name>v_EDB</name></member>
     <member refid="classgr_1_1ErTools_1_1MC__impl_1a4d95cf2adf2711aaf40b26d89d537c9e" kind="function"><name>MC_impl</name></member>
     <member refid="classgr_1_1ErTools_1_1MC__impl_1ad7edc424526ccc418405624933074edd" kind="function"><name>~MC_impl</name></member>
     <member refid="classgr_1_1ErTools_1_1MC__impl_1a80f7d84de1b70e0eec6e098c163dca13" kind="function"><name>work</name></member>
@@ -126,6 +158,8 @@
   </compound>
   <compound refid="AWGN_8h" kind="file"><name>AWGN.h</name>
   </compound>
+  <compound refid="AWGN__bez__FEC_8h" kind="file"><name>AWGN_bez_FEC.h</name>
+  </compound>
   <compound refid="BER_8h" kind="file"><name>BER.h</name>
   </compound>
   <compound refid="MC_8h" kind="file"><name>MC.h</name>
@@ -133,6 +167,8 @@
   <compound refid="SER_8h" kind="file"><name>SER.h</name>
   </compound>
   <compound refid="Teoreticka__BER_8h" kind="file"><name>Teoreticka_BER.h</name>
+  </compound>
+  <compound refid="AWGN__bez__FEC__impl_8h" kind="file"><name>AWGN_bez_FEC_impl.h</name>
   </compound>
   <compound refid="AWGN__impl_8h" kind="file"><name>AWGN_impl.h</name>
   </compound>
@@ -143,6 +179,12 @@
   <compound refid="SER__impl_8h" kind="file"><name>SER_impl.h</name>
   </compound>
   <compound refid="Teoreticka__BER__impl_8h" kind="file"><name>Teoreticka_BER_impl.h</name>
+  </compound>
+  <compound refid="AWGN__bez__FEC__pydoc__template_8h" kind="file"><name>AWGN_bez_FEC_pydoc_template.h</name>
+    <member refid="AWGN__bez__FEC__pydoc__template_8h_1a74021f021dcdfbb22891787b79c5529d" kind="define"><name>D</name></member>
+    <member refid="AWGN__bez__FEC__pydoc__template_8h_1a1978e15c4c1da1b7d545bb93ce54c358" kind="variable"><name>__doc_gr_ErTools_AWGN_bez_FEC</name></member>
+    <member refid="AWGN__bez__FEC__pydoc__template_8h_1a70fcd3355fdd32f9f72accfd8daa3cfc" kind="variable"><name>__doc_gr_ErTools_AWGN_bez_FEC_AWGN_bez_FEC</name></member>
+    <member refid="AWGN__bez__FEC__pydoc__template_8h_1ab8d442125b3146941af93a7e0fad6d9c" kind="variable"><name>__doc_gr_ErTools_AWGN_bez_FEC_make</name></member>
   </compound>
   <compound refid="AWGN__pydoc__template_8h" kind="file"><name>AWGN_pydoc_template.h</name>
     <member refid="AWGN__pydoc__template_8h_1a74021f021dcdfbb22891787b79c5529d" kind="define"><name>D</name></member>
