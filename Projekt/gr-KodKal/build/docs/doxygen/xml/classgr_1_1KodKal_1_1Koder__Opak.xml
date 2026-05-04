@@ -1,0 +1,85 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="classgr_1_1KodKal_1_1Koder__Opak" kind="class" language="C++" prot="public">
+    <compoundname>gr::KodKal::Koder_Opak</compoundname>
+    <basecompoundref prot="public" virt="virtual">gr::sync_interpolator</basecompoundref>
+    <derivedcompoundref refid="classgr_1_1KodKal_1_1Koder__Opak__impl" prot="public" virt="non-virtual">gr::KodKal::Koder_Opak_impl</derivedcompoundref>
+    <includes refid="Koder__Opak_8h" local="no">Koder_Opak.h</includes>
+    <sectiondef kind="public-type">
+      <memberdef kind="typedef" id="classgr_1_1KodKal_1_1Koder__Opak_1ae86f8c746ef7b17ca9541cdc7c004b54" prot="public" static="no">
+        <type>std::shared_ptr&lt; <ref refid="classgr_1_1KodKal_1_1Koder__Opak" kindref="compound">Koder_Opak</ref> &gt;</type>
+        <definition>typedef std::shared_ptr&lt;Koder_Opak&gt; gr::KodKal::Koder_Opak::sptr</definition>
+        <argsstring></argsstring>
+        <name>sptr</name>
+        <qualifiedname>gr::KodKal::Koder_Opak::sptr</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/aymo/BC/Projekt/gr-KodKal/include/gnuradio/KodKal/Koder_Opak.h" line="25" column="29" bodyfile="/home/aymo/BC/Projekt/gr-KodKal/include/gnuradio/KodKal/Koder_Opak.h" bodystart="25" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="classgr_1_1KodKal_1_1Koder__Opak_1a9b255496dce50140049665739d42cb31" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classgr_1_1KodKal_1_1Koder__Opak_1ae86f8c746ef7b17ca9541cdc7c004b54" kindref="member">sptr</ref></type>
+        <definition>static sptr gr::KodKal::Koder_Opak::make</definition>
+        <argsstring>(int k)</argsstring>
+        <name>make</name>
+        <qualifiedname>gr::KodKal::Koder_Opak::make</qualifiedname>
+        <param>
+          <type>int</type>
+          <declname>k</declname>
+        </param>
+        <briefdescription>
+<para>Return a shared_ptr to a new instance of <ref refid="classgr_1_1KodKal_1_1Koder__Opak" kindref="compound">KodKal::Koder_Opak</ref>. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>To avoid accidental use of raw pointers, <ref refid="classgr_1_1KodKal_1_1Koder__Opak" kindref="compound">KodKal::Koder_Opak</ref>&apos;s constructor is in a private implementation class. <ref refid="classgr_1_1KodKal_1_1Koder__Opak_1a9b255496dce50140049665739d42cb31" kindref="member">KodKal::Koder_Opak::make</ref> is the public interface for creating new instances. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/aymo/BC/Projekt/gr-KodKal/include/gnuradio/KodKal/Koder_Opak.h" line="35" column="17"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+<para>&lt;+description of block+&gt; </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1">
+        <label>gr::KodKal::Koder_Opak</label>
+        <link refid="classgr_1_1KodKal_1_1Koder__Opak"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>gr::KodKal::Koder_Opak_impl</label>
+        <link refid="classgr_1_1KodKal_1_1Koder__Opak__impl"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>gr::sync_interpolator</label>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="1">
+        <label>gr::KodKal::Koder_Opak</label>
+        <link refid="classgr_1_1KodKal_1_1Koder__Opak"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>gr::sync_interpolator</label>
+      </node>
+    </collaborationgraph>
+    <location file="/home/aymo/BC/Projekt/gr-KodKal/include/gnuradio/KodKal/Koder_Opak.h" line="22" column="1" bodyfile="/home/aymo/BC/Projekt/gr-KodKal/include/gnuradio/KodKal/Koder_Opak.h" bodystart="23" bodyend="36"/>
+    <listofallmembers>
+      <member refid="classgr_1_1KodKal_1_1Koder__Opak_1a9b255496dce50140049665739d42cb31" prot="public" virt="non-virtual"><scope>gr::KodKal::Koder_Opak</scope><name>make</name></member>
+      <member refid="classgr_1_1KodKal_1_1Koder__Opak_1ae86f8c746ef7b17ca9541cdc7c004b54" prot="public" virt="non-virtual"><scope>gr::KodKal::Koder_Opak</scope><name>sptr</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

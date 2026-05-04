@@ -1,0 +1,12 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="dir_93bff873947d0202eb8f8a41bf78992b" kind="dir">
+    <compoundname>bindings</compoundname>
+    <innerfile refid="build_2python_2KodKal_2bindings_2pydoc__macros_8h">build/python/KodKal/bindings/pydoc_macros.h</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/aymo/BC/Projekt/gr-KodKal/build/python/KodKal/bindings/"/>
+  </compounddef>
+</doxygen>

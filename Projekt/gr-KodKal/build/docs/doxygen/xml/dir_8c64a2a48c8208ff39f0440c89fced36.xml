@@ -1,0 +1,12 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="dir_8c64a2a48c8208ff39f0440c89fced36" kind="dir">
+    <compoundname>bindings</compoundname>
+    <innerdir refid="dir_3af6e620343a75f751864f75948b4cfc">docstrings</innerdir>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/aymo/BC/Projekt/gr-KodKal/python/KodKal/bindings/"/>
+  </compounddef>
+</doxygen>

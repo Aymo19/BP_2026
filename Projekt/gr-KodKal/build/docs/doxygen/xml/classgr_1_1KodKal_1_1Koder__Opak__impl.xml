@@ -1,0 +1,131 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="classgr_1_1KodKal_1_1Koder__Opak__impl" kind="class" language="C++" prot="public">
+    <compoundname>gr::KodKal::Koder_Opak_impl</compoundname>
+    <basecompoundref refid="classgr_1_1KodKal_1_1Koder__Opak" prot="public" virt="non-virtual">gr::KodKal::Koder_Opak</basecompoundref>
+    <includes refid="Koder__Opak__impl_8h" local="no">Koder_Opak_impl.h</includes>
+    <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classgr_1_1KodKal_1_1Koder__Opak__impl_1a6240a2b5a3bebef3206d7f54f3e54325" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int gr::KodKal::Koder_Opak_impl::_k</definition>
+        <argsstring></argsstring>
+        <name>_k</name>
+        <qualifiedname>gr::KodKal::Koder_Opak_impl::_k</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/aymo/BC/Projekt/gr-KodKal/lib/Koder_Opak_impl.h" line="19" column="7" bodyfile="/home/aymo/BC/Projekt/gr-KodKal/lib/Koder_Opak_impl.h" bodystart="19" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="classgr_1_1KodKal_1_1Koder__Opak__impl_1afc2d3dd3babe104d81bed4ee032e84f5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>gr::KodKal::Koder_Opak_impl::Koder_Opak_impl</definition>
+        <argsstring>(int k)</argsstring>
+        <name>Koder_Opak_impl</name>
+        <qualifiedname>gr::KodKal::Koder_Opak_impl::Koder_Opak_impl</qualifiedname>
+        <param>
+          <type>int</type>
+          <declname>k</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/aymo/BC/Projekt/gr-KodKal/lib/Koder_Opak_impl.h" line="22" column="5"/>
+      </memberdef>
+      <memberdef kind="function" id="classgr_1_1KodKal_1_1Koder__Opak__impl_1a3dfe2801e872d0d8475aba3127e01480" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>gr::KodKal::Koder_Opak_impl::~Koder_Opak_impl</definition>
+        <argsstring>()</argsstring>
+        <name>~Koder_Opak_impl</name>
+        <qualifiedname>gr::KodKal::Koder_Opak_impl::~Koder_Opak_impl</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/aymo/BC/Projekt/gr-KodKal/lib/Koder_Opak_impl.h" line="23" column="5"/>
+      </memberdef>
+      <memberdef kind="function" id="classgr_1_1KodKal_1_1Koder__Opak__impl_1aaa3eef055bc53a41bc711a2b24f26dd0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int gr::KodKal::Koder_Opak_impl::work</definition>
+        <argsstring>(int noutput_items, gr_vector_const_void_star &amp;input_items, gr_vector_void_star &amp;output_items)</argsstring>
+        <name>work</name>
+        <qualifiedname>gr::KodKal::Koder_Opak_impl::work</qualifiedname>
+        <param>
+          <type>int</type>
+          <declname>noutput_items</declname>
+        </param>
+        <param>
+          <type>gr_vector_const_void_star &amp;</type>
+          <declname>input_items</declname>
+        </param>
+        <param>
+          <type>gr_vector_void_star &amp;</type>
+          <declname>output_items</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/aymo/BC/Projekt/gr-KodKal/lib/Koder_Opak_impl.h" line="26" column="9"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="2">
+        <label>gr::KodKal::Koder_Opak</label>
+        <link refid="classgr_1_1KodKal_1_1Koder__Opak"/>
+        <childnode refid="3" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>gr::KodKal::Koder_Opak_impl</label>
+        <link refid="classgr_1_1KodKal_1_1Koder__Opak__impl"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>gr::sync_interpolator</label>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="2">
+        <label>gr::KodKal::Koder_Opak</label>
+        <link refid="classgr_1_1KodKal_1_1Koder__Opak"/>
+        <childnode refid="3" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>gr::KodKal::Koder_Opak_impl</label>
+        <link refid="classgr_1_1KodKal_1_1Koder__Opak__impl"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>gr::sync_interpolator</label>
+      </node>
+    </collaborationgraph>
+    <location file="/home/aymo/BC/Projekt/gr-KodKal/lib/Koder_Opak_impl.h" line="16" column="1" bodyfile="/home/aymo/BC/Projekt/gr-KodKal/lib/Koder_Opak_impl.h" bodystart="17" bodyend="29"/>
+    <listofallmembers>
+      <member refid="classgr_1_1KodKal_1_1Koder__Opak__impl_1a6240a2b5a3bebef3206d7f54f3e54325" prot="private" virt="non-virtual"><scope>gr::KodKal::Koder_Opak_impl</scope><name>_k</name></member>
+      <member refid="classgr_1_1KodKal_1_1Koder__Opak__impl_1afc2d3dd3babe104d81bed4ee032e84f5" prot="public" virt="non-virtual"><scope>gr::KodKal::Koder_Opak_impl</scope><name>Koder_Opak_impl</name></member>
+      <member refid="classgr_1_1KodKal_1_1Koder__Opak_1a9b255496dce50140049665739d42cb31" prot="public" virt="non-virtual"><scope>gr::KodKal::Koder_Opak_impl</scope><name>make</name></member>
+      <member refid="classgr_1_1KodKal_1_1Koder__Opak_1ae86f8c746ef7b17ca9541cdc7c004b54" prot="public" virt="non-virtual"><scope>gr::KodKal::Koder_Opak_impl</scope><name>sptr</name></member>
+      <member refid="classgr_1_1KodKal_1_1Koder__Opak__impl_1aaa3eef055bc53a41bc711a2b24f26dd0" prot="public" virt="non-virtual"><scope>gr::KodKal::Koder_Opak_impl</scope><name>work</name></member>
+      <member refid="classgr_1_1KodKal_1_1Koder__Opak__impl_1a3dfe2801e872d0d8475aba3127e01480" prot="public" virt="non-virtual"><scope>gr::KodKal::Koder_Opak_impl</scope><name>~Koder_Opak_impl</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

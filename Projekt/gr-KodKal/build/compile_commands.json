@@ -1,0 +1,32 @@
+[
+{
+  "directory": "/home/aymo/BC/Projekt/gr-KodKal/build/lib",
+  "command": "/usr/bin/c++ -DBOOST_ATOMIC_DYN_LINK -DBOOST_ATOMIC_NO_LIB -DBOOST_THREAD_DYN_LINK -DBOOST_THREAD_NO_LIB -DFMT_SHARED -DGR_CTRLPORT -DGR_MPLIB_GMP -DGR_PERFORMANCE_COUNTERS -DSPDLOG_COMPILED_LIB -DSPDLOG_FMT_EXTERNAL -DSPDLOG_SHARED_LIB -Dgnuradio_KodKal_EXPORTS -I/home/aymo/BC/Projekt/gr-KodKal/lib/../include  -fvisibility=hidden -Wsign-compare -Wall -Wno-uninitialized -O3 -DNDEBUG -std=c++17 -fPIC -o CMakeFiles/gnuradio-KodKal.dir/Koder_Opak_impl.cc.o -c /home/aymo/BC/Projekt/gr-KodKal/lib/Koder_Opak_impl.cc",
+  "file": "/home/aymo/BC/Projekt/gr-KodKal/lib/Koder_Opak_impl.cc",
+  "output": "lib/CMakeFiles/gnuradio-KodKal.dir/Koder_Opak_impl.cc.o"
+},
+{
+  "directory": "/home/aymo/BC/Projekt/gr-KodKal/build/lib",
+  "command": "/usr/bin/c++ -DBOOST_ATOMIC_DYN_LINK -DBOOST_ATOMIC_NO_LIB -DBOOST_THREAD_DYN_LINK -DBOOST_THREAD_NO_LIB -DFMT_SHARED -DGR_CTRLPORT -DGR_MPLIB_GMP -DGR_PERFORMANCE_COUNTERS -DSPDLOG_COMPILED_LIB -DSPDLOG_FMT_EXTERNAL -DSPDLOG_SHARED_LIB -Dgnuradio_KodKal_EXPORTS -I/home/aymo/BC/Projekt/gr-KodKal/lib/../include  -fvisibility=hidden -Wsign-compare -Wall -Wno-uninitialized -O3 -DNDEBUG -std=c++17 -fPIC -o CMakeFiles/gnuradio-KodKal.dir/Dekoder_Opak_impl.cc.o -c /home/aymo/BC/Projekt/gr-KodKal/lib/Dekoder_Opak_impl.cc",
+  "file": "/home/aymo/BC/Projekt/gr-KodKal/lib/Dekoder_Opak_impl.cc",
+  "output": "lib/CMakeFiles/gnuradio-KodKal.dir/Dekoder_Opak_impl.cc.o"
+},
+{
+  "directory": "/home/aymo/BC/Projekt/gr-KodKal/build/python/KodKal/bindings",
+  "command": "/usr/bin/c++ -DBOOST_ATOMIC_DYN_LINK -DBOOST_ATOMIC_NO_LIB -DBOOST_DATE_TIME_DYN_LINK -DBOOST_DATE_TIME_NO_LIB -DBOOST_PROGRAM_OPTIONS_DYN_LINK -DBOOST_PROGRAM_OPTIONS_NO_LIB -DBOOST_REGEX_DYN_LINK -DBOOST_REGEX_NO_LIB -DBOOST_SYSTEM_DYN_LINK -DBOOST_SYSTEM_NO_LIB -DBOOST_THREAD_DYN_LINK -DBOOST_THREAD_NO_LIB -DBOOST_UNIT_TEST_FRAMEWORK_DYN_LINK -DBOOST_UNIT_TEST_FRAMEWORK_NO_LIB -DFMT_SHARED -DGR_CTRLPORT -DGR_MPLIB_GMP -DGR_PERFORMANCE_COUNTERS -DKodKal_python_EXPORTS -DSPDLOG_COMPILED_LIB -DSPDLOG_FMT_EXTERNAL -DSPDLOG_SHARED_LIB -I/home/aymo/BC/Projekt/gr-KodKal/build/python/KodKal/bindings -I/home/aymo/BC/Projekt/gr-KodKal/python/KodKal/bindings/../../../lib -I/home/aymo/BC/Projekt/gr-KodKal/python/KodKal/bindings/../../../include -I/home/aymo/BC/Projekt/gr-KodKal/lib/../include -isystem /usr/include/python3.12 -isystem /usr/lib/python3/dist-packages/numpy/core/include  -fvisibility=hidden -Wsign-compare -Wall -Wno-uninitialized -O3 -DNDEBUG -std=c++17 -fPIC -fvisibility=hidden -Wno-unused-variable -flto -fno-fat-lto-objects -o CMakeFiles/KodKal_python.dir/Koder_Opak_python.cc.o -c /home/aymo/BC/Projekt/gr-KodKal/python/KodKal/bindings/Koder_Opak_python.cc",
+  "file": "/home/aymo/BC/Projekt/gr-KodKal/python/KodKal/bindings/Koder_Opak_python.cc",
+  "output": "python/KodKal/bindings/CMakeFiles/KodKal_python.dir/Koder_Opak_python.cc.o"
+},
+{
+  "directory": "/home/aymo/BC/Projekt/gr-KodKal/build/python/KodKal/bindings",
+  "command": "/usr/bin/c++ -DBOOST_ATOMIC_DYN_LINK -DBOOST_ATOMIC_NO_LIB -DBOOST_DATE_TIME_DYN_LINK -DBOOST_DATE_TIME_NO_LIB -DBOOST_PROGRAM_OPTIONS_DYN_LINK -DBOOST_PROGRAM_OPTIONS_NO_LIB -DBOOST_REGEX_DYN_LINK -DBOOST_REGEX_NO_LIB -DBOOST_SYSTEM_DYN_LINK -DBOOST_SYSTEM_NO_LIB -DBOOST_THREAD_DYN_LINK -DBOOST_THREAD_NO_LIB -DBOOST_UNIT_TEST_FRAMEWORK_DYN_LINK -DBOOST_UNIT_TEST_FRAMEWORK_NO_LIB -DFMT_SHARED -DGR_CTRLPORT -DGR_MPLIB_GMP -DGR_PERFORMANCE_COUNTERS -DKodKal_python_EXPORTS -DSPDLOG_COMPILED_LIB -DSPDLOG_FMT_EXTERNAL -DSPDLOG_SHARED_LIB -I/home/aymo/BC/Projekt/gr-KodKal/build/python/KodKal/bindings -I/home/aymo/BC/Projekt/gr-KodKal/python/KodKal/bindings/../../../lib -I/home/aymo/BC/Projekt/gr-KodKal/python/KodKal/bindings/../../../include -I/home/aymo/BC/Projekt/gr-KodKal/lib/../include -isystem /usr/include/python3.12 -isystem /usr/lib/python3/dist-packages/numpy/core/include  -fvisibility=hidden -Wsign-compare -Wall -Wno-uninitialized -O3 -DNDEBUG -std=c++17 -fPIC -fvisibility=hidden -Wno-unused-variable -flto -fno-fat-lto-objects -o CMakeFiles/KodKal_python.dir/Dekoder_Opak_python.cc.o -c /home/aymo/BC/Projekt/gr-KodKal/python/KodKal/bindings/Dekoder_Opak_python.cc",
+  "file": "/home/aymo/BC/Projekt/gr-KodKal/python/KodKal/bindings/Dekoder_Opak_python.cc",
+  "output": "python/KodKal/bindings/CMakeFiles/KodKal_python.dir/Dekoder_Opak_python.cc.o"
+},
+{
+  "directory": "/home/aymo/BC/Projekt/gr-KodKal/build/python/KodKal/bindings",
+  "command": "/usr/bin/c++ -DBOOST_ATOMIC_DYN_LINK -DBOOST_ATOMIC_NO_LIB -DBOOST_DATE_TIME_DYN_LINK -DBOOST_DATE_TIME_NO_LIB -DBOOST_PROGRAM_OPTIONS_DYN_LINK -DBOOST_PROGRAM_OPTIONS_NO_LIB -DBOOST_REGEX_DYN_LINK -DBOOST_REGEX_NO_LIB -DBOOST_SYSTEM_DYN_LINK -DBOOST_SYSTEM_NO_LIB -DBOOST_THREAD_DYN_LINK -DBOOST_THREAD_NO_LIB -DBOOST_UNIT_TEST_FRAMEWORK_DYN_LINK -DBOOST_UNIT_TEST_FRAMEWORK_NO_LIB -DFMT_SHARED -DGR_CTRLPORT -DGR_MPLIB_GMP -DGR_PERFORMANCE_COUNTERS -DKodKal_python_EXPORTS -DSPDLOG_COMPILED_LIB -DSPDLOG_FMT_EXTERNAL -DSPDLOG_SHARED_LIB -I/home/aymo/BC/Projekt/gr-KodKal/build/python/KodKal/bindings -I/home/aymo/BC/Projekt/gr-KodKal/python/KodKal/bindings/../../../lib -I/home/aymo/BC/Projekt/gr-KodKal/python/KodKal/bindings/../../../include -I/home/aymo/BC/Projekt/gr-KodKal/lib/../include -isystem /usr/include/python3.12 -isystem /usr/lib/python3/dist-packages/numpy/core/include  -fvisibility=hidden -Wsign-compare -Wall -Wno-uninitialized -O3 -DNDEBUG -std=c++17 -fPIC -fvisibility=hidden -Wno-unused-variable -flto -fno-fat-lto-objects -o CMakeFiles/KodKal_python.dir/python_bindings.cc.o -c /home/aymo/BC/Projekt/gr-KodKal/python/KodKal/bindings/python_bindings.cc",
+  "file": "/home/aymo/BC/Projekt/gr-KodKal/python/KodKal/bindings/python_bindings.cc",
+  "output": "python/KodKal/bindings/CMakeFiles/KodKal_python.dir/python_bindings.cc.o"
+}
+]

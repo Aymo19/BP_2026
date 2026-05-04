@@ -1,0 +1,120 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygenindex xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="index.xsd" version="1.9.8" xml:lang="en-US">
+  <compound refid="classgr_1_1KodKal_1_1Dekoder__Opak" kind="class"><name>gr::KodKal::Dekoder_Opak</name>
+    <member refid="classgr_1_1KodKal_1_1Dekoder__Opak_1ad01ef583f9682df5f8dbf31ac106e212" kind="typedef"><name>sptr</name></member>
+    <member refid="classgr_1_1KodKal_1_1Dekoder__Opak_1a439632d3296cbb2126c7f85a37622ea4" kind="function"><name>make</name></member>
+  </compound>
+  <compound refid="classgr_1_1KodKal_1_1Dekoder__Opak__impl" kind="class"><name>gr::KodKal::Dekoder_Opak_impl</name>
+    <member refid="classgr_1_1KodKal_1_1Dekoder__Opak__impl_1a464d8525ef8ffd9eee1fbf78d4608fa3" kind="variable"><name>_n</name></member>
+    <member refid="classgr_1_1KodKal_1_1Dekoder__Opak__impl_1a3cecd8fdf0846aaf6ff4189688e69bdf" kind="variable"><name>count</name></member>
+    <member refid="classgr_1_1KodKal_1_1Dekoder__Opak__impl_1a9e15be3d944c95387c0ff32710f9f519" kind="variable"><name>polovica</name></member>
+    <member refid="classgr_1_1KodKal_1_1Dekoder__Opak__impl_1a6519b45fb838cf798fd7d8fca71f6cf5" kind="function"><name>Dekoder_Opak_impl</name></member>
+    <member refid="classgr_1_1KodKal_1_1Dekoder__Opak__impl_1ad86e087c6292836a8835228c4ca59762" kind="function"><name>~Dekoder_Opak_impl</name></member>
+    <member refid="classgr_1_1KodKal_1_1Dekoder__Opak__impl_1a7998ba2285a4cecf7007a84b2e9c6e2a" kind="function"><name>work</name></member>
+  </compound>
+  <compound refid="classgr_1_1KodKal_1_1Koder__Opak" kind="class"><name>gr::KodKal::Koder_Opak</name>
+    <member refid="classgr_1_1KodKal_1_1Koder__Opak_1ae86f8c746ef7b17ca9541cdc7c004b54" kind="typedef"><name>sptr</name></member>
+    <member refid="classgr_1_1KodKal_1_1Koder__Opak_1a9b255496dce50140049665739d42cb31" kind="function"><name>make</name></member>
+  </compound>
+  <compound refid="classgr_1_1KodKal_1_1Koder__Opak__impl" kind="class"><name>gr::KodKal::Koder_Opak_impl</name>
+    <member refid="classgr_1_1KodKal_1_1Koder__Opak__impl_1a6240a2b5a3bebef3206d7f54f3e54325" kind="variable"><name>_k</name></member>
+    <member refid="classgr_1_1KodKal_1_1Koder__Opak__impl_1afc2d3dd3babe104d81bed4ee032e84f5" kind="function"><name>Koder_Opak_impl</name></member>
+    <member refid="classgr_1_1KodKal_1_1Koder__Opak__impl_1a3dfe2801e872d0d8475aba3127e01480" kind="function"><name>~Koder_Opak_impl</name></member>
+    <member refid="classgr_1_1KodKal_1_1Koder__Opak__impl_1aaa3eef055bc53a41bc711a2b24f26dd0" kind="function"><name>work</name></member>
+  </compound>
+  <compound refid="namespacegr" kind="namespace"><name>gr</name>
+  </compound>
+  <compound refid="namespacegr_1_1KodKal" kind="namespace"><name>gr::KodKal</name>
+  </compound>
+  <compound refid="namespacestd" kind="namespace"><name>std</name>
+  </compound>
+  <compound refid="group__defs_8dox" kind="file"><name>group_defs.dox</name>
+  </compound>
+  <compound refid="main__page_8dox" kind="file"><name>main_page.dox</name>
+  </compound>
+  <compound refid="build_2python_2KodKal_2bindings_2pydoc__macros_8h" kind="file"><name>build/python/KodKal/bindings/pydoc_macros.h</name>
+    <member refid="build_2python_2KodKal_2bindings_2pydoc__macros_8h_1afa7cf06549cf7fd295f622ef6f376357" kind="define"><name>__EXPAND</name></member>
+    <member refid="build_2python_2KodKal_2bindings_2pydoc__macros_8h_1a251b23a2efed48ff2ba2d6f449ed33a3" kind="define"><name>__COUNT</name></member>
+    <member refid="build_2python_2KodKal_2bindings_2pydoc__macros_8h_1a2815f7ab197591ba9559415c694f9ce0" kind="define"><name>__VA_SIZE</name></member>
+    <member refid="build_2python_2KodKal_2bindings_2pydoc__macros_8h_1afdd58e017733f2235c227ef8dd3b2de8" kind="define"><name>__CAT1</name></member>
+    <member refid="build_2python_2KodKal_2bindings_2pydoc__macros_8h_1af08fe30f2a41cef10658f6a892d20543" kind="define"><name>__CAT2</name></member>
+    <member refid="build_2python_2KodKal_2bindings_2pydoc__macros_8h_1a43c147206df4346db5e9d6445aab28ae" kind="define"><name>__DOC1</name></member>
+    <member refid="build_2python_2KodKal_2bindings_2pydoc__macros_8h_1a53738db606593bc1554371d718695fed" kind="define"><name>__DOC2</name></member>
+    <member refid="build_2python_2KodKal_2bindings_2pydoc__macros_8h_1a21baf08c04d32485764f227c32b5bf5d" kind="define"><name>__DOC3</name></member>
+    <member refid="build_2python_2KodKal_2bindings_2pydoc__macros_8h_1a9463ba0ad86bcb4c59b5aecf8a37174c" kind="define"><name>__DOC4</name></member>
+    <member refid="build_2python_2KodKal_2bindings_2pydoc__macros_8h_1a942579d548421ddb2906af7094e5789c" kind="define"><name>__DOC5</name></member>
+    <member refid="build_2python_2KodKal_2bindings_2pydoc__macros_8h_1a31ea356761360e78d16525aa69d2dae6" kind="define"><name>__DOC6</name></member>
+    <member refid="build_2python_2KodKal_2bindings_2pydoc__macros_8h_1a6f1e731f1c6d2893ff1bf98582a7de6e" kind="define"><name>__DOC7</name></member>
+    <member refid="build_2python_2KodKal_2bindings_2pydoc__macros_8h_1a4e578031ec998eaeb933d5caa6a7d28a" kind="define"><name>DOC</name></member>
+  </compound>
+  <compound refid="docs_2doxygen_2pydoc__macros_8h" kind="file"><name>docs/doxygen/pydoc_macros.h</name>
+    <member refid="docs_2doxygen_2pydoc__macros_8h_1afa7cf06549cf7fd295f622ef6f376357" kind="define"><name>__EXPAND</name></member>
+    <member refid="docs_2doxygen_2pydoc__macros_8h_1a251b23a2efed48ff2ba2d6f449ed33a3" kind="define"><name>__COUNT</name></member>
+    <member refid="docs_2doxygen_2pydoc__macros_8h_1a2815f7ab197591ba9559415c694f9ce0" kind="define"><name>__VA_SIZE</name></member>
+    <member refid="docs_2doxygen_2pydoc__macros_8h_1afdd58e017733f2235c227ef8dd3b2de8" kind="define"><name>__CAT1</name></member>
+    <member refid="docs_2doxygen_2pydoc__macros_8h_1af08fe30f2a41cef10658f6a892d20543" kind="define"><name>__CAT2</name></member>
+    <member refid="docs_2doxygen_2pydoc__macros_8h_1a43c147206df4346db5e9d6445aab28ae" kind="define"><name>__DOC1</name></member>
+    <member refid="docs_2doxygen_2pydoc__macros_8h_1a53738db606593bc1554371d718695fed" kind="define"><name>__DOC2</name></member>
+    <member refid="docs_2doxygen_2pydoc__macros_8h_1a21baf08c04d32485764f227c32b5bf5d" kind="define"><name>__DOC3</name></member>
+    <member refid="docs_2doxygen_2pydoc__macros_8h_1a9463ba0ad86bcb4c59b5aecf8a37174c" kind="define"><name>__DOC4</name></member>
+    <member refid="docs_2doxygen_2pydoc__macros_8h_1a942579d548421ddb2906af7094e5789c" kind="define"><name>__DOC5</name></member>
+    <member refid="docs_2doxygen_2pydoc__macros_8h_1a31ea356761360e78d16525aa69d2dae6" kind="define"><name>__DOC6</name></member>
+    <member refid="docs_2doxygen_2pydoc__macros_8h_1a6f1e731f1c6d2893ff1bf98582a7de6e" kind="define"><name>__DOC7</name></member>
+    <member refid="docs_2doxygen_2pydoc__macros_8h_1a4e578031ec998eaeb933d5caa6a7d28a" kind="define"><name>DOC</name></member>
+  </compound>
+  <compound refid="api_8h" kind="file"><name>api.h</name>
+    <member refid="api_8h_1a9aa99082a3271d160e1aa4cd6383f281" kind="define"><name>KODKAL_API</name></member>
+  </compound>
+  <compound refid="Dekoder__Opak_8h" kind="file"><name>Dekoder_Opak.h</name>
+  </compound>
+  <compound refid="Koder__Opak_8h" kind="file"><name>Koder_Opak.h</name>
+  </compound>
+  <compound refid="Dekoder__Opak__impl_8h" kind="file"><name>Dekoder_Opak_impl.h</name>
+  </compound>
+  <compound refid="Koder__Opak__impl_8h" kind="file"><name>Koder_Opak_impl.h</name>
+  </compound>
+  <compound refid="Dekoder__Opak__pydoc__template_8h" kind="file"><name>Dekoder_Opak_pydoc_template.h</name>
+    <member refid="Dekoder__Opak__pydoc__template_8h_1a74021f021dcdfbb22891787b79c5529d" kind="define"><name>D</name></member>
+    <member refid="Dekoder__Opak__pydoc__template_8h_1a8c0a580290b8a6dcbf7c57e2a79e299f" kind="variable"><name>__doc_gr_KodKal_Dekoder_Opak</name></member>
+    <member refid="Dekoder__Opak__pydoc__template_8h_1af14d886df1a2fdb2ed5022989a0696df" kind="variable"><name>__doc_gr_KodKal_Dekoder_Opak_Dekoder_Opak</name></member>
+    <member refid="Dekoder__Opak__pydoc__template_8h_1a3bba225779bd0fd6ad0c9d09e190ca5c" kind="variable"><name>__doc_gr_KodKal_Dekoder_Opak_make</name></member>
+  </compound>
+  <compound refid="Koder__Opak__pydoc__template_8h" kind="file"><name>Koder_Opak_pydoc_template.h</name>
+    <member refid="Koder__Opak__pydoc__template_8h_1a74021f021dcdfbb22891787b79c5529d" kind="define"><name>D</name></member>
+    <member refid="Koder__Opak__pydoc__template_8h_1a34b13436b8b7241399a775e7851bbbc3" kind="variable"><name>__doc_gr_KodKal_Koder_Opak</name></member>
+    <member refid="Koder__Opak__pydoc__template_8h_1afdba3ba5383a0bc26ccc811277cf065b" kind="variable"><name>__doc_gr_KodKal_Koder_Opak_Koder_Opak</name></member>
+    <member refid="Koder__Opak__pydoc__template_8h_1a383fa3b4cc2b23421100db220141cace" kind="variable"><name>__doc_gr_KodKal_Koder_Opak_make</name></member>
+  </compound>
+  <compound refid="group__block" kind="group"><name>block</name>
+  </compound>
+  <compound refid="dir_93bff873947d0202eb8f8a41bf78992b" kind="dir"><name>bindings</name>
+  </compound>
+  <compound refid="dir_8c64a2a48c8208ff39f0440c89fced36" kind="dir"><name>bindings</name>
+  </compound>
+  <compound refid="dir_49e56c817e5e54854c35e136979f97ca" kind="dir"><name>docs</name>
+  </compound>
+  <compound refid="dir_3af6e620343a75f751864f75948b4cfc" kind="dir"><name>docstrings</name>
+  </compound>
+  <compound refid="dir_359d2bec989c9a8deeeb9aee335c1c76" kind="dir"><name>doxygen</name>
+  </compound>
+  <compound refid="dir_902d6fe55786be073ae6681293cdb979" kind="dir"><name>gnuradio</name>
+  </compound>
+  <compound refid="dir_d44c64559bbebec7f509842c48db8b23" kind="dir"><name>include</name>
+  </compound>
+  <compound refid="dir_7f59dba7e724702614f8a32f93cb8004" kind="dir"><name>KodKal</name>
+  </compound>
+  <compound refid="dir_9e4bfdcf78e79e948593b4c9e31b9eef" kind="dir"><name>KodKal</name>
+  </compound>
+  <compound refid="dir_6d2f1bf6ce36f5b5970fbce0d45b3b73" kind="dir"><name>KodKal</name>
+  </compound>
+  <compound refid="dir_97aefd0d527b934f1d99a682da8fe6a9" kind="dir"><name>lib</name>
+  </compound>
+  <compound refid="dir_f2cd86917185299abf5a1f0679072f3c" kind="dir"><name>other</name>
+  </compound>
+  <compound refid="dir_ab3dd591509f89c87d6a9fd8136a6d03" kind="dir"><name>python</name>
+  </compound>
+  <compound refid="dir_7837fde3ab9c1fb2fc5be7b717af8d79" kind="dir"><name>python</name>
+  </compound>
+  <compound refid="indexpage" kind="page"><name>index</name>
+  </compound>
+</doxygenindex>

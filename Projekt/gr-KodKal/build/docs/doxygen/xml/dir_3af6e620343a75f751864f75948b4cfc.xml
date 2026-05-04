@@ -1,0 +1,13 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="dir_3af6e620343a75f751864f75948b4cfc" kind="dir">
+    <compoundname>docstrings</compoundname>
+    <innerfile refid="Dekoder__Opak__pydoc__template_8h">Dekoder_Opak_pydoc_template.h</innerfile>
+    <innerfile refid="Koder__Opak__pydoc__template_8h">Koder_Opak_pydoc_template.h</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/aymo/BC/Projekt/gr-KodKal/python/KodKal/bindings/docstrings/"/>
+  </compounddef>
+</doxygen>

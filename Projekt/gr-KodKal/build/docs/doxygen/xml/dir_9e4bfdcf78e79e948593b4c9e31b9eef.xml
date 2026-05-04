@@ -1,0 +1,14 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="dir_9e4bfdcf78e79e948593b4c9e31b9eef" kind="dir">
+    <compoundname>KodKal</compoundname>
+    <innerfile refid="api_8h">api.h</innerfile>
+    <innerfile refid="Dekoder__Opak_8h">Dekoder_Opak.h</innerfile>
+    <innerfile refid="Koder__Opak_8h">Koder_Opak.h</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/aymo/BC/Projekt/gr-KodKal/include/gnuradio/KodKal/"/>
+  </compounddef>
+</doxygen>

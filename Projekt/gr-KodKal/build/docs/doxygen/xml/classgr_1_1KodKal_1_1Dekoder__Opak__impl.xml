@@ -1,0 +1,161 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="classgr_1_1KodKal_1_1Dekoder__Opak__impl" kind="class" language="C++" prot="public">
+    <compoundname>gr::KodKal::Dekoder_Opak_impl</compoundname>
+    <basecompoundref refid="classgr_1_1KodKal_1_1Dekoder__Opak" prot="public" virt="non-virtual">gr::KodKal::Dekoder_Opak</basecompoundref>
+    <includes refid="Dekoder__Opak__impl_8h" local="no">Dekoder_Opak_impl.h</includes>
+    <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classgr_1_1KodKal_1_1Dekoder__Opak__impl_1a464d8525ef8ffd9eee1fbf78d4608fa3" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int gr::KodKal::Dekoder_Opak_impl::_n</definition>
+        <argsstring></argsstring>
+        <name>_n</name>
+        <qualifiedname>gr::KodKal::Dekoder_Opak_impl::_n</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/aymo/BC/Projekt/gr-KodKal/lib/Dekoder_Opak_impl.h" line="19" column="7" bodyfile="/home/aymo/BC/Projekt/gr-KodKal/lib/Dekoder_Opak_impl.h" bodystart="19" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgr_1_1KodKal_1_1Dekoder__Opak__impl_1a3cecd8fdf0846aaf6ff4189688e69bdf" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int gr::KodKal::Dekoder_Opak_impl::count</definition>
+        <argsstring></argsstring>
+        <name>count</name>
+        <qualifiedname>gr::KodKal::Dekoder_Opak_impl::count</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/aymo/BC/Projekt/gr-KodKal/lib/Dekoder_Opak_impl.h" line="21" column="7" bodyfile="/home/aymo/BC/Projekt/gr-KodKal/lib/Dekoder_Opak_impl.h" bodystart="21" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgr_1_1KodKal_1_1Dekoder__Opak__impl_1a9e15be3d944c95387c0ff32710f9f519" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int gr::KodKal::Dekoder_Opak_impl::polovica</definition>
+        <argsstring></argsstring>
+        <name>polovica</name>
+        <qualifiedname>gr::KodKal::Dekoder_Opak_impl::polovica</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/aymo/BC/Projekt/gr-KodKal/lib/Dekoder_Opak_impl.h" line="21" column="13" bodyfile="/home/aymo/BC/Projekt/gr-KodKal/lib/Dekoder_Opak_impl.h" bodystart="21" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="classgr_1_1KodKal_1_1Dekoder__Opak__impl_1a6519b45fb838cf798fd7d8fca71f6cf5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>gr::KodKal::Dekoder_Opak_impl::Dekoder_Opak_impl</definition>
+        <argsstring>(int n)</argsstring>
+        <name>Dekoder_Opak_impl</name>
+        <qualifiedname>gr::KodKal::Dekoder_Opak_impl::Dekoder_Opak_impl</qualifiedname>
+        <param>
+          <type>int</type>
+          <declname>n</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/aymo/BC/Projekt/gr-KodKal/lib/Dekoder_Opak_impl.h" line="24" column="5"/>
+      </memberdef>
+      <memberdef kind="function" id="classgr_1_1KodKal_1_1Dekoder__Opak__impl_1ad86e087c6292836a8835228c4ca59762" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>gr::KodKal::Dekoder_Opak_impl::~Dekoder_Opak_impl</definition>
+        <argsstring>()</argsstring>
+        <name>~Dekoder_Opak_impl</name>
+        <qualifiedname>gr::KodKal::Dekoder_Opak_impl::~Dekoder_Opak_impl</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/aymo/BC/Projekt/gr-KodKal/lib/Dekoder_Opak_impl.h" line="25" column="5"/>
+      </memberdef>
+      <memberdef kind="function" id="classgr_1_1KodKal_1_1Dekoder__Opak__impl_1a7998ba2285a4cecf7007a84b2e9c6e2a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int gr::KodKal::Dekoder_Opak_impl::work</definition>
+        <argsstring>(int noutput_items, gr_vector_const_void_star &amp;input_items, gr_vector_void_star &amp;output_items)</argsstring>
+        <name>work</name>
+        <qualifiedname>gr::KodKal::Dekoder_Opak_impl::work</qualifiedname>
+        <param>
+          <type>int</type>
+          <declname>noutput_items</declname>
+        </param>
+        <param>
+          <type>gr_vector_const_void_star &amp;</type>
+          <declname>input_items</declname>
+        </param>
+        <param>
+          <type>gr_vector_void_star &amp;</type>
+          <declname>output_items</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/aymo/BC/Projekt/gr-KodKal/lib/Dekoder_Opak_impl.h" line="28" column="9"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="2">
+        <label>gr::KodKal::Dekoder_Opak</label>
+        <link refid="classgr_1_1KodKal_1_1Dekoder__Opak"/>
+        <childnode refid="3" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>gr::KodKal::Dekoder_Opak_impl</label>
+        <link refid="classgr_1_1KodKal_1_1Dekoder__Opak__impl"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>gr::sync_decimator</label>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="2">
+        <label>gr::KodKal::Dekoder_Opak</label>
+        <link refid="classgr_1_1KodKal_1_1Dekoder__Opak"/>
+        <childnode refid="3" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>gr::KodKal::Dekoder_Opak_impl</label>
+        <link refid="classgr_1_1KodKal_1_1Dekoder__Opak__impl"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>gr::sync_decimator</label>
+      </node>
+    </collaborationgraph>
+    <location file="/home/aymo/BC/Projekt/gr-KodKal/lib/Dekoder_Opak_impl.h" line="16" column="1" bodyfile="/home/aymo/BC/Projekt/gr-KodKal/lib/Dekoder_Opak_impl.h" bodystart="17" bodyend="31"/>
+    <listofallmembers>
+      <member refid="classgr_1_1KodKal_1_1Dekoder__Opak__impl_1a464d8525ef8ffd9eee1fbf78d4608fa3" prot="private" virt="non-virtual"><scope>gr::KodKal::Dekoder_Opak_impl</scope><name>_n</name></member>
+      <member refid="classgr_1_1KodKal_1_1Dekoder__Opak__impl_1a3cecd8fdf0846aaf6ff4189688e69bdf" prot="private" virt="non-virtual"><scope>gr::KodKal::Dekoder_Opak_impl</scope><name>count</name></member>
+      <member refid="classgr_1_1KodKal_1_1Dekoder__Opak__impl_1a6519b45fb838cf798fd7d8fca71f6cf5" prot="public" virt="non-virtual"><scope>gr::KodKal::Dekoder_Opak_impl</scope><name>Dekoder_Opak_impl</name></member>
+      <member refid="classgr_1_1KodKal_1_1Dekoder__Opak_1a439632d3296cbb2126c7f85a37622ea4" prot="public" virt="non-virtual"><scope>gr::KodKal::Dekoder_Opak_impl</scope><name>make</name></member>
+      <member refid="classgr_1_1KodKal_1_1Dekoder__Opak__impl_1a9e15be3d944c95387c0ff32710f9f519" prot="private" virt="non-virtual"><scope>gr::KodKal::Dekoder_Opak_impl</scope><name>polovica</name></member>
+      <member refid="classgr_1_1KodKal_1_1Dekoder__Opak_1ad01ef583f9682df5f8dbf31ac106e212" prot="public" virt="non-virtual"><scope>gr::KodKal::Dekoder_Opak_impl</scope><name>sptr</name></member>
+      <member refid="classgr_1_1KodKal_1_1Dekoder__Opak__impl_1a7998ba2285a4cecf7007a84b2e9c6e2a" prot="public" virt="non-virtual"><scope>gr::KodKal::Dekoder_Opak_impl</scope><name>work</name></member>
+      <member refid="classgr_1_1KodKal_1_1Dekoder__Opak__impl_1ad86e087c6292836a8835228c4ca59762" prot="public" virt="non-virtual"><scope>gr::KodKal::Dekoder_Opak_impl</scope><name>~Dekoder_Opak_impl</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>
