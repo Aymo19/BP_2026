@@ -158,6 +158,24 @@ blocks:
     coordinate: [184, 12]
     rotation: 0
     state: enabled
+- name: ErTools_AWGN_0
+  id: ErTools_AWGN
+  parameters:
+    M: '2'
+    affinity: ''
+    alias: ''
+    comment: ''
+    k: '1'
+    maxoutbuf: '0'
+    minoutbuf: '0'
+    n: '1'
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [1096, 240.0]
+    rotation: 0
+    state: enabled
 - name: ErTools_AWGN_bez_FEC_0
   id: ErTools_AWGN_bez_FEC
   parameters:
@@ -173,11 +191,11 @@ blocks:
     bus_structure: null
     coordinate: [392, 312.0]
     rotation: 0
-    state: enabled
+    state: disabled
 - name: ErTools_BER_0
   id: ErTools_BER
   parameters:
-    M: M
+    M: '1'
     N: N
     affinity: ''
     alias: ''
@@ -229,6 +247,26 @@ blocks:
     coordinate: [40, 568.0]
     rotation: 0
     state: enabled
+- name: analog_random_source_x_0
+  id: analog_random_source_x
+  parameters:
+    affinity: ''
+    alias: ''
+    comment: ''
+    max: M
+    maxoutbuf: '0'
+    min: '0'
+    minoutbuf: '0'
+    num_samps: '10000'
+    repeat: 'True'
+    type: byte
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [176, 144.0]
+    rotation: 0
+    state: enabled
 - name: blocks_add_xx_0
   id: blocks_add_xx
   parameters:
@@ -246,7 +284,7 @@ blocks:
     bus_structure: null
     coordinate: [624, 264.0]
     rotation: 0
-    state: enabled
+    state: disabled
 - name: blocks_file_source_0
   id: blocks_file_source
   parameters:
@@ -268,7 +306,7 @@ blocks:
     bus_structure: null
     coordinate: [24, 152.0]
     rotation: 0
-    state: enabled
+    state: disabled
 - name: blocks_nlog10_ff_0
   id: blocks_nlog10_ff
   parameters:
@@ -320,7 +358,7 @@ blocks:
     bus_structure: null
     coordinate: [216, 184.0]
     rotation: 0
-    state: enabled
+    state: disabled
 - name: blocks_stream_to_vector_0
   id: blocks_stream_to_vector
   parameters:
@@ -357,6 +395,24 @@ blocks:
     coordinate: [296, 608.0]
     rotation: 0
     state: enabled
+- name: blocks_stream_to_vector_1
+  id: blocks_stream_to_vector
+  parameters:
+    affinity: ''
+    alias: ''
+    comment: ''
+    maxoutbuf: '0'
+    minoutbuf: '0'
+    num_items: '1'
+    type: complex
+    vlen: '1'
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [760, 360.0]
+    rotation: 0
+    state: enabled
 - name: blocks_throttle2_0
   id: blocks_throttle2
   parameters:
@@ -378,6 +434,24 @@ blocks:
     coordinate: [392, 232.0]
     rotation: 0
     state: enabled
+- name: blocks_vector_to_stream_0
+  id: blocks_vector_to_stream
+  parameters:
+    affinity: ''
+    alias: ''
+    comment: ''
+    maxoutbuf: '0'
+    minoutbuf: '0'
+    num_items: '1'
+    type: complex
+    vlen: '1'
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [1056, 352.0]
+    rotation: 0
+    state: enabled
 - name: digital_constellation_decoder_cb_0
   id: digital_constellation_decoder_cb
   parameters:
@@ -391,7 +465,7 @@ blocks:
     bus_sink: false
     bus_source: false
     bus_structure: null
-    coordinate: [680, 272.0]
+    coordinate: [712, 248.0]
     rotation: 0
     state: enabled
 - name: digital_constellation_encoder_bc_0
@@ -494,7 +568,7 @@ blocks:
     bus_sink: false
     bus_source: false
     bus_structure: null
-    coordinate: [856, 272.0]
+    coordinate: [936, 240.0]
     rotation: 0
     state: enabled
 - name: virtual_sink_0_0
@@ -603,11 +677,13 @@ blocks:
     state: enabled
 
 connections:
+- [ErTools_AWGN_0, '0', blocks_vector_to_stream_0, '0']
 - [ErTools_AWGN_bez_FEC_0, '0', blocks_add_xx_0, '1']
 - [ErTools_BER_0, '0', blocks_nlog10_ff_0, '0']
 - [ErTools_MC_0, '0', virtual_sink_1, '0']
 - [ErTools_MC_0, '1', virtual_sink_0_1, '0']
 - [ErTools_Teoreticka_BER_0, '0', blocks_nlog10_ff_0_1_0, '0']
+- [analog_random_source_x_0, '0', virtual_sink_0_0, '0']
 - [blocks_add_xx_0, '0', digital_constellation_decoder_cb_0, '0']
 - [blocks_file_source_0, '0', blocks_pack_k_bits_bb_0, '0']
 - [blocks_nlog10_ff_0, '0', blocks_stream_to_vector_0, '0']
@@ -615,7 +691,10 @@ connections:
 - [blocks_pack_k_bits_bb_0, '0', virtual_sink_0_0, '0']
 - [blocks_stream_to_vector_0, '0', qtgui_vector_sink_f_0_0, '0']
 - [blocks_stream_to_vector_0_1_0, '0', qtgui_vector_sink_f_0_0, '1']
+- [blocks_stream_to_vector_1, '0', ErTools_AWGN_0, '0']
 - [blocks_throttle2_0, '0', blocks_add_xx_0, '0']
+- [blocks_throttle2_0, '0', blocks_stream_to_vector_1, '0']
+- [blocks_vector_to_stream_0, '0', digital_constellation_decoder_cb_0, '0']
 - [digital_constellation_decoder_cb_0, '0', virtual_sink_0, '0']
 - [digital_constellation_encoder_bc_0, '0', ErTools_AWGN_bez_FEC_0, '0']
 - [digital_constellation_encoder_bc_0, '0', blocks_throttle2_0, '0']
@@ -623,6 +702,7 @@ connections:
 - [virtual_source_0_0_0, '0', digital_constellation_encoder_bc_0, '0']
 - [virtual_source_0_0_1, '0', ErTools_BER_0, '0']
 - [virtual_source_0_0_2_0, '0', ErTools_BER_0, '1']
+- [virtual_source_1, '0', ErTools_AWGN_0, '1']
 - [virtual_source_1, '0', ErTools_AWGN_bez_FEC_0, '1']
 
 metadata:

@@ -29,7 +29,8 @@ list(APPEND ErTools_python_files
     AWGN_python.cc
     Teoreticka_BER_python.cc
     MC_python.cc
-    AWGN_bez_FEC_python.cc python_bindings.cc)
+    AWGN_bez_FEC_python.cc
+    python_bindings.cc)
 
 gr_pybind_make_oot(ErTools ../../.. gr::ErTools "${ErTools_python_files}")
 

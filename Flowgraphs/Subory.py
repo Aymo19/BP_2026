@@ -12,7 +12,7 @@ from PyQt5 import Qt
 from gnuradio import qtgui
 from gnuradio import ErTools
 from gnuradio import blocks
-import pmt
+import numpy
 from gnuradio import digital
 from gnuradio import gr
 from gnuradio.filter import firdes
@@ -120,40 +120,38 @@ class Subory(gr.top_block, Qt.QWidget):
             self.top_grid_layout.setColumnStretch(c, 1)
         self.digital_constellation_encoder_bc_0 = digital.constellation_encoder_bc(Modulacia)
         self.digital_constellation_decoder_cb_0 = digital.constellation_decoder_cb(Modulacia)
+        self.blocks_vector_to_stream_0 = blocks.vector_to_stream(gr.sizeof_gr_complex*1, 1)
         self.blocks_throttle2_0 = blocks.throttle( gr.sizeof_gr_complex*1, samp_rate, True, 0 if "auto" == "auto" else max( int(float(0.1) * samp_rate) if "auto" == "time" else int(0.1), 1) )
+        self.blocks_stream_to_vector_1 = blocks.stream_to_vector(gr.sizeof_gr_complex*1, 1)
         self.blocks_stream_to_vector_0_1_0 = blocks.stream_to_vector(gr.sizeof_float*1, N)
         self.blocks_stream_to_vector_0 = blocks.stream_to_vector(gr.sizeof_float*1, N)
-        self.blocks_pack_k_bits_bb_0 = blocks.pack_k_bits_bb(1)
         self.blocks_nlog10_ff_0_1_0 = blocks.nlog10_ff(1, 1, 0)
         self.blocks_nlog10_ff_0 = blocks.nlog10_ff(1, 1, 0)
-        self.blocks_file_source_0 = blocks.file_source(gr.sizeof_char*1, '/home/aymo/Downloads/message.txt', True, 0, 0)
-        self.blocks_file_source_0.set_begin_tag(pmt.PMT_NIL)
-        self.blocks_add_xx_0 = blocks.add_vcc(1)
+        self.analog_random_source_x_0 = blocks.vector_source_b(list(map(int, numpy.random.randint(0, M, 10000))), True)
         self.ErTools_Teoreticka_BER_0 = ErTools.Teoreticka_BER(N, M, 'PSK', EbN0_min, EbN0_max)
         self.ErTools_MC_0 = ErTools.MC(N, EbN0_min, EbN0_max)
-        self.ErTools_BER_0 = ErTools.BER(N, M)
-        self.ErTools_AWGN_bez_FEC_0 = ErTools.AWGN_bez_FEC(2)
+        self.ErTools_BER_0 = ErTools.BER(N, 1)
+        self.ErTools_AWGN_0 = ErTools.AWGN(2, 1, 1)
 
 
         ##################################################
         # Connections
         ##################################################
-        self.connect((self.ErTools_AWGN_bez_FEC_0, 0), (self.blocks_add_xx_0, 1))
+        self.connect((self.ErTools_AWGN_0, 0), (self.blocks_vector_to_stream_0, 0))
         self.connect((self.ErTools_BER_0, 0), (self.blocks_nlog10_ff_0, 0))
-        self.connect((self.ErTools_MC_0, 0), (self.ErTools_AWGN_bez_FEC_0, 1))
+        self.connect((self.ErTools_MC_0, 0), (self.ErTools_AWGN_0, 1))
         self.connect((self.ErTools_MC_0, 1), (self.ErTools_BER_0, 0))
         self.connect((self.ErTools_Teoreticka_BER_0, 0), (self.blocks_nlog10_ff_0_1_0, 0))
-        self.connect((self.blocks_add_xx_0, 0), (self.digital_constellation_decoder_cb_0, 0))
-        self.connect((self.blocks_file_source_0, 0), (self.blocks_pack_k_bits_bb_0, 0))
+        self.connect((self.analog_random_source_x_0, 0), (self.ErTools_BER_0, 1))
+        self.connect((self.analog_random_source_x_0, 0), (self.digital_constellation_encoder_bc_0, 0))
         self.connect((self.blocks_nlog10_ff_0, 0), (self.blocks_stream_to_vector_0, 0))
         self.connect((self.blocks_nlog10_ff_0_1_0, 0), (self.blocks_stream_to_vector_0_1_0, 0))
-        self.connect((self.blocks_pack_k_bits_bb_0, 0), (self.ErTools_BER_0, 1))
-        self.connect((self.blocks_pack_k_bits_bb_0, 0), (self.digital_constellation_encoder_bc_0, 0))
         self.connect((self.blocks_stream_to_vector_0, 0), (self.qtgui_vector_sink_f_0_0, 0))
         self.connect((self.blocks_stream_to_vector_0_1_0, 0), (self.qtgui_vector_sink_f_0_0, 1))
-        self.connect((self.blocks_throttle2_0, 0), (self.blocks_add_xx_0, 0))
+        self.connect((self.blocks_stream_to_vector_1, 0), (self.ErTools_AWGN_0, 0))
+        self.connect((self.blocks_throttle2_0, 0), (self.blocks_stream_to_vector_1, 0))
+        self.connect((self.blocks_vector_to_stream_0, 0), (self.digital_constellation_decoder_cb_0, 0))
         self.connect((self.digital_constellation_decoder_cb_0, 0), (self.ErTools_BER_0, 2))
-        self.connect((self.digital_constellation_encoder_bc_0, 0), (self.ErTools_AWGN_bez_FEC_0, 0))
         self.connect((self.digital_constellation_encoder_bc_0, 0), (self.blocks_throttle2_0, 0))
 
 

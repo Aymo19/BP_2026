@@ -12,9 +12,9 @@ parameters:
    dtype: int
    default: 256
  - id: M
-   label: Počet modulačných stavov
+   label: Dĺžka informačného slova
    dtype: int
-   default: 2
+   default: 1
 
 inputs:
  - label: in0

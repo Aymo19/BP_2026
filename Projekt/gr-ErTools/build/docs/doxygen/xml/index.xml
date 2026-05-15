@@ -50,7 +50,6 @@
   <compound refid="classgr_1_1ErTools_1_1BER__impl" kind="class"><name>gr::ErTools::BER_impl</name>
     <member refid="classgr_1_1ErTools_1_1BER__impl_1a646875331c3a666c5f45baef1b8a7506" kind="variable"><name>_N</name></member>
     <member refid="classgr_1_1ErTools_1_1BER__impl_1af72d31ea68f0afb6724be92de5b6ee44" kind="variable"><name>_M</name></member>
-    <member refid="classgr_1_1ErTools_1_1BER__impl_1ab4c67152d40a3cfdb9ea46156380c8d2" kind="variable"><name>k</name></member>
     <member refid="classgr_1_1ErTools_1_1BER__impl_1aa11f6d310e7eeb8839451cd310ac8b3b" kind="variable"><name>index</name></member>
     <member refid="classgr_1_1ErTools_1_1BER__impl_1ae027d779cd1785ace0ab535c946c5e55" kind="variable"><name>_count</name></member>
     <member refid="classgr_1_1ErTools_1_1BER__impl_1ab18d7297f443b1021b20c7bcf5189526" kind="variable"><name>_pamat_BER</name></member>

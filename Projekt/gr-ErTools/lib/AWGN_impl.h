@@ -18,10 +18,10 @@ namespace ErTools {
 class AWGN_impl : public AWGN
 {
 private:
-  int _M, _k, _n, index, counter;
-  float Ps, sumPs, EBQ;
+  int _M, _k, _n, index;
+  
+  float Es, total_Es, EBQ;
   double Rs;
-//  gr_complex sg_n;
 
   std::random_device rd;
   std::mt19937 R;

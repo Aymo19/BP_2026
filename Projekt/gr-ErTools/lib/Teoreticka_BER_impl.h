@@ -18,8 +18,10 @@ class Teoreticka_BER_impl : public Teoreticka_BER
 {
 private:
   int _N, _M, _EbN0min, _EbN0max;
+  
   std::string _Mod;
-  int j;
+  
+  int index;
   double rozpatieT, rozpatiePostupT;
 
   std::vector<double> _bodyBPSK; // BPSK

@@ -24,7 +24,7 @@ inputs:
  - label: in0
    domain: stream
    dtype: complex
-   vlen: 7
+   vlen: ${n}
  - label: in1
    domain: stream
    dtype: float
@@ -33,6 +33,6 @@ outputs:
  - label: out
    domain: stream
    dtype: complex
-   vlen: 7
+   vlen: ${n}
 
 file_format: 1

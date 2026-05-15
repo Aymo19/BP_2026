@@ -18,7 +18,7 @@ class MC_impl : public MC
 private:
   int _N, _EbN0min, _EbN0max;
   
-  int index_CLK, counter;
+  int index_CLK;
   double Rz, Rz_krok;
 
   std::vector<double> v_EDB;

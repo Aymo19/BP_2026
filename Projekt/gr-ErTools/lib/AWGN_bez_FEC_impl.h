@@ -18,8 +18,8 @@ namespace ErTools {
 class AWGN_bez_FEC_impl : public AWGN_bez_FEC
 {
 private:
-  int _M, _k, _n, index, counter;
-  double Es, sumEs, EBQ_B;
+  int _M, index;
+  double Es, total_Es, EBQ_B;
 
   std::random_device rd_B;
   std::mt19937 R_B;

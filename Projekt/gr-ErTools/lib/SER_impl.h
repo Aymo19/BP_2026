@@ -18,6 +18,8 @@ class SER_impl : public SER
 private:
   int _N;
 
+  int k;
+
   // Deklarovanie vektorov
   std::vector<int> _count;
   std::vector<double> _pamat_SER;

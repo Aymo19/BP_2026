@@ -37,7 +37,7 @@ blocks:
   id: variable
   parameters:
     comment: ''
-    value: '25'
+    value: '15'
   states:
     bus_sink: false
     bus_source: false
@@ -101,8 +101,8 @@ blocks:
     bus_structure: null
     coordinate: [1016, 24.0]
     rotation: 0
-    state: enabled
-- name: Modulacia_1
+    state: disabled
+- name: Modulacia
   id: variable_constellation
   parameters:
     comment: ''
@@ -120,6 +120,26 @@ blocks:
     bus_source: false
     bus_structure: null
     coordinate: [664, 24.0]
+    rotation: 0
+    state: enabled
+- name: Modulacia_2
+  id: variable_constellation
+  parameters:
+    comment: ''
+    const_points: '[-1-1j, -1+1j, 1+1j, 1-1j]'
+    dims: '1'
+    normalization: digital.constellation.AMPLITUDE_NORMALIZATION
+    npwr: '1.0'
+    precision: '8'
+    rot_sym: '4'
+    soft_dec_lut: None
+    sym_map: '[0, 1, 3, 2]'
+    type: qpsk
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [496, 24.0]
     rotation: 0
     state: enabled
 - name: N
@@ -161,7 +181,7 @@ blocks:
 - name: ErTools_AWGN_0
   id: ErTools_AWGN
   parameters:
-    M: M
+    M: '2'
     affinity: ''
     alias: ''
     comment: ''
@@ -173,13 +193,31 @@ blocks:
     bus_sink: false
     bus_source: false
     bus_structure: null
-    coordinate: [392, 328.0]
+    coordinate: [632, 304.0]
     rotation: 0
     state: enabled
+- name: ErTools_AWGN_0_0
+  id: ErTools_AWGN
+  parameters:
+    M: '4'
+    affinity: ''
+    alias: ''
+    comment: ''
+    k: '2'
+    maxoutbuf: '0'
+    minoutbuf: '0'
+    n: '2'
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [464, 560.0]
+    rotation: 0
+    state: disabled
 - name: ErTools_BER_0
   id: ErTools_BER
   parameters:
-    M: M
+    M: '2'
     N: N
     affinity: ''
     alias: ''
@@ -190,7 +228,24 @@ blocks:
     bus_sink: false
     bus_source: false
     bus_structure: null
-    coordinate: [200, 424.0]
+    coordinate: [208, 840.0]
+    rotation: 0
+    state: disabled
+- name: ErTools_BER_0_0
+  id: ErTools_BER
+  parameters:
+    M: '1'
+    N: N
+    affinity: ''
+    alias: ''
+    comment: ''
+    maxoutbuf: '0'
+    minoutbuf: '0'
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [408, 648.0]
     rotation: 0
     state: enabled
 - name: ErTools_MC_0
@@ -216,8 +271,8 @@ blocks:
   parameters:
     EbN0max: EbN0_max
     EbN0min: EbN0_min
-    M: M
-    Mod: QAM
+    M: '2'
+    Mod: PSK
     N: N
     affinity: ''
     alias: ''
@@ -228,7 +283,7 @@ blocks:
     bus_sink: false
     bus_source: false
     bus_structure: null
-    coordinate: [40, 576.0]
+    coordinate: [48, 992.0]
     rotation: 0
     state: enabled
 - name: analog_random_source_x_0
@@ -237,11 +292,11 @@ blocks:
     affinity: ''
     alias: ''
     comment: ''
-    max: M
+    max: '2'
     maxoutbuf: '0'
     min: '0'
     minoutbuf: '0'
-    num_samps: Num_samp
+    num_samps: '10000'
     repeat: 'True'
     type: byte
   states:
@@ -251,24 +306,26 @@ blocks:
     coordinate: [16, 176.0]
     rotation: 0
     state: enabled
-- name: blocks_add_xx_0
-  id: blocks_add_xx
+- name: analog_random_source_x_0_0
+  id: analog_random_source_x
   parameters:
     affinity: ''
     alias: ''
     comment: ''
+    max: '4'
     maxoutbuf: '0'
+    min: '0'
     minoutbuf: '0'
-    num_inputs: '2'
-    type: complex
-    vlen: '1'
+    num_samps: '10000'
+    repeat: 'True'
+    type: byte
   states:
     bus_sink: false
     bus_source: false
     bus_structure: null
-    coordinate: [624, 272.0]
+    coordinate: [32, 368.0]
     rotation: 0
-    state: enabled
+    state: disabled
 - name: blocks_nlog10_ff_0
   id: blocks_nlog10_ff
   parameters:
@@ -284,7 +341,25 @@ blocks:
     bus_sink: false
     bus_source: false
     bus_structure: null
-    coordinate: [384, 448.0]
+    coordinate: [392, 864.0]
+    rotation: 0
+    state: disabled
+- name: blocks_nlog10_ff_0_0
+  id: blocks_nlog10_ff
+  parameters:
+    affinity: ''
+    alias: ''
+    comment: ''
+    k: '0'
+    maxoutbuf: '0'
+    minoutbuf: '0'
+    n: '1'
+    vlen: '1'
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [608, 672.0]
     rotation: 0
     state: enabled
 - name: blocks_nlog10_ff_0_1_0
@@ -302,9 +377,41 @@ blocks:
     bus_sink: false
     bus_source: false
     bus_structure: null
-    coordinate: [208, 608.0]
+    coordinate: [216, 1024.0]
     rotation: 0
     state: enabled
+- name: blocks_pack_k_bits_bb_0
+  id: blocks_pack_k_bits_bb
+  parameters:
+    affinity: ''
+    alias: ''
+    comment: ''
+    k: '2'
+    maxoutbuf: '0'
+    minoutbuf: '0'
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [224, 648.0]
+    rotation: 0
+    state: disabled
+- name: blocks_pack_k_bits_bb_0_0
+  id: blocks_pack_k_bits_bb
+  parameters:
+    affinity: ''
+    alias: ''
+    comment: ''
+    k: '2'
+    maxoutbuf: '0'
+    minoutbuf: '0'
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [216, 712.0]
+    rotation: 0
+    state: disabled
 - name: blocks_stream_to_vector_0
   id: blocks_stream_to_vector
   parameters:
@@ -320,7 +427,25 @@ blocks:
     bus_sink: false
     bus_source: false
     bus_structure: null
-    coordinate: [480, 456.0]
+    coordinate: [488, 872.0]
+    rotation: 0
+    state: disabled
+- name: blocks_stream_to_vector_0_0
+  id: blocks_stream_to_vector
+  parameters:
+    affinity: ''
+    alias: ''
+    comment: ''
+    maxoutbuf: '0'
+    minoutbuf: '0'
+    num_items: N
+    type: float
+    vlen: '1'
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [696, 680.0]
     rotation: 0
     state: enabled
 - name: blocks_stream_to_vector_0_1_0
@@ -338,9 +463,45 @@ blocks:
     bus_sink: false
     bus_source: false
     bus_structure: null
-    coordinate: [304, 616.0]
+    coordinate: [312, 1032.0]
     rotation: 0
     state: enabled
+- name: blocks_stream_to_vector_1_0
+  id: blocks_stream_to_vector
+  parameters:
+    affinity: ''
+    alias: ''
+    comment: ''
+    maxoutbuf: '0'
+    minoutbuf: '0'
+    num_items: '2'
+    type: complex
+    vlen: '1'
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [336, 528.0]
+    rotation: 0
+    state: disabled
+- name: blocks_stream_to_vector_1_0_0
+  id: blocks_stream_to_vector
+  parameters:
+    affinity: ''
+    alias: ''
+    comment: ''
+    maxoutbuf: '0'
+    minoutbuf: '0'
+    num_items: '2'
+    type: complex
+    vlen: '1'
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [528, 248.0]
+    rotation: 0
+    state: disabled
 - name: blocks_throttle2_0
   id: blocks_throttle2
   parameters:
@@ -359,9 +520,66 @@ blocks:
     bus_sink: false
     bus_source: false
     bus_structure: null
-    coordinate: [392, 240.0]
+    coordinate: [344, 240.0]
     rotation: 0
     state: enabled
+- name: blocks_throttle2_0_0
+  id: blocks_throttle2
+  parameters:
+    affinity: ''
+    alias: ''
+    comment: ''
+    ignoretag: 'True'
+    limit: auto
+    maximum: '0.1'
+    maxoutbuf: '0'
+    minoutbuf: '0'
+    samples_per_second: samp_rate
+    type: complex
+    vlen: '1'
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [360, 424.0]
+    rotation: 0
+    state: disabled
+- name: blocks_vector_to_stream_0_0
+  id: blocks_vector_to_stream
+  parameters:
+    affinity: ''
+    alias: ''
+    comment: ''
+    maxoutbuf: '0'
+    minoutbuf: '0'
+    num_items: '2'
+    type: complex
+    vlen: '1'
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [592, 432.0]
+    rotation: 0
+    state: disabled
+- name: blocks_vector_to_stream_0_0_0
+  id: blocks_vector_to_stream
+  parameters:
+    affinity: ''
+    alias: ''
+    comment: ''
+    maxoutbuf: '0'
+    minoutbuf: '0'
+    num_items: '2'
+    type: complex
+    vlen: '1'
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [776, 264.0]
+    rotation: 0
+    state: disabled
 - name: digital_constellation_decoder_cb_0
   id: digital_constellation_decoder_cb
   parameters:
@@ -375,9 +593,25 @@ blocks:
     bus_sink: false
     bus_source: false
     bus_structure: null
-    coordinate: [680, 280.0]
+    coordinate: [872, 304.0]
     rotation: 0
     state: enabled
+- name: digital_constellation_decoder_cb_0_0
+  id: digital_constellation_decoder_cb
+  parameters:
+    affinity: ''
+    alias: ''
+    comment: ''
+    constellation: Modulacia_2
+    maxoutbuf: '0'
+    minoutbuf: '0'
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [696, 472.0]
+    rotation: 0
+    state: disabled
 - name: digital_constellation_encoder_bc_0
   id: digital_constellation_encoder_bc
   parameters:
@@ -394,6 +628,22 @@ blocks:
     coordinate: [160, 288.0]
     rotation: 0
     state: enabled
+- name: digital_constellation_encoder_bc_0_0
+  id: digital_constellation_encoder_bc
+  parameters:
+    affinity: ''
+    alias: ''
+    comment: ''
+    constellation: Modulacia_2
+    maxoutbuf: '0'
+    minoutbuf: '0'
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [176, 480.0]
+    rotation: 0
+    state: disabled
 - name: qtgui_vector_sink_f_0_0
   id: qtgui_vector_sink_f
   parameters:
@@ -465,7 +715,7 @@ blocks:
     bus_sink: false
     bus_source: false
     bus_structure: null
-    coordinate: [680, 440.0]
+    coordinate: [880, 812.0]
     rotation: 0
     state: enabled
 - name: virtual_sink_0
@@ -478,7 +728,7 @@ blocks:
     bus_sink: false
     bus_source: false
     bus_structure: null
-    coordinate: [856, 280.0]
+    coordinate: [1048, 304.0]
     rotation: 0
     state: enabled
 - name: virtual_sink_0_0
@@ -494,6 +744,19 @@ blocks:
     coordinate: [152, 200.0]
     rotation: 0
     state: enabled
+- name: virtual_sink_0_0_0
+  id: virtual_sink
+  parameters:
+    alias: ''
+    comment: ''
+    stream_id: SIGNAL2
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [200, 400.0]
+    rotation: 0
+    state: disabled
 - name: virtual_sink_0_1
   id: virtual_sink
   parameters:
@@ -507,6 +770,19 @@ blocks:
     coordinate: [896, 192.0]
     rotation: 0
     state: enabled
+- name: virtual_sink_0_2
+  id: virtual_sink
+  parameters:
+    alias: ''
+    comment: ''
+    stream_id: AWGN_2
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [872, 472.0]
+    rotation: 0
+    state: disabled
 - name: virtual_sink_1
   id: virtual_sink
   parameters:
@@ -525,12 +801,25 @@ blocks:
   parameters:
     alias: ''
     comment: ''
+    stream_id: AWGN_2
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [40, 920.0]
+    rotation: 0
+    state: disabled
+- name: virtual_source_0_0
+  id: virtual_source
+  parameters:
+    alias: ''
+    comment: ''
     stream_id: AWGN_1
   states:
     bus_sink: false
     bus_source: false
     bus_structure: null
-    coordinate: [32, 504.0]
+    coordinate: [32, 720.0]
     rotation: 0
     state: enabled
 - name: virtual_source_0_0_0
@@ -556,10 +845,36 @@ blocks:
     bus_sink: false
     bus_source: false
     bus_structure: null
-    coordinate: [16, 392.0]
+    coordinate: [24, 808.0]
+    rotation: 0
+    state: disabled
+- name: virtual_source_0_0_1_0
+  id: virtual_source
+  parameters:
+    alias: ''
+    comment: ''
+    stream_id: SAMP_POINT
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [16, 608.0]
     rotation: 0
     state: enabled
 - name: virtual_source_0_0_2_0
+  id: virtual_source
+  parameters:
+    alias: ''
+    comment: ''
+    stream_id: SIGNAL2
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [48, 864.0]
+    rotation: 0
+    state: disabled
+- name: virtual_source_0_0_2_0_0
   id: virtual_source
   parameters:
     alias: ''
@@ -569,7 +884,7 @@ blocks:
     bus_sink: false
     bus_source: false
     bus_structure: null
-    coordinate: [40, 448.0]
+    coordinate: [40, 656.0]
     rotation: 0
     state: enabled
 - name: virtual_source_1
@@ -582,31 +897,65 @@ blocks:
     bus_sink: false
     bus_source: false
     bus_structure: null
-    coordinate: [216, 352.0]
+    coordinate: [416, 344.0]
     rotation: 0
     state: enabled
+- name: virtual_source_1_0
+  id: virtual_source
+  parameters:
+    alias: ''
+    comment: ''
+    stream_id: EbN0
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [224, 552.0]
+    rotation: 0
+    state: disabled
 
 connections:
-- [ErTools_AWGN_0, '0', blocks_add_xx_0, '1']
+- [ErTools_AWGN_0, '0', blocks_vector_to_stream_0_0_0, '0']
+- [ErTools_AWGN_0, '0', digital_constellation_decoder_cb_0, '0']
+- [ErTools_AWGN_0_0, '0', blocks_vector_to_stream_0_0, '0']
 - [ErTools_BER_0, '0', blocks_nlog10_ff_0, '0']
+- [ErTools_BER_0_0, '0', blocks_nlog10_ff_0_0, '0']
 - [ErTools_MC_0, '0', virtual_sink_1, '0']
 - [ErTools_MC_0, '1', virtual_sink_0_1, '0']
 - [ErTools_Teoreticka_BER_0, '0', blocks_nlog10_ff_0_1_0, '0']
 - [analog_random_source_x_0, '0', virtual_sink_0_0, '0']
-- [blocks_add_xx_0, '0', digital_constellation_decoder_cb_0, '0']
+- [analog_random_source_x_0_0, '0', digital_constellation_encoder_bc_0_0, '0']
+- [analog_random_source_x_0_0, '0', virtual_sink_0_0_0, '0']
 - [blocks_nlog10_ff_0, '0', blocks_stream_to_vector_0, '0']
+- [blocks_nlog10_ff_0_0, '0', blocks_stream_to_vector_0_0, '0']
 - [blocks_nlog10_ff_0_1_0, '0', blocks_stream_to_vector_0_1_0, '0']
-- [blocks_stream_to_vector_0, '0', qtgui_vector_sink_f_0_0, '0']
+- [blocks_pack_k_bits_bb_0, '0', ErTools_BER_0_0, '1']
+- [blocks_pack_k_bits_bb_0_0, '0', ErTools_BER_0_0, '2']
+- [blocks_stream_to_vector_0, '0', qtgui_vector_sink_f_0_0, '1']
+- [blocks_stream_to_vector_0_0, '0', qtgui_vector_sink_f_0_0, '0']
 - [blocks_stream_to_vector_0_1_0, '0', qtgui_vector_sink_f_0_0, '1']
-- [blocks_throttle2_0, '0', blocks_add_xx_0, '0']
+- [blocks_stream_to_vector_1_0, '0', ErTools_AWGN_0_0, '0']
+- [blocks_stream_to_vector_1_0_0, '0', ErTools_AWGN_0, '0']
+- [blocks_throttle2_0, '0', ErTools_AWGN_0, '0']
+- [blocks_throttle2_0, '0', blocks_stream_to_vector_1_0_0, '0']
+- [blocks_throttle2_0_0, '0', blocks_stream_to_vector_1_0, '0']
+- [blocks_vector_to_stream_0_0, '0', digital_constellation_decoder_cb_0_0, '0']
+- [blocks_vector_to_stream_0_0_0, '0', digital_constellation_decoder_cb_0, '0']
 - [digital_constellation_decoder_cb_0, '0', virtual_sink_0, '0']
-- [digital_constellation_encoder_bc_0, '0', ErTools_AWGN_0, '0']
+- [digital_constellation_decoder_cb_0_0, '0', virtual_sink_0_2, '0']
 - [digital_constellation_encoder_bc_0, '0', blocks_throttle2_0, '0']
+- [digital_constellation_encoder_bc_0_0, '0', blocks_throttle2_0_0, '0']
 - [virtual_source_0, '0', ErTools_BER_0, '2']
+- [virtual_source_0_0, '0', ErTools_BER_0_0, '2']
+- [virtual_source_0_0, '0', blocks_pack_k_bits_bb_0_0, '0']
 - [virtual_source_0_0_0, '0', digital_constellation_encoder_bc_0, '0']
 - [virtual_source_0_0_1, '0', ErTools_BER_0, '0']
+- [virtual_source_0_0_1_0, '0', ErTools_BER_0_0, '0']
 - [virtual_source_0_0_2_0, '0', ErTools_BER_0, '1']
+- [virtual_source_0_0_2_0_0, '0', ErTools_BER_0_0, '1']
+- [virtual_source_0_0_2_0_0, '0', blocks_pack_k_bits_bb_0, '0']
 - [virtual_source_1, '0', ErTools_AWGN_0, '1']
+- [virtual_source_1_0, '0', ErTools_AWGN_0_0, '1']
 
 metadata:
   file_format: 1
